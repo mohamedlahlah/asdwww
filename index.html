@@ -1,155 +1,351 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>منصة التاجر الرقمي - خدمات متكاملة</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-      :root {
-        --apple-blue: #0071e3;
-        --apple-gray: #1d1d1f;
-        --apple-gray-light: #f5f5f7;
-        --card-bg: #151516;
-        --border-color: rgba(255, 255, 255, 0.08);
-      }
-      body {
-        font-family: 'IBM Plex Sans Arabic', sans-serif;
-        background-color: #000000;
-        color: #ffffff;
-        overflow-x: hidden;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-      .apple-blur {
-        backdrop-filter: saturate(180%) blur(20px);
-        background-color: rgba(0, 0, 0, 0.75);
-      }
-      .hero-title-apple {
-        font-size: clamp(3rem, 10vw, 7rem);
-        line-height: 1.05;
-        letter-spacing: -0.03em;
-        font-weight: 700;
-        color: #ffffff;
-      }
-      .section-title-apple {
-        font-size: clamp(2.5rem, 6vw, 4.5rem);
-        line-height: 1.1;
-        letter-spacing: -0.02em;
-        font-weight: 700;
-        color: #ffffff;
-      }
-      .reveal {
-        opacity: 0;
-        transform: translateY(60px);
-        transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
-      }
-      .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      
-      .bento-card {
-        background: var(--card-bg);
-        border-radius: 2.5rem;
-        border: 1px solid var(--border-color);
-        overflow: hidden;
-        position: relative;
-        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
-      }
-      .bento-card:hover {
-        border-color: rgba(255, 255, 255, 0.2);
-        transform: scale(1.02);
-        box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>منصة التاجر الرقمي - خدمات متكاملة</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --apple-blue: #0071e3;
+      --apple-gray: #1d1d1f;
+      --apple-gray-light: #f5f5f7;
+      --bg-primary: #000000;
+      --text-primary: #ffffff;
+      --text-secondary: #86868b;
+      --card-bg: #151516;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --nav-blur: rgba(0, 0, 0, 0.75);
+    }
+
+    :root.light {
+      --bg-primary: #ffffff;
+      --text-primary: #1d1d1f;
+      --text-secondary: #6e6e73;
+      --card-bg: #f5f5f7;
+      --border-color: rgba(0, 0, 0, 0.08);
+      --nav-blur: rgba(255, 255, 255, 0.75);
+    }
+
+    body {
+      font-family: 'IBM Plex Sans Arabic', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transition: background-color 0.5s ease, color 0.5s ease;
+      direction: rtl;
+    }
+
+    /* RTL Logical Properties Fixes */
+    .text-right {
+      text-align: start !important;
+    }
+
+    .text-left {
+      text-align: end !important;
+    }
+
+    .mr-auto {
+      margin-inline-start: auto !important;
+      margin-inline-end: 0 !important;
+    }
+
+    .ml-auto {
+      margin-inline-end: auto !important;
+      margin-inline-start: 0 !important;
+    }
+
+    .right-0 {
+      inset-inline-end: 0 !important;
+    }
+
+    .left-0 {
+      inset-inline-start: 0 !important;
+    }
+
+    .apple-blur {
+      backdrop-filter: saturate(180%) blur(20px);
+      background-color: var(--nav-blur);
+    }
+
+    .hero-title-apple {
+      font-size: clamp(2.2rem, 10vw, 5.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .section-title-apple {
+      font-size: clamp(1.8rem, 6vw, 3.5rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .section-padding {
+      padding-top: clamp(4rem, 10vh, 12rem);
+      padding-bottom: clamp(4rem, 10vh, 12rem);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .bento-card {
+      background: var(--card-bg);
+      border-radius: clamp(1.5rem, 5vw, 2.5rem);
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease, background-color 0.5s ease;
+    }
+
+
+    .bento-card:hover {
+      border-color: var(--text-secondary);
+      transform: scale(1.02);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
+    }
+
+    :root:not(.light) .bento-card:hover {
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .glow-border-rainbow {
+      position: relative;
+    }
+
+    .glow-border-rainbow::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(8px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing-rainbow 25s linear infinite;
+      opacity: 0.25;
+      border-radius: 2.6rem;
+    }
+
+    @keyframes glowing-rainbow {
+      0% {
+        background-position: 0 0;
       }
 
-      .glow-border-rainbow {
-        position: relative;
-      }
-      .glow-border-rainbow::before {
-        content: "";
-        position: absolute;
-        inset: -2px;
-        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-        background-size: 400%;
-        z-index: -1;
-        filter: blur(8px);
-        width: calc(100% + 4px);
-        height: calc(100% + 4px);
-        animation: glowing-rainbow 25s linear infinite;
-        opacity: 0.25;
-        border-radius: 2.6rem;
+      50% {
+        background-position: 400% 0;
       }
 
-      @keyframes glowing-rainbow {
-        0% { background-position: 0 0; }
-        50% { background-position: 400% 0; }
-        100% { background-position: 0 0; }
+      100% {
+        background-position: 0 0;
       }
+    }
 
-      .apple-intelligence-glow {
-        background: radial-gradient(circle at center, rgba(139, 92, 246, 0.25) 0%, transparent 75%);
-      }
+    .apple-intelligence-glow {
+      background: radial-gradient(circle at center, rgba(139, 92, 246, 0.25) 0%, transparent 75%);
+    }
 
-      select {
-        appearance: none;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-position: left 1.5rem center;
-        background-size: 1.5rem;
-      }
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2386868b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: left 1.5rem center;
+      background-size: 1.5rem;
+      color: var(--text-primary);
+    }
 
-      .btn-apple {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .btn-apple:hover {
-        transform: scale(1.03);
-        opacity: 0.9;
-      }
+    .btn-apple {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #000;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #333;
-        border-radius: 10px;
-        border: 2px solid #000;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #444;
-      }
+    .btn-apple:hover {
+      transform: scale(1.03);
+      opacity: 0.9;
+    }
 
-      /* Global resets for pure dark theme */
-      .bg-white, .bg-gray-50, .bg-gray-100 {
-        background-color: transparent !important;
-      }
-      .text-gray-900 {
-        color: #ffffff !important;
-      }
-      .text-gray-500, .text-gray-600 {
-        color: #86868b !important;
-      }
-    </style>
-    <script type="importmap">
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-primary);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--text-secondary);
+      border-radius: 10px;
+      border: 2px solid var(--bg-primary);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--apple-blue);
+    }
+
+    /* Theme Resets */
+    .bg-white,
+    .bg-gray-50,
+    .bg-gray-100 {
+      background-color: transparent !important;
+    }
+
+    .text-gray-900 {
+      color: var(--text-primary) !important;
+    }
+
+    .text-gray-500,
+    .text-gray-600 {
+      color: var(--text-secondary) !important;
+    }
+
+    .bg-black {
+      background-color: var(--bg-primary) !important;
+    }
+
+    .text-white {
+      color: var(--text-primary) !important;
+    }
+
+    .border-white\/10 {
+      border-color: var(--border-color) !important;
+    }
+
+    .bg-white\/5 {
+      background-color: rgba(128, 128, 128, 0.1) !important;
+    }
+
+    /* Light Mode Overrides */
+    :root.light .text-gray-400,
+    :root.light .text-gray-500 {
+      color: #6e6e73 !important;
+    }
+
+    :root.light .hover\:text-white:hover {
+      color: #0071e3 !important;
+      /* Apple Blue instead of black for better UX */
+    }
+
+    :root.light .bg-white {
+      background-color: #1d1d1f !important;
+      color: #ffffff !important;
+    }
+
+    :root.light .bg-black {
+      background-color: #f5f5f7 !important;
+      color: #1d1d1f !important;
+    }
+
+    :root.light .btn-apple.bg-white {
+      background-color: #1d1d1f !important;
+      color: #ffffff !important;
+    }
+
+    :root.light .btn-apple.bg-black {
+      background-color: #f5f5f7 !important;
+      color: #1d1d1f !important;
+    }
+
+    :root.light select {
+      background-color: #f5f5f7 !important;
+      border-color: rgba(0, 0, 0, 0.1) !important;
+      color: #1d1d1f !important;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%231d1d1f'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    }
+
+    :root.light .bento-card {
+      background-color: #ffffff !important;
+      background-image: none !important;
+      border-color: rgba(0, 0, 0, 0.05) !important;
+    }
+
+    :root.light .bento-card p {
+      color: #6e6e73 !important;
+    }
+
+    :root.light .bento-card h3,
+    :root.light .bento-card h4 {
+      color: #1d1d1f !important;
+    }
+
+    :root.light .bg-white\/5 {
+      background-color: rgba(0, 0, 0, 0.03) !important;
+    }
+
+    :root.light .border-white\/10 {
+      border-color: rgba(0, 0, 0, 0.1) !important;
+    }
+
+    :root.light .placeholder-gray-700::placeholder {
+      color: #86868b !important;
+    }
+
+    :root.light .text-white {
+      color: #1d1d1f !important;
+    }
+
+    :root.light .bg-\[\#1c1c1e\],
+    :root.light .bg-\[\#0a0a0b\],
+    :root.light .bg-\[\#151516\],
+    :root.light .bg-\[\#0c0c0d\],
+    :root.light .bg-\[\#0f0f10\] {
+      background-color: #ffffff !important;
+      background-image: none !important;
+      color: #1d1d1f !important;
+    }
+
+    :root.light .from-\[\#151516\],
+    :root.light .from-\[\#0c0c0d\],
+    :root.light .from-\[\#0f0f10\] {
+      --tw-gradient-from: #ffffff !important;
+      --tw-gradient-to: #f5f5f7 !important;
+    }
+
+    :root.light .apple-intelligence-glow {
+      background: radial-gradient(circle at center, rgba(37, 99, 235, 0.03) 0%, transparent 75%) !important;
+    }
+
+    :root.light .text-blue-400 {
+      color: #0071e3 !important;
+    }
+
+    :root.light .hover\:text-blue-400:hover {
+      color: #0071e3 !important;
+    }
+  </style>
+  <script type="importmap">
     {
       "imports": {
         "react": "https://esm.sh/react@^19.2.3",
         "react/": "https://esm.sh/react@^19.2.3/",
         "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react-router-dom": "https://esm.sh/react-router-dom@^6.22.3",
         "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
       }
     }
     </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
 </html>
