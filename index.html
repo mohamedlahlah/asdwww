@@ -10,11 +10,39 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            apple: {
+              blue: '#0071e3',
+              gray: '#1d1d1f',
+              'gray-light': '#f5f5f7'
+            }
+          },
+          fontFamily: {
+            sans: ['"IBM Plex Sans Arabic"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
   <style>
     :root {
       --apple-blue: #0071e3;
       --apple-gray: #1d1d1f;
       --apple-gray-light: #f5f5f7;
+      --bg-primary: #ffffff;
+      --text-primary: #1d1d1f;
+      --text-secondary: #6e6e73;
+      --card-bg: #f5f5f7;
+      --border-color: rgba(0, 0, 0, 0.08);
+      --nav-blur: rgba(255, 255, 255, 0.75);
+    }
+
+    :root.dark {
       --bg-primary: #000000;
       --text-primary: #ffffff;
       --text-secondary: #86868b;
@@ -23,13 +51,34 @@
       --nav-blur: rgba(0, 0, 0, 0.75);
     }
 
-    :root.light {
-      --bg-primary: #ffffff;
-      --text-primary: #1d1d1f;
-      --text-secondary: #6e6e73;
-      --card-bg: #f5f5f7;
-      --border-color: rgba(0, 0, 0, 0.08);
-      --nav-blur: rgba(255, 255, 255, 0.75);
+    /* Premium Apple-style Scrollbar */
+    ::-webkit-scrollbar {
+      width: 14px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(120, 120, 120, 0.3);
+      border-radius: 9999px;
+      border: 4px solid rgba(0, 0, 0, 0);
+      background-clip: content-box;
+      transition: background-color 0.3s ease;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(120, 120, 120, 0.6);
+    }
+
+    /* Dark mode adjustments for scrollbar */
+    .dark ::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .dark ::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(255, 255, 255, 0.4);
     }
 
     body {
@@ -123,7 +172,7 @@
       box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
     }
 
-    :root:not(.light) .bento-card:hover {
+    :root.dark .bento-card:hover {
       box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
     }
 
@@ -200,134 +249,64 @@
       background: var(--apple-blue);
     }
 
-    /* Theme Resets */
-    .bg-white,
-    .bg-gray-50,
-    .bg-gray-100 {
-      background-color: transparent !important;
+    /* Component Specific Styles using Variables */
+    .apple-blur {
+      backdrop-filter: saturate(180%) blur(20px);
+      background-color: var(--nav-blur);
     }
 
-    .text-gray-900 {
-      color: var(--text-primary) !important;
+    .hero-title-apple {
+      font-size: clamp(2.2rem, 10vw, 5.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      font-weight: 700;
+      color: var(--text-primary);
     }
 
-    .text-gray-500,
-    .text-gray-600 {
-      color: var(--text-secondary) !important;
+    .section-title-apple {
+      font-size: clamp(1.8rem, 6vw, 3.5rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+      color: var(--text-primary);
     }
 
-    .bg-black {
-      background-color: var(--bg-primary) !important;
+    .bento-card {
+      background: var(--card-bg);
+      border-radius: clamp(1.5rem, 5vw, 2.5rem);
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease, background-color 0.5s ease;
     }
 
-    .text-white {
-      color: var(--text-primary) !important;
+    .bento-card:hover {
+      border-color: var(--text-secondary);
+      transform: scale(1.02);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
     }
 
-    .border-white\/10 {
-      border-color: var(--border-color) !important;
+    :root.dark .bento-card:hover {
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
     }
 
-    .bg-white\/5 {
-      background-color: rgba(128, 128, 128, 0.1) !important;
+    /* Scrollbar Styling using Variables */
+    ::-webkit-scrollbar {
+      width: 10px;
     }
 
-    /* Light Mode Overrides */
-    :root.light .text-gray-400,
-    :root.light .text-gray-500 {
-      color: #6e6e73 !important;
+    ::-webkit-scrollbar-track {
+      background: var(--bg-primary);
     }
 
-    :root.light .hover\:text-white:hover {
-      color: #0071e3 !important;
-      /* Apple Blue instead of black for better UX */
+    ::-webkit-scrollbar-thumb {
+      background: var(--text-secondary);
+      border-radius: 10px;
+      border: 2px solid var(--bg-primary);
     }
 
-    :root.light .bg-white {
-      background-color: #1d1d1f !important;
-      color: #ffffff !important;
-    }
-
-    :root.light .bg-black {
-      background-color: #f5f5f7 !important;
-      color: #1d1d1f !important;
-    }
-
-    :root.light .btn-apple.bg-white {
-      background-color: #1d1d1f !important;
-      color: #ffffff !important;
-    }
-
-    :root.light .btn-apple.bg-black {
-      background-color: #f5f5f7 !important;
-      color: #1d1d1f !important;
-    }
-
-    :root.light select {
-      background-color: #f5f5f7 !important;
-      border-color: rgba(0, 0, 0, 0.1) !important;
-      color: #1d1d1f !important;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%231d1d1f'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
-    }
-
-    :root.light .bento-card {
-      background-color: #ffffff !important;
-      background-image: none !important;
-      border-color: rgba(0, 0, 0, 0.05) !important;
-    }
-
-    :root.light .bento-card p {
-      color: #6e6e73 !important;
-    }
-
-    :root.light .bento-card h3,
-    :root.light .bento-card h4 {
-      color: #1d1d1f !important;
-    }
-
-    :root.light .bg-white\/5 {
-      background-color: rgba(0, 0, 0, 0.03) !important;
-    }
-
-    :root.light .border-white\/10 {
-      border-color: rgba(0, 0, 0, 0.1) !important;
-    }
-
-    :root.light .placeholder-gray-700::placeholder {
-      color: #86868b !important;
-    }
-
-    :root.light .text-white {
-      color: #1d1d1f !important;
-    }
-
-    :root.light .bg-\[\#1c1c1e\],
-    :root.light .bg-\[\#0a0a0b\],
-    :root.light .bg-\[\#151516\],
-    :root.light .bg-\[\#0c0c0d\],
-    :root.light .bg-\[\#0f0f10\] {
-      background-color: #ffffff !important;
-      background-image: none !important;
-      color: #1d1d1f !important;
-    }
-
-    :root.light .from-\[\#151516\],
-    :root.light .from-\[\#0c0c0d\],
-    :root.light .from-\[\#0f0f10\] {
-      --tw-gradient-from: #ffffff !important;
-      --tw-gradient-to: #f5f5f7 !important;
-    }
-
-    :root.light .apple-intelligence-glow {
-      background: radial-gradient(circle at center, rgba(37, 99, 235, 0.03) 0%, transparent 75%) !important;
-    }
-
-    :root.light .text-blue-400 {
-      color: #0071e3 !important;
-    }
-
-    :root.light .hover\:text-blue-400:hover {
-      color: #0071e3 !important;
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--apple-blue);
     }
   </style>
   <script type="importmap">
@@ -345,6 +324,36 @@
 
 <body>
   <div id="root"></div>
+  <script>
+    // Intersection Observer for Reveal animations
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    function initReveals() {
+      document.querySelectorAll('.reveal').forEach(el => {
+        observer.observe(el);
+      });
+    }
+
+    // Initialize on load and when the DOM changes (for React transitions)
+    window.addEventListener('load', initReveals);
+
+    // Use a MutationObserver to handle React page transitions
+    const domObserver = new MutationObserver(() => {
+      initReveals();
+    });
+
+    domObserver.observe(document.body, { childList: true, subtree: true });
+  </script>
   <script type="module" src="/index.tsx"></script>
 </body>
 

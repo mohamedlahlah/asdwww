@@ -1,10 +1,24 @@
 import React from 'react';
-import { Search, TrendingUp, Monitor, Palette, Workflow, Briefcase, Sparkles, ArrowRight } from 'lucide-react';
+import { Search, TrendingUp, Monitor, Palette, Workflow, Briefcase, Sparkles, ArrowRight, ShoppingBag, Building2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SectionHeader from '../components/SectionHeader';
 
 const ServicesLandingPage = () => {
     const services = [
+        {
+            title: "بناء المتاجر الإلكترونية",
+            desc: "متاجر Shopify ومنصات مخصصة بلمسة Apple وتجربة مستخدم عالمية تخدم البيع المباشر.",
+            icon: <ShoppingBag className="text-blue-500" size={40} />,
+            path: "/ecommerce",
+            color: "blue"
+        },
+        {
+            title: "مواقع الشركات المؤسسية",
+            desc: "منصات قرار تعكس هوية شركتك وتبني الثقة مع الشركاء والمستثمرين والعملاء.",
+            icon: <Building2 className="text-indigo-500" size={40} />,
+            path: "/corporate-web",
+            color: "indigo"
+        },
         {
             title: "تحسين محركات البحث SEO",
             desc: "تصدر النتائج الأولى في جوجل واجعل عملاءك يجدونك عضوياً بدون إعلانات.",
@@ -20,13 +34,6 @@ const ServicesLandingPage = () => {
             color: "orange"
         },
         {
-            title: "بناء المواقع والمتاجر",
-            desc: "متاجر Shopify ومنصات مخصصة بلمسة Apple وتجربة مستخدم عالمية.",
-            icon: <Monitor className="text-blue-500" size={40} />,
-            path: "/web-dev",
-            color: "blue"
-        },
-        {
             title: "تصميم واجهات UI/UX",
             desc: "تحويل الأفكار إلى واقع بصري ساحر يزيد الولاء ويحفز عملية الشراء.",
             icon: <Palette className="text-purple-500" size={40} />,
@@ -39,18 +46,11 @@ const ServicesLandingPage = () => {
             icon: <Workflow className="text-purple-500" size={40} />,
             path: "/automation",
             color: "purple"
-        },
-        {
-            title: "الإدارة والنمو الاستراتيجي",
-            desc: "نحن فريقك المدمج الذي يتحمل عبء التشغيل والنمو للوصول لأرقام قياسية.",
-            icon: <Briefcase className="text-blue-500" size={40} />,
-            path: "/management",
-            color: "blue"
         }
     ];
 
     return (
-        <main className="pt-32 pb-32">
+        <main className="pt-32 pb-32 bg-white dark:bg-black transition-colors duration-500">
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 <SectionHeader
                     tag="منظومة الخدمات 360"
@@ -64,20 +64,20 @@ const ServicesLandingPage = () => {
                         <Link
                             key={i}
                             to={service.path}
-                            className="bento-card p-10 group hover:border-white/20 transition-all flex flex-col justify-between min-h-[400px]"
+                            className="bento-card p-10 group hover:border-blue-500/30 transition-all flex flex-col justify-between min-h-[400px] bg-gray-50 dark:bg-[#151516]"
                         >
                             <div>
-                                <div className="mb-10 p-5 bg-white/5 w-fit rounded-[2rem] group-hover:scale-110 transition-transform duration-500">
+                                <div className="mb-10 p-5 bg-white dark:bg-white/5 w-fit rounded-[2rem] group-hover:scale-110 transition-transform duration-500 shadow-sm dark:shadow-none">
                                     {service.icon}
                                 </div>
-                                <h3 className="text-2xl md:text-3xl font-black text-white mb-6 tracking-tight group-hover:text-blue-500 transition-colors">
+                                <h3 className="text-2xl md:text-3xl font-black text-gray-900 dark:text-white mb-6 tracking-tight group-hover:text-blue-500 transition-colors">
                                     {service.title}
                                 </h3>
-                                <p className="text-gray-500 text-lg font-medium leading-relaxed">
+                                <p className="text-gray-500 dark:text-gray-400 text-lg font-medium leading-relaxed">
                                     {service.desc}
                                 </p>
                             </div>
-                            <div className="mt-12 flex items-center gap-4 text-white font-black text-lg group">
+                            <div className="mt-12 flex items-center gap-4 text-gray-900 dark:text-white font-black text-lg group">
                                 <span>استكشف الخدمة</span>
                                 <ArrowRight size={20} className="group-hover:translate-x-[-4px] transition-transform" />
                             </div>
@@ -86,13 +86,13 @@ const ServicesLandingPage = () => {
                 </div>
 
                 {/* Integration Value Prop */}
-                <div className="bento-card p-12 md:p-20 bg-black border border-blue-500/20 text-center relative overflow-hidden group">
+                <div className="bento-card p-12 md:p-20 bg-gray-50 dark:bg-black border border-blue-500/10 dark:border-blue-500/20 text-center relative overflow-hidden group">
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_0%_100%,_rgba(37,99,235,0.05)_0% ,_transparent_50%)]"></div>
-                    <h3 className="text-3xl md:text-5xl font-black text-white mb-10 tracking-tighter relative z-10">هل تحتاج لإستراتيجية مخصصة؟</h3>
-                    <p className="text-xl text-gray-500 font-medium max-w-2xl mx-auto mb-12 relative z-10">
+                    <h3 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white mb-10 tracking-tighter relative z-10">هل تحتاج لإستراتيجية مخصصة؟</h3>
+                    <p className="text-xl text-gray-500 dark:text-gray-400 font-medium max-w-2xl mx-auto mb-12 relative z-10">
                         إذا كنت تبحث عن باقة متكاملة تجمع بين أكثر من خدمة لتحقيق نمو سريع، فنحن هنا لتصميم "خطة الحرب" الخاصة بك.
                     </p>
-                    <Link to="/contact" className="relative z-10 inline-block bg-blue-600 text-white px-12 py-5 rounded-[2.5rem] font-black text-xl hover:bg-white hover:text-black transition-all shadow-[0_0_40px_rgba(37,99,235,0.3)]">
+                    <Link to="/contact" className="relative z-10 inline-block bg-blue-600 text-white px-12 py-5 rounded-[2.5rem] font-black text-xl hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all shadow-xl">
                         اطلب استشارة مجانية
                     </Link>
                 </div>

@@ -53,8 +53,8 @@ const ServiceForm: React.FC<ServiceFormProps> = ({ serviceName, questions }) => 
             <div className="absolute top-0 end-0 w-64 h-64 bg-blue-600/10 blur-[100px] pointer-events-none"></div>
 
             <div className="mb-12 text-center md:text-start reveal">
-                <h3 className="text-3xl md:text-4xl font-black text-white mb-4">ابدأ مشروعك الآن</h3>
-                <p className="text-gray-500 text-lg md:text-xl font-medium">أجب على الأسئلة التالية لنتمكن من فهم احتياجاتك وتقديم أفضل استراتيجية نمو لك.</p>
+                <h3 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-4">ابدأ مشروعك الآن</h3>
+                <p className="text-gray-500 dark:text-gray-400 text-lg md:text-xl font-medium">أجب على الأسئلة التالية لنتمكن من فهم احتياجاتك وتقديم أفضل استراتيجية نمو لك.</p>
             </div>
 
 
@@ -62,7 +62,7 @@ const ServiceForm: React.FC<ServiceFormProps> = ({ serviceName, questions }) => 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {questions.map((q, idx) => (
                         <div key={idx} className={`space-y-3 ${q.type === 'textarea' ? 'md:col-span-2' : ''} text-start`}>
-                            <label className="text-white font-bold text-lg block px-2">
+                            <label className="text-gray-900 dark:text-white font-bold text-lg block px-2">
                                 {q.label} {q.required && <span className="text-red-500">*</span>}
                             </label>
 
@@ -72,7 +72,7 @@ const ServiceForm: React.FC<ServiceFormProps> = ({ serviceName, questions }) => 
                                     required={q.required}
                                     placeholder={q.placeholder}
                                     onChange={(e) => handleInputChange(q.label, e.target.value)}
-                                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:border-blue-500 outline-none transition-all placeholder-gray-700"
+                                    className="w-full bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-2xl px-6 py-4 text-gray-900 dark:text-white focus:border-blue-500 outline-none transition-all placeholder-gray-400 dark:placeholder-gray-700"
                                 />
                             )}
 
@@ -81,11 +81,11 @@ const ServiceForm: React.FC<ServiceFormProps> = ({ serviceName, questions }) => 
                                     <select
                                         required={q.required}
                                         onChange={(e) => handleInputChange(q.label, e.target.value)}
-                                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:border-blue-500 outline-none transition-all appearance-none"
+                                        className="w-full bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-2xl px-6 py-4 text-gray-900 dark:text-white focus:border-blue-500 outline-none transition-all appearance-none"
                                     >
-                                        <option value="" className="bg-[#1c1c1e]">اختر الإجابة...</option>
+                                        <option value="" className="bg-white dark:bg-[#1c1c1e] text-gray-900 dark:text-white">اختر الإجابة...</option>
                                         {q.options?.map((opt, i) => (
-                                            <option key={i} value={opt} className="bg-[#1c1c1e]">{opt}</option>
+                                            <option key={i} value={opt} className="bg-white dark:bg-[#1c1c1e] text-gray-900 dark:text-white">{opt}</option>
                                         ))}
                                     </select>
                                 </div>
@@ -97,7 +97,7 @@ const ServiceForm: React.FC<ServiceFormProps> = ({ serviceName, questions }) => 
                                     placeholder={q.placeholder}
                                     rows={4}
                                     onChange={(e) => handleInputChange(q.label, e.target.value)}
-                                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:border-blue-500 outline-none transition-all placeholder-gray-700"
+                                    className="w-full bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-2xl px-6 py-4 text-gray-900 dark:text-white focus:border-blue-500 outline-none transition-all placeholder-gray-400 dark:placeholder-gray-700"
                                 ></textarea>
                             )}
 
@@ -113,7 +113,7 @@ const ServiceForm: React.FC<ServiceFormProps> = ({ serviceName, questions }) => 
                                                 onChange={(e) => handleInputChange(q.label, e.target.value)}
                                                 className="w-5 h-5 accent-blue-500"
                                             />
-                                            <span className="text-gray-400 group-hover:text-white transition-colors">{opt}</span>
+                                            <span className="text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">{opt}</span>
                                         </label>
                                     ))}
                                 </div>
@@ -133,7 +133,7 @@ const ServiceForm: React.FC<ServiceFormProps> = ({ serviceName, questions }) => 
                     ) : isSuccess ? (
                         <>تم الإرسال بنجاح <CheckCircle2 size={24} /></>
                     ) : (
-                        <>إرسال الطلب عبر واتساب <Send size={24} className="group-hover:translate-x-[-10px] transition-transform" /></>
+                        <>ابدأ استشارتك المجانية <Send size={24} className="group-hover:translate-x-[-10px] transition-transform" /></>
                     )}
                 </button>
             </form>
