@@ -13,42 +13,6 @@ const CATEGORIES = [
 
 const PROJECTS = [
     {
-        id: 'fashion-brand-scale',
-        title: 'براند أزياء عالمي',
-        description: 'تحويل متجر من أداء متذبذب إلى نمو صاروخي.',
-        category: 'ecommerce',
-        tags: ['Shopify Plus', 'UX/UI', 'أتمتة'],
-        stats: '+340% إيرادات',
-        color: 'bg-emerald-500',
-        textColor: 'text-emerald-500',
-        borderColor: 'border-emerald-500/20',
-        bg: 'bg-emerald-50 dark:bg-emerald-900/5'
-    },
-    {
-        id: 'food-delivery-app',
-        title: 'تطبيق توصيل ذكي',
-        description: 'بناء تطبيق توصيل متكامل مع خوارزميات توجيه.',
-        category: 'app',
-        tags: ['React Native', 'Node.js', 'Redis'],
-        stats: '-60% تكاليف',
-        color: 'bg-blue-500',
-        textColor: 'text-blue-500',
-        borderColor: 'border-blue-500/20',
-        bg: 'bg-blue-50 dark:bg-blue-900/5'
-    },
-    {
-        id: 'tech-store-seo',
-        title: 'متجر إلكترونيات',
-        description: 'هيمنة على نتائج البحث وزيادة المبيعات المجانية.',
-        category: 'seo',
-        tags: ['SEO تقني', 'استراتيجية محتوى', 'بناء روابط'],
-        stats: '+210% زيارات',
-        color: 'bg-purple-500',
-        textColor: 'text-purple-500',
-        borderColor: 'border-purple-500/20',
-        bg: 'bg-purple-50 dark:bg-purple-900/5'
-    },
-    {
         id: 'ar-investor',
         title: 'رادار المستثمر',
         description: 'منصة ذكية لاكتشاف الفرص الخفية في السوق السعودي عبر تحليل البيانات.',
@@ -59,18 +23,6 @@ const PROJECTS = [
         textColor: 'text-emerald-600',
         borderColor: 'border-emerald-600/20',
         bg: 'bg-emerald-50 dark:bg-emerald-900/5'
-    },
-    {
-        id: 'real-estate-automation',
-        title: 'شركة تطوير عقاري',
-        description: 'أتمتة عملية البيع وربط العملاء بالـ CRM.',
-        category: 'automation',
-        tags: ['n8n', 'Salesforce', 'WhatsApp API'],
-        stats: '-90% عمل يدوي',
-        color: 'bg-orange-500',
-        textColor: 'text-orange-500',
-        borderColor: 'border-orange-500/20',
-        bg: 'bg-orange-50 dark:bg-orange-900/5'
     }
 ];
 

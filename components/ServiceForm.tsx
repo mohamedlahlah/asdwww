@@ -31,7 +31,7 @@ const ServiceForm: React.FC<ServiceFormProps> = ({ serviceName, questions }) => 
         });
 
         const encodedMessage = encodeURIComponent(message);
-        const phoneNumber = '963936638280';
+        const phoneNumber = '971545777839';
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
         // Simulate a brief delay then redirect

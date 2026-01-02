@@ -367,13 +367,11 @@ const Home = () => {
                         title="فريقنا هو سر قوتك"
                         subtitle="تجمعنا رؤية واحدة: تمكين التاجر العربي من المنافسة عالميًا بأفضل الأدوات الممكنة."
                     />
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
                         {[
-                            { icon: Code2, role: "مطورين", desc: "بنية تحتية صلبة", color: "text-blue-500", bg: "bg-blue-500/10" },
-                            { icon: Palette, role: "مبدعين", desc: "واجهات عالمية", color: "text-purple-500", bg: "bg-purple-500/10" },
-                            { icon: Target, role: "خبراء SEO", desc: "وصول دقيق", color: "text-red-500", bg: "bg-red-500/10" },
-                            { icon: BrainCircuit, role: "مهندسي أتمتة", desc: "كفاءة بلا توقف", color: "text-amber-500", bg: "bg-amber-500/10" },
-                            { icon: TrendingUp, role: "قادة نمو", desc: "أرقام تتضاعف", color: "text-green-500", bg: "bg-green-500/10" }
+                            { icon: Code2, role: "مهندسو البرمجيات", subRole: "(Software Engineers)", desc: "يبنون بنية تقنية مستقرة، قابلة للتوسع، تتحمل النمو العالي دون أعطال أو حلول مؤقتة.", color: "text-blue-500", bg: "bg-blue-500/10" },
+                            { icon: Palette, role: "مصممو تجربة المستخدم", subRole: "(UX/UI Designers)", desc: "لا يصممون شكلًا جميلًا فقط، بل واجهات تحوّل الزائر إلى عميل بثقة وسلاسة عالمية.", color: "text-purple-500", bg: "bg-purple-500/10" },
+                            { icon: Target, role: "خبراء SEO", subRole: "(SEO Specialists)", desc: "يبنون حضورًا طويل الأمد في نتائج البحث، يعتمد على البيانات والسلوك الشرائي لا على الحيل المؤقتة.", color: "text-green-500", bg: "bg-green-500/10" }
                         ].map((item, i) => (
                             <div key={i} className="group flex flex-col items-center text-center">
                                 {/* Symbolic Icon Container */}
@@ -388,10 +386,11 @@ const Home = () => {
                                     <div className="absolute bottom-4 left-4 w-1 h-1 rounded-full bg-gray-200 dark:bg-white/10 group-hover:bg-current text-inherit opacity-50"></div>
                                 </div>
 
-                                <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{item.role}</h4>
-                                <span className="text-sm font-medium text-gray-500 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors">
+                                <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1">{item.role}</h4>
+                                <span className="text-sm font-bold text-blue-500 mb-4 block dir-ltr">{item.subRole}</span>
+                                <p className="text-gray-500 dark:text-gray-400 leading-relaxed font-medium max-w-xs group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors">
                                     {item.desc}
-                                </span>
+                                </p>
                             </div>
                         ))}
                     </div>
