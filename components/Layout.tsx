@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import WhatsAppButton from './WhatsAppButton';
 import { Menu, X, Sun, Moon, ArrowUpRight, ChevronLeft, Instagram, Twitter, Linkedin, Github, Sparkles, Send, ChevronDown, Rocket, Search, Globe, Code, Palette, Zap, Briefcase, Info, LayoutGrid, ShoppingBag, LayoutDashboard, Building2, Phone } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
@@ -73,6 +74,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
                 {/* Desktop Navigation Links - Centered when scrolled */}
                 <div className="hidden lg:flex items-center gap-2 bg-transparent">
+                    <Link
+                        to="/"
+                        className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 flex items-center gap-2
+                        ${pathname === '/' ? 'bg-black/5 dark:bg-white/10 text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5'}`}
+                    >
+                        الرئيسية
+                    </Link>
 
                     {/* Services Dropdown Trigger */}
                     <div className="relative group/nav" ref={servicesRef}>
@@ -215,10 +223,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
             {children}
 
+            <WhatsAppButton />
             {/* GLOBAL PREMIUM NEWSLETTER SECTION */}
             <Newsletter />
 
-            <footer className="section-padding bg-gray-50 dark:bg-black px-6 md:px-12 border-t border-black/5 dark:border-white/5 transition-colors duration-500 font-sans">
+            <footer className="section-padding bg-gray-50 dark:bg-black border-t border-black/5 dark:border-white/5 transition-colors duration-500 font-sans">
                 <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-20 md:mb-24">
                     <div className="lg:col-span-4 text-start">
                         <div className="flex items-center justify-end md:justify-start gap-4 mb-8">

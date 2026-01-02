@@ -12,6 +12,7 @@ import ManagementPage from './pages/ManagementPage';
 import AboutPage from './pages/AboutPage';
 import ProductsPage from './pages/ProductsPage';
 import PortfolioPage from './pages/PortfolioPage';
+import CaseStudyPage from './pages/CaseStudyPage';
 import ServicesLandingPage from './pages/ServicesLandingPage';
 import ContactPage from './pages/ContactPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -36,6 +37,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/portfolio/:id" element={<CaseStudyPage />} />
           <Route path="/services" element={<ServicesLandingPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/seo" element={<SEOPage />} />

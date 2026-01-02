@@ -1,99 +1,153 @@
-import React from 'react';
-import { Layout, Palette, BarChart3, TrendingUp, Globe, Smartphone, Sparkles, ArrowUpRight, Monitor } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowUpRight, BarChart3, Code2, Globe, Layout, Palette, ScanFace, Smartphone, Sparkles, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SectionHeader from '../components/SectionHeader';
 
+const CATEGORIES = [
+    { id: 'all', label: 'الكل' },
+    { id: 'ecommerce', label: 'متاجر إلكترونية' },
+    { id: 'app', label: 'تطبيقات وأنظمة' },
+    { id: 'seo', label: 'نمو و SEO' },
+    { id: 'automation', label: 'أتمتة' }
+];
+
+const PROJECTS = [
+    {
+        id: 'fashion-brand-scale',
+        title: 'براند أزياء عالمي',
+        description: 'تحويل متجر من أداء متذبذب إلى نمو صاروخي.',
+        category: 'ecommerce',
+        tags: ['Shopify Plus', 'UX/UI', 'أتمتة'],
+        stats: '+340% إيرادات',
+        color: 'bg-emerald-500',
+        textColor: 'text-emerald-500',
+        borderColor: 'border-emerald-500/20',
+        bg: 'bg-emerald-50 dark:bg-emerald-900/5'
+    },
+    {
+        id: 'food-delivery-app',
+        title: 'تطبيق توصيل ذكي',
+        description: 'بناء تطبيق توصيل متكامل مع خوارزميات توجيه.',
+        category: 'app',
+        tags: ['React Native', 'Node.js', 'Redis'],
+        stats: '-60% تكاليف',
+        color: 'bg-blue-500',
+        textColor: 'text-blue-500',
+        borderColor: 'border-blue-500/20',
+        bg: 'bg-blue-50 dark:bg-blue-900/5'
+    },
+    {
+        id: 'tech-store-seo',
+        title: 'متجر إلكترونيات',
+        description: 'هيمنة على نتائج البحث وزيادة المبيعات المجانية.',
+        category: 'seo',
+        tags: ['SEO تقني', 'استراتيجية محتوى', 'بناء روابط'],
+        stats: '+210% زيارات',
+        color: 'bg-purple-500',
+        textColor: 'text-purple-500',
+        borderColor: 'border-purple-500/20',
+        bg: 'bg-purple-50 dark:bg-purple-900/5'
+    },
+    {
+        id: 'ar-investor',
+        title: 'رادار المستثمر',
+        description: 'منصة ذكية لاكتشاف الفرص الخفية في السوق السعودي عبر تحليل البيانات.',
+        category: 'app',
+        tags: ['منصة سحابية (SaaS)', 'تحليل بيانات', 'تقنية مالية'],
+        stats: 'رائد في التقنية المالية',
+        color: 'bg-emerald-600',
+        textColor: 'text-emerald-600',
+        borderColor: 'border-emerald-600/20',
+        bg: 'bg-emerald-50 dark:bg-emerald-900/5'
+    },
+    {
+        id: 'real-estate-automation',
+        title: 'شركة تطوير عقاري',
+        description: 'أتمتة عملية البيع وربط العملاء بالـ CRM.',
+        category: 'automation',
+        tags: ['n8n', 'Salesforce', 'WhatsApp API'],
+        stats: '-90% عمل يدوي',
+        color: 'bg-orange-500',
+        textColor: 'text-orange-500',
+        borderColor: 'border-orange-500/20',
+        bg: 'bg-orange-50 dark:bg-orange-900/5'
+    }
+];
+
 const PortfolioPage = () => {
+    const [activeCategory, setActiveCategory] = useState('all');
+
+    const filteredProjects = activeCategory === 'all'
+        ? PROJECTS
+        : PROJECTS.filter(p => p.category === activeCategory);
+
     return (
-        <main className="pt-32 pb-32 bg-white dark:bg-black transition-colors duration-500">
+        <main className="pt-32 pb-32 bg-white dark:bg-black transition-colors duration-500 min-h-screen">
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 <SectionHeader
                     tag="سجل نجاحنا"
                     title="قصص نمو <br/> <span className='text-emerald-500'>تتكلم لغة الأرقام.</span>"
-                    subtitle="نحن لا نعرض مجرد تصاميم، بل نعرض تحولات حقيقية في أداء المتاجر والبراندات التي وثقت بنا لتحطيم أرقامها القياسية."
+                    subtitle="استكشف كيف ساعدنا الشركات على تحقيق قفزات نوعية في الأداء والعائد."
                     icon={<BarChart3 className="w-5 h-5 text-emerald-400" />}
                 />
 
-                {/* Portfolio Bento Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-24">
-                    {/* Big Client 1 */}
-                    <Link to="/contact" className="lg:col-span-8 bento-card p-12 md:p-16 relative overflow-hidden group min-h-[500px] flex flex-col justify-between bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 transition-colors">
-                        <div className="absolute top-0 inset-inline-start-0 w-full h-full bg-[radial-gradient(circle_at_0%_0%,_rgba(16,185,129,0.1)_0%,_transparent_50%)]"></div>
-                        <div className="relative z-10">
-                            <div className="flex items-center gap-4 mb-8 text-start">
-                                <span className="bg-emerald-500/10 text-emerald-600 dark:text-emerald-500 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest border border-emerald-500/20">E-Commerce Scale</span>
-                                <span className="text-gray-500 dark:text-gray-500 text-xs font-bold">Fashion Sector</span>
-                            </div>
-                            <h3 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white mb-6">براند أزياء عالمي</h3>
-                            <p className="text-xl text-gray-500 dark:text-gray-400 font-medium max-w-xl leading-relaxed">
-                                تحويل متجر من أداء متذبذب إلى نمو صاروخي من خلال إعادة تصميم تجربة المستخدم (UI/UX) وأتمتة سلاسل الإمداد.
-                            </p>
-                        </div>
-                        <div className="relative z-10 flex flex-wrap gap-8 items-end justify-start">
-                            <div className="text-start">
-                                <div className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tighter mb-2">+340%</div>
-                                <div className="text-emerald-600 dark:text-emerald-500 font-black text-sm uppercase tracking-widest">Growth in Revenue</div>
-                            </div>
-                            <div className="text-start">
-                                <div className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tighter mb-2">x4.8</div>
-                                <div className="text-emerald-600 dark:text-emerald-500 font-black text-sm uppercase tracking-widest">ROAS Average</div>
-                            </div>
-                        </div>
-                    </Link>
-
-                    {/* Side Case 1 */}
-                    <Link to="/contact" className="lg:col-span-4 bento-card p-12 flex flex-col justify-between hover:border-emerald-500/30 transition-all cursor-pointer group bg-gray-50 dark:bg-[#151516]">
-                        <div>
-                            <Smartphone size={48} className="text-emerald-500 mb-8" />
-                            <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">تطبيق توصيل ذكي</h4>
-                            <p className="text-gray-500 dark:text-gray-400 font-medium leading-relaxed italic">"أتمتة خدمة العملاء قللت التكاليف بنسبة 60% وزادت سرعة الرد."</p>
-                        </div>
-                        <div className="pt-8 border-t border-black/5 dark:border-white/5 flex justify-between items-center text-gray-900 dark:text-white font-black group-hover:text-emerald-500 transition-colors">
-                            <span>Success Story</span>
-                            <ArrowUpRight size={20} />
-                        </div>
-                    </Link>
-
-                    {/* Side Case 2 */}
-                    <Link to="/contact" className="lg:col-span-4 bento-card p-12 flex flex-col justify-between hover:border-emerald-500/30 transition-all cursor-pointer group bg-gray-50 dark:bg-[#151516]">
-                        <div>
-                            <Globe size={48} className="text-emerald-500 mb-8" />
-                            <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">متجر إلقرونيات</h4>
-                            <p className="text-gray-500 dark:text-gray-400 font-medium leading-relaxed italic">"تحسين محركات البحث (SEO) ضاعف الزيارات المجانية خلال 4 أشهر فقط."</p>
-                        </div>
-                        <div className="pt-8 border-t border-black/5 dark:border-white/5 flex justify-between items-center text-gray-900 dark:text-white font-black group-hover:text-emerald-500 transition-colors">
-                            <span>Case Study</span>
-                            <ArrowUpRight size={20} />
-                        </div>
-                    </Link>
-
-                    {/* Big Client 2 */}
-                    <div className="lg:col-span-8 bento-card p-12 md:p-16 bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 min-h-[500px] flex flex-col justify-center text-center relative overflow-hidden transition-colors">
-                        <div className="absolute top-0 inset-inline-start-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,_rgba(16,185,129,0.05)_0%,_transparent_70%)]"></div>
-                        <div className="relative z-10">
-                            <Sparkles size={80} className="text-emerald-500 mb-10 mx-auto opacity-30" />
-                            <h3 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white mb-6 tracking-tighter">Your Store is Next.</h3>
-                            <p className="text-xl text-gray-500 dark:text-gray-400 font-medium max-w-xl mx-auto leading-relaxed mb-12">
-                                نحن لا نجمع المشاريع، نحن نختار شركاء لديهم الطموح الكافي للسيطرة على أسواقهم. هل أنت مستعد؟
-                            </p>
-                            <Link to="/contact" className="bg-emerald-600 text-white px-12 py-5 rounded-3xl font-black text-xl hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all shadow-2xl mx-auto inline-block">
-                                ابدأ مشروعك الآن
-                            </Link>
-                        </div>
-                    </div>
+                {/* Filters */}
+                <div className="flex flex-wrap gap-4 mb-16 justify-center">
+                    {CATEGORIES.map((cat) => (
+                        <button
+                            key={cat.id}
+                            onClick={() => setActiveCategory(cat.id)}
+                            className={`px-6 py-3 rounded-full font-bold text-sm transition-all ${activeCategory === cat.id
+                                ? 'bg-black dark:bg-white text-white dark:text-black shadow-lg scale-105'
+                                : 'bg-gray-100 dark:bg-white/5 text-gray-500 hover:bg-gray-200 dark:hover:bg-white/10'
+                                }`}
+                        >
+                            {cat.label}
+                        </button>
+                    ))}
                 </div>
 
-                {/* Industries Section */}
-                <div className="text-start mb-16">
-                    <h4 className="text-gray-400 dark:text-gray-500 font-black text-sm uppercase tracking-[0.3em] mb-4">خبراتنا تشمل</h4>
-                    <div className="flex flex-wrap gap-x-12 gap-y-6 text-2xl md:text-4xl font-black text-gray-200 dark:text-white/20">
-                        <span className="hover:text-emerald-500 transition-colors cursor-default">FASHION</span>
-                        <span className="hover:text-emerald-500 transition-colors cursor-default">ELECTRONICS</span>
-                        <span className="hover:text-emerald-500 transition-colors cursor-default">SAAS</span>
-                        <span className="hover:text-emerald-500 transition-colors cursor-default">HEALTHCARE</span>
-                        <span className="hover:text-emerald-500 transition-colors cursor-default">LOGISTICS</span>
-                    </div>
+                {/* Projects Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in-up">
+                    {filteredProjects.map((project) => (
+                        <Link
+                            to={`/portfolio/${project.id}`}
+                            key={project.id}
+                            className={`bento-card p-10 group relative overflow-hidden border transition-all hover:-translate-y-2 hover:shadow-2xl ${project.bg} ${project.borderColor}`}
+                        >
+                            <div className="flex justify-between items-start mb-8">
+                                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center ${project.color} bg-opacity-10`}>
+                                    <ArrowUpRight className={`${project.textColor} transform scale-x-[-1]`} />
+                                </div>
+                                <span className={`text-sm font-black uppercase tracking-wider px-3 py-1 rounded-full bg-white dark:bg-black/20 ${project.textColor}`}>
+                                    {project.stats}
+                                </span>
+                            </div>
+
+                            <h3 className="text-3xl font-black text-gray-900 dark:text-white mb-4 group-hover:text-emerald-500 transition-colors">
+                                {project.title}
+                            </h3>
+                            <p className="text-gray-500 dark:text-gray-400 font-bold mb-8 text-lg">
+                                {project.description}
+                            </p>
+
+                            <div className="flex flex-wrap gap-2 mt-auto">
+                                {project.tags.map(tag => (
+                                    <span key={tag} className="text-xs font-bold text-gray-400 border border-black/10 dark:border-white/10 px-3 py-1 rounded-lg">
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+                        </Link>
+                    ))}
                 </div>
+
+                {/* Empty State */}
+                {filteredProjects.length === 0 && (
+                    <div className="text-center py-24 border border-dashed border-gray-200 dark:border-gray-800 rounded-3xl">
+                        <p className="text-gray-400 font-bold text-xl">لا توجد مشاريع في هذا القسم حالياً.</p>
+                    </div>
+                )}
             </section>
         </main>
     );

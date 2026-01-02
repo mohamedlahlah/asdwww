@@ -83,7 +83,7 @@ const CorporateWebPage = () => {
                             { t: "هندسة رحلة المستشار", d: "بناء مسارات تفاعلية تقود الزائر نحو قرار التواصل الرسمي." }
                         ].map((item, i) => (
                             <div key={i} className="bento-card p-10 bg-gray-50 dark:bg-[#0a0a0b] border border-black/5 dark:border-white/10">
-                                <div className="text-indigo-500 font-black mb-4">Phase 0{i + 1}</div>
+                                <div className="text-indigo-500 font-black mb-4">المرحلة ٠{i + 1}</div>
                                 <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
                                 <p className="text-gray-500 dark:text-gray-400 text-lg font-medium leading-relaxed">{item.d}</p>
                             </div>
@@ -188,7 +188,7 @@ const CorporateWebPage = () => {
                             {[
                                 {
                                     l: "الأمان والحماية",
-                                    v: "High Tier",
+                                    v: "حماية فائقة",
                                     i: (
                                         <svg viewBox="0 0 24 24" fill="none" className="w-12 h-12 text-blue-500" stroke="currentColor" strokeWidth="1.5">
                                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" strokeLinecap="round" strokeLinejoin="round" />
@@ -199,7 +199,7 @@ const CorporateWebPage = () => {
                                 },
                                 {
                                     l: "توافق الموبايل",
-                                    v: "Adaptive",
+                                    v: "تصميم متجاوب",
                                     i: (
                                         <svg viewBox="0 0 24 24" fill="none" className="w-12 h-12 text-emerald-500" stroke="currentColor" strokeWidth="1.5">
                                             <rect x="5" y="2" width="14" height="20" rx="2" ry="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -210,7 +210,7 @@ const CorporateWebPage = () => {
                                 },
                                 {
                                     l: "بنية URL",
-                                    v: "Semantic",
+                                    v: "روابط دلالية",
                                     i: (
                                         <svg viewBox="0 0 24 24" fill="none" className="w-12 h-12 text-indigo-500" stroke="currentColor" strokeWidth="1.5">
                                             <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" strokeLinecap="round" strokeLinejoin="round" />
@@ -221,7 +221,7 @@ const CorporateWebPage = () => {
                                 },
                                 {
                                     l: "إدارة المحتوى",
-                                    v: "Flexible",
+                                    v: "نظام مرن",
                                     i: (
                                         <svg viewBox="0 0 24 24" fill="none" className="w-12 h-12 text-purple-500" stroke="currentColor" strokeWidth="1.5">
                                             <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" strokeLinecap="round" strokeLinejoin="round" />
@@ -256,7 +256,7 @@ const CorporateWebPage = () => {
                         icon={<Search className="w-5 h-5 text-blue-500" />}
                     />
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-4xl mx-auto">
-                        {['Authority Search', 'Brand Visibility', 'Schema Support', 'Internal Linking'].map((item, i) => (
+                        {['موثوقية البحث', 'ظهور العلامة', 'بيانات هيكلية (Schema)', 'الربط الداخلي'].map((item, i) => (
                             <div key={i} className="px-6 py-3 bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-xl font-bold text-gray-500 dark:text-gray-400 text-sm">
                                 {item}
                             </div>
@@ -277,7 +277,7 @@ const CorporateWebPage = () => {
                                 />
                             </div>
                             <div className="lg:w-1/2 flex flex-wrap gap-4">
-                                {['CRM Sync', 'HR & Hiring Portal', 'Analytics Dashboards', 'Internal Flows'].map((hub, i) => (
+                                {['ربط الـ CRM', 'بوابة التوظيف', 'لوحات التحليل', 'أتمتة العمليات'].map((hub, i) => (
                                     <div key={i} className="p-4 px-8 bg-white dark:bg-white/5 border border-black/5 dark:border-white/5 rounded-2xl font-black text-purple-500 text-sm shadow-sm">
                                         {hub}
                                     </div>
@@ -316,7 +316,7 @@ const CorporateWebPage = () => {
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(255,255,255,0.05)_0%,_transparent_50%)]"></div>
                     <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-16">
                         <div className="text-start">
-                            <div className="text-blue-400 font-black tracking-widest uppercase mb-4 text-sm">Performance & Results</div>
+                            <div className="text-blue-400 font-black tracking-widest uppercase mb-4 text-sm">الأداء والنتائج</div>
                             <h4 className="text-4xl md:text-6xl font-black mb-6">نتائج مثبتة <br />مؤسساتياً.</h4>
                         </div>
                         <div className="grid grid-cols-2 gap-8 w-full md:w-auto">
@@ -384,10 +384,7 @@ const CorporateWebPage = () => {
                             question: "كم يستغرق بناء موقع تعريفي للشركة؟",
                             answer: "يعتمد ذلك على حجم المشروع، ولكن غالباً ما يستغرق من 4 إلى 8 أسابيع لنخرج بمنظومة متكاملة تعكس ثقل شركتك الحقيقي."
                         },
-                        {
-                            question: "هل يمكنني تحديث محتوى الموقع بنفسي؟",
-                            answer: "نعم، نقوم بربط الموقع بنظام إدارة محتوى (CMS) سهل الاستخدام، يتيح لفريقك إضافة الأخبار، الخدمات، أو تحديث البيانات دون الحاجة لخبرة برمجية."
-                        }
+
                     ]}
                 />
 
