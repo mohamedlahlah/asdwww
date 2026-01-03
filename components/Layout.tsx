@@ -237,7 +237,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                             <span className="font-black text-2xl md:text-3xl tracking-tighter text-gray-900 dark:text-white">التاجر الرقمي</span>
                         </div>
                         <p className="text-gray-500 dark:text-gray-400 text-lg md:text-xl leading-relaxed mb-10 max-w-lg font-medium">
-                            المنصة رقم #1 في الشرق الأوسط لدعم وتمكين رواد الأعمال الرقميين من خلال منظومة خدمات عالمية متكاملة.
+                            نحن منصة ناشئة تهدف إلى تمكين التجار العرب، عبر توفير أدوات وخدمات رقمية تساعدهم على بناء أعمال مستدامة وقابلة للنمو.
                         </p>
                         <div className="flex gap-6">
                             {[Instagram, Twitter, Linkedin, Github].map((Icon, i) => (

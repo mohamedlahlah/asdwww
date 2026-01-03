@@ -42,7 +42,7 @@ const ContactPage = () => {
                             {[
                                 { i: <Mail className="text-blue-500" />, t: "البريد الإلكتروني", v: "hello@digitalmerchant.team" },
                                 { i: <Phone className="text-blue-500" />, t: "رقم الواتساب", v: "+971 54 577 7839" },
-                                { i: <MapPin className="text-blue-500" />, t: "المقر الرئيسي", v: "Doha, Qatar / Global Remote" },
+                                { i: <MapPin className="text-blue-500" />, t: "مواقع الفروع", v: "الإمارات (العين) | سوريا (حماة)" },
                                 { i: <Clock className="text-blue-500" />, t: "ساعات العمل", v: "الأحد - الخميس: 9:00 ص - 6:00 م" }
                             ].map((item, i) => (
                                 <div key={i} className="flex gap-6 items-center group">
