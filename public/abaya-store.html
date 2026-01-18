@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عبايات الأناقة | متجر العبايات الفاخرة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --primary: #1a1a2e;
+      --accent: #c9a962;
+      --accent-light: #e5d4a1;
+      --bg: #faf9f7;
+      --card-bg: #ffffff;
+      --text: #1a1a2e;
+      --text-light: #6b7280;
+      --border: #e5e7eb;
+    }
+    
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    
+    /* Header */
+    .header {
+      background: var(--primary);
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    
+    .logo-icon { font-size: 2rem; }
+    
+    .nav { display: flex; gap: 30px; }
+    
+    .nav a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+    
+    .nav a:hover { color: var(--accent); }
+    
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    .cart-btn {
+      background: var(--accent);
+      color: var(--primary);
+      padding: 10px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.3s;
+    }
+    
+    .cart-btn:hover { transform: scale(1.05); }
+    
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #16213e 100%);
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a962' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+    
+    .hero-content {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .hero-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--primary);
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    
+    .hero h1 {
+      color: #fff;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    
+    .hero p {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    
+    .hero-btns {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .btn-primary {
+      background: var(--accent);
+      color: var(--primary);
+      padding: 15px 40px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    
+    .btn-primary:hover {
+      background: var(--accent-light);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(201,169,98,0.3);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: #fff;
+      padding: 15px 40px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 2px solid rgba(255,255,255,0.3);
+      transition: all 0.3s;
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.6);
+    }
+    
+    /* Categories */
+    .categories {
+      padding: 60px 20px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .section-title h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    
+    .section-title p {
+      color: var(--text-light);
+    }
+    
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    
+    .cat-card {
+      background: var(--card-bg);
+      border-radius: 20px;
+      padding: 30px 20px;
+      text-align: center;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    
+    .cat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      border-color: var(--accent);
+    }
+    
+    .cat-icon {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+    
+    .cat-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+    
+    .cat-card span {
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+    
+    /* Products */
+    .products {
+      padding: 60px 20px;
+      background: #fff;
+    }
+    
+    .products-container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    
+    .product-card {
+      background: var(--card-bg);
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+    }
+    
+    .product-img {
+      position: relative;
+      height: 320px;
+      background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 6rem;
+      overflow: hidden;
+    }
+    
+    .product-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #ef4444;
+      color: #fff;
+      padding: 5px 12px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    
+    .product-badge.new { background: #10b981; }
+    
+    .product-actions {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      opacity: 0;
+      display: flex;
+      gap: 10px;
+      transition: all 0.3s;
+    }
+    
+    .product-card:hover .product-actions {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+    
+    .action-btn {
+      width: 45px;
+      height: 45px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+    
+    .action-btn:hover {
+      background: var(--accent);
+      transform: scale(1.1);
+    }
+    
+    .product-info {
+      padding: 20px;
+    }
+    
+    .product-info h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    
+    .product-info p {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
+    
+    .product-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .price {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    
+    .price span {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      text-decoration: line-through;
+      margin-right: 8px;
+    }
+    
+    .add-cart {
+      background: var(--primary);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: none;
+      font-family: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .add-cart:hover {
+      background: var(--accent);
+      color: var(--primary);
+    }
+    
+    /* Features */
+    .features {
+      padding: 60px 20px;
+      background: var(--primary);
+      color: #fff;
+    }
+    
+    .features-grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    
+    .feature {
+      text-align: center;
+      padding: 30px;
+    }
+    
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    
+    .feature h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    
+    .feature p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.95rem;
+    }
+    
+    /* Footer */
+    .footer {
+      background: #0f0f1a;
+      color: #fff;
+      padding: 60px 20px 30px;
+    }
+    
+    .footer-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+    }
+    
+    .footer h4 {
+      color: var(--accent);
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+    
+    .footer ul {
+      list-style: none;
+    }
+    
+    .footer li {
+      margin-bottom: 10px;
+    }
+    
+    .footer a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .footer a:hover {
+      color: var(--accent);
+    }
+    
+    .footer-bottom {
+      max-width: 1280px;
+      margin: 40px auto 0;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      color: rgba(255,255,255,0.5);
+    }
+    
+    .salla-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 15px;
+      color: rgba(255,255,255,0.6);
+    }
+    
+    @media (max-width: 768px) {
+      .nav { display: none; }
+      .hero { padding: 50px 20px; }
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <span class="logo-icon">👗</span>
+        <span>عبايات الأناقة</span>
+      </div>
+      <nav class="nav">
+        <a href="#">الرئيسية</a>
+        <a href="#">العبايات</a>
+        <a href="#">الجديد</a>
+        <a href="#">العروض</a>
+        <a href="#">تواصل معنا</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#" class="cart-btn">🛒 السلة (0)</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-badge">✨ تخفيضات تصل إلى 40%</span>
+      <h1>عبايات فاخرة بتصاميم عصرية</h1>
+      <p>اكتشفي تشكيلتنا المميزة من العبايات الراقية المصممة بأيدي أمهر المصممين</p>
+      <div class="hero-btns">
+        <a href="#" class="btn-primary">تسوقي الآن</a>
+        <a href="#" class="btn-secondary">اكتشفي المجموعات</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories">
+    <div class="section-title">
+      <h2>تصفحي حسب الفئة</h2>
+      <p>اختاري من مجموعاتنا المتنوعة</p>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card">
+        <div class="cat-icon">🖤</div>
+        <h3>عبايات سوداء</h3>
+        <span>45 منتج</span>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">✨</div>
+        <h3>عبايات مطرزة</h3>
+        <span>32 منتج</span>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">💎</div>
+        <h3>عبايات فاخرة</h3>
+        <span>28 منتج</span>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">🌸</div>
+        <h3>عبايات ملونة</h3>
+        <span>36 منتج</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products">
+    <div class="products-container">
+      <div class="section-title">
+        <h2>أحدث المنتجات</h2>
+        <p>تشكيلة مختارة من أرقى العبايات</p>
+      </div>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-img">
+            <span class="product-badge new">جديد</span>
+            👗
+            <div class="product-actions">
+              <div class="action-btn">❤️</div>
+              <div class="action-btn">👁️</div>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>عباية الأميرة السوداء</h3>
+            <p>تصميم أنيق مع تطريز يدوي</p>
+            <div class="product-footer">
+              <div class="price"><span>850 ر.س</span> 599 ر.س</div>
+              <button class="add-cart">أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            👗
+            <div class="product-actions">
+              <div class="action-btn">❤️</div>
+              <div class="action-btn">👁️</div>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>عباية الورد الذهبي</h3>
+            <p>قماش فاخر مع لمسات ذهبية</p>
+            <div class="product-footer">
+              <div class="price">750 ر.س</div>
+              <button class="add-cart">أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <span class="product-badge">-30%</span>
+            👗
+            <div class="product-actions">
+              <div class="action-btn">❤️</div>
+              <div class="action-btn">👁️</div>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>عباية الفخامة</h3>
+            <p>تطريز كريستال مع حزام</p>
+            <div class="product-footer">
+              <div class="price"><span>1200 ر.س</span> 840 ر.س</div>
+              <button class="add-cart">أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <span class="product-badge new">جديد</span>
+            👗
+            <div class="product-actions">
+              <div class="action-btn">❤️</div>
+              <div class="action-btn">👁️</div>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>عباية اللؤلؤ</h3>
+            <p>تصميم بسيط مع لآلئ طبيعية</p>
+            <div class="product-footer">
+              <div class="price">980 ر.س</div>
+              <button class="add-cart">أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">🚚</div>
+        <h3>شحن مجاني</h3>
+        <p>للطلبات فوق 300 ر.س</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔄</div>
+        <h3>استبدال سهل</h3>
+        <p>خلال 14 يوم من الاستلام</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">💳</div>
+        <h3>دفع آمن</h3>
+        <p>جميع وسائل الدفع متاحة</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">💬</div>
+        <h3>دعم 24/7</h3>
+        <p>فريق متخصص لخدمتك</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <h4>عبايات الأناقة</h4>
+        <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">
+          نقدم أفخر العبايات بأحدث التصاميم العصرية
+        </p>
+      </div>
+      <div>
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="#">الرئيسية</a></li>
+          <li><a href="#">المنتجات</a></li>
+          <li><a href="#">من نحن</a></li>
+          <li><a href="#">تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>خدمة العملاء</h4>
+        <ul>
+          <li><a href="#">سياسة الاستبدال</a></li>
+          <li><a href="#">الشحن والتوصيل</a></li>
+          <li><a href="#">الأسئلة الشائعة</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>تواصل معنا</h4>
+        <ul>
+          <li><a href="#">📱 0500000000</a></li>
+          <li><a href="#">✉️ info@abaya.com</a></li>
+          <li><a href="#">📍 الرياض، السعودية</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 عبايات الأناقة. جميع الحقوق محفوظة</p>
+      <div class="salla-badge">
+        <span>🛒</span>
+        <span>مدعوم بواسطة سلة</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

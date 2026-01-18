@@ -254,7 +254,69 @@ const WebDevPage = () => {
                     </div>
                 </div>
 
-                {/* Section 10: Continuous Improvement */}
+                {/* Section 10: Product Entry Services */}
+                <div className="mb-32">
+                    <SectionHeader
+                        tag="خدمات إدخال المنتجات"
+                        title="منتجاتك جاهزة للبيع <br/> <span className='text-emerald-500'>بشكل احترافي.</span>"
+                        subtitle="نقدم خدمات شاملة لإدخال وإدارة منتجات متجرك بأعلى معايير الجودة والاحترافية لضمان تجربة تسوق مميزة."
+                        icon={<Layers className="w-5 h-5 text-emerald-500" />}
+                    />
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+                        {[
+                            {
+                                t: "إدخال بيانات المنتجات",
+                                d: "إدخال شامل لجميع تفاصيل المنتجات: الأسماء، الأوصاف، الأسعار، المخزون، والمواصفات التقنية.",
+                                i: <ShoppingBag className="text-emerald-500" />
+                            },
+                            {
+                                t: "تحرير صور المنتجات",
+                                d: "معالجة احترافية للصور: إزالة الخلفيات، تعديل الألوان، وتحسين الجودة لعرض مثالي.",
+                                i: <Cpu className="text-blue-500" />
+                            },
+                            {
+                                t: "كتابة أوصاف تسويقية",
+                                d: "صياغة أوصاف جذابة ومقنعة تبرز مميزات المنتج وتحفز على الشراء.",
+                                i: <MessageSquare className="text-purple-500" />
+                            },
+                            {
+                                t: "تصنيف وتنظيم المنتجات",
+                                d: "هيكلة ذكية للفئات والتصنيفات لتسهيل التصفح وتحسين تجربة المستخدم.",
+                                i: <Layers className="text-orange-500" />
+                            },
+                            {
+                                t: "تحسين SEO المنتجات",
+                                d: "تهيئة المنتجات لمحركات البحث: عناوين محسنة، كلمات مفتاحية، وروابط صديقة.",
+                                i: <Search className="text-cyan-500" />
+                            },
+                            {
+                                t: "إضافة المتغيرات",
+                                d: "إعداد خيارات المنتجات المتعددة: الألوان، المقاسات، والإصدارات المختلفة.",
+                                i: <RefreshCw className="text-pink-500" />
+                            },
+                            {
+                                t: "نقل المنتجات",
+                                d: "نقل وترحيل المنتجات بين المنصات (سلة، زد، شوبيفاي) مع الحفاظ على جميع البيانات.",
+                                i: <Globe className="text-indigo-500" />
+                            },
+                            {
+                                t: "إدارة المخزون",
+                                d: "متابعة وتحديث كميات المخزون بشكل دوري وتنبيهات النفاد التلقائية.",
+                                i: <Rocket className="text-amber-500" />
+                            }
+                        ].map((item, i) => (
+                            <div key={i} className="bento-card p-8 bg-gray-50 dark:bg-[#151516] hover:border-emerald-500/30 transition-all group text-start">
+                                <div className="w-14 h-14 bg-white dark:bg-white/10 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                                    {item.i}
+                                </div>
+                                <h4 className="text-xl font-black text-gray-900 dark:text-white mb-3">{item.t}</h4>
+                                <p className="text-gray-500 dark:text-gray-400 font-medium leading-relaxed text-sm">{item.d}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Section 11: Continuous Improvement */}
                 <div className="mb-32">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-start">
                         <div>
