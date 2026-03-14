@@ -19,7 +19,30 @@ const PROJECTS: any = {
         ],
         challenge: 'السوق المالي يعاني من "ضوضاء البيانات". المستثمر يغرق في الأرقام الخام دون الحصول على رؤية واضحة أو سياق اقتصادي يدعم القرار.',
         solution: 'طورنا "رادار المستثمر" كمنصة SaaS تعتمد على الخوارزميات لتحويل البيانات المبعثرة إلى "قصص اقتصادية" ومرئيات (Data Viz) تقود لقرار استثماري آمن.',
-        color: 'emerald'
+        color: 'emerald',
+        // Technical Specifications
+        techStack: {
+            frontend: ['React', 'TypeScript', 'TailwindCSS', 'Recharts', 'Framer Motion'],
+            backend: ['Node.js', 'Express', 'PostgreSQL', 'Redis'],
+            infrastructure: ['Vercel', 'AWS S3', 'CloudFlare CDN'],
+            apis: ['Saudi Stock Exchange API', 'Financial Data APIs', 'News Aggregation APIs']
+        },
+        projectDetails: {
+            pages: 12,
+            duration: '4 أشهر',
+            teamSize: 5,
+            platform: 'Web Application (SaaS)',
+            responsive: true,
+            rtl: true
+        },
+        features: [
+            'لوحة تحكم تفاعلية مع مؤشرات حية',
+            'تحليل ذكي للأسهم والشركات',
+            'تنبيهات فورية للفرص الاستثمارية',
+            'تقارير مخصصة قابلة للتصدير',
+            'نظام اشتراكات متعدد المستويات',
+            'تكامل مع منصات التداول'
+        ]
     }
 };
 
@@ -93,6 +116,131 @@ const CaseStudyPage = () => {
                             icon={<Zap className={theme.text} />}
                         />
                     </div>
+                </div>
+            </section>
+
+            {/* Technical Specifications */}
+            <section className="px-6 md:px-12 max-w-[1400px] mx-auto mb-32">
+                <SectionHeader
+                    tag="المواصفات التقنية"
+                    title="التقنيات والأدوات"
+                    subtitle="نستخدم أحدث التقنيات لضمان أداء عالٍ وتجربة مستخدم استثنائية"
+                    className="mb-16"
+                />
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    {/* Frontend */}
+                    <div className="bento-card p-8 bg-blue-50 dark:bg-blue-900/5 border-blue-100 dark:border-blue-500/10">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center">
+                                <Globe className="text-blue-500" size={20} />
+                            </div>
+                            <h4 className="text-lg font-black text-gray-900 dark:text-white">Frontend</h4>
+                        </div>
+                        <ul className="space-y-2">
+                            {project.techStack.frontend.map((tech: string, i: number) => (
+                                <li key={i} className="text-sm font-bold text-gray-600 dark:text-gray-400 flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                                    {tech}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Backend */}
+                    <div className="bento-card p-8 bg-purple-50 dark:bg-purple-900/5 border-purple-100 dark:border-purple-500/10">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="w-10 h-10 bg-purple-500/10 rounded-xl flex items-center justify-center">
+                                <Layers className="text-purple-500" size={20} />
+                            </div>
+                            <h4 className="text-lg font-black text-gray-900 dark:text-white">Backend</h4>
+                        </div>
+                        <ul className="space-y-2">
+                            {project.techStack.backend.map((tech: string, i: number) => (
+                                <li key={i} className="text-sm font-bold text-gray-600 dark:text-gray-400 flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
+                                    {tech}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Infrastructure */}
+                    <div className="bento-card p-8 bg-green-50 dark:bg-green-900/5 border-green-100 dark:border-green-500/10">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="w-10 h-10 bg-green-500/10 rounded-xl flex items-center justify-center">
+                                <Zap className="text-green-500" size={20} />
+                            </div>
+                            <h4 className="text-lg font-black text-gray-900 dark:text-white">Infrastructure</h4>
+                        </div>
+                        <ul className="space-y-2">
+                            {project.techStack.infrastructure.map((tech: string, i: number) => (
+                                <li key={i} className="text-sm font-bold text-gray-600 dark:text-gray-400 flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                                    {tech}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* APIs */}
+                    <div className="bento-card p-8 bg-orange-50 dark:bg-orange-900/5 border-orange-100 dark:border-orange-500/10">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="w-10 h-10 bg-orange-500/10 rounded-xl flex items-center justify-center">
+                                <BarChart3 className="text-orange-500" size={20} />
+                            </div>
+                            <h4 className="text-lg font-black text-gray-900 dark:text-white">APIs & Integrations</h4>
+                        </div>
+                        <ul className="space-y-2">
+                            {project.techStack.apis.map((tech: string, i: number) => (
+                                <li key={i} className="text-sm font-bold text-gray-600 dark:text-gray-400 flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
+                                    {tech}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+
+                {/* Project Details Grid */}
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <div className="bento-card p-6 text-center bg-gray-50 dark:bg-[#111]">
+                        <div className="text-3xl font-black text-emerald-600 dark:text-emerald-400 mb-2">{project.projectDetails.pages}</div>
+                        <div className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">صفحة</div>
+                    </div>
+                    <div className="bento-card p-6 text-center bg-gray-50 dark:bg-[#111]">
+                        <div className="text-2xl font-black text-blue-600 dark:text-blue-400 mb-2">{project.projectDetails.duration}</div>
+                        <div className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">المدة</div>
+                    </div>
+                    <div className="bento-card p-6 text-center bg-gray-50 dark:bg-[#111]">
+                        <div className="text-3xl font-black text-purple-600 dark:text-purple-400 mb-2">{project.projectDetails.teamSize}</div>
+                        <div className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">أعضاء الفريق</div>
+                    </div>
+                    <div className="bento-card p-6 text-center bg-gray-50 dark:bg-[#111] col-span-2 md:col-span-3">
+                        <div className="text-lg font-black text-gray-900 dark:text-white mb-2">{project.projectDetails.platform}</div>
+                        <div className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">المنصة</div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Key Features */}
+            <section className="px-6 md:px-12 max-w-[1200px] mx-auto mb-32">
+                <SectionHeader
+                    tag="المميزات الرئيسية"
+                    title="ما يميز المشروع"
+                    subtitle="مجموعة شاملة من الوظائف المتقدمة"
+                    className="mb-16"
+                />
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {project.features.map((feature: string, i: number) => (
+                        <div key={i} className="flex items-start gap-4 p-6 bg-gray-50 dark:bg-[#111] rounded-2xl border border-black/5 dark:border-white/5 hover:border-emerald-500/20 transition-all group">
+                            <div className="w-8 h-8 bg-emerald-500/10 rounded-lg flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                                <Sparkles className="text-emerald-500" size={16} />
+                            </div>
+                            <p className="text-gray-900 dark:text-white font-bold text-lg">{feature}</p>
+                        </div>
+                    ))}
                 </div>
             </section>
 
