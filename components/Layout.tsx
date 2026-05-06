@@ -66,9 +66,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             >
                 {/* Logo Section */}
                 <Link to="/" className={`flex items-center gap-3 group px-4 ${scrolled ? 'scale-90' : ''} transition-transform duration-500`}>
-                    <div className="w-8 h-8 md:w-10 md:h-10 bg-black dark:bg-white rounded-lg md:rounded-xl flex items-center justify-center shadow-2xl text-white dark:text-black font-black text-xs md:text-sm">
-                        DM
-                    </div>
+                    <img
+                        src="/dtajer.svg"
+                        alt="التاجر الرقمي"
+                        className="w-10 h-10 md:w-12 md:h-12 object-contain shrink-0 drop-shadow-xl"
+                    />
                     {!scrolled && <span className="font-black text-xl md:text-2xl tracking-tighter text-gray-900 dark:text-white transition-opacity duration-300">التاجر الرقمي</span>}
                 </Link>
 
@@ -231,9 +233,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-20 md:mb-24">
                     <div className="lg:col-span-4 text-start">
                         <div className="flex items-center justify-end md:justify-start gap-4 mb-8">
-                            <div className="w-10 h-10 bg-black dark:bg-white rounded-xl flex items-center justify-center shadow-xl">
-                                <div className="text-white dark:text-black font-black text-xs">DM</div>
-                            </div>
+                            <img
+                                src="/dtajer.svg"
+                                alt="التاجر الرقمي"
+                                className="w-12 h-12 object-contain shrink-0 drop-shadow-xl"
+                            />
                             <span className="font-black text-2xl md:text-3xl tracking-tighter text-gray-900 dark:text-white">التاجر الرقمي</span>
                         </div>
                         <p className="text-gray-500 dark:text-gray-400 text-lg md:text-xl leading-relaxed mb-10 max-w-lg font-medium">
