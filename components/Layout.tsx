@@ -225,32 +225,46 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
             {children}
 
-            {/* PROFESSIONAL MOBILE BOTTOM NAVBAR */}
-            <div className="lg:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[92%] max-w-[400px] h-16 bg-white/80 dark:bg-[#151516]/80 backdrop-blur-2xl border border-black/5 dark:border-white/10 rounded-full z-[100] shadow-[0_20px_50px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.4)] flex items-center justify-around px-4 transition-all duration-500">
+            {/* PROFESSIONAL MOBILE BOTTOM NAVBAR - HIGH END SLIDING DESIGN */}
+            <div className="lg:hidden fixed bottom-8 left-1/2 -translate-x-1/2 w-[92%] max-w-[420px] h-[72px] bg-white/70 dark:bg-[#0c0c0d]/70 backdrop-blur-3xl border border-white/20 dark:border-white/10 rounded-[2.5rem] z-[100] shadow-[0_20px_50px_rgba(0,0,0,0.2)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex items-center justify-between px-2 transition-all duration-500">
+                
+                {/* Sliding Background Indicator */}
+                <div 
+                    className="absolute h-[56px] bg-blue-600 dark:bg-blue-500 rounded-full transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] shadow-lg shadow-blue-500/20"
+                    style={{
+                        width: 'calc(25% - 12px)',
+                        left: pathname === '/' ? '12px' : 
+                              pathname === '/services' ? 'calc(25% + 4px)' : 
+                              pathname === '/portfolio' ? 'calc(50% + 4px)' : 
+                              pathname === '/contact' ? 'calc(75% - 4px)' : '12px',
+                        opacity: ['/', '/services', '/portfolio', '/contact'].includes(pathname) ? 1 : 0
+                    }}
+                />
+
                 {[
-                    { name: 'الرئيسية', path: '/', icon: <LayoutDashboard size={22} /> },
-                    { name: 'الخدمات', path: '/services', icon: <Briefcase size={22} /> },
-                    { name: 'الأعمال', path: '/portfolio', icon: <LayoutGrid size={22} /> },
-                    { name: 'تواصل', path: '/contact', icon: <Phone size={22} /> },
+                    { name: 'الرئيسية', path: '/', icon: <LayoutDashboard size={20} /> },
+                    { name: 'الخدمات', path: '/services', icon: <Briefcase size={20} /> },
+                    { name: 'الأعمال', path: '/portfolio', icon: <LayoutGrid size={20} /> },
+                    { name: 'تواصل', path: '/contact', icon: <Phone size={20} /> },
                 ].map((item) => {
                     const active = pathname === item.path;
                     return (
                         <Link
                             key={item.path}
                             to={item.path}
-                            className={`relative flex flex-col items-center justify-center gap-1 transition-all duration-300 ${active ? 'text-blue-500 scale-110' : 'text-gray-400 hover:text-gray-600 dark:hover:text-gray-200'}`}
+                            className={`relative z-10 flex flex-col items-center justify-center w-1/4 h-full transition-all duration-500 ${active ? 'text-white' : 'text-gray-400'}`}
                         >
-                            <div className={`p-2 rounded-xl transition-colors ${active ? 'bg-blue-500/10' : ''}`}>
+                            <div className={`transition-transform duration-500 ${active ? 'scale-110 -translate-y-0.5' : 'scale-100'}`}>
                                 {item.icon}
                             </div>
-                            <span className={`text-[10px] font-black transition-opacity ${active ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'}`}>{item.name}</span>
-                            {active && (
-                                <div className="absolute -bottom-1 w-1 h-1 bg-blue-500 rounded-full shadow-[0_0_8px_#3b82f6]"></div>
-                            )}
+                            <span className={`text-[10px] font-black transition-all duration-500 tracking-tighter mt-1 ${active ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 h-0 overflow-hidden'}`}>
+                                {item.name}
+                            </span>
                         </Link>
                     );
                 })}
             </div>
+
 
             {/* Padding spacer for mobile to prevent content overlap with bottom navbar */}
             <div className="h-24 lg:hidden"></div>
