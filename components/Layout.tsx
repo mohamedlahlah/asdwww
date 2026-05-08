@@ -225,45 +225,54 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
             {children}
 
-            {/* PROFESSIONAL MOBILE BOTTOM NAVBAR - HIGH END SLIDING DESIGN */}
-            <div className="lg:hidden fixed bottom-8 left-1/2 -translate-x-1/2 w-[92%] max-w-[420px] h-[72px] bg-white/70 dark:bg-[#0c0c0d]/70 backdrop-blur-3xl border border-white/20 dark:border-white/10 rounded-[2.5rem] z-[100] shadow-[0_20px_50px_rgba(0,0,0,0.2)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex items-center justify-between px-2 transition-all duration-500">
-                
-                {/* Sliding Background Indicator */}
-                <div 
-                    className="absolute h-[56px] bg-blue-600 dark:bg-blue-500 rounded-full transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] shadow-lg shadow-blue-500/20"
-                    style={{
-                        width: 'calc(25% - 12px)',
-                        left: pathname === '/' ? '12px' : 
-                              pathname === '/services' ? 'calc(25% + 4px)' : 
-                              pathname === '/portfolio' ? 'calc(50% + 4px)' : 
-                              pathname === '/contact' ? 'calc(75% - 4px)' : '12px',
-                        opacity: ['/', '/services', '/portfolio', '/contact'].includes(pathname) ? 1 : 0
-                    }}
-                />
+            {/* WORLD-CLASS MOBILE BOTTOM NAVBAR - INSPIRED BY TOP-TIER APPS */}
+            <div className="lg:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[94%] max-w-[440px] h-[76px] z-[100] transition-all duration-500">
+                {/* Main Bar Container */}
+                <div className="relative w-full h-full bg-white/70 dark:bg-[#0c0c0d]/80 backdrop-blur-3xl border border-white/30 dark:border-white/10 rounded-[2.5rem] shadow-[0_10px_40px_rgba(0,0,0,0.1),0_2px_10px_rgba(0,0,0,0.05)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.4)] flex items-center justify-between px-3 overflow-hidden">
+                    
+                    {/* Magnetic Sliding Indicator - Spring Physics Simulation */}
+                    <div 
+                        className="absolute h-[58px] bg-blue-600 dark:bg-blue-500 rounded-[2rem] transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] shadow-xl shadow-blue-500/30"
+                        style={{
+                            width: 'calc(25% - 16px)',
+                            left: pathname === '/' ? '16px' : 
+                                  pathname === '/services' ? 'calc(25% + 4px)' : 
+                                  pathname === '/portfolio' ? 'calc(50% + 4px)' : 
+                                  pathname === '/contact' ? 'calc(75% - 12px)' : '16px',
+                            opacity: ['/', '/services', '/portfolio', '/contact'].includes(pathname) ? 1 : 0
+                        }}
+                    />
 
-                {[
-                    { name: 'الرئيسية', path: '/', icon: <LayoutDashboard size={20} /> },
-                    { name: 'الخدمات', path: '/services', icon: <Briefcase size={20} /> },
-                    { name: 'الأعمال', path: '/portfolio', icon: <LayoutGrid size={20} /> },
-                    { name: 'تواصل', path: '/contact', icon: <Phone size={20} /> },
-                ].map((item) => {
-                    const active = pathname === item.path;
-                    return (
-                        <Link
-                            key={item.path}
-                            to={item.path}
-                            className={`relative z-10 flex flex-col items-center justify-center w-1/4 h-full transition-all duration-500 ${active ? 'text-white' : 'text-gray-400'}`}
-                        >
-                            <div className={`transition-transform duration-500 ${active ? 'scale-110 -translate-y-0.5' : 'scale-100'}`}>
-                                {item.icon}
-                            </div>
-                            <span className={`text-[10px] font-black transition-all duration-500 tracking-tighter mt-1 ${active ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 h-0 overflow-hidden'}`}>
-                                {item.name}
-                            </span>
-                        </Link>
-                    );
-                })}
+                    {[
+                        { name: 'الرئيسية', path: '/', icon: <LayoutDashboard size={22} /> },
+                        { name: 'الخدمات', path: '/services', icon: <Briefcase size={22} /> },
+                        { name: 'الأعمال', path: '/portfolio', icon: <LayoutGrid size={22} /> },
+                        { name: 'تواصل', path: '/contact', icon: <Phone size={22} /> },
+                    ].map((item) => {
+                        const active = pathname === item.path;
+                        return (
+                            <Link
+                                key={item.path}
+                                to={item.path}
+                                className={`relative z-10 flex flex-col items-center justify-center w-1/4 h-full group active:scale-90 transition-transform duration-200 ${active ? 'text-white' : 'text-gray-400 dark:text-gray-500'}`}
+                            >
+                                <div className={`transition-all duration-500 ${active ? 'scale-110 -translate-y-1 drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]' : 'scale-100 group-hover:text-gray-600 dark:group-hover:text-gray-300'}`}>
+                                    {item.icon}
+                                </div>
+                                <span className={`text-[11px] font-black tracking-tight transition-all duration-500 mt-1.5 ${active ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-50 h-0 overflow-hidden'}`}>
+                                    {item.name}
+                                </span>
+                                
+                                {/* Refined Active Glow Dot */}
+                                {active && (
+                                    <div className="absolute top-2 right-1/2 translate-x-1/2 w-1 h-1 bg-white rounded-full blur-[1px] animate-pulse"></div>
+                                )}
+                            </Link>
+                        );
+                    })}
+                </div>
             </div>
+
 
 
             {/* Padding spacer for mobile to prevent content overlap with bottom navbar */}
