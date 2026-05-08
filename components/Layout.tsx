@@ -285,7 +285,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <footer className="section-padding bg-gray-50 dark:bg-black border-t border-black/5 dark:border-white/5 transition-colors duration-500 font-sans">
                 <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-20 md:mb-24">
                     <div className="lg:col-span-4 text-start">
-                        <div className="flex items-center justify-end md:justify-start gap-4 mb-8">
+                        <div className="flex items-center justify-start gap-4 mb-8">
                             <img
                                 src="/dtajer.png"
                                 alt="التاجر الرقمي"
