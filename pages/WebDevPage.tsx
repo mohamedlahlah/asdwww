@@ -25,19 +25,19 @@ const WebDevPage = () => {
                     icon={<ShoppingCart className="w-5 h-5 text-blue-500" />}
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-32">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-32">
                     {[
-                        { t: "تجربة شراء معقدة", d: "المشتري يغادر فوراً إذا شعر بأي ارتباك أو غموض.", i: <X className="text-red-500" /> },
-                        { t: "بطء الموقع", d: "كل ثانية تأخير تعني خسارة مباشرة في المبيعات.", i: <Gauge className="text-red-500" /> },
-                        { t: "ثقة ضعيفة", d: "عدم وجود عناصر طمأنينة يقتل الرغبة في الدفع.", i: <ShieldCheck className="text-red-500" /> },
-                        { t: "نظام دفع متعثر", d: "تعقيد صفحة الدفع (Checkout) هو العدو الأول لمعدل التحويل.", i: <CreditCard className="text-red-500" /> }
+                        { t: "تجربة شراء معقدة", d: "المشتري يغادر فوراً إذا شعر بأي ارتباك أو غموض.", i: <X size={28} className="text-red-500" /> },
+                        { t: "بطء الموقع", d: "كل ثانية تأخير تعني خسارة مباشرة في المبيعات.", i: <Gauge size={28} className="text-red-500" /> },
+                        { t: "ثقة ضعيفة", d: "عدم وجود عناصر طمأنينة يقتل الرغبة في الدفع.", i: <ShieldCheck size={28} className="text-red-500" /> },
+                        { t: "نظام دفع متعثر", d: "تعقيد صفحة الدفع (Checkout) هو العدو الأول لمعدل التحويل.", i: <CreditCard size={28} className="text-red-500" /> }
                     ].map((item, i) => (
-                        <div key={i} className="bento-card p-8 bg-gray-50 dark:bg-[#151516] hover:border-red-500/30 transition-all group">
+                        <div key={i} className="bento-card p-8 lg:p-10 bg-gray-50 dark:bg-[#151516] hover:border-red-500/30 transition-all group text-start">
                             <div className="w-12 h-12 bg-red-500/10 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
                                 {item.i}
                             </div>
-                            <h4 className="text-xl font-black text-gray-900 dark:text-white mb-3">{item.t}</h4>
-                            <p className="text-gray-500 dark:text-gray-400 font-bold leading-relaxed">{item.d}</p>
+                            <h4 className="text-xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
+                            <p className="text-base lg:text-lg text-gray-500 dark:text-gray-400 font-bold leading-relaxed">{item.d}</p>
                         </div>
                     ))}
                 </div>
@@ -52,7 +52,7 @@ const WebDevPage = () => {
                             icon={<Zap className="w-5 h-5 text-purple-500" />}
                         />
                     </div>
-                    <div className="bento-card p-12 bg-gray-50 dark:bg-[#0c0c0d] relative overflow-hidden text-start">
+                    <div className="bento-card p-10 lg:p-12 bg-gray-50 dark:bg-[#0c0c0d] relative overflow-hidden text-start">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 blur-3xl"></div>
                         <div className="space-y-8 relative z-10">
                             <div className="flex items-center gap-6 opacity-40 grayscale">
@@ -62,7 +62,7 @@ const WebDevPage = () => {
                             <div className="h-px bg-gray-200 dark:bg-white/5"></div>
                             <div className="flex items-center gap-6">
                                 <span className="text-sm font-black text-purple-500">✅ عقلية التاجر:</span>
-                                <span className="text-2xl font-black text-gray-900 dark:text-white leading-tight">لماذا يشتري العميل هنا وليس عند المنافس؟</span>
+                                <span className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white leading-tight">لماذا يشتري العميل هنا وليس عند المنافس؟</span>
                             </div>
                         </div>
                     </div>
@@ -76,15 +76,15 @@ const WebDevPage = () => {
                         subtitle="نبدأ بتحليل نموذج العمل، الهوامش الربحية، ودورة الشراء قبل البدء في التصميم."
                         icon={<Workflow className="w-5 h-5 text-blue-500" />}
                     />
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-start">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 text-start">
                         {[
                             { t: "تحليل نموذج العمل", d: "نوع المنتجات، الهوامش، ودورة حياة العميل المتوقعة." },
                             { t: "تحليل سلوك العميل", d: "دراسة دوافع الشراء، نقاط التردد، والاعتراضات المحتملة." },
                             { t: "تصميم رحلة الشراء", d: "من الدخول إلى التصفح ثم المقارنة والقرار وأخيراً الدفع السلس." }
                         ].map((item, i) => (
                             <div key={i} className="bento-card p-10 bg-gray-50 dark:bg-[#0a0a0b] border border-black/5 dark:border-white/10">
-                                <div className="text-blue-500 font-black mb-4">الخطوة {i + 1}</div>
-                                <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
+                                <div className="text-blue-500 font-black mb-4 text-base">الخطوة {i + 1}</div>
+                                <h4 className="text-xl lg:text-2xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
                                 <p className="text-gray-500 dark:text-gray-400 text-lg font-medium leading-relaxed">{item.d}</p>
                             </div>
                         ))}
@@ -209,7 +209,7 @@ const WebDevPage = () => {
 
                 {/* Section 8: Ecommerce SEO */}
                 <div className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div className="bento-card p-12 bg-blue-500/5 border-blue-500/10 text-start">
+                    <div className="bento-card p-10 lg:p-12 bg-blue-500/5 border-blue-500/10 text-start">
                         <SectionHeader
                             tag="سيو المتاجر"
                             title="المتجر الذي لا يظهر <br/> <span className='text-blue-500'>لا يبيع.</span>"
@@ -231,122 +231,13 @@ const WebDevPage = () => {
                     </div>
                 </div>
 
-                {/* Section 9: Integration & Automation */}
-                <div className="mb-32 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div className="lg:col-span-12">
-                        <div className="bento-card p-12 bg-purple-600/5 text-start border-purple-500/10 flex flex-col lg:flex-row gap-12 items-center">
-                            <div className="lg:w-1/2">
-                                <SectionHeader
-                                    tag="التكامل والأتمتة"
-                                    title="المتجر مركز عمليات <br/> <span className='text-purple-500'>لا مجرد واجهة.</span>"
-                                    subtitle="نربط متجرك مع بوابات الدفع، شركات الشحن، إدارة المخزون، والـ CRM ليصبح منصة نمو مستدام."
-                                    icon={<Share2 className="w-5 h-5 text-purple-500" />}
-                                />
-                            </div>
-                            <div className="lg:w-1/2 flex flex-wrap gap-4">
-                                {['مزامنة المخزون', 'أتمتة الشحن', 'ربط CRM', 'بوابات الدفع'].map((hub, i) => (
-                                    <div key={i} className="p-4 px-8 bg-white dark:bg-white/5 border border-black/5 dark:border-white/5 rounded-2xl font-black text-purple-500 text-sm shadow-sm">
-                                        {hub}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Section 10: Product Entry Services */}
-                <div className="mb-32">
-                    <SectionHeader
-                        tag="خدمات إدخال المنتجات"
-                        title="منتجاتك جاهزة للبيع <br/> <span className='text-emerald-500'>بشكل احترافي.</span>"
-                        subtitle="نقدم خدمات شاملة لإدخال وإدارة منتجات متجرك بأعلى معايير الجودة والاحترافية لضمان تجربة تسوق مميزة."
-                        icon={<Layers className="w-5 h-5 text-emerald-500" />}
-                    />
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-                        {[
-                            {
-                                t: "إدخال بيانات المنتجات",
-                                d: "إدخال شامل لجميع تفاصيل المنتجات: الأسماء، الأوصاف، الأسعار، المخزون، والمواصفات التقنية.",
-                                i: <ShoppingBag className="text-emerald-500" />
-                            },
-                            {
-                                t: "تحرير صور المنتجات",
-                                d: "معالجة احترافية للصور: إزالة الخلفيات، تعديل الألوان، وتحسين الجودة لعرض مثالي.",
-                                i: <Cpu className="text-blue-500" />
-                            },
-                            {
-                                t: "كتابة أوصاف تسويقية",
-                                d: "صياغة أوصاف جذابة ومقنعة تبرز مميزات المنتج وتحفز على الشراء.",
-                                i: <MessageSquare className="text-purple-500" />
-                            },
-                            {
-                                t: "تصنيف وتنظيم المنتجات",
-                                d: "هيكلة ذكية للفئات والتصنيفات لتسهيل التصفح وتحسين تجربة المستخدم.",
-                                i: <Layers className="text-orange-500" />
-                            },
-                            {
-                                t: "تحسين SEO المنتجات",
-                                d: "تهيئة المنتجات لمحركات البحث: عناوين محسنة، كلمات مفتاحية، وروابط صديقة.",
-                                i: <Search className="text-cyan-500" />
-                            },
-                            {
-                                t: "إضافة المتغيرات",
-                                d: "إعداد خيارات المنتجات المتعددة: الألوان، المقاسات، والإصدارات المختلفة.",
-                                i: <RefreshCw className="text-pink-500" />
-                            },
-                            {
-                                t: "نقل المنتجات",
-                                d: "نقل وترحيل المنتجات بين المنصات (سلة، زد، شوبيفاي) مع الحفاظ على جميع البيانات.",
-                                i: <Globe className="text-indigo-500" />
-                            },
-                            {
-                                t: "إدارة المخزون",
-                                d: "متابعة وتحديث كميات المخزون بشكل دوري وتنبيهات النفاد التلقائية.",
-                                i: <Rocket className="text-amber-500" />
-                            }
-                        ].map((item, i) => (
-                            <div key={i} className="bento-card p-8 bg-gray-50 dark:bg-[#151516] hover:border-emerald-500/30 transition-all group text-start">
-                                <div className="w-14 h-14 bg-white dark:bg-white/10 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                                    {item.i}
-                                </div>
-                                <h4 className="text-xl font-black text-gray-900 dark:text-white mb-3">{item.t}</h4>
-                                <p className="text-gray-500 dark:text-gray-400 font-medium leading-relaxed text-sm">{item.d}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Section 11: Continuous Improvement */}
-                <div className="mb-32">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-start">
-                        <div>
-                            <SectionHeader
-                                tag="التحسين المستمر"
-                                title="المتجر الناجح <br/> <span className='text-blue-500'>لا يتوقف عن التحسن.</span>"
-                                subtitle="نراقب ونحلل معدلات التحويل، قيمة السلة، والتخلي عن الطلبات لنحسّن المتجر باستمرار بناءً على بيانات حقيقية."
-                                icon={<TrendingUp className="w-5 h-5 text-blue-500" />}
-                            />
-                        </div>
-                        <div className="grid grid-cols-2 gap-6">
-                            <div className="p-8 bento-card bg-gray-50 dark:bg-[#151516] flex flex-col items-center">
-                                <LineChart className="text-blue-500 mb-4" size={32} />
-                                <div className="text-sm font-bold text-gray-500">معدل التحويل</div>
-                            </div>
-                            <div className="p-8 bento-card bg-gray-50 dark:bg-[#151516] flex flex-col items-center">
-                                <BarChart3 className="text-green-500 mb-4" size={32} />
-                                <div className="text-sm font-bold text-gray-500">قيمة السلة</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 {/* Section 11: Proof & Results */}
                 <div className="mb-32 p-12 md:p-24 bento-card bg-black text-white border-none relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(255,255,255,0.05)_0%,_transparent_50%)]"></div>
                     <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-16">
                         <div className="text-start">
                             <div className="text-blue-400 font-black tracking-widest uppercase mb-4 text-sm">نتائج التجارة الإلكترونية</div>
-                            <h4 className="text-4xl md:text-6xl font-black mb-6">نتائج <br />أداء حقيقي.</h4>
+                            <h4 className="section-title-apple text-white mb-6">نتائج <br />أداء حقيقي.</h4>
                         </div>
                         <div className="grid grid-cols-2 gap-8 w-full md:w-auto">
                             {[
@@ -366,9 +257,9 @@ const WebDevPage = () => {
 
                 {/* Section 12: Ideal Client */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-32">
-                    <div className="bento-card p-12 bg-green-500/5 border-green-500/10">
-                        <h4 className="text-2xl font-black text-green-600 mb-8 flex items-center gap-3">
-                            <CheckCircle2 /> هذه الخدمة لك إذا:
+                    <div className="bento-card p-10 lg:p-12 bg-green-500/5 border-green-500/10">
+                        <h4 className="text-xl font-black text-green-600 mb-8 flex items-center gap-3">
+                            <CheckCircle2 size={24} /> هذه الخدمة لك إذا:
                         </h4>
                         <ul className="space-y-6 text-start">
                             {[
@@ -383,8 +274,8 @@ const WebDevPage = () => {
                             ))}
                         </ul>
                     </div>
-                    <div className="bento-card p-12 bg-red-500/5 border-red-500/10 opacity-60">
-                        <h4 className="text-2xl font-black text-red-600 mb-8 flex items-center gap-3">
+                    <div className="bento-card p-10 lg:p-12 bg-red-500/5 border-red-500/10 opacity-60">
+                        <h4 className="text-xl font-black text-red-600 mb-8 flex items-center gap-3">
                             <X className="w-6 h-6" /> غير مناسبة إذا كنت:
                         </h4>
                         <ul className="space-y-6 text-start">
@@ -421,13 +312,13 @@ const WebDevPage = () => {
                 />
 
                 {/* Section 14: Final CTA */}
-                <div className="mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-[4rem] p-12 md:p-32">
+                <div className="mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-[3rem] p-12 md:p-24">
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="text-5xl md:text-7xl font-black text-gray-900 dark:text-white mb-8 tracking-tighter">
+                        <h2 className="section-title-apple text-gray-900 dark:text-white mb-10 tracking-tighter">
                             هل متجرك جاهز للبيع... <br />
                             <span className="text-blue-600 dark:text-blue-500">أم مجرد عرض؟</span>
                         </h2>
-                        <p className="text-2xl text-gray-400 font-bold mb-16 leading-relaxed">
+                        <p className="text-xl lg:text-2xl text-gray-400 font-bold mb-16 leading-relaxed">
                             ابدأ اليوم رحلتك نحو متجر يعمل كآلة بيع حقيقية. سنقوم بتحليل أهدافك ورسم مسار التفوق التجاري الخاص بك.
                         </p>
                         <ServiceForm serviceName="بناء المتاجر الإلكترونية" questions={ecomQuestions} />

@@ -17,10 +17,10 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ tag, title, subtitle, ico
             <span>{tag}</span>
         </div>
         <h2
-            className={`font-black mb-4 md:mb-6 lg:mb-8 tracking-tighter leading-[1.15] text-gray-900 dark:text-white ${titleClassName || 'text-4xl md:text-5xl lg:text-6xl'}`}
+            className={`section-title-apple mb-4 md:mb-6 lg:mb-8 text-gray-900 dark:text-white ${titleClassName || ''}`}
             dangerouslySetInnerHTML={{ __html: title }}
         ></h2>
-        <p className={`text-base md:text-lg lg:text-xl text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed font-medium ${subtitleClassName || 'mr-0 ml-auto'}`}>{subtitle}</p>
+        <p className={`text-lg md:text-xl lg:text-2xl text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed font-medium ${subtitleClassName || 'mr-0 ml-auto'}`}>{subtitle}</p>
     </div>
 );
 

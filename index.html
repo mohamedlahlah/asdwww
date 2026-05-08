@@ -24,12 +24,12 @@
             }
           },
           lineHeight: {
-            'none': '1.25',
-            'tight': '1.25',
-            'snug': '1.25',
-            'normal': '1.25',
-            'relaxed': '1.25',
-            'loose': '1.25',
+            'none': '1.1',
+            'tight': '1.2',
+            'snug': '1.3',
+            'normal': '1.5',
+            'relaxed': '1.6',
+            'loose': '2',
           },
           fontFamily: {
             sans: ['"IBM Plex Sans Arabic"', 'sans-serif'],
@@ -51,41 +51,32 @@
       --nav-blur: rgba(255, 255, 255, 0.75);
     }
 
-    /* Force global line-height for text elements */
-    body,
-    p,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    span,
-    div,
-    li,
-    a,
-    button,
-    input,
-    textarea,
-    select {
-      line-height: 1.25 !important;
-    }
-
+    /* Modern Responsive Font System - Re-balanced for better scale */
     html {
-      font-size: 15px;
-      line-height: 1.25;
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-text-size-adjust: 100%;
     }
 
-    @media (min-width: 768px) {
-      html {
-        font-size: 16px;
-      }
+    @media (max-width: 768px) {
+      html { font-size: 15px; }
     }
 
-    @media (min-width: 1280px) {
-      html {
-        font-size: 17px;
-      }
+    @media (min-width: 1440px) {
+      html { font-size: 17px; }
+    }
+
+    @media (min-width: 1920px) {
+      html { font-size: 18px; }
+    }
+
+    /* Force global line-height for better readability */
+    body, p, li, a, span {
+      line-height: 1.6 !important;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1.15 !important;
     }
 
     :root.dark {
@@ -99,7 +90,7 @@
 
     /* Premium Apple-style Scrollbar */
     ::-webkit-scrollbar {
-      width: 14px;
+      width: 10px;
     }
 
     ::-webkit-scrollbar-track {
@@ -109,22 +100,12 @@
     ::-webkit-scrollbar-thumb {
       background-color: rgba(120, 120, 120, 0.3);
       border-radius: 9999px;
-      border: 4px solid rgba(0, 0, 0, 0);
+      border: 2px solid transparent;
       background-clip: content-box;
-      transition: background-color 0.3s ease;
     }
 
-    ::-webkit-scrollbar-thumb:hover {
-      background-color: rgba(120, 120, 120, 0.6);
-    }
-
-    /* Dark mode adjustments for scrollbar */
     .dark ::-webkit-scrollbar-thumb {
       background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .dark ::-webkit-scrollbar-thumb:hover {
-      background-color: rgba(255, 255, 255, 0.4);
     }
 
     body {
@@ -134,35 +115,25 @@
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      transition: background-color 0.5s ease, color 0.5s ease;
+      transition: background-color 0.5s ease;
       direction: rtl;
     }
 
-    /* RTL Logical Properties Fixes */
-    .text-right {
-      text-align: start !important;
+    /* Premium Typography Classes - Adjusted to be more conservative on large screens */
+    .hero-title-apple {
+      font-size: clamp(2.4rem, 7vw, 4.8rem);
+      line-height: 1.1 !important;
+      letter-spacing: -0.04em;
+      font-weight: 900;
+      color: var(--text-primary);
     }
 
-    .text-left {
-      text-align: end !important;
-    }
-
-    .mr-auto {
-      margin-inline-start: auto !important;
-      margin-inline-end: 0 !important;
-    }
-
-    .ml-auto {
-      margin-inline-end: auto !important;
-      margin-inline-start: 0 !important;
-    }
-
-    .right-0 {
-      inset-inline-end: 0 !important;
-    }
-
-    .left-0 {
-      inset-inline-start: 0 !important;
+    .section-title-apple {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.15 !important;
+      letter-spacing: -0.03em;
+      font-weight: 800;
+      color: var(--text-primary);
     }
 
     .apple-blur {
@@ -170,42 +141,15 @@
       background-color: var(--nav-blur);
     }
 
-    .hero-title-apple {
-      font-size: clamp(2.2rem, 10vw, 5.5rem);
-      line-height: 1.25 !important;
-      letter-spacing: -0.03em;
-      font-weight: 700;
-      color: var(--text-primary);
-    }
-
-    .section-title-apple {
-      font-size: clamp(1.8rem, 6vw, 3.5rem);
-      line-height: 1.25 !important;
-      letter-spacing: -0.02em;
-      font-weight: 700;
-      color: var(--text-primary);
-    }
-
     .section-padding {
-      padding-top: 4rem;
-      padding-bottom: 4rem;
+      padding-top: clamp(4rem, 8vh, 8rem);
+      padding-bottom: clamp(4rem, 8vh, 8rem);
       padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
 
-    @media (min-width: 768px) {
-      .section-padding {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-      }
-    }
-
     @media (min-width: 1024px) {
       .section-padding {
-        padding-top: 8rem;
-        padding-bottom: 8rem;
         padding-left: 4rem;
         padding-right: 4rem;
       }
@@ -213,7 +157,7 @@
 
     .reveal {
       opacity: 0;
-      transform: translateY(40px);
+      transform: translateY(30px);
       transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -224,155 +168,20 @@
 
     .bento-card {
       background: var(--card-bg);
-      border-radius: clamp(1.5rem, 5vw, 2.5rem);
+      border-radius: 2rem;
       border: 1px solid var(--border-color);
       overflow: hidden;
-      position: relative;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease, background-color 0.5s ease;
-    }
-
-
-    .bento-card:hover {
-      border-color: var(--text-secondary);
-      transform: scale(1.02);
-      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
-    }
-
-    :root.dark .bento-card:hover {
-      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
-    }
-
-    .glow-border-rainbow {
-      position: relative;
-    }
-
-    .glow-border-rainbow::before {
-      content: "";
-      position: absolute;
-      inset: -2px;
-      background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-      background-size: 400%;
-      z-index: -1;
-      filter: blur(8px);
-      width: calc(100% + 4px);
-      height: calc(100% + 4px);
-      animation: glowing-rainbow 25s linear infinite;
-      opacity: 0.25;
-      border-radius: 2.6rem;
-    }
-
-    @keyframes glowing-rainbow {
-      0% {
-        background-position: 0 0;
-      }
-
-      50% {
-        background-position: 400% 0;
-      }
-
-      100% {
-        background-position: 0 0;
-      }
-    }
-
-    .apple-intelligence-glow {
-      background: radial-gradient(circle at center, rgba(139, 92, 246, 0.25) 0%, transparent 75%);
-    }
-
-    select {
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2386868b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: left 1.5rem center;
-      background-size: 1.5rem;
-      color: var(--text-primary);
-    }
-
-    .btn-apple {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .btn-apple:hover {
-      transform: scale(1.03);
-      opacity: 0.9;
-    }
-
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: var(--bg-primary);
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: var(--text-secondary);
-      border-radius: 10px;
-      border: 2px solid var(--bg-primary);
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: var(--apple-blue);
-    }
-
-    /* Component Specific Styles using Variables */
-    .apple-blur {
-      backdrop-filter: saturate(180%) blur(20px);
-      background-color: var(--nav-blur);
-    }
-
-    .hero-title-apple {
-      font-size: clamp(2.2rem, 10vw, 5.5rem);
-      line-height: 1.25 !important;
-      letter-spacing: -0.03em;
-      font-weight: 700;
-      color: var(--text-primary);
-    }
-
-    .section-title-apple {
-      font-size: clamp(1.8rem, 6vw, 3.5rem);
-      line-height: 1.25 !important;
-      letter-spacing: -0.02em;
-      font-weight: 700;
-      color: var(--text-primary);
-    }
-
-    .bento-card {
-      background: var(--card-bg);
-      border-radius: clamp(1.5rem, 5vw, 2.5rem);
-      border: 1px solid var(--border-color);
-      overflow: hidden;
-      position: relative;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease, background-color 0.5s ease;
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .bento-card:hover {
       border-color: var(--text-secondary);
-      transform: scale(1.02);
-      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px) scale(1.01);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
     }
 
-    :root.dark .bento-card:hover {
-      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
-    }
-
-    /* Scrollbar Styling using Variables */
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: var(--bg-primary);
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: var(--text-secondary);
-      border-radius: 10px;
-      border: 2px solid var(--bg-primary);
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: var(--apple-blue);
+    .dark .bento-card:hover {
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
     }
   </style>
   <script type="importmap">
@@ -391,33 +200,19 @@
 <body>
   <div id="root"></div>
   <script>
-    // Intersection Observer for Reveal animations
-    const observerOptions = {
-      threshold: 0.1
-    };
-
+    const observerOptions = { threshold: 0.1 };
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('active');
       });
     }, observerOptions);
 
     function initReveals() {
-      document.querySelectorAll('.reveal').forEach(el => {
-        observer.observe(el);
-      });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     }
 
-    // Initialize on load and when the DOM changes (for React transitions)
     window.addEventListener('load', initReveals);
-
-    // Use a MutationObserver to handle React page transitions
-    const domObserver = new MutationObserver(() => {
-      initReveals();
-    });
-
+    const domObserver = new MutationObserver(() => initReveals());
     domObserver.observe(document.body, { childList: true, subtree: true });
   </script>
   <script type="module" src="/index.tsx"></script>

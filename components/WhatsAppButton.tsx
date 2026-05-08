@@ -14,7 +14,7 @@ const WhatsAppButton = () => {
     }, []);
 
     return (
-        <div className={`fixed bottom-8 left-8 z-[100] transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+        <div className={`fixed bottom-28 md:bottom-8 left-8 z-[100] transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
             <a
                 href={whatsappUrl}
                 target="_blank"

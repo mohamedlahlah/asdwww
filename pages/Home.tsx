@@ -41,29 +41,29 @@ const Home = () => {
                         <span>التاجر الرقمي</span>
                     </div>
 
-                    <h1 className="hero-title-apple mb-12 md:mb-16 reveal active leading-tight">
+                    <h1 className="hero-title-apple mb-12 md:mb-16 reveal active">
                         لسنا مجرد وكالة... <br />
                         <span className="text-gray-400 dark:text-gray-600">نحن شريكك في كواليس النمو.</span>
                     </h1>
 
-                    <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed font-medium mb-16 reveal active">
+                    <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed font-medium mb-16 reveal active">
                         في عالم رقمي سريع، لا يكفي أن "تجرّب أدوات" أو "تشغّل حملات". <br className="hidden md:block" />
                         النجاح اليوم يحتاج منظومة متكاملة تعمل بانسجام: تقنية، تسويق، تجربة مستخدم، وأتمتة.
                     </p>
 
                     <div className="flex flex-col md:flex-row items-center justify-center gap-6 reveal active">
-                        <Link to="/contact" className="px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-xl font-bold transition-all hover:scale-105 shadow-[0_0_40px_rgba(37,99,235,0.3)] flex items-center gap-3">
+                        <Link to="/contact" className="px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-lg md:text-xl font-bold transition-all hover:scale-105 shadow-[0_0_40px_rgba(37,99,235,0.3)] flex items-center gap-3">
                             ابدأ بتحليل نمو شامل
                             <ArrowUpRight size={24} />
                         </Link>
-                        <Link to="/services" className="px-10 py-5 bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 text-gray-900 dark:text-white rounded-full text-xl font-bold transition-all border border-black/5 dark:border-white/10">
+                        <Link to="/services" className="px-10 py-5 bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 text-gray-900 dark:text-white rounded-full text-lg md:text-xl font-bold transition-all border border-black/5 dark:border-white/10">
                             استكشف خدماتنا
                         </Link>
                     </div>
 
                     {/* Value Prop Badge */}
                     <div className="mt-20 flex justify-center reveal active">
-                        <div className="px-6 py-3 bg-white/50 dark:bg-white/5 backdrop-blur-xl border border-black/5 dark:border-white/10 rounded-2xl text-gray-500 dark:text-gray-400 text-sm font-bold">
+                        <div className="px-6 py-3 bg-white/50 dark:bg-white/5 backdrop-blur-xl border border-black/5 dark:border-white/10 rounded-2xl text-gray-500 dark:text-gray-400 text-xs md:text-sm font-bold">
                             "نجاحك ليس مشروعًا لدينا… بل معيار شراكتنا."
                         </div>
                     </div>
@@ -84,7 +84,7 @@ const Home = () => {
 
                         {/* Visual: Chaos Graphic */}
                         <div className="relative w-full flex justify-center order-1 lg:order-2">
-                            <div className="w-full max-w-sm md:max-w-md">
+                            <div className="w-full max-w-sm md:max-w-md lg:max-w-lg">
                                 <ChaosGraphic />
                             </div>
                         </div>
@@ -100,12 +100,12 @@ const Home = () => {
                             { title: "اعتماد على مزودين منفصلين", desc: "تشتت الجهود بين عدة وكالات بلا رؤية موحّدة." },
                             { title: "النتيجة: هدر للموارد", desc: "ضياع الميزانية، الوقت، والطاقة." }
                         ].map((item, i) => (
-                            <div key={i} className="bento-card p-8 bg-white dark:bg-[#0f0f10] hover:border-red-500/20 group hover:-translate-y-1 transition-transform">
-                                <div className="w-12 h-12 bg-red-50 dark:bg-red-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                    <XCircle className="text-red-500" size={24} />
+                            <div key={i} className="bento-card p-8 lg:p-10 bg-white dark:bg-[#0f0f10] hover:border-red-500/20 group hover:-translate-y-1 transition-transform">
+                                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-red-50 dark:bg-red-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                    <XCircle className="text-red-500" size={28} />
                                 </div>
-                                <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">{item.title}</h3>
-                                <p className="text-gray-500 dark:text-gray-400 font-medium">{item.desc}</p>
+                                <h3 className="text-xl lg:text-2xl font-black text-gray-900 dark:text-white mb-3">{item.title}</h3>
+                                <p className="text-base lg:text-lg text-gray-500 dark:text-gray-400 font-medium">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -126,7 +126,7 @@ const Home = () => {
 
                         {/* Visual: System Graphic */}
                         <div className="relative w-full flex justify-center order-1 lg:order-2">
-                            <div className="w-full max-w-sm md:max-w-md">
+                            <div className="w-full max-w-sm md:max-w-md lg:max-w-lg">
                                 <SystemGraphic />
                             </div>
                         </div>
@@ -135,27 +135,27 @@ const Home = () => {
                     {/* Grid Items (8 Cards) */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                         {[
-                            { title: "SEO استراتيجي", desc: "مبني على نية الشراء", icon: <Search size={20} /> },
-                            { title: "متاجر قابلة للتوسع", desc: "بنية تحتية قوية", icon: <LayoutGrid size={20} /> },
-                            { title: "UX/UI يقود القرار", desc: "تصميم يحول الزوار لعملاء", icon: <Palette size={20} /> },
-                            { title: "أتمتة العمليات", desc: "بـ n8n وربط الأنظمة", icon: <Zap size={20} /> },
-                            { title: "إعلانات مربحة", desc: "مبنية على العائد ROAS", icon: <TrendingUp size={20} /> },
-                            { title: "هندسة Funnels", desc: "مسارات بيع ذكية", icon: <Code size={20} /> },
-                            { title: "تحليل بالأرقام", desc: "قرارات مبنية على داتا", icon: <BarChart3 size={20} /> },
-                            { title: "إدارة نمو", desc: "حملات توسع مدروسة", icon: <Rocket size={20} /> }
+                            { title: "SEO استراتيجي", desc: "مبني على نية الشراء", icon: <Search size={24} /> },
+                            { title: "متاجر قابلة للتوسع", desc: "بنية تحتية قوية", icon: <LayoutGrid size={24} /> },
+                            { title: "UX/UI يقود القرار", desc: "تصميم يحول الزوار لعملاء", icon: <Palette size={24} /> },
+                            { title: "أتمتة العمليات", desc: "بـ n8n وربط الأنظمة", icon: <Zap size={24} /> },
+                            { title: "إعلانات مربحة", desc: "مبنية على العائد ROAS", icon: <TrendingUp size={24} /> },
+                            { title: "هندسة Funnels", desc: "مسارات بيع ذكية", icon: <Code size={24} /> },
+                            { title: "تحليل بالأرقام", desc: "قرارات مبنية على داتا", icon: <BarChart3 size={24} /> },
+                            { title: "إدارة نمو", desc: "حملات توسع مدروسة", icon: <Rocket size={24} /> }
                         ].map((item, i) => (
-                            <div key={i} className="bento-card p-6 bg-blue-50 dark:bg-blue-900/5 border-blue-100 dark:border-blue-500/10 hover:border-blue-500/30 group hover:-translate-y-1 transition-transform">
-                                <div className="w-10 h-10 bg-blue-100 dark:bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
+                            <div key={i} className="bento-card p-8 bg-blue-50 dark:bg-blue-900/5 border-blue-100 dark:border-blue-500/10 hover:border-blue-500/30 group hover:-translate-y-1 transition-transform">
+                                <div className="w-10 h-10 bg-blue-100 dark:bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
                                     {item.icon}
                                 </div>
-                                <h3 className="text-lg font-black text-gray-900 dark:text-white mb-2">{item.title}</h3>
-                                <p className="text-sm text-gray-500 dark:text-gray-400 font-bold">{item.desc}</p>
+                                <h3 className="text-lg lg:text-xl font-black text-gray-900 dark:text-white mb-2">{item.title}</h3>
+                                <p className="text-sm lg:text-base text-gray-500 dark:text-gray-400 font-bold">{item.desc}</p>
                             </div>
                         ))}
                     </div>
 
                     <div className="mt-16 text-center">
-                        <p className="text-2xl font-bold text-gray-500 dark:text-gray-400">
+                        <p className="text-xl lg:text-2xl font-bold text-gray-500 dark:text-gray-400">
                             لتتفرغ أنت لما تتقنه فعلًا: <span className="text-gray-900 dark:text-white">المنتج، العميل، والرؤية.</span>
                         </p>
                     </div>
@@ -165,22 +165,22 @@ const Home = () => {
             {/* PARTNERSHIP MINDSET */}
             <section className="py-16 md:py-24 lg:py-32 px-6 md:px-10 lg:px-16 bg-black text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(37,99,235,0.2)_0%,_transparent_50%)]"></div>
-                <div className="max-w-[1000px] mx-auto text-center relative z-10">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-sm font-bold mb-8">
-                        <Users size={16} />
+                <div className="max-w-[1200px] mx-auto text-center relative z-10">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-xs font-bold mb-8">
+                        <Users size={18} />
                         <span>عقلية الشريك</span>
                     </div>
 
-                    <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tighter leading-tight">
+                    <h2 className="section-title-apple text-white mb-8 tracking-tighter leading-tight">
                         نحن نعمل كشريك استراتيجي مدمج، <br />
                         <span className="text-blue-500">لا كمزوّد خدمة خارجي.</span>
                     </h2>
 
-                    <p className="text-xl md:text-2xl text-gray-300 font-medium leading-relaxed max-w-4xl mx-auto mb-16">
+                    <p className="text-lg md:text-xl text-gray-300 font-medium leading-relaxed max-w-4xl mx-auto mb-16">
                         نشارك في صناعة القرار، نفهم نموذج عملك بعمق، ونعمل بعقلية داخلية تضع أهدافك التجارية في صميم كل خطوة.
                     </p>
 
-                    <blockquote className="text-2xl md:text-3xl font-bold leading-relaxed italic text-white/90 border-r-4 border-blue-500 pr-6 inline-block">
+                    <blockquote className="text-xl md:text-2xl font-bold leading-relaxed italic text-white/90 border-r-4 border-blue-500 pr-6 inline-block">
                         "نمو أعمالك هو المؤشر الحقيقي لنجاح شراكتنا."
                     </blockquote>
                 </div>
@@ -189,35 +189,35 @@ const Home = () => {
             {/* TECHNICAL & INNOVATION */}
             <section className="py-16 md:py-24 lg:py-32 px-6 md:px-10 lg:px-16 bg-white dark:bg-black">
                 <div className="max-w-[1400px] mx-auto">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
                         <div className="lg:col-span-5 text-start">
                             <SectionHeader
                                 tag="التميز الهندسي"
                                 title="بنية رقمية صلبة.<br/> <span class='text-blue-500'> أتمتة ذكية تفهمك.</span>"
                                 subtitle="لا نكتفي ببناء المواقع؛ نخلق أنظمة حية تتنفس البيانات، تتحدث مع عملائك، وتنجز المهام الروتينية بدقة جراحية بينما تتفرغ أنت للنمو."
                             />
-                            <div className="mt-8 flex flex-col gap-4">
-                                <div className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-white/5 rounded-2xl border border-black/5 dark:border-white/5 backdrop-blur-sm">
-                                    <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-500">
-                                        <Zap size={20} />
+                            <div className="mt-8 flex flex-col gap-6">
+                                <div className="flex items-center gap-6 p-6 bg-gray-50 dark:bg-white/5 rounded-3xl border border-black/5 dark:border-white/5 backdrop-blur-sm">
+                                    <div className="w-12 h-12 rounded-2xl bg-green-500/10 flex items-center justify-center text-green-500">
+                                        <Zap size={24} />
                                     </div>
                                     <div>
-                                        <h5 className="font-bold text-gray-900 dark:text-white">أداء فائق السرعة</h5>
-                                        <p className="text-sm text-gray-500 dark:text-gray-400">تحميل &lt; 1 ثانية</p>
+                                        <h5 className="text-lg lg:text-xl font-bold text-gray-900 dark:text-white">أداء فائق السرعة</h5>
+                                        <p className="text-sm lg:text-base text-gray-500 dark:text-gray-400">تحميل &lt; 1 ثانية</p>
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-white/5 rounded-2xl border border-black/5 dark:border-white/5 backdrop-blur-sm">
-                                    <div className="w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-500">
-                                        <Workflow size={20} />
+                                <div className="flex items-center gap-6 p-6 bg-gray-50 dark:bg-white/5 rounded-3xl border border-black/5 dark:border-white/5 backdrop-blur-sm">
+                                    <div className="w-12 h-12 rounded-2xl bg-purple-500/10 flex items-center justify-center text-purple-500">
+                                        <Workflow size={24} />
                                     </div>
                                     <div>
-                                        <h5 className="font-bold text-gray-900 dark:text-white">أتمتة سير العمل</h5>
-                                        <p className="text-sm text-gray-500 dark:text-gray-400">توفير +40 ساعة/شهرياً</p>
+                                        <h5 className="text-lg lg:text-xl font-bold text-gray-900 dark:text-white">أتمتة سير العمل</h5>
+                                        <p className="text-sm lg:text-base text-gray-500 dark:text-gray-400">توفير +40 ساعة/شهرياً</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 relative">
+                        <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 relative">
                             {/* Decorative background glow */}
                             <div className="absolute inset-0 bg-blue-500/5 blur-[100px] -z-10 rounded-full"></div>
 
@@ -227,12 +227,12 @@ const Home = () => {
                                 { t: "تكامل بلا حدود", d: "جسور ذكية بين منصاتك المختلفة (CRM, ERP, Ads) لتنهي عزلة البيانات للأبد وتوحد الرؤية.", i: <Layers /> },
                                 { t: "نمو بلا قيود", d: "نظام مرن مصمم ليتوسع معك بسلاسة من أول طلب وحتى الطلب المليون دون الحاجة لإعادة البناء.", i: <BarChart3 /> }
                             ].map((item, i) => (
-                                <div key={i} className="bento-card p-8 bg-white/50 dark:bg-[#151516]/80 backdrop-blur-xl border border-black/5 dark:border-white/10 hover:border-blue-500/30 hover:scale-[1.02] flex flex-col gap-4 group transition-all duration-500">
+                                <div key={i} className="bento-card p-10 lg:p-12 bg-white/50 dark:bg-[#151516]/80 backdrop-blur-xl border border-black/5 dark:border-white/10 hover:border-blue-500/30 hover:scale-[1.02] flex flex-col gap-6 group transition-all duration-500">
                                     <div className="w-14 h-14 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-white/5 dark:to-white/10 rounded-2xl flex items-center justify-center text-gray-900 dark:text-white group-hover:bg-blue-600 group-hover:text-white transition-colors duration-500 shadow-sm">
                                         {React.cloneElement(item.i as any, { size: 28 })}
                                     </div>
-                                    <h4 className="text-xl font-black text-gray-900 dark:text-white">{item.t}</h4>
-                                    <p className="text-gray-500 dark:text-gray-400 font-medium leading-relaxed">{item.d}</p>
+                                    <h4 className="text-xl lg:text-2xl font-black text-gray-900 dark:text-white">{item.t}</h4>
+                                    <p className="text-base lg:text-lg text-gray-500 dark:text-gray-400 font-medium leading-relaxed">{item.d}</p>
                                 </div>
                             ))}
                         </div>
@@ -252,52 +252,34 @@ const Home = () => {
                                 title="لا نبحث عن ضجة مؤقتة...<br/> <span class='text-green-600'>نبني أصولاً تدوم.</span>"
                                 subtitle="القفزات السريعة تغري الهواة، لكن النمو المركب هو لعبة المحترفين. نحول عملك من صفقات عشوائية إلى ماكينة تدفق نقدي مستدام."
                                 className="items-start text-start"
-                                titleClassName="text-4xl md:text-6xl lg:text-7xl font-black"
-                                subtitleClassName="text-xl md:text-2xl mt-6"
                             />
                         </div>
 
                         {/* Symbolic Image (Left Side) */}
                         <div className="relative order-2 flex justify-center">
-                            <div className="w-full max-w-sm md:max-w-md">
+                            <div className="w-full max-w-sm md:max-w-md lg:max-w-lg">
                                 <CompoundGrowthGraphic />
                             </div>
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="bento-card p-10 bg-white dark:bg-[#151516] border border-green-500/10 hover:border-green-500/30 transition-all duration-500 group relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/5 blur-[50px] -z-10 transition-opacity opacity-50 group-hover:opacity-100"></div>
-                            <div className="w-16 h-16 bg-green-100 dark:bg-green-500/10 rounded-2xl flex items-center justify-center text-green-600 dark:text-green-500 mb-8 group-hover:scale-110 transition-transform duration-500">
-                                <TrendingUp size={32} />
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                        {[
+                            { t: "تراكم القيمة", d: "كل ريال يُنفق اليوم يجب أن يسهل بيعة الغد. نبني لك قاعدة بيانات، سمعة، ومحتوى يرفع قيمة علامتك تلقائياً مع الزمن.", i: <TrendingUp size={32} />, color: "green" },
+                            { t: "ملكية الجمهور", d: "لا تكن رهينة لمنصات الإعلانات. نساعدك في بناء قنواتك الخاصة (قوائم بريدية، مجتمعات) التي تملكها للأبد ولا يستطيع أحد أخذها منك.", i: <ShieldCheck size={32} />, color: "blue" },
+                            { t: "استقرار التنبؤ", d: "وداعاً للتقلبات العنيفة. نصمم آليات عمل وهياكل تسويقية تعطيك رؤية واضحة للمستقبل، لتتخذ قرارات التوسع بقلب مطمئن.", i: <BarChart3 size={32} />, color: "purple" }
+                        ].map((item, i) => (
+                            <div key={i} className={`bento-card p-10 bg-white dark:bg-[#151516] border border-${item.color}-500/10 hover:border-${item.color}-500/30 transition-all duration-500 group relative overflow-hidden`}>
+                                <div className={`absolute top-0 right-0 w-32 h-32 bg-${item.color}-500/5 blur-[60px] -z-10 transition-opacity opacity-50 group-hover:opacity-100`}></div>
+                                <div className={`w-16 h-16 bg-${item.color}-100 dark:bg-${item.color}-500/10 rounded-2xl flex items-center justify-center text-${item.color}-600 dark:text-${item.color}-500 mb-8 group-hover:scale-110 transition-transform duration-500`}>
+                                    {item.i}
+                                </div>
+                                <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
+                                <p className="text-gray-500 dark:text-gray-400 font-medium leading-relaxed text-lg lg:text-xl">
+                                    {item.d}
+                                </p>
                             </div>
-                            <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">تراكم القيمة</h4>
-                            <p className="text-gray-500 dark:text-gray-400 font-medium leading-relaxed text-lg">
-                                كل ريال يُنفق اليوم يجب أن يسهل بيعة الغد. نبني لك قاعدة بيانات، سمعة، ومحتوى يرفع قيمة علامتك تلقائياً مع الزمن.
-                            </p>
-                        </div>
-
-                        <div className="bento-card p-10 bg-white dark:bg-[#151516] border border-blue-500/10 hover:border-blue-500/30 transition-all duration-500 group relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 blur-[50px] -z-10 transition-opacity opacity-50 group-hover:opacity-100"></div>
-                            <div className="w-16 h-16 bg-blue-100 dark:bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-600 dark:text-blue-500 mb-8 group-hover:scale-110 transition-transform duration-500">
-                                <ShieldCheck size={32} />
-                            </div>
-                            <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">ملكية الجمهور</h4>
-                            <p className="text-gray-500 dark:text-gray-400 font-medium leading-relaxed text-lg">
-                                لا تكن رهينة لمنصات الإعلانات. نساعدك في بناء قنواتك الخاصة (قوائم بريدية، مجتمعات) التي تملكها للأبد ولا يستطيع أحد أخذها منك.
-                            </p>
-                        </div>
-
-                        <div className="bento-card p-10 bg-white dark:bg-[#151516] border border-purple-500/10 hover:border-purple-500/30 transition-all duration-500 group relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/5 blur-[50px] -z-10 transition-opacity opacity-50 group-hover:opacity-100"></div>
-                            <div className="w-16 h-16 bg-purple-100 dark:bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-600 dark:text-purple-500 mb-8 group-hover:scale-110 transition-transform duration-500">
-                                <BarChart3 size={32} />
-                            </div>
-                            <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">استقرار التنبؤ</h4>
-                            <p className="text-gray-500 dark:text-gray-400 font-medium leading-relaxed text-lg">
-                                وداعاً للتقلبات العنيفة. نصمم آليات عمل وهياكل تسويقية تعطيك رؤية واضحة للمستقبل، لتتخذ قرارات التوسع بقلب مطمئن.
-                            </p>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -308,22 +290,22 @@ const Home = () => {
                     {/* Vision */}
                     <div className="text-start">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-gray-100 dark:bg-white/10 rounded-full text-xs font-black uppercase tracking-widest mb-6">
-                            <Globe size={14} />
+                            <Globe size={16} />
                             رؤية عربية
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-8 leading-tight">
+                        <h2 className="section-title-apple text-gray-900 dark:text-white mb-8 leading-tight">
                             نفهم السوق... <br />
                             <span className="text-blue-500">ونتقن الأدوات.</span>
                         </h2>
-                        <ul className="space-y-6 text-lg font-medium text-gray-500 dark:text-gray-400">
+                        <ul className="space-y-6 text-lg lg:text-xl font-medium text-gray-500 dark:text-gray-400">
                             {[
                                 "نمزج فهم عميق للتاجر العربي",
                                 "لغة السوق المحلي وثقافته",
                                 "معايير عالمية في التنفيذ",
                                 "أفضل ممارسات Google وApple وUX الحديثة"
                             ].map((item, i) => (
-                                <li key={i} className="flex items-center gap-4">
-                                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                                <li key={i} className="flex items-center gap-6">
+                                    <div className="w-2.5 h-2.5 bg-blue-500 rounded-full"></div>
                                     {item}
                                 </li>
                             ))}
@@ -331,9 +313,9 @@ const Home = () => {
                     </div>
 
                     {/* Why Digital Merchant */}
-                    <div className="bento-card p-10 bg-gray-900 text-white relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full blur-[100px]"></div>
-                        <h3 className="text-3xl font-black mb-8 relative z-10">لماذا "التاجر الرقمي"؟</h3>
+                    <div className="bento-card p-12 lg:p-16 bg-gray-900 text-white relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/20 rounded-full blur-[120px]"></div>
+                        <h3 className="text-3xl lg:text-4xl font-black mb-10 relative z-10">لماذا "التاجر الرقمي"؟</h3>
                         <ul className="space-y-6 relative z-10">
                             {[
                                 "فريق واحد بدل 5 مزودين",
@@ -342,16 +324,16 @@ const Home = () => {
                                 "قرارات مبنية على بيانات",
                                 "شراكة طويلة المدى"
                             ].map((item, i) => (
-                                <li key={i} className="flex items-center gap-4 text-xl font-bold">
-                                    <CheckCircle2 className="text-green-400 shrink-0" />
+                                <li key={i} className="flex items-center gap-6 text-xl lg:text-2xl font-bold">
+                                    <CheckCircle2 className="text-green-400 shrink-0" size={28} />
                                     {item}
                                 </li>
                             ))}
                         </ul>
-                        <div className="mt-12 flex items-center gap-3 px-6 py-3 bg-white/10 rounded-xl w-fit backdrop-blur-md border border-white/10">
-                            <ShieldCheck className="text-blue-400" />
+                        <div className="mt-16 flex items-center gap-4 px-6 py-3 bg-white/10 rounded-2xl w-fit backdrop-blur-md border border-white/10">
+                            <ShieldCheck className="text-blue-400" size={24} />
                             <div>
-                                <div className="font-black text-sm">100% Reliable</div>
+                                <div className="font-black text-base">100% Reliable</div>
                                 <div className="text-xs text-gray-400">التزام كامل بالجودة والشفافية</div>
                             </div>
                         </div>
@@ -361,13 +343,13 @@ const Home = () => {
 
             {/* TEAM */}
             <section className="py-16 md:py-24 lg:py-32 px-6 md:px-10 lg:px-16 bg-gray-50/50 dark:bg-[#080808]">
-                <div className="max-w-4xl mx-auto text-center">
+                <div className="max-w-6xl mx-auto text-center">
                     <SectionHeader
                         tag="الفريق"
                         title="فريقنا هو سر قوتك"
                         subtitle="تجمعنا رؤية واحدة: تمكين التاجر العربي من المنافسة عالميًا بأفضل الأدوات الممكنة."
                     />
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 mt-16">
                         {[
                             { icon: Code2, role: "مهندسو البرمجيات", subRole: "(Software Engineers)", desc: "يبنون بنية تقنية مستقرة، قابلة للتوسع، تتحمل النمو العالي دون أعطال أو حلول مؤقتة.", color: "text-blue-500", bg: "bg-blue-500/10" },
                             { icon: Palette, role: "مصممو تجربة المستخدم", subRole: "(UX/UI Designers)", desc: "لا يصممون شكلًا جميلًا فقط، بل واجهات تحوّل الزائر إلى عميل بثقة وسلاسة عالمية.", color: "text-purple-500", bg: "bg-purple-500/10" },
@@ -375,20 +357,20 @@ const Home = () => {
                         ].map((item, i) => (
                             <div key={i} className="group flex flex-col items-center text-center">
                                 {/* Symbolic Icon Container */}
-                                <div className="w-24 h-24 md:w-32 md:h-32 rounded-3xl bg-white dark:bg-[#151516] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl hover:scale-105 transition-all duration-500 flex items-center justify-center relative overflow-hidden mb-6">
+                                <div className="w-28 h-28 lg:w-32 lg:h-32 rounded-[2rem] bg-white dark:bg-[#151516] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-2xl hover:scale-105 transition-all duration-500 flex items-center justify-center relative overflow-hidden mb-8">
                                     <div className={`absolute inset-0 ${item.bg} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                                     <div className="absolute -inset-full top-0 block h-full w-1/2 -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-20 group-hover:animate-shine" />
 
                                     <item.icon size={40} className={`text-gray-400 dark:text-gray-600 group-hover:${item.color} transition-colors duration-500 relative z-10`} />
 
                                     {/* Decorative Elements */}
-                                    <div className="absolute top-2 right-2 w-2 h-2 rounded-full bg-gray-200 dark:bg-white/10 group-hover:bg-current text-inherit opacity-50"></div>
-                                    <div className="absolute bottom-4 left-4 w-1 h-1 rounded-full bg-gray-200 dark:bg-white/10 group-hover:bg-current text-inherit opacity-50"></div>
+                                    <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-gray-200 dark:bg-white/10 group-hover:bg-current text-inherit opacity-50"></div>
+                                    <div className="absolute bottom-4 left-4 w-1.5 h-1.5 rounded-full bg-gray-200 dark:bg-white/10 group-hover:bg-current text-inherit opacity-50"></div>
                                 </div>
 
-                                <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1">{item.role}</h4>
-                                <span className="text-sm font-bold text-blue-500 mb-4 block dir-ltr">{item.subRole}</span>
-                                <p className="text-gray-500 dark:text-gray-400 leading-relaxed font-medium max-w-xs group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors">
+                                <h4 className="text-xl lg:text-2xl font-black text-gray-900 dark:text-white mb-2">{item.role}</h4>
+                                <span className="text-sm lg:text-base font-bold text-blue-500 mb-6 block dir-ltr">{item.subRole}</span>
+                                <p className="text-base lg:text-lg text-gray-500 dark:text-gray-400 leading-relaxed font-medium max-w-sm group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors">
                                     {item.desc}
                                 </p>
                             </div>
@@ -400,7 +382,7 @@ const Home = () => {
             {/* PROCESS */}
             <section className="py-16 md:py-24 lg:py-32 px-6 md:px-10 lg:px-16 bg-white dark:bg-black relative overflow-hidden">
                 {/* Decorative Background Elements */}
-                <div className="absolute top-1/2 left-0 w-full h-[500px] -translate-y-1/2 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 blur-3xl -z-10"></div>
+                <div className="absolute top-1/2 left-0 w-full h-[600px] -translate-y-1/2 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 blur-3xl -z-10"></div>
 
                 <div className="max-w-[1400px] mx-auto relative">
                     <SectionHeader
@@ -411,9 +393,9 @@ const Home = () => {
                     />
 
                     {/* Connecting Line (Desktop) */}
-                    <div className="hidden lg:block absolute top-[280px] left-10 right-10 h-0.5 bg-gradient-to-r from-transparent via-gray-200 dark:via-gray-800 to-transparent z-0"></div>
+                    <div className="hidden lg:block absolute top-[300px] left-10 right-10 h-1 bg-gradient-to-r from-transparent via-gray-200 dark:via-gray-800 to-transparent z-0"></div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12 relative z-10">
                         {[
                             {
                                 step: "01",
@@ -441,15 +423,15 @@ const Home = () => {
                                 desc: "نواصل العمل كشريك طويل المدى، ونواكب تطور أعمالك، ونضمن نموًا متوازنًا ومستدامًا يدعم أهدافك الاستراتيجية."
                             }
                         ].map((item, i) => (
-                            <div key={i} className="group relative pt-12">
+                            <div key={i} className="group relative pt-16">
                                 {/* Step Indicator */}
-                                <div className="absolute top-0 right-8 w-20 h-20 bg-white dark:bg-[#0c0c0d] border border-gray-100 dark:border-white/10 rounded-2xl flex items-center justify-center text-2xl font-black text-gray-300 dark:text-gray-700 group-hover:text-blue-500 group-hover:border-blue-500/50 group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-500 shadow-xl z-20">
+                                <div className="absolute top-0 right-10 w-20 h-20 bg-white dark:bg-[#0c0c0d] border border-gray-100 dark:border-white/10 rounded-[1.5rem] flex items-center justify-center text-2xl font-black text-gray-300 dark:text-gray-700 group-hover:text-blue-500 group-hover:border-blue-500/50 group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-500 shadow-2xl z-20">
                                     {item.step}
                                 </div>
 
                                 {/* Card Body */}
-                                <div className="h-full p-8 md:p-10 pt-16 rounded-[2.5rem] bg-gray-50/50 dark:bg-[#0c0c0d]/80 border border-black/5 dark:border-white/5 backdrop-blur-xl hover:bg-white dark:hover:bg-[#151516] hover:border-blue-500/20 hover:shadow-2xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col">
-                                    <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4 mt-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                <div className="h-full p-8 lg:p-10 pt-20 rounded-[2.5rem] bg-gray-50/50 dark:bg-[#0c0c0d]/80 border border-black/5 dark:border-white/5 backdrop-blur-xl hover:bg-white dark:hover:bg-[#151516] hover:border-blue-500/20 hover:shadow-2xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col">
+                                    <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-6 mt-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                         {item.title}
                                     </h3>
                                     <p className="text-lg text-gray-500 dark:text-gray-400 font-medium leading-relaxed group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">
@@ -464,46 +446,46 @@ const Home = () => {
 
             {/* CTA */}
             <section className="py-16 md:py-24 lg:py-32 px-6 md:px-10 lg:px-16 bg-white dark:bg-black">
-                <div className="max-w-5xl mx-auto text-center bg-gray-900 text-white rounded-[3rem] p-12 md:p-24 relative overflow-hidden">
+                <div className="max-w-6xl mx-auto text-center bg-gray-900 text-white rounded-[3rem] p-12 md:p-24 relative overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_0%_100%,_rgba(37,99,235,0.4)_0%,_transparent_50%)]"></div>
 
                     <div className="relative z-10 flex flex-col items-center">
-                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-black mb-8 tracking-tighter leading-tight">
+                        <h2 className="section-title-apple text-white mb-10 tracking-tighter leading-tight">
                             هل تبحث عن مزوّد خدمات… <br className="hidden lg:block" />
                             <span className="text-blue-500">أم عن شريك يقود معك النمو؟</span>
                         </h2>
 
-                        <p className="text-lg md:text-xl text-gray-300 font-medium mb-12 max-w-3xl mx-auto leading-relaxed">
+                        <p className="text-lg md:text-xl text-gray-300 font-medium mb-16 max-w-4xl mx-auto leading-relaxed">
                             في التاجر الرقمي، لا نُقدّم حلولًا منفصلة، بل نبني منظومة متكاملة تُدار بعقلية الشريك، وتُقاس بالأثر الحقيقي على أعمالك.
                         </p>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-start w-full max-w-3xl mx-auto mb-16">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-start w-full max-w-4xl mx-auto mb-20">
                             {[
                                 "وضوح استراتيجي بدل القرارات التجريبية",
                                 "نظام متكامل بدل أدوات متفرقة",
                                 "نتائج قابلة للقياس بدل وعود تسويقية",
                                 "شريك يفكّر معك ويدير التفاصيل"
                             ].map((item, i) => (
-                                <div key={i} className="flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/5 backdrop-blur-sm">
+                                <div key={i} className="flex items-center gap-6 bg-white/5 p-5 rounded-2xl border border-white/5 backdrop-blur-sm">
                                     <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center shrink-0 text-blue-400">
                                         <CheckCircle2 size={20} />
                                     </div>
-                                    <span className="text-lg font-bold text-gray-100">{item}</span>
+                                    <span className="text-lg lg:text-xl font-bold text-gray-100">{item}</span>
                                 </div>
                             ))}
                         </div>
 
-                        <div className="mb-8 max-w-2xl mx-auto text-gray-400 font-medium space-y-2">
-                            <p className="text-xl text-white font-bold">ابدأ اليوم بتحليل نمو شامل يحدد:</p>
-                            <p>أين تقف الآن، وما الذي يعيقك، وأين تكمن فرص النمو الحقيقية.</p>
+                        <div className="mb-12 max-w-3xl mx-auto text-gray-400 font-medium space-y-4">
+                            <p className="text-xl lg:text-2xl text-white font-bold">ابدأ اليوم بتحليل نمو شامل يحدد:</p>
+                            <p className="text-lg">أين تقف الآن، وما الذي يعيقك، وأين تكمن فرص النمو الحقيقية.</p>
                         </div>
 
-                        <Link to="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-xl font-black transition-all hover:scale-105 shadow-2xl shadow-blue-600/30">
+                        <Link to="/contact" className="inline-flex items-center gap-4 px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-xl font-black transition-all hover:scale-105 shadow-2xl shadow-blue-600/30">
                             <span>اطلب التحليل الآن</span>
-                            <ArrowUpRight />
+                            <ArrowUpRight size={28} />
                         </Link>
 
-                        <p className="mt-10 text-gray-500 font-medium leading-relaxed max-w-xl mx-auto">
+                        <p className="mt-12 text-base lg:text-lg text-gray-500 font-medium leading-relaxed max-w-2xl mx-auto">
                             ودع التاجر الرقمي يعمل في كواليس نجاحك،
                             بينما تركز أنت على تطوير عملك وبناء مستقبله.
                         </p>
@@ -536,7 +518,7 @@ const Workflow = ({ size = 24, className = "" }: { size?: number, className?: st
 );
 
 const CompoundGrowthGraphic = () => (
-    <div className="relative w-full aspect-square md:aspect-video lg:aspect-square flex items-center justify-center p-8">
+    <div className="relative w-full aspect-square flex items-center justify-center p-8">
         {/* Background decorations */}
         <div className="absolute inset-0 bg-gradient-to-tr from-green-500/10 to-blue-500/10 rounded-3xl blur-2xl"></div>
 
@@ -564,7 +546,6 @@ const CompoundGrowthGraphic = () => (
                 </defs>
 
                 {/* Curve Line */}
-                {/* Starting low left, exponential up to right */}
                 <path d="M 50 250 C 150 250, 200 200, 350 50"
                     fill="none"
                     stroke="url(#growthGradient)"
@@ -589,7 +570,7 @@ const CompoundGrowthGraphic = () => (
 );
 
 const ChaosGraphic = () => (
-    <div className="relative w-full aspect-square md:aspect-video lg:aspect-square flex items-center justify-center p-8">
+    <div className="relative w-full aspect-square flex items-center justify-center p-8">
         {/* Background decorations */}
         <div className="absolute inset-0 bg-gradient-to-tr from-red-500/10 to-orange-500/10 rounded-3xl blur-2xl"></div>
 
@@ -657,7 +638,7 @@ const ChaosGraphic = () => (
 );
 
 const SystemGraphic = () => (
-    <div className="relative w-full aspect-square md:aspect-video lg:aspect-square flex items-center justify-center p-8">
+    <div className="relative w-full aspect-square flex items-center justify-center p-8">
         {/* Background decorations */}
         <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-purple-500/10 rounded-3xl blur-2xl"></div>
 
