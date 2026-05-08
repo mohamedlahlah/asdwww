@@ -91,7 +91,7 @@ const Home = () => {
                     </div>
 
                     {/* Grid Items (Full Width Again) */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-10">
                         {[
                             { title: "أدوات لا تعمل معًا", desc: "أنظمة منفصلة تزيد التعقيد بدلاً من حله." },
                             { title: "إعلانات بلا عائد حقيقي", desc: "صرف ميزانيات ضخمة دون نتائج ملموسة." },
@@ -100,12 +100,12 @@ const Home = () => {
                             { title: "اعتماد على مزودين منفصلين", desc: "تشتت الجهود بين عدة وكالات بلا رؤية موحّدة." },
                             { title: "النتيجة: هدر للموارد", desc: "ضياع الميزانية، الوقت، والطاقة." }
                         ].map((item, i) => (
-                            <div key={i} className="bento-card p-8 lg:p-10 bg-white dark:bg-[#0f0f10] hover:border-red-500/20 group hover:-translate-y-1 transition-transform">
+                            <div key={i} className="bento-card p-6 md:p-8 lg:p-10 bg-white dark:bg-[#0f0f10] hover:border-red-500/20 group hover:-translate-y-1 transition-transform">
                                 <div className="w-10 h-10 lg:w-12 lg:h-12 bg-red-50 dark:bg-red-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                                     <XCircle className="text-red-500" size={28} />
                                 </div>
-                                <h3 className="text-xl lg:text-2xl font-black text-gray-900 dark:text-white mb-3">{item.title}</h3>
-                                <p className="text-base lg:text-lg text-gray-500 dark:text-gray-400 font-medium">{item.desc}</p>
+                                <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-3">{item.title}</h3>
+                                <p className="text-lg lg:text-xl text-gray-500 dark:text-gray-400 font-medium">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -133,7 +133,7 @@ const Home = () => {
                     </div>
 
                     {/* Grid Items (8 Cards) */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                         {[
                             { title: "SEO استراتيجي", desc: "مبني على نية الشراء", icon: <Search size={24} /> },
                             { title: "متاجر قابلة للتوسع", desc: "بنية تحتية قوية", icon: <LayoutGrid size={24} /> },
@@ -144,18 +144,18 @@ const Home = () => {
                             { title: "تحليل بالأرقام", desc: "قرارات مبنية على داتا", icon: <BarChart3 size={24} /> },
                             { title: "إدارة نمو", desc: "حملات توسع مدروسة", icon: <Rocket size={24} /> }
                         ].map((item, i) => (
-                            <div key={i} className="bento-card p-8 bg-blue-50 dark:bg-blue-900/5 border-blue-100 dark:border-blue-500/10 hover:border-blue-500/30 group hover:-translate-y-1 transition-transform">
+                            <div key={i} className="bento-card p-6 md:p-8 bg-blue-50 dark:bg-blue-900/5 border-blue-100 dark:border-blue-500/10 hover:border-blue-500/30 group hover:-translate-y-1 transition-transform">
                                 <div className="w-10 h-10 bg-blue-100 dark:bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
                                     {item.icon}
                                 </div>
-                                <h3 className="text-lg lg:text-xl font-black text-gray-900 dark:text-white mb-2">{item.title}</h3>
-                                <p className="text-sm lg:text-base text-gray-500 dark:text-gray-400 font-bold">{item.desc}</p>
+                                <h3 className="text-xl lg:text-2xl font-black text-gray-900 dark:text-white mb-2">{item.title}</h3>
+                                <p className="text-lg lg:text-xl text-gray-500 dark:text-gray-400 font-bold">{item.desc}</p>
                             </div>
                         ))}
                     </div>
 
                     <div className="mt-16 text-center">
-                        <p className="text-xl lg:text-2xl font-bold text-gray-500 dark:text-gray-400">
+                        <p className="text-2xl lg:text-3xl font-bold text-gray-500 dark:text-gray-400">
                             لتتفرغ أنت لما تتقنه فعلًا: <span className="text-gray-900 dark:text-white">المنتج، العميل، والرؤية.</span>
                         </p>
                     </div>
@@ -202,8 +202,8 @@ const Home = () => {
                                         <Zap size={24} />
                                     </div>
                                     <div>
-                                        <h5 className="text-lg lg:text-xl font-bold text-gray-900 dark:text-white">أداء فائق السرعة</h5>
-                                        <p className="text-sm lg:text-base text-gray-500 dark:text-gray-400">تحميل &lt; 1 ثانية</p>
+                                        <h5 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white">أداء فائق السرعة</h5>
+                                        <p className="text-lg lg:text-xl text-gray-500 dark:text-gray-400">تحميل &lt; 1 ثانية</p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-6 p-6 bg-gray-50 dark:bg-white/5 rounded-3xl border border-black/5 dark:border-white/5 backdrop-blur-sm">
@@ -211,8 +211,8 @@ const Home = () => {
                                         <Workflow size={24} />
                                     </div>
                                     <div>
-                                        <h5 className="text-lg lg:text-xl font-bold text-gray-900 dark:text-white">أتمتة سير العمل</h5>
-                                        <p className="text-sm lg:text-base text-gray-500 dark:text-gray-400">توفير +40 ساعة/شهرياً</p>
+                                        <h5 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white">أتمتة سير العمل</h5>
+                                        <p className="text-lg lg:text-xl text-gray-500 dark:text-gray-400">توفير +40 ساعة/شهرياً</p>
                                     </div>
                                 </div>
                             </div>
@@ -227,12 +227,12 @@ const Home = () => {
                                 { t: "تكامل بلا حدود", d: "جسور ذكية بين منصاتك المختلفة (CRM, ERP, Ads) لتنهي عزلة البيانات للأبد وتوحد الرؤية.", i: <Layers /> },
                                 { t: "نمو بلا قيود", d: "نظام مرن مصمم ليتوسع معك بسلاسة من أول طلب وحتى الطلب المليون دون الحاجة لإعادة البناء.", i: <BarChart3 /> }
                             ].map((item, i) => (
-                                <div key={i} className="bento-card p-10 lg:p-12 bg-white/50 dark:bg-[#151516]/80 backdrop-blur-xl border border-black/5 dark:border-white/10 hover:border-blue-500/30 hover:scale-[1.02] flex flex-col gap-6 group transition-all duration-500">
+                                <div key={i} className="bento-card p-6 md:p-8 lg:p-12 bg-white/50 dark:bg-[#151516]/80 backdrop-blur-xl border border-black/5 dark:border-white/10 hover:border-blue-500/30 hover:scale-[1.02] flex flex-col gap-6 group transition-all duration-500">
                                     <div className="w-14 h-14 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-white/5 dark:to-white/10 rounded-2xl flex items-center justify-center text-gray-900 dark:text-white group-hover:bg-blue-600 group-hover:text-white transition-colors duration-500 shadow-sm">
                                         {React.cloneElement(item.i as any, { size: 28 })}
                                     </div>
-                                    <h4 className="text-xl lg:text-2xl font-black text-gray-900 dark:text-white">{item.t}</h4>
-                                    <p className="text-base lg:text-lg text-gray-500 dark:text-gray-400 font-medium leading-relaxed">{item.d}</p>
+                                    <h4 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white">{item.t}</h4>
+                                    <p className="text-lg lg:text-xl text-gray-500 dark:text-gray-400 font-medium leading-relaxed">{item.d}</p>
                                 </div>
                             ))}
                         </div>
@@ -269,13 +269,13 @@ const Home = () => {
                             { t: "ملكية الجمهور", d: "لا تكن رهينة لمنصات الإعلانات. نساعدك في بناء قنواتك الخاصة (قوائم بريدية، مجتمعات) التي تملكها للأبد ولا يستطيع أحد أخذها منك.", i: <ShieldCheck size={32} />, color: "blue" },
                             { t: "استقرار التنبؤ", d: "وداعاً للتقلبات العنيفة. نصمم آليات عمل وهياكل تسويقية تعطيك رؤية واضحة للمستقبل، لتتخذ قرارات التوسع بقلب مطمئن.", i: <BarChart3 size={32} />, color: "purple" }
                         ].map((item, i) => (
-                            <div key={i} className={`bento-card p-10 bg-white dark:bg-[#151516] border border-${item.color}-500/10 hover:border-${item.color}-500/30 transition-all duration-500 group relative overflow-hidden`}>
+                            <div key={i} className={`bento-card p-6 md:p-8 lg:p-10 bg-white dark:bg-[#151516] border border-${item.color}-500/10 hover:border-${item.color}-500/30 transition-all duration-500 group relative overflow-hidden`}>
                                 <div className={`absolute top-0 right-0 w-32 h-32 bg-${item.color}-500/5 blur-[60px] -z-10 transition-opacity opacity-50 group-hover:opacity-100`}></div>
                                 <div className={`w-16 h-16 bg-${item.color}-100 dark:bg-${item.color}-500/10 rounded-2xl flex items-center justify-center text-${item.color}-600 dark:text-${item.color}-500 mb-8 group-hover:scale-110 transition-transform duration-500`}>
                                     {item.i}
                                 </div>
                                 <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
-                                <p className="text-gray-500 dark:text-gray-400 font-medium leading-relaxed text-lg lg:text-xl">
+                                <p className="text-gray-500 dark:text-gray-400 font-medium leading-relaxed text-xl lg:text-2xl">
                                     {item.d}
                                 </p>
                             </div>
@@ -297,7 +297,7 @@ const Home = () => {
                             نفهم السوق... <br />
                             <span className="text-blue-500">ونتقن الأدوات.</span>
                         </h2>
-                        <ul className="space-y-6 text-lg lg:text-xl font-medium text-gray-500 dark:text-gray-400">
+                        <ul className="space-y-6 text-xl lg:text-2xl font-medium text-gray-500 dark:text-gray-400">
                             {[
                                 "نمزج فهم عميق للتاجر العربي",
                                 "لغة السوق المحلي وثقافته",
@@ -313,7 +313,7 @@ const Home = () => {
                     </div>
 
                     {/* Why Digital Merchant */}
-                    <div className="bento-card p-12 lg:p-16 bg-gray-900 text-white relative overflow-hidden">
+                    <div className="bento-card p-8 md:p-10 lg:p-16 bg-gray-900 text-white relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/20 rounded-full blur-[120px]"></div>
                         <h3 className="text-3xl lg:text-4xl font-black mb-10 relative z-10">لماذا "التاجر الرقمي"؟</h3>
                         <ul className="space-y-6 relative z-10">
@@ -324,7 +324,7 @@ const Home = () => {
                                 "قرارات مبنية على بيانات",
                                 "شراكة طويلة المدى"
                             ].map((item, i) => (
-                                <li key={i} className="flex items-center gap-6 text-xl lg:text-2xl font-bold">
+                                <li key={i} className="flex items-center gap-6 text-2xl lg:text-3xl font-bold">
                                     <CheckCircle2 className="text-green-400 shrink-0" size={28} />
                                     {item}
                                 </li>
@@ -368,9 +368,9 @@ const Home = () => {
                                     <div className="absolute bottom-4 left-4 w-1.5 h-1.5 rounded-full bg-gray-200 dark:bg-white/10 group-hover:bg-current text-inherit opacity-50"></div>
                                 </div>
 
-                                <h4 className="text-xl lg:text-2xl font-black text-gray-900 dark:text-white mb-2">{item.role}</h4>
-                                <span className="text-sm lg:text-base font-bold text-blue-500 mb-6 block dir-ltr">{item.subRole}</span>
-                                <p className="text-base lg:text-lg text-gray-500 dark:text-gray-400 leading-relaxed font-medium max-w-sm group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors">
+                                <h4 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-2">{item.role}</h4>
+                                <span className="text-lg lg:text-xl font-bold text-blue-500 mb-6 block dir-ltr">{item.subRole}</span>
+                                <p className="text-lg lg:text-xl text-gray-500 dark:text-gray-400 leading-relaxed font-medium max-w-sm group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors">
                                     {item.desc}
                                 </p>
                             </div>
@@ -430,7 +430,7 @@ const Home = () => {
                                 </div>
 
                                 {/* Card Body */}
-                                <div className="h-full p-8 lg:p-10 pt-20 rounded-[2.5rem] bg-gray-50/50 dark:bg-[#0c0c0d]/80 border border-black/5 dark:border-white/5 backdrop-blur-xl hover:bg-white dark:hover:bg-[#151516] hover:border-blue-500/20 hover:shadow-2xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col">
+                                <div className="h-full p-6 md:p-8 lg:p-10 pt-16 md:pt-20 rounded-[2.5rem] bg-gray-50/50 dark:bg-[#0c0c0d]/80 border border-black/5 dark:border-white/5 backdrop-blur-xl hover:bg-white dark:hover:bg-[#151516] hover:border-blue-500/20 hover:shadow-2xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col">
                                     <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-6 mt-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                         {item.title}
                                     </h3>
@@ -446,7 +446,7 @@ const Home = () => {
 
             {/* CTA */}
             <section className="py-12 md:py-20 lg:py-28 px-4 md:px-8 lg:px-16 bg-white dark:bg-black">
-                <div className="max-w-6xl mx-auto text-center bg-gray-900 text-white rounded-[3rem] p-12 md:p-24 relative overflow-hidden">
+                <div className="max-w-6xl mx-auto text-center bg-gray-900 text-white rounded-[3rem] p-8 md:p-16 lg:p-24 relative overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_0%_100%,_rgba(37,99,235,0.4)_0%,_transparent_50%)]"></div>
 
                     <div className="relative z-10 flex flex-col items-center">
@@ -470,13 +470,13 @@ const Home = () => {
                                     <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center shrink-0 text-blue-400">
                                         <CheckCircle2 size={20} />
                                     </div>
-                                    <span className="text-lg lg:text-xl font-bold text-gray-100">{item}</span>
+                                    <span className="text-xl lg:text-2xl font-bold text-gray-100">{item}</span>
                                 </div>
                             ))}
                         </div>
 
                         <div className="mb-12 max-w-3xl mx-auto text-gray-400 font-medium space-y-4">
-                            <p className="text-xl lg:text-2xl text-white font-bold">ابدأ اليوم بتحليل نمو شامل يحدد:</p>
+                            <p className="text-2xl lg:text-3xl text-white font-bold">ابدأ اليوم بتحليل نمو شامل يحدد:</p>
                             <p className="text-lg">أين تقف الآن، وما الذي يعيقك، وأين تكمن فرص النمو الحقيقية.</p>
                         </div>
 
@@ -485,7 +485,7 @@ const Home = () => {
                             <ArrowUpRight size={28} />
                         </Link>
 
-                        <p className="mt-12 text-base lg:text-lg text-gray-500 font-medium leading-relaxed max-w-2xl mx-auto">
+                        <p className="mt-12 text-lg lg:text-xl text-gray-500 font-medium leading-relaxed max-w-2xl mx-auto">
                             ودع التاجر الرقمي يعمل في كواليس نجاحك،
                             بينما تركز أنت على تطوير عملك وبناء مستقبله.
                         </p>
