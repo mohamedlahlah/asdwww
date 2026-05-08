@@ -67,7 +67,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 {/* Logo Section */}
                 <Link to="/" className={`flex items-center gap-3 group px-4 ${scrolled ? 'scale-90' : ''} transition-transform duration-500`}>
                     <img
-                        src="/dtajer.svg"
+                        src="/dtajer.png"
                         alt="التاجر الرقمي"
                         className="w-10 h-10 md:w-12 md:h-12 object-contain shrink-0 drop-shadow-xl"
                     />
@@ -234,7 +234,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     <div className="lg:col-span-4 text-start">
                         <div className="flex items-center justify-end md:justify-start gap-4 mb-8">
                             <img
-                                src="/dtajer.svg"
+                                src="/dtajer.png"
                                 alt="التاجر الرقمي"
                                 className="w-12 h-12 object-contain shrink-0 drop-shadow-xl"
                             />
