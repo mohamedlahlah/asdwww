@@ -11,7 +11,7 @@ interface SectionHeaderProps {
 }
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({ tag, title, subtitle, icon, titleClassName, subtitleClassName, className }) => (
-    <div className={`reveal mb-10 md:mb-16 lg:mb-24 text-start ${className || ''}`}>
+    <div className={`reveal mb-10 md:mb-16 lg:mb-16 md:mb-24 text-start ${className || ''}`}>
         <div className={`inline-flex items-center gap-3 bg-gray-100 dark:bg-white/5 text-gray-500 dark:text-gray-400 px-4 py-1.5 rounded-full text-[12px] md:text-[14px] font-bold mb-4 md:mb-6 border border-black/5 dark:border-white/10 backdrop-blur-sm ${className?.includes('text-center') ? 'mx-auto' : ''}`}>
             {icon}
             <span>{tag}</span>

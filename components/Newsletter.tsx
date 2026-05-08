@@ -17,7 +17,7 @@ const Newsletter = () => {
     };
 
     return (
-        <section className="relative py-16 md:py-24 px-6 md:px-12 bg-white dark:bg-black overflow-hidden transition-colors duration-500">
+        <section className="relative py-16 md:py-16 md:py-24 px-6 md:px-12 bg-white dark:bg-black overflow-hidden transition-colors duration-500">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
                 <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-blue-500/10 dark:bg-blue-600/5 blur-[120px] rounded-full animate-pulse"></div>

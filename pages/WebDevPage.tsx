@@ -15,7 +15,7 @@ const WebDevPage = () => {
     ];
 
     return (
-        <main className="pt-32 pb-32 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
+        <main className="pt-16 md:pt-24 pb-20 md:pt-32 md:pb-32 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 {/* Section 1: Problem Awareness */}
                 <SectionHeader
@@ -43,7 +43,7 @@ const WebDevPage = () => {
                 </div>
 
                 {/* Section 2: Reframing */}
-                <div className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="التحول الذهني"
@@ -96,7 +96,7 @@ const WebDevPage = () => {
                     <div className="lg:col-span-12">
                         <div className="bento-card p-12 bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(37,99,235,0.02)_0%,_transparent_50%)]"></div>
-                            <div className="flex flex-col lg:flex-row gap-16 items-center">
+                            <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16 items-center">
                                 <div className="lg:w-1/2 text-start relative z-10">
                                     <SectionHeader
                                         tag="هندسة التجربة"
@@ -124,7 +124,7 @@ const WebDevPage = () => {
                 </div>
 
                 {/* Section 5: Product Page Engineering */}
-                <div className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="هندسة صفحات المنتج"
@@ -164,7 +164,7 @@ const WebDevPage = () => {
                 {/* Section 6: Checkout Optimization */}
                 <div className="mb-32 p-12 md:p-24 bento-card relative overflow-hidden bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 transition-colors">
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_100%,_rgba(37,99,235,0.05)_0%,_transparent_50%)]"></div>
-                    <div className="relative z-10 flex flex-col lg:flex-row gap-16 items-center">
+                    <div className="relative z-10 flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16 items-center">
                         <div className="lg:w-1/2 text-start">
                             <SectionHeader
                                 tag="تهيئة التحويل"
@@ -208,7 +208,7 @@ const WebDevPage = () => {
                 </div>
 
                 {/* Section 8: Ecommerce SEO */}
-                <div className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="bento-card p-10 lg:p-12 bg-blue-500/5 border-blue-500/10 text-start">
                         <SectionHeader
                             tag="سيو المتاجر"
@@ -234,7 +234,7 @@ const WebDevPage = () => {
                 {/* Section 11: Proof & Results */}
                 <div className="mb-32 p-12 md:p-24 bento-card bg-black text-white border-none relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(255,255,255,0.05)_0%,_transparent_50%)]"></div>
-                    <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-16">
+                    <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12 lg:gap-16">
                         <div className="text-start">
                             <div className="text-blue-400 font-black tracking-widest uppercase mb-4 text-sm">نتائج التجارة الإلكترونية</div>
                             <h4 className="section-title-apple text-white mb-6">نتائج <br />أداء حقيقي.</h4>

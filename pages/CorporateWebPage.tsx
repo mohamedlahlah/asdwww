@@ -15,7 +15,7 @@ const CorporateWebPage = () => {
     ];
 
     return (
-        <main className="pt-32 pb-32 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
+        <main className="pt-16 md:pt-24 pb-20 md:pt-32 md:pb-32 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 {/* Section 1: Problem Awareness */}
                 <SectionHeader
@@ -43,7 +43,7 @@ const CorporateWebPage = () => {
                 </div>
 
                 {/* Section 2: Reframing */}
-                <div className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="التحول الذهني"
@@ -96,7 +96,7 @@ const CorporateWebPage = () => {
                     <div className="lg:col-span-12">
                         <div className="bento-card p-12 bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(37,99,235,0.02)_0%,_transparent_50%)]"></div>
-                            <div className="flex flex-col lg:flex-row gap-16 items-center">
+                            <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16 items-center">
                                 <div className="lg:w-1/2 text-start relative z-10">
                                     <SectionHeader
                                         tag="هندسة المحتوى"
@@ -124,7 +124,7 @@ const CorporateWebPage = () => {
                 </div>
 
                 {/* Section 5: UX for Decision Makers */}
-                <div className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="تجربة صناع القرار"
@@ -158,7 +158,7 @@ const CorporateWebPage = () => {
                 {/* Section 6: Enterprise-Grade Development (Visual Overhaul) */}
                 <div className="mb-48 relative">
                     <div className="absolute inset-0 bg-blue-500/5 blur-[120px] pointer-events-none"></div>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                         <div className="text-start">
                             <SectionHeader
                                 tag="تطوير مؤسسي"
@@ -314,7 +314,7 @@ const CorporateWebPage = () => {
                 {/* Section 10: Proof & Impact */}
                 <div className="mb-32 p-12 md:p-24 bento-card bg-black text-white border-none relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(255,255,255,0.05)_0%,_transparent_50%)]"></div>
-                    <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-16">
+                    <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12 lg:gap-16">
                         <div className="text-start">
                             <div className="text-blue-400 font-black tracking-widest uppercase mb-4 text-sm">الأداء والنتائج</div>
                             <h4 className="text-4xl md:text-6xl font-black mb-6">نتائج مثبتة <br />مؤسساتياً.</h4>

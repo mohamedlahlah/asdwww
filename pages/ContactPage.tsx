@@ -17,7 +17,7 @@ const ContactPage = () => {
     };
 
     return (
-        <main className="pt-32 pb-32 bg-white dark:bg-black transition-colors duration-500">
+        <main className="pt-16 md:pt-24 pb-20 md:pt-32 md:pb-32 bg-white dark:bg-black transition-colors duration-500">
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 <SectionHeader
                     tag="تواصل معنا"
@@ -26,7 +26,7 @@ const ContactPage = () => {
                     icon={<MessageCircle className="w-5 h-5 text-blue-400" />}
                 />
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-24 mb-24">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-24 mb-16 md:mb-24">
                     {/* Contact Info */}
                     <div className="lg:col-span-5 space-y-12 text-start">
                         <div>

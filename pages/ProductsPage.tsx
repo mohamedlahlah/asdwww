@@ -15,7 +15,7 @@ const ProductsPage = () => {
     };
 
     return (
-        <main className="min-h-screen pt-32 pb-32 bg-white dark:bg-black text-gray-900 dark:text-white relative overflow-hidden flex flex-col items-center justify-center transition-colors duration-500">
+        <main className="min-h-screen pt-16 md:pt-24 pb-20 md:pt-32 md:pb-32 bg-white dark:bg-black text-gray-900 dark:text-white relative overflow-hidden flex flex-col items-center justify-center transition-colors duration-500">
 
             {/* Ambient Background */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -50,7 +50,7 @@ const ProductsPage = () => {
                 </p>
 
                 {/* The "Box" Graphic - CSS Only */}
-                <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto mb-20 group perspective-1000">
+                <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto mb-12 md:mb-20 group perspective-1000">
                     <div className="w-full h-full relative transform-style-3d animate-[float_6s_ease-in-out_infinite]">
                         {/* Glow */}
                         <div className="absolute inset-0 bg-blue-500/20 rounded-3xl blur-3xl transform scale-110"></div>

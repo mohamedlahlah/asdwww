@@ -50,7 +50,7 @@ const ServicesLandingPage = () => {
     ];
 
     return (
-        <main className="pt-32 pb-32 bg-white dark:bg-black transition-colors duration-500">
+        <main className="pt-16 md:pt-24 pb-20 md:pt-32 md:pb-32 bg-white dark:bg-black transition-colors duration-500">
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 <SectionHeader
                     tag="منظومة الخدمات 360"
@@ -59,7 +59,7 @@ const ServicesLandingPage = () => {
                     icon={<Sparkles className="w-5 h-5 text-blue-400" />}
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24 text-start">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 md:mb-24 text-start">
                     {services.map((service, i) => (
                         <Link
                             key={i}

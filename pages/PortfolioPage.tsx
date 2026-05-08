@@ -34,7 +34,7 @@ const PortfolioPage = () => {
         : PROJECTS.filter(p => p.category === activeCategory);
 
     return (
-        <main className="pt-32 pb-32 bg-white dark:bg-black transition-colors duration-500 min-h-screen">
+        <main className="pt-16 md:pt-24 pb-20 md:pt-32 md:pb-32 bg-white dark:bg-black transition-colors duration-500 min-h-screen">
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 <SectionHeader
                     tag="سجل نجاحنا"
@@ -96,7 +96,7 @@ const PortfolioPage = () => {
 
                 {/* Empty State */}
                 {filteredProjects.length === 0 && (
-                    <div className="text-center py-24 border border-dashed border-gray-200 dark:border-gray-800 rounded-3xl">
+                    <div className="text-center py-16 md:py-24 border border-dashed border-gray-200 dark:border-gray-800 rounded-3xl">
                         <p className="text-gray-400 font-bold text-xl">لا توجد مشاريع في هذا القسم حالياً.</p>
                     </div>
                 )}

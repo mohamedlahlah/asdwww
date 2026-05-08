@@ -16,7 +16,7 @@ const AdsPage = () => {
     ];
 
     return (
-        <main className="pt-32 pb-32 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
+        <main className="pt-16 md:pt-24 pb-20 md:pt-32 md:pb-32 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 {/* Section 1: Problem awareness (Breaking the False Idea) */}
                 <SectionHeader
@@ -41,7 +41,7 @@ const AdsPage = () => {
                 </div>
 
                 {/* Section 2: Reframing */}
-                <div className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="التحول الذهني"
@@ -196,7 +196,7 @@ const AdsPage = () => {
                         icon={<TrendingUp className="w-5 h-5 text-blue-500" />}
                     />
 
-                    <div className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
                             {
                                 number: "01",
@@ -282,7 +282,7 @@ const AdsPage = () => {
                         icon={<MousePointer2 className="w-5 h-5 text-rose-500" />}
                     />
 
-                    <div className="mt-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    <div className="mt-16 md:mt-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                         {/* Visual Side (The Image) */}
                         <div className="lg:col-span-7 sticky top-32">
                             <div className="bento-card p-4 bg-gray-900 border-gray-800 overflow-hidden relative group">
@@ -379,7 +379,7 @@ const AdsPage = () => {
                         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full mix-blend-multiply dark:mix-blend-screen animate-pulse"></div>
                         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-red-500/10 blur-[120px] rounded-full mix-blend-multiply dark:mix-blend-screen opacity-50"></div>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 lg:gap-24 items-center relative z-10">
                             {/* Text Visuals */}
                             <div className="text-start space-y-12">
                                 <SectionHeader
@@ -458,7 +458,7 @@ const AdsPage = () => {
                         titleClassName="text-4xl md:text-5xl lg:text-5xl"
                     />
 
-                    <div className="mt-32 relative">
+                    <div className="mt-20 md:mt-32 relative">
                         {/* Timeline Center Line */}
                         <div className="absolute top-0 bottom-0 left-[20px] md:left-1/2 w-0.5 bg-gradient-to-b from-emerald-500 via-blue-500 to-transparent -translate-x-1/2 opacity-30"></div>
 
@@ -574,7 +574,7 @@ const AdsPage = () => {
                 </div>
 
                 {/* Section 6: Conversion Engineering */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-32">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-center mb-32">
                     <div className="lg:col-span-5 text-start">
                         <SectionHeader
                             tag="هندسة التحويل"
@@ -714,7 +714,7 @@ const AdsPage = () => {
                 />
 
                 {/* Section 11: Final CTA (Unified Intelligent Layout) */}
-                <div className="mt-32 lg:mt-48 relative">
+                <div className="mt-20 md:mt-32 lg:mt-48 relative">
                     <div className="max-w-4xl mx-auto p-6 md:p-12 text-center">
                         {/* Header & Copy */}
                         <div className="mb-16 relative z-10 w-full">

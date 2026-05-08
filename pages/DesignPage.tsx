@@ -22,7 +22,7 @@ const DesignPage = () => {
     ];
 
     return (
-        <main className="pt-32 pb-32 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
+        <main className="pt-16 md:pt-24 pb-20 md:pt-32 md:pb-32 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
 
                 {/* Section 1: Problem Awareness */}
@@ -53,7 +53,7 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 2: Reframing */}
-                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="التحول الذهني"
@@ -107,7 +107,7 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 4: User Research */}
-                <div className="mb-48 grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16 items-center">
+                <div className="mb-48 grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="lg:col-span-5 relative group overflow-hidden bento-card h-[500px] flex items-center justify-center bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10">
                         <Microscope size={120} className="text-indigo-500 opacity-20 group-hover:scale-110 transition-transform duration-700" />
                         <div className="absolute bottom-10 left-0 right-0 text-center">
@@ -156,7 +156,7 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 6: UI Design */}
-                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start order-2 lg:order-1">
                         <SectionHeader
                             tag="تصميم الواجهة UI"

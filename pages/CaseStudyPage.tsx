@@ -66,9 +66,9 @@ const CaseStudyPage = () => {
     const theme = colorClasses[color] || colorClasses.emerald;
 
     return (
-        <main className="pt-32 pb-32 bg-white dark:bg-black transition-colors duration-500">
+        <main className="pt-16 md:pt-24 pb-20 md:pt-32 md:pb-32 bg-white dark:bg-black transition-colors duration-500">
             {/* Header / Hero */}
-            <section className="px-6 md:px-12 max-w-[1400px] mx-auto mb-20 text-start">
+            <section className="px-6 md:px-12 max-w-[1400px] mx-auto mb-12 md:mb-20 text-start">
                 <Link to="/portfolio" className="inline-flex items-center gap-2 text-gray-400 hover:text-black dark:hover:text-white transition-colors mb-8 font-bold" dir="rtl">
                     <ArrowRight size={20} className="transform rotate-180" />
                     عودة للمعرض
@@ -84,7 +84,7 @@ const CaseStudyPage = () => {
             </section>
 
             {/* Stats Grid */}
-            <section className="px-6 md:px-12 max-w-[1400px] mx-auto mb-24">
+            <section className="px-6 md:px-12 max-w-[1400px] mx-auto mb-16 md:mb-24">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {stats.map((stat: any, i: number) => (
                         <div key={i} className="bento-card p-10 text-center bg-gray-50 dark:bg-[#111] border border-black/5 dark:border-white/10">
@@ -97,7 +97,7 @@ const CaseStudyPage = () => {
 
             {/* Challenge & Solution */}
             <section className="px-6 md:px-12 max-w-[1200px] mx-auto mb-32">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 md:gap-24 items-start">
                     <div>
                         <SectionHeader
                             tag="التحدي"

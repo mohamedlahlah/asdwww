@@ -14,7 +14,7 @@ const ManagementPage = () => {
     ];
 
     return (
-        <main className="pt-32 pb-32 bg-white dark:bg-black transition-colors duration-500">
+        <main className="pt-16 md:pt-24 pb-20 md:pt-32 md:pb-32 bg-white dark:bg-black transition-colors duration-500">
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 <SectionHeader
                     tag="الإدارة والنمو الاستراتيجي"
@@ -24,7 +24,7 @@ const ManagementPage = () => {
                 />
 
                 {/* Management Pillars Bento */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24 text-start">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 md:mb-24 text-start">
                     {[
                         { t: "إدارة العمليات (Ops)", d: "هيكلة سير العمل اليومي، تنظيم المهام، وضمان تنفيذها بأعلى جودة وفي الوقت المحدد.", i: <ShieldCheck className="text-blue-500" /> },
                         { t: "استراتيجية النمو", d: "وضع خطط توسعية مبنية على أرقام السوق الحقيقية واقتناص الفرص التجارية الواعدة.", i: <LineChart className="text-blue-500" /> },
@@ -38,7 +38,7 @@ const ManagementPage = () => {
                     ))}
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16 md:mb-24">
                     <div className="lg:col-span-5 space-y-10 text-start">
                         <div className="inline-flex items-center gap-3 bg-gray-100 dark:bg-white/5 text-blue-600 dark:text-blue-500 px-6 py-2 rounded-full text-sm font-black mb-4 border border-blue-500/10 dark:border-blue-500/20">
                             <TrendingUp size={18} />

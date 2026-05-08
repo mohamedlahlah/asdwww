@@ -16,9 +16,9 @@ const FAQ = ({ items, tag = "الأسئلة الشائعة", title = "لديك �
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
-        <section className="py-24 md:py-32 px-6 md:px-12 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
+        <section className="py-16 md:py-24 md:py-32 px-6 md:px-12 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
             <div className="max-w-[1000px] mx-auto">
-                <div className="text-center mb-20 reveal">
+                <div className="text-center mb-12 md:mb-20 reveal">
                     <div className="inline-flex items-center gap-3 bg-blue-500/5 dark:bg-white/5 text-blue-600 dark:text-blue-500 px-6 py-2 rounded-full text-sm font-black mb-8 border border-blue-500/10 dark:border-blue-500/20 backdrop-blur-xl">
                         <HelpCircle size={18} />
                         <span>{tag}</span>

@@ -34,7 +34,7 @@ const Home = () => {
     return (
         <main className="flex-grow overflow-hidden">
             {/* HERO SECTION */}
-            <section className="relative pt-32 md:pt-48 lg:pt-64 pb-20 md:pb-32 lg:pb-40 px-6 md:px-10 lg:px-16 bg-white dark:bg-black overflow-hidden flex flex-col items-center min-h-screen transition-colors duration-500">
+            <section className="relative pt-28 md:pt-40 lg:pt-56 pb-16 md:pb-28 lg:pb-36 px-4 md:px-8 lg:px-16 bg-white dark:bg-black overflow-hidden flex flex-col items-center min-h-screen transition-colors duration-500">
                 <div className="max-w-[1400px] mx-auto relative z-10 w-full text-center">
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-50 dark:bg-blue-900/10 text-blue-600 dark:text-blue-400 border border-blue-100 dark:border-blue-500/20 rounded-full text-sm font-black mb-8 animate-fade-in-up">
                         <Sparkles size={16} />
@@ -62,7 +62,7 @@ const Home = () => {
                     </div>
 
                     {/* Value Prop Badge */}
-                    <div className="mt-20 flex justify-center reveal active">
+                    <div className="mt-12 md:mt-20 flex justify-center reveal active">
                         <div className="px-6 py-3 bg-white/50 dark:bg-white/5 backdrop-blur-xl border border-black/5 dark:border-white/10 rounded-2xl text-gray-500 dark:text-gray-400 text-xs md:text-sm font-bold">
                             "نجاحك ليس مشروعًا لدينا… بل معيار شراكتنا."
                         </div>
@@ -71,10 +71,10 @@ const Home = () => {
             </section>
 
             {/* THE PROBLEM SECTION */}
-            <section className="py-16 md:py-24 lg:py-32 px-6 md:px-10 lg:px-16 bg-gray-50/50 dark:bg-[#050505]">
+            <section className="py-12 md:py-20 lg:py-28 px-4 md:px-8 lg:px-16 bg-gray-50/50 dark:bg-[#050505]">
                 <div className="max-w-[1400px] mx-auto">
                     {/* Header Row: Title + Visual */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-end mb-16 md:mb-24">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-end mb-16 md:mb-16 md:mb-24">
                         <SectionHeader
                             tag="المشكلة التي نحلّها"
                             title="لماذا يفشل النمو <br/> <span class='text-red-500'>رغم كثرة الأدوات؟</span>"
@@ -113,10 +113,10 @@ const Home = () => {
             </section>
 
             {/* THE SOLUTION SECTION */}
-            <section className="py-16 md:py-24 lg:py-32 px-6 md:px-10 lg:px-16 bg-white dark:bg-black">
+            <section className="py-12 md:py-20 lg:py-28 px-4 md:px-8 lg:px-16 bg-white dark:bg-black">
                 <div className="max-w-[1400px] mx-auto">
                     {/* Header Row: Title + Visual */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-end mb-16 md:mb-24">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-end mb-16 md:mb-16 md:mb-24">
                         <SectionHeader
                             tag="الحل: فريق نمو مدمج"
                             title="منظومة واحدة <br/> <span class='text-blue-500'>بدل حلول متفرقة.</span>"
@@ -163,7 +163,7 @@ const Home = () => {
             </section>
 
             {/* PARTNERSHIP MINDSET */}
-            <section className="py-16 md:py-24 lg:py-32 px-6 md:px-10 lg:px-16 bg-black text-white relative overflow-hidden">
+            <section className="py-12 md:py-20 lg:py-28 px-4 md:px-8 lg:px-16 bg-black text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(37,99,235,0.2)_0%,_transparent_50%)]"></div>
                 <div className="max-w-[1200px] mx-auto text-center relative z-10">
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-xs font-bold mb-8">
@@ -187,9 +187,9 @@ const Home = () => {
             </section>
 
             {/* TECHNICAL & INNOVATION */}
-            <section className="py-16 md:py-24 lg:py-32 px-6 md:px-10 lg:px-16 bg-white dark:bg-black">
+            <section className="py-12 md:py-20 lg:py-28 px-4 md:px-8 lg:px-16 bg-white dark:bg-black">
                 <div className="max-w-[1400px] mx-auto">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16 lg:gap-24 items-center">
                         <div className="lg:col-span-5 text-start">
                             <SectionHeader
                                 tag="التميز الهندسي"
@@ -241,10 +241,10 @@ const Home = () => {
             </section>
 
             {/* SUSTAINABLE GROWTH */}
-            <section className="py-16 md:py-24 lg:py-32 px-6 md:px-10 lg:px-16 bg-gray-50 dark:bg-[#080808]">
+            <section className="py-12 md:py-20 lg:py-28 px-4 md:px-8 lg:px-16 bg-gray-50 dark:bg-[#080808]">
                 <div className="max-w-[1400px] mx-auto">
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-12 md:mb-16 lg:mb-20">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-12 md:mb-16 lg:mb-12 md:mb-20">
                         {/* Text Content */}
                         <div className="text-start order-1">
                             <SectionHeader
@@ -285,8 +285,8 @@ const Home = () => {
             </section>
 
             {/* VISION & WHY US */}
-            <section className="py-16 md:py-24 lg:py-32 px-6 md:px-10 lg:px-16 bg-white dark:bg-black">
-                <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+            <section className="py-12 md:py-20 lg:py-28 px-4 md:px-8 lg:px-16 bg-white dark:bg-black">
+                <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 lg:gap-24">
                     {/* Vision */}
                     <div className="text-start">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-gray-100 dark:bg-white/10 rounded-full text-xs font-black uppercase tracking-widest mb-6">
@@ -342,14 +342,14 @@ const Home = () => {
             </section>
 
             {/* TEAM */}
-            <section className="py-16 md:py-24 lg:py-32 px-6 md:px-10 lg:px-16 bg-gray-50/50 dark:bg-[#080808]">
+            <section className="py-12 md:py-20 lg:py-28 px-4 md:px-8 lg:px-16 bg-gray-50/50 dark:bg-[#080808]">
                 <div className="max-w-6xl mx-auto text-center">
                     <SectionHeader
                         tag="الفريق"
                         title="فريقنا هو سر قوتك"
                         subtitle="تجمعنا رؤية واحدة: تمكين التاجر العربي من المنافسة عالميًا بأفضل الأدوات الممكنة."
                     />
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 mt-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8 md:gap-12 lg:gap-16 mt-16">
                         {[
                             { icon: Code2, role: "مهندسو البرمجيات", subRole: "(Software Engineers)", desc: "يبنون بنية تقنية مستقرة، قابلة للتوسع، تتحمل النمو العالي دون أعطال أو حلول مؤقتة.", color: "text-blue-500", bg: "bg-blue-500/10" },
                             { icon: Palette, role: "مصممو تجربة المستخدم", subRole: "(UX/UI Designers)", desc: "لا يصممون شكلًا جميلًا فقط، بل واجهات تحوّل الزائر إلى عميل بثقة وسلاسة عالمية.", color: "text-purple-500", bg: "bg-purple-500/10" },
@@ -380,7 +380,7 @@ const Home = () => {
             </section>
 
             {/* PROCESS */}
-            <section className="py-16 md:py-24 lg:py-32 px-6 md:px-10 lg:px-16 bg-white dark:bg-black relative overflow-hidden">
+            <section className="py-12 md:py-20 lg:py-28 px-4 md:px-8 lg:px-16 bg-white dark:bg-black relative overflow-hidden">
                 {/* Decorative Background Elements */}
                 <div className="absolute top-1/2 left-0 w-full h-[600px] -translate-y-1/2 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 blur-3xl -z-10"></div>
 
@@ -389,7 +389,7 @@ const Home = () => {
                         tag="منهجية العمل"
                         title="كيف ندير الشراكة؟"
                         subtitle=""
-                        className="mb-16 md:mb-24"
+                        className="mb-16 md:mb-16 md:mb-24"
                     />
 
                     {/* Connecting Line (Desktop) */}
@@ -445,7 +445,7 @@ const Home = () => {
             </section>
 
             {/* CTA */}
-            <section className="py-16 md:py-24 lg:py-32 px-6 md:px-10 lg:px-16 bg-white dark:bg-black">
+            <section className="py-12 md:py-20 lg:py-28 px-4 md:px-8 lg:px-16 bg-white dark:bg-black">
                 <div className="max-w-6xl mx-auto text-center bg-gray-900 text-white rounded-[3rem] p-12 md:p-24 relative overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_0%_100%,_rgba(37,99,235,0.4)_0%,_transparent_50%)]"></div>
 
@@ -459,7 +459,7 @@ const Home = () => {
                             في التاجر الرقمي، لا نُقدّم حلولًا منفصلة، بل نبني منظومة متكاملة تُدار بعقلية الشريك، وتُقاس بالأثر الحقيقي على أعمالك.
                         </p>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-start w-full max-w-4xl mx-auto mb-20">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-start w-full max-w-4xl mx-auto mb-12 md:mb-20">
                             {[
                                 "وضوح استراتيجي بدل القرارات التجريبية",
                                 "نظام متكامل بدل أدوات متفرقة",

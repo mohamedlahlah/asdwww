@@ -14,7 +14,7 @@ const AutomationPage = () => {
     ];
 
     return (
-        <main className="pt-32 pb-32 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
+        <main className="pt-16 md:pt-24 pb-20 md:pt-32 md:pb-32 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 {/* Section 1: Problem Awareness */}
                 <div className="mb-48">
@@ -46,7 +46,7 @@ const AutomationPage = () => {
                 </div>
 
                 {/* Section 2: Reframing */}
-                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="التحول الذهني"
@@ -135,7 +135,7 @@ const AutomationPage = () => {
                 </div>
 
                 {/* Section 5: Advanced Engineering */}
-                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="هندسة Workflows"
@@ -268,7 +268,7 @@ const AutomationPage = () => {
                 {/* Section 7: Security & Reliability */}
                 <div className="mb-48 p-12 md:p-24 bento-card relative overflow-hidden bg-black text-white border-none">
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_100%,_rgba(37,99,235,0.1)_0%,_transparent_50%)]"></div>
-                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                         <div className="text-start">
                             <SectionHeader
                                 tag="الأمان والاعتمادية"
@@ -309,7 +309,7 @@ const AutomationPage = () => {
                 </div>
 
                 {/* Section 9: ROI & Measurement */}
-                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="القياس والعائد"
