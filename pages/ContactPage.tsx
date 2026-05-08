@@ -10,7 +10,7 @@ const ContactPage = () => {
         const subject = formData.get('subject');
         const message = formData.get('message');
 
-        const whatsappUrl = `https://wa.me/971545777839?text=${encodeURIComponent(
+        const whatsappUrl = `https://wa.me/966593224180?text=${encodeURIComponent(
             `*رسالة تواصل جديدة*\n\n*الاسم:* ${name}\n*الموضوع:* ${subject}\n*الرسالة:* ${message}`
         )}`;
         window.open(whatsappUrl, '_blank');
@@ -41,7 +41,7 @@ const ContactPage = () => {
                         <div className="space-y-8">
                             {[
                                 { i: <Mail className="text-blue-500" />, t: "البريد الإلكتروني", v: "hello@digitalmerchant.team" },
-                                { i: <Phone className="text-blue-500" />, t: "رقم الواتساب", v: "+971 54 577 7839" },
+                                { i: <Phone className="text-blue-500" />, t: "رقم الواتساب", v: "+966 59 322 4180" },
                                 { i: <MapPin className="text-blue-500" />, t: "مواقع الفروع", v: "الإمارات (العين) | سوريا (حماة)" },
                                 { i: <Clock className="text-blue-500" />, t: "ساعات العمل", v: "الأحد - الخميس: 9:00 ص - 6:00 م" }
                             ].map((item, i) => (
