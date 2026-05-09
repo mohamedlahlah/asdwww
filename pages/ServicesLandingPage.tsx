@@ -50,7 +50,7 @@ const ServicesLandingPage = () => {
     ];
 
     return (
-        <main className="pt-16 md:pt-24 pb-20 md:pt-32 md:pb-32 bg-white dark:bg-black transition-colors duration-500">
+        <main className="pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black transition-colors duration-500">
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 <SectionHeader
                     tag="منظومة الخدمات 360"

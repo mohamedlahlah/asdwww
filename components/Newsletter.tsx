@@ -29,7 +29,7 @@ const Newsletter = () => {
                     {/* Floating Social Proof Chip */}
                     <div className="inline-flex items-center gap-3 bg-black dark:bg-white text-white dark:text-black px-5 py-2 rounded-full text-xs font-black mb-10 shadow-2xl animate-bounce-slow">
                         <Users size={14} />
-                        <span>انضم لـ 12,400+ تاجر ناجح</span>
+                        <span>انضم للقائمة البريدية للتجار</span>
                     </div>
 
                     <div className="text-center mb-10 max-w-4xl">

@@ -15,7 +15,7 @@ const ProductsPage = () => {
     };
 
     return (
-        <main className="min-h-screen pt-16 md:pt-24 pb-20 md:pt-32 md:pb-32 bg-white dark:bg-black text-gray-900 dark:text-white relative overflow-hidden flex flex-col items-center justify-center transition-colors duration-500">
+        <main className="min-h-screen pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black text-gray-900 dark:text-white relative overflow-hidden flex flex-col items-center justify-center transition-colors duration-500">
 
             {/* Ambient Background */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">

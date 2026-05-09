@@ -14,7 +14,7 @@ const AutomationPage = () => {
     ];
 
     return (
-        <main className="pt-16 md:pt-24 pb-20 md:pt-32 md:pb-32 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
+        <main className="pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 {/* Section 1: Problem Awareness */}
                 <div className="mb-20 md:mb-48">

@@ -34,7 +34,7 @@ const PortfolioPage = () => {
         : PROJECTS.filter(p => p.category === activeCategory);
 
     return (
-        <main className="pt-16 md:pt-24 pb-20 md:pt-32 md:pb-32 bg-white dark:bg-black transition-colors duration-500 min-h-screen">
+        <main className="pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black transition-colors duration-500 min-h-screen">
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 <SectionHeader
                     tag="سجل نجاحنا"
