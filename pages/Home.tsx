@@ -8,6 +8,10 @@ import {
     TrendingUp,
 
     Zap,
+    Megaphone,
+    Camera,
+    Scale,
+    LayoutTemplate,
     ArrowUpRight,
     Users,
     BarChart3,
@@ -160,6 +164,38 @@ const Home = () => {
                         <p className="text-2xl lg:text-3xl font-bold text-gray-500 dark:text-gray-400">
                             لتتفرغ أنت لما تتقنه فعلًا: <span className="text-gray-900 dark:text-white">المنتج، العميل، والرؤية.</span>
                         </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* MOST REQUESTED SERVICES */}
+            <section className="py-12 md:py-16 px-4 md:px-8 lg:px-16 bg-white dark:bg-black overflow-hidden border-b border-black/5 dark:border-white/5">
+                <div className="max-w-[1400px] mx-auto text-center mb-10 md:mb-16">
+                    <h2 className="text-3xl md:text-4xl font-black text-[#0f4a5a] dark:text-white tracking-tight">ألقِ نظرة على الخدمات الأكثر طلباً لدى خدمات التاجر</h2>
+                </div>
+                
+                <div className="max-w-[1400px] mx-auto overflow-x-auto pb-12 pt-4 hide-scrollbar cursor-grab active:cursor-grabbing">
+                    <div className="flex gap-4 md:gap-6 w-max mx-auto px-4 md:px-0">
+                        {[
+                            { title: "التسويق الرقمي", from: "from-[#fcd34d]", to: "to-[#fb923c]", icon: <Megaphone size={120} className="text-white/90 drop-shadow-[0_20px_20px_rgba(0,0,0,0.15)]" strokeWidth={1} /> },
+                            { title: "تحسين محركات البحث", from: "from-[#fb923c]", to: "to-[#f87171]", icon: <Search size={120} className="text-white/90 drop-shadow-[0_20px_20px_rgba(0,0,0,0.15)]" strokeWidth={1} /> },
+                            { title: "تصوير المنتجات", from: "from-[#ef4444]", to: "to-[#e11d48]", icon: <Camera size={120} className="text-white/90 drop-shadow-[0_20px_20px_rgba(0,0,0,0.15)]" strokeWidth={1} /> },
+                            { title: "الكتابة القانونية", from: "from-[#7dd3fc]", to: "to-[#38bdf8]", icon: <Scale size={120} className="text-white/90 drop-shadow-[0_20px_20px_rgba(0,0,0,0.15)]" strokeWidth={1} /> },
+                            { title: "تصميم CSS", from: "from-[#86efac]", to: "to-[#4ade80]", icon: <LayoutTemplate size={120} className="text-white/90 drop-shadow-[0_20px_20px_rgba(0,0,0,0.15)]" strokeWidth={1} /> },
+                        ].map((s, i) => (
+                            <div key={i} className={`w-[260px] md:w-[280px] lg:w-[300px] h-[360px] md:h-[400px] rounded-3xl md:rounded-[2.5rem] bg-gradient-to-b ${s.from} ${s.to} p-6 md:p-8 flex flex-col justify-between items-center group hover:-translate-y-4 hover:shadow-2xl hover:shadow-black/20 transition-all duration-500 shadow-lg relative overflow-hidden`}>
+                                {/* Subtle inner glow */}
+                                <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2.5rem]"></div>
+                                
+                                <h3 className="text-2xl md:text-3xl font-black text-white text-center w-full z-10 drop-shadow-md leading-snug">{s.title}</h3>
+                                
+                                <div className="mb-6 md:mb-10 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-700 ease-out z-10 relative">
+                                    {/* Fake floor shadow for 3D effect */}
+                                    <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-24 h-6 bg-black/20 blur-xl rounded-[100%] transition-opacity duration-500 group-hover:opacity-60"></div>
+                                    {s.icon}
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
