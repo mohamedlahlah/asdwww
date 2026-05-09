@@ -122,7 +122,7 @@ const SEOPage = () => {
                 </div>
 
                 {/* Section 4: Domain Authority */}
-                <div className="mb-16 md:mb-32 p-8 md:p-16 lg:p-24 bento-card relative overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-900 text-white border-none shadow-[0_20px_50px_rgba(37,99,235,0.3)]">
+                <div className="mb-16 md:mb-32 py-12 px-4 md:p-16 lg:p-24 -mx-6 md:mx-0 w-[calc(100%+3rem)] md:w-auto bento-card relative overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-900 text-white border-none shadow-[0_20px_50px_rgba(37,99,235,0.3)]">
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(255,255,255,0.15)_0%,_transparent_50%)]"></div>
                     <div className="relative z-10 max-w-5xl">
                         <div className="inline-flex items-center gap-2 px-6 py-2 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full text-xs font-black uppercase tracking-widest mb-12">
@@ -224,7 +224,7 @@ const SEOPage = () => {
                 />
 
                 {/* Section 7: Action / Form */}
-                <div className="mt-20 md:mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-[3rem] p-8 md:p-16 lg:p-24">
+                <div className="mt-20 md:mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-none md:rounded-[3rem] py-12 px-4 md:p-16 lg:p-24 -mx-6 md:mx-0 w-[calc(100%+3rem)] md:w-auto">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="section-title-apple text-gray-900 dark:text-white mb-10 tracking-tighter">
                             هل تريد زوارًا... <br />

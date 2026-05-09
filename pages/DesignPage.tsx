@@ -206,7 +206,7 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 8: Developer Integration */}
-                <div className="mb-20 md:mb-48 bento-card p-8 md:p-16 lg:p-24 bg-gray-900 text-white border-none relative overflow-hidden text-start">
+                <div className="mb-20 md:mb-48 bento-card py-12 px-4 md:p-16 lg:p-24 -mx-6 md:mx-0 w-[calc(100%+3rem)] md:w-auto bg-gray-900 text-white border-none relative overflow-hidden text-start">
                     <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_0%_0%,_rgba(59,130,246,0.2)_0%,_transparent_50%)]"></div>
                     <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12">
                         <div>
@@ -310,7 +310,7 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 12: Call to Action */}
-                <div className="mt-20 md:mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-[4rem] p-12 md:p-32">
+                <div className="mt-20 md:mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-none md:rounded-[4rem] py-12 px-4 md:p-24 lg:p-32 -mx-6 md:mx-0 w-[calc(100%+3rem)] md:w-auto">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-5xl md:text-7xl font-black text-gray-900 dark:text-white mb-8 tracking-tighter">
                             هل واجهتك تحقق أهدافك... <br />

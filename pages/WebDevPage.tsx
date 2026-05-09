@@ -162,7 +162,7 @@ const WebDevPage = () => {
                 </div>
 
                 {/* Section 6: Checkout Optimization */}
-                <div className="mb-16 md:mb-32 p-8 md:p-16 lg:p-24 bento-card relative overflow-hidden bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 transition-colors">
+                <div className="mb-16 md:mb-32 py-12 px-4 md:p-16 lg:p-24 -mx-6 md:mx-0 w-[calc(100%+3rem)] md:w-auto bento-card relative overflow-hidden bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 transition-colors">
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_100%,_rgba(37,99,235,0.05)_0%,_transparent_50%)]"></div>
                     <div className="relative z-10 flex flex-col lg:flex-row gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                         <div className="lg:w-1/2 text-start">
@@ -232,7 +232,7 @@ const WebDevPage = () => {
                 </div>
 
                 {/* Section 11: Proof & Results */}
-                <div className="mb-16 md:mb-32 p-8 md:p-16 lg:p-24 bento-card bg-black text-white border-none relative overflow-hidden">
+                <div className="mb-16 md:mb-32 py-12 px-4 md:p-16 lg:p-24 -mx-6 md:mx-0 w-[calc(100%+3rem)] md:w-auto bento-card bg-black text-white border-none relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(255,255,255,0.05)_0%,_transparent_50%)]"></div>
                     <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-8 md:gap-12 lg:gap-16">
                         <div className="text-start">
@@ -312,7 +312,7 @@ const WebDevPage = () => {
                 />
 
                 {/* Section 14: Final CTA */}
-                <div className="mt-20 md:mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-[3rem] p-8 md:p-16 lg:p-24">
+                <div className="mt-20 md:mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-none md:rounded-[3rem] py-12 px-4 md:p-16 lg:p-24 -mx-6 md:mx-0 w-[calc(100%+3rem)] md:w-auto">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="section-title-apple text-gray-900 dark:text-white mb-10 tracking-tighter">
                             هل متجرك جاهز للبيع... <br />

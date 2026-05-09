@@ -374,7 +374,7 @@ const AdsPage = () => {
 
                 {/* Section: Google Ecosystem Omnichannel (Premium Redesign) */}
                 <div className="mb-20 md:mb-48 relative">
-                    <div className="max-w-[1400px] mx-auto bg-gray-50 dark:bg-[#0c0c0d] rounded-[3rem] p-8 md:p-20 border border-black/5 dark:border-white/5 relative overflow-hidden">
+                    <div className="max-w-[1400px] mx-auto bg-gray-50 dark:bg-[#0c0c0d] rounded-none md:rounded-[3rem] p-8 md:p-20 border border-black/5 dark:border-white/5 relative overflow-hidden">
                         {/* Abstract Background Glows */}
                         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full mix-blend-multiply dark:mix-blend-screen animate-pulse"></div>
                         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-red-500/10 blur-[120px] rounded-full mix-blend-multiply dark:mix-blend-screen opacity-50"></div>
@@ -550,7 +550,7 @@ const AdsPage = () => {
 
 
                 {/* Section 5: Ad Creatives */}
-                <div className="mb-20 md:mb-48 relative p-8 md:p-16 lg:p-24 bento-card bg-black text-white border-none overflow-hidden">
+                <div className="mb-20 md:mb-48 relative py-12 px-4 md:p-16 lg:p-24 -mx-6 md:mx-0 w-[calc(100%+3rem)] md:w-auto bento-card bg-black text-white border-none overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_0%_0%,_rgba(37,99,235,0.2)_0%,_transparent_50%)]"></div>
                     <div className="relative z-10 max-w-4xl mx-auto text-center md:text-start">
                         <SectionHeader
@@ -601,7 +601,7 @@ const AdsPage = () => {
 
 
                 {/* Section 7: Optimization Loop */}
-                <div className="mb-16 md:mb-32 p-8 md:p-16 lg:p-24 bento-card bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 text-center relative overflow-hidden">
+                <div className="mb-16 md:mb-32 py-12 px-4 md:p-16 lg:p-24 -mx-6 md:mx-0 w-[calc(100%+3rem)] md:w-auto bento-card bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 text-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-blue-600/5 blur-[120px]"></div>
                     <SectionHeader
                         tag="التحسين المستمر"

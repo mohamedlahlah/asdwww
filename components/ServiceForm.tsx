@@ -87,8 +87,8 @@ const ServiceForm: React.FC<ServiceFormProps> = ({ serviceName, questions }) => 
     const canAdvance = !question.required || (answers[question.label] && answers[question.label].trim() !== "");
 
     return (
-        <div className="bento-card p-6 md:p-12 lg:p-16 max-w-4xl mx-auto mt-16 md:mt-24 border-blue-500/20 shadow-2xl relative overflow-hidden bg-white dark:bg-[#0c0c0d]">
-            <div className="absolute top-0 end-0 w-64 h-64 bg-blue-600/10 blur-[100px] pointer-events-none"></div>
+        <div className="md:bento-card p-0 md:p-12 lg:p-16 max-w-4xl mx-auto mt-8 md:mt-24 md:border-blue-500/20 md:shadow-2xl relative overflow-hidden bg-transparent md:bg-white md:dark:bg-[#0c0c0d] rounded-none md:rounded-3xl border-none">
+            <div className="absolute top-0 end-0 w-64 h-64 bg-blue-600/10 blur-[100px] pointer-events-none hidden md:block"></div>
 
             <div className="mb-8 md:mb-12 text-center md:text-start reveal">
                 <h3 className="text-2xl md:text-4xl font-black text-gray-900 dark:text-white mb-4">ابدأ مشروعك الآن</h3>

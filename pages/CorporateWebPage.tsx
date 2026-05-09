@@ -312,7 +312,7 @@ const CorporateWebPage = () => {
                 </div>
 
                 {/* Section 10: Proof & Impact */}
-                <div className="mb-16 md:mb-32 p-8 md:p-16 lg:p-24 bento-card bg-black text-white border-none relative overflow-hidden">
+                <div className="mb-16 md:mb-32 py-12 px-4 md:p-16 lg:p-24 -mx-6 md:mx-0 w-[calc(100%+3rem)] md:w-auto bento-card bg-black text-white border-none relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(255,255,255,0.05)_0%,_transparent_50%)]"></div>
                     <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-8 md:gap-12 lg:gap-16">
                         <div className="text-start">
@@ -389,7 +389,7 @@ const CorporateWebPage = () => {
                 />
 
                 {/* Section 13: Call to Action */}
-                <div className="mt-20 md:mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-[4rem] p-12 md:p-32">
+                <div className="mt-20 md:mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-none md:rounded-[4rem] py-12 px-4 md:p-24 lg:p-32 -mx-6 md:mx-0 w-[calc(100%+3rem)] md:w-auto">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-5xl md:text-7xl font-black text-gray-900 dark:text-white mb-8 tracking-tighter">
                             هل موقع شركتك <br />

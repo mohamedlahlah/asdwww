@@ -110,7 +110,7 @@ const AutomationPage = () => {
                 </div>
 
                 {/* Section 4: Methodology */}
-                <div className="mb-20 md:mb-48 p-8 md:p-16 lg:p-24 bento-card relative overflow-hidden bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 text-start">
+                <div className="mb-20 md:mb-48 py-12 px-4 md:p-16 lg:p-24 -mx-6 md:mx-0 w-[calc(100%+3rem)] md:w-auto bento-card relative overflow-hidden bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 text-start">
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(168,85,247,0.05)_0%,_transparent_50%)]"></div>
                     <SectionHeader
                         tag="منهجيتنا"
@@ -266,7 +266,7 @@ const AutomationPage = () => {
                 </div>
 
                 {/* Section 7: Security & Reliability */}
-                <div className="mb-20 md:mb-48 p-8 md:p-16 lg:p-24 bento-card relative overflow-hidden bg-black text-white border-none">
+                <div className="mb-20 md:mb-48 py-12 px-4 md:p-16 lg:p-24 -mx-6 md:mx-0 w-[calc(100%+3rem)] md:w-auto bento-card relative overflow-hidden bg-black text-white border-none">
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_100%,_rgba(37,99,235,0.1)_0%,_transparent_50%)]"></div>
                     <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                         <div className="text-start">
@@ -332,7 +332,7 @@ const AutomationPage = () => {
                 </div>
 
                 {/* Section 10: Proof & Impact */}
-                <div className="mb-20 md:mb-48 bento-card p-8 md:p-16 lg:p-24 bg-gray-50 dark:bg-[#0c0c0d] border border-black/5 dark:border-white/10">
+                <div className="mb-20 md:mb-48 bento-card py-12 px-4 md:p-16 lg:p-24 -mx-6 md:mx-0 w-[calc(100%+3rem)] md:w-auto bg-gray-50 dark:bg-[#0c0c0d] border border-black/5 dark:border-white/10">
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
                         {[
                             { v: "65%", l: "تقليل العمل اليدوي", c: "text-purple-600" },
@@ -405,7 +405,7 @@ const AutomationPage = () => {
                 />
 
                 {/* Section 12: Call to Action */}
-                <div className="mt-20 md:mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-[4rem] p-12 md:p-32">
+                <div className="mt-20 md:mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-none md:rounded-[4rem] py-12 px-4 md:p-24 lg:p-32 -mx-6 md:mx-0 w-[calc(100%+3rem)] md:w-auto">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-5xl md:text-7xl font-black text-gray-900 dark:text-white mb-8 tracking-tighter">
                             هل تعمل أنظمتك معك… <br />

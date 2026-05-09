@@ -443,7 +443,7 @@ const Home = () => {
 
             {/* CTA */}
             <section className="py-12 md:py-20 lg:py-28 px-4 md:px-8 lg:px-16 bg-white dark:bg-black">
-                <div className="max-w-6xl mx-auto text-center bg-gray-900 text-white rounded-[3rem] p-8 md:p-16 lg:p-24 relative overflow-hidden">
+                <div className="max-w-6xl mx-auto text-center bg-gray-900 text-white rounded-none md:rounded-[3rem] py-12 px-4 md:p-16 lg:p-24 -mx-6 md:mx-0 w-[calc(100%+3rem)] md:w-auto relative overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_0%_100%,_rgba(37,99,235,0.4)_0%,_transparent_50%)]"></div>
 
                     <div className="relative z-10 flex flex-col items-center">
