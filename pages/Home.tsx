@@ -133,7 +133,7 @@ const Home = () => {
                     </div>
 
                     {/* Grid Items (8 Cards) */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
                         {[
                             { title: "SEO استراتيجي", desc: "مبني على نية الشراء", icon: <Search size={24} /> },
                             { title: "متاجر قابلة للتوسع", desc: "بنية تحتية قوية", icon: <LayoutGrid size={24} /> },
@@ -144,12 +144,12 @@ const Home = () => {
                             { title: "تحليل بالأرقام", desc: "قرارات مبنية على داتا", icon: <BarChart3 size={24} /> },
                             { title: "إدارة نمو", desc: "حملات توسع مدروسة", icon: <Rocket size={24} /> }
                         ].map((item, i) => (
-                            <div key={i} className="bento-card p-6 md:p-8 bg-blue-50 dark:bg-blue-900/5 border-blue-100 dark:border-blue-500/10 hover:border-blue-500/30 group hover:-translate-y-1 transition-transform">
+                            <div key={i} className="bento-card p-4 md:p-6 lg:p-8 bg-blue-50 dark:bg-blue-900/5 border-blue-100 dark:border-blue-500/10 hover:border-blue-500/30 group hover:-translate-y-1 transition-transform">
                                 <div className="w-10 h-10 bg-blue-100 dark:bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
                                     {item.icon}
                                 </div>
-                                <h3 className="text-xl lg:text-2xl font-black text-gray-900 dark:text-white mb-2">{item.title}</h3>
-                                <p className="text-lg lg:text-xl text-gray-500 dark:text-gray-400 font-bold">{item.desc}</p>
+                                <h3 className="text-base md:text-xl lg:text-2xl font-black text-gray-900 dark:text-white mb-1 md:mb-2 leading-tight">{item.title}</h3>
+                                <p className="text-xs md:text-lg lg:text-xl text-gray-500 dark:text-gray-400 font-bold">{item.desc}</p>
                             </div>
                         ))}
                     </div>
