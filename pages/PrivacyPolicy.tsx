@@ -54,9 +54,12 @@ const PrivacyPolicy = () => {
                     </div>
 
                     <div className="space-y-4">
-                        <h3 className="text-2xl font-black text-gray-900 dark:text-white">4. أمن البيانات</h3>
+                        <h3 className="text-2xl font-black text-gray-900 dark:text-white">4. أمن البيانات ومعالجة الدفع</h3>
                         <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
                             أمان بياناتك مهم بالنسبة لنا، ولكن تذكر أنه لا توجد طريقة نقل عبر الإنترنت أو طريقة تخزين إلكتروني آمنة بنسبة 100%. بينما نسعى جاهدين لاستخدام وسائل مقبولة تجارياً لحماية بياناتك الشخصية، لا يمكننا ضمان أمانها المطلق.
+                        </p>
+                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+                            <strong className="text-gray-900 dark:text-white">بخصوص عمليات الدفع:</strong> نحن لا نقوم بتخزين أو حفظ أرقام البطاقات الائتمانية أو تفاصيل الدفع الحساسة على خوادمنا نهائياً. جميع عمليات الدفع تتم معالجتها بأعلى معايير التشفير والأمان عبر بوابات دفع عالمية وموثوقة ومعتمدة (مثل Stripe).
                         </p>
                     </div>
 

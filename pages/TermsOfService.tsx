@@ -41,21 +41,28 @@ const TermsOfService = () => {
                     </div>
 
                     <div className="space-y-4">
-                        <h3 className="text-2xl font-black text-gray-900 dark:text-white">4. حدود المسؤولية</h3>
+                        <h3 className="text-2xl font-black text-gray-900 dark:text-white">4. سياسة التنفيذ والتسليم (Fulfillment Policy)</h3>
+                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+                            نظراً لكون خدماتنا رقمية وتطويرية، تختلف مدة التنفيذ والتسليم بناءً على حجم ونطاق المشروع. يتم الاتفاق المسبق على الإطار الزمني لتسليم المشاريع مع العميل في العقد المبرم أو عرض السعر. عادةً ما تتراوح مدة تنفيذ المتاجر الإلكترونية وحملات التسويق من 14 إلى 30 يوم عمل. نلتزم بإبقاء العميل على اطلاع دائم بمراحل سير العمل وتسليم المتطلبات المتفق عليها رقمياً.
+                        </p>
+                    </div>
+
+                    <div className="space-y-4">
+                        <h3 className="text-2xl font-black text-gray-900 dark:text-white">5. حدود المسؤولية</h3>
                         <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
                             لا نتحمل بأي حال من الأحوال المسؤولية عن أي أضرار (بما في ذلك، على سبيل المثال لا الحصر، الأضرار الناجمة عن فقدان البيانات أو الأرباح، أو بسبب انقطاع العمل) الناشئة عن استخدام أو عدم القدرة على استخدام المواد الموجودة على موقعنا، حتى لو تم إبلاغنا شفهياً أو كتابياً باحتمالية حدوث مثل هذه الأضرار.
                         </p>
                     </div>
 
                     <div className="space-y-4">
-                        <h3 className="text-2xl font-black text-gray-900 dark:text-white">5. الروابط الخارجية</h3>
+                        <h3 className="text-2xl font-black text-gray-900 dark:text-white">6. الروابط الخارجية</h3>
                         <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
                             قد يحتوي موقعنا على روابط لمواقع خارجية لا نقوم بإدارتها. نحن لا نملك أي سيطرة على محتوى وسياسات الخصوصية لتلك المواقع ولا نتحمل أي مسؤولية عنها.
                         </p>
                     </div>
 
                     <div className="space-y-4">
-                        <h3 className="text-2xl font-black text-gray-900 dark:text-white">6. القانون الواجب التطبيق</h3>
+                        <h3 className="text-2xl font-black text-gray-900 dark:text-white">7. القانون الواجب التطبيق</h3>
                         <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
                             تخضع هذه الشروط والأحكام وتفسر وفقاً للقوانين المعمول بها في المملكة العربية السعودية، وتخضع أنت بشكل غير قابل للنقض للاختصاص القضائي الحصري للمحاكم في تلك الدولة أو الموقع.
                         </p>
