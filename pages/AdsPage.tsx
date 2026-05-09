@@ -26,13 +26,13 @@ const AdsPage = () => {
                     icon={<ShieldAlert className="w-5 h-5 text-orange-500" />}
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-32">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-16 md:mb-32">
                     {[
                         { t: "نقرات بلا مبيعات", d: "زيارات كثيرة تنتهي بمعدل ارتداد عالي لأن الرسالة لا تطابق النية.", icon: <MousePointer2 className="text-orange-500" /> },
                         { t: "ميزانية تُحرق بلا أثر", d: "التنافس على كلمات عامة بدلاً من استهداف لحظات القرار الحاسمة.", icon: <Zap className="text-orange-500" /> },
                         { t: "نتائج تجارية ضعيفة", d: "تقارير تبدو جميلة بالأرقام، ولكنها لا تترجم لنمو حقيقي في حسابك البنكي.", icon: <BarChart3 className="text-orange-500" /> }
                     ].map((item, i) => (
-                        <div key={i} className="bento-card p-10 bg-orange-50/30 dark:bg-orange-500/5 border-orange-100 dark:border-orange-500/10">
+                        <div key={i} className="bento-card p-6 md:p-10 bg-orange-50/30 dark:bg-orange-500/5 border-orange-100 dark:border-orange-500/10">
                             <div className="mb-6">{item.icon}</div>
                             <h4 className="text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
                             <p className="text-lg text-gray-600 dark:text-gray-400 font-medium leading-relaxed">{item.d}</p>
@@ -41,7 +41,7 @@ const AdsPage = () => {
                 </div>
 
                 {/* Section 2: Reframing */}
-                <div className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
+                <div className="mb-16 md:mb-32 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="التحول الذهني"
@@ -50,7 +50,7 @@ const AdsPage = () => {
                             icon={<Brain className="w-5 h-5 text-blue-500" />}
                         />
                     </div>
-                    <div className="bento-card p-12 bg-gray-50 dark:bg-[#0c0c0d] flex flex-col gap-4 md:gap-8">
+                    <div className="bento-card p-6 md:p-12 bg-gray-50 dark:bg-[#0c0c0d] flex flex-col gap-4 md:gap-8">
                         <div className="flex items-center gap-6 p-6 bg-red-500/5 rounded-2xl border border-red-500/10">
                             <X className="text-red-500" size={32} />
                             <div>
@@ -70,7 +70,7 @@ const AdsPage = () => {
 
                 {/* Section 3: Core Methodology (The Crystal Pyramid Redesign) */}
                 {/* Section 3: Core Methodology (Compact Grid Redesign) */}
-                <div className="mb-32 relative">
+                <div className="mb-16 md:mb-32 relative">
                     <SectionHeader
                         tag="المنهجية الجوهرية"
                         title="نظام إعلاني مبني <span className='text-indigo-500'>على هرم نية المستخدم.</span>"
@@ -133,7 +133,7 @@ const AdsPage = () => {
 
 
                 {/* Section: Platforms We Manage (Redesigned Grid) */}
-                <div className="mb-48 relative">
+                <div className="mb-20 md:mb-48 relative">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         {/* Text Content (Right Side) */}
                         <div className="lg:col-span-5 text-start order-1 md:order-1">
@@ -188,7 +188,7 @@ const AdsPage = () => {
 
 
                 {/* Section: Scaling Strategy Roadmap (Infographic based) */}
-                <div className="mb-48 relative">
+                <div className="mb-20 md:mb-48 relative">
                     <SectionHeader
                         tag="استراتيجية التوسع"
                         title="خارطة طريق <span className='text-blue-500'>التوسع الهائل.</span>"
@@ -256,14 +256,14 @@ const AdsPage = () => {
                                 isCTA: true
                             }
                         ].map((step, i) => (
-                            <div key={i} className={`bento-card p-10 flex flex-col justify-between transition-all duration-500 hover:scale-105 group relative overflow-hidden ${step.color} reveal`} style={{ transitionDelay: `${i * 50}ms` }}>
+                            <div key={i} className={`bento-card p-6 md:p-10 flex flex-col justify-between transition-all duration-500 hover:scale-105 group relative overflow-hidden ${step.color} reveal`} style={{ transitionDelay: `${i * 50}ms` }}>
                                 {step.isCTA && <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 blur-[60px]"></div>}
                                 <div className="text-start relative z-10">
                                     <div className="flex justify-between items-start mb-8">
                                         <div className={`w-10 h-10 md:w-14 md:h-14 rounded-2xl ${step.isCTA ? 'bg-white/10' : 'bg-gray-100 dark:bg-white/5'} flex items-center justify-center`}>
                                             {step.icon}
                                         </div>
-                                        <span className={`text-4xl font-black tracking-tighter ${step.isCTA ? 'text-white/20' : 'text-gray-900/10 dark:text-white/10'}`}>{step.number}</span>
+                                        <span className={`text-3xl md:text-4xl font-black tracking-tighter ${step.isCTA ? 'text-white/20' : 'text-gray-900/10 dark:text-white/10'}`}>{step.number}</span>
                                     </div>
                                     <h5 className={`text-base md:text-xl font-black mb-4 leading-tight ${step.isCTA ? 'text-white' : 'text-gray-900 dark:text-white group-hover:text-blue-500 transition-colors'}`}>{step.t}</h5>
                                     <p className={`font-bold text-sm leading-relaxed ${step.isCTA ? 'text-blue-50' : 'text-gray-500 dark:text-gray-400'}`}>{step.d}</p>
@@ -274,7 +274,7 @@ const AdsPage = () => {
                 </div>
 
                 {/* Section: Heatmap Analysis (New Request) */}
-                <div className="mb-48 relative">
+                <div className="mb-20 md:mb-48 relative">
                     <SectionHeader
                         tag="تحليل السلوك"
                         title="تتبّع أداء الإعلانات <span className='text-rose-500'>عبر الخرائط الحرارية.</span>"
@@ -373,7 +373,7 @@ const AdsPage = () => {
                 </div>
 
                 {/* Section: Google Ecosystem Omnichannel (Premium Redesign) */}
-                <div className="mb-48 relative">
+                <div className="mb-20 md:mb-48 relative">
                     <div className="max-w-[1400px] mx-auto bg-gray-50 dark:bg-[#0c0c0d] rounded-[3rem] p-8 md:p-20 border border-black/5 dark:border-white/5 relative overflow-hidden">
                         {/* Abstract Background Glows */}
                         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full mix-blend-multiply dark:mix-blend-screen animate-pulse"></div>
@@ -449,16 +449,16 @@ const AdsPage = () => {
                 </div>
 
                 {/* Section: Advertising Effectiveness (Vertical Timeline) */}
-                <div className="mb-48 relative px-6 max-w-5xl mx-auto">
+                <div className="mb-20 md:mb-48 relative px-6 max-w-5xl mx-auto">
                     <SectionHeader
                         tag="محركات الفعالية"
                         title="لماذا تهم <span className='text-emerald-500'>فعالية الإعلانات؟</span>"
                         subtitle="الحملة الإعلانية ليست مجرد إنفاق، بل هي استثمار استراتيجي يهدف لتحويل كل ريال إلى أصل تجاري متنامي."
                         icon={<TargetIcon className="w-5 h-5 text-emerald-500" />}
-                        titleClassName="text-4xl md:text-5xl lg:text-5xl"
+                        titleClassName="text-4xl md:text-5xl lg:text-3xl md:text-5xl"
                     />
 
-                    <div className="mt-20 md:mt-32 relative">
+                    <div className="mt-20 md:mt-16 md:mt-32 relative">
                         {/* Timeline Center Line */}
                         <div className="absolute top-0 bottom-0 left-[20px] md:left-1/2 w-0.5 bg-gradient-to-b from-emerald-500 via-blue-500 to-transparent -translate-x-1/2 opacity-30"></div>
 
@@ -520,7 +520,7 @@ const AdsPage = () => {
 
 
                 {/* Section 4: Account Architecture */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-32 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16 md:mb-32 items-center">
                     <div className="lg:col-span-5 text-start order-1 lg:order-1">
                         <SectionHeader
                             tag="هندسة الحساب"
@@ -550,7 +550,7 @@ const AdsPage = () => {
 
 
                 {/* Section 5: Ad Creatives */}
-                <div className="mb-48 relative p-12 md:p-24 bento-card bg-black text-white border-none overflow-hidden">
+                <div className="mb-20 md:mb-48 relative p-8 md:p-16 lg:p-24 bento-card bg-black text-white border-none overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_0%_0%,_rgba(37,99,235,0.2)_0%,_transparent_50%)]"></div>
                     <div className="relative z-10 max-w-4xl mx-auto text-center md:text-start">
                         <SectionHeader
@@ -574,7 +574,7 @@ const AdsPage = () => {
                 </div>
 
                 {/* Section 6: Conversion Engineering */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center mb-32">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center mb-16 md:mb-32">
                     <div className="lg:col-span-5 text-start">
                         <SectionHeader
                             tag="هندسة التحويل"
@@ -601,7 +601,7 @@ const AdsPage = () => {
 
 
                 {/* Section 7: Optimization Loop */}
-                <div className="mb-32 p-12 md:p-24 bento-card bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 text-center relative overflow-hidden">
+                <div className="mb-16 md:mb-32 p-8 md:p-16 lg:p-24 bento-card bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 text-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-blue-600/5 blur-[120px]"></div>
                     <SectionHeader
                         tag="التحسين المستمر"
@@ -612,9 +612,9 @@ const AdsPage = () => {
                 </div>
 
                 {/* Section 8: Proof & Metrics */}
-                <div className="mb-32">
+                <div className="mb-16 md:mb-32">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8">
-                        <div className="lg:col-span-8 bento-card p-12 md:p-16 relative overflow-hidden bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10">
+                        <div className="lg:col-span-8 bento-card p-12 md:p-8 md:p-16 relative overflow-hidden bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10">
                             <div className="absolute top-0 start-0 w-full h-full bg-[radial-gradient(circle_at_0%_0%,_rgba(249,115,22,0.05)_0%,_transparent_50%)]"></div>
                             <div className="flex items-center justify-end gap-6 mb-16 relative z-10">
                                 <div className="text-start">
@@ -639,17 +639,17 @@ const AdsPage = () => {
                             </div>
                         </div>
                         <div className="lg:col-span-4 grid gap-4 md:gap-8">
-                            <div className="bento-card p-10 bg-gray-50 dark:bg-[#151516] flex flex-col justify-between">
+                            <div className="bento-card p-6 md:p-10 bg-gray-50 dark:bg-[#151516] flex flex-col justify-between">
                                 <Globe size={40} className="text-blue-500" />
                                 <div className="text-start">
-                                    <div className="text-4xl font-black text-gray-900 dark:text-white mb-2">12+ دولة</div>
+                                    <div className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-2">12+ دولة</div>
                                     <p className="text-gray-500 font-bold text-sm uppercase tracking-widest">تغطية حملات إقليمية</p>
                                 </div>
                             </div>
-                            <div className="bento-card p-10 bg-gray-50 dark:bg-[#0a0a0b] flex flex-col justify-between">
+                            <div className="bento-card p-6 md:p-10 bg-gray-50 dark:bg-[#0a0a0b] flex flex-col justify-between">
                                 <Zap size={40} className="text-yellow-500" />
                                 <div className="text-start">
-                                    <div className="text-4xl font-black text-gray-900 dark:text-white mb-2">0.9s</div>
+                                    <div className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-2">0.9s</div>
                                     <p className="text-gray-500 font-bold text-sm uppercase tracking-widest">سرعة تحويل الصفحات</p>
                                 </div>
                             </div>
@@ -658,8 +658,8 @@ const AdsPage = () => {
                 </div>
 
                 {/* Section 9: Qualification (Ideal Client) */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-32">
-                    <div className="bento-card p-12 bg-green-500/5 border-green-500/20">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-16 md:mb-32">
+                    <div className="bento-card p-6 md:p-12 bg-green-500/5 border-green-500/20">
                         <h4 className="text-lg md:text-2xl font-black text-green-600 mb-8 flex items-center gap-3">
                             <CheckCircle2 /> هذه الخدمة لك إذا:
                         </h4>
@@ -676,7 +676,7 @@ const AdsPage = () => {
                             ))}
                         </ul>
                     </div>
-                    <div className="bento-card p-12 bg-red-500/5 border-red-500/20 grayscale hover:grayscale-0 transition-all opacity-60">
+                    <div className="bento-card p-6 md:p-12 bg-red-500/5 border-red-500/20 grayscale hover:grayscale-0 transition-all opacity-60">
                         <h4 className="text-lg md:text-2xl font-black text-red-600 mb-8 flex items-center gap-3">
                             <BadgeAlert /> غير مناسبة إذا كنت:
                         </h4>
@@ -714,8 +714,8 @@ const AdsPage = () => {
                 />
 
                 {/* Section 11: Final CTA (Unified Intelligent Layout) */}
-                <div className="mt-20 md:mt-32 lg:mt-48 relative">
-                    <div className="max-w-4xl mx-auto p-6 md:p-12 text-center">
+                <div className="mt-20 md:mt-16 md:mt-32 lg:mt-20 md:mt-48 relative">
+                    <div className="max-w-4xl mx-auto p-6 md:p-6 md:p-12 text-center">
                         {/* Header & Copy */}
                         <div className="mb-16 relative z-10 w-full">
                             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-orange-500/10 text-orange-600 dark:text-orange-500 border border-orange-500/20 rounded-full text-sm font-black mb-8 animate-pulse">

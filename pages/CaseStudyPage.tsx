@@ -87,8 +87,8 @@ const CaseStudyPage = () => {
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto mb-16 md:mb-24">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {stats.map((stat: any, i: number) => (
-                        <div key={i} className="bento-card p-10 text-center bg-gray-50 dark:bg-[#111] border border-black/5 dark:border-white/10">
-                            <div className={`text-5xl md:text-6xl font-black mb-2 ${theme.text}`}>{stat.value}</div>
+                        <div key={i} className="bento-card p-6 md:p-10 text-center bg-gray-50 dark:bg-[#111] border border-black/5 dark:border-white/10">
+                            <div className={`text-5xl md:text-4xl md:text-6xl font-black mb-2 ${theme.text}`}>{stat.value}</div>
                             <div className="text-gray-400 font-bold uppercase tracking-widest text-sm">{stat.label}</div>
                         </div>
                     ))}
@@ -96,7 +96,7 @@ const CaseStudyPage = () => {
             </section>
 
             {/* Challenge & Solution */}
-            <section className="px-6 md:px-12 max-w-[1200px] mx-auto mb-32">
+            <section className="px-6 md:px-12 max-w-[1200px] mx-auto mb-16 md:mb-32">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 md:gap-24 items-start">
                     <div>
                         <SectionHeader
@@ -120,7 +120,7 @@ const CaseStudyPage = () => {
             </section>
 
             {/* Technical Specifications */}
-            <section className="px-6 md:px-12 max-w-[1400px] mx-auto mb-32">
+            <section className="px-6 md:px-12 max-w-[1400px] mx-auto mb-16 md:mb-32">
                 <SectionHeader
                     tag="المواصفات التقنية"
                     title="التقنيات والأدوات"
@@ -224,7 +224,7 @@ const CaseStudyPage = () => {
             </section>
 
             {/* Key Features */}
-            <section className="px-6 md:px-12 max-w-[1200px] mx-auto mb-32">
+            <section className="px-6 md:px-12 max-w-[1200px] mx-auto mb-16 md:mb-32">
                 <SectionHeader
                     tag="المميزات الرئيسية"
                     title="ما يميز المشروع"
@@ -245,8 +245,8 @@ const CaseStudyPage = () => {
             </section>
 
             {/* Visual Proof (Mockup Placeholders) */}
-            <section className="px-6 md:px-12 max-w-[1400px] mx-auto mb-32">
-                <div className="bento-card p-4 md:p-6 lg:p-8 md:p-12 bg-gray-100 dark:bg-[#151516] border-none mb-8">
+            <section className="px-6 md:px-12 max-w-[1400px] mx-auto mb-16 md:mb-32">
+                <div className="bento-card p-4 md:p-6 lg:p-8 md:p-6 md:p-12 bg-gray-100 dark:bg-[#151516] border-none mb-8">
                     <div className="aspect-video bg-gray-200 dark:bg-black/50 rounded-2xl flex items-center justify-center">
                         <span className="text-gray-400 font-black text-2xl">[ تصور الفائدة / لقطة شاشة ]</span>
                     </div>

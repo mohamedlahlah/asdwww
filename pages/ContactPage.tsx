@@ -34,7 +34,7 @@ const ContactPage = () => {
                                 <Sparkles size={18} />
                                 <span>جاهزون للرد دائماً</span>
                             </div>
-                            <h2 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight mb-8 tracking-tighter">معلومات الاتصال</h2>
+                            <h2 className="text-3xl md:text-3xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight mb-8 tracking-tighter">معلومات الاتصال</h2>
                             <p className="text-xl text-gray-500 dark:text-gray-400 font-medium leading-relaxed mb-12">فريقنا متاح لدعمك وتقديم الاستشارات التقنية والتسويقية اللازمة لمتجرك.</p>
                         </div>
 
@@ -68,7 +68,7 @@ const ContactPage = () => {
                     </div>
 
                     {/* Contact Form */}
-                    <div className="lg:col-span-7 bento-card p-10 md:p-16 relative overflow-hidden bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 shadow-xl dark:shadow-none transition-colors">
+                    <div className="lg:col-span-7 bento-card p-10 md:p-8 md:p-16 relative overflow-hidden bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 shadow-xl dark:shadow-none transition-colors">
                         <div className="absolute top-0 inset-inline-end-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(37,99,235,0.05)_0%,_transparent_50%)]"></div>
                         <form onSubmit={handleSubmit} className="relative z-10 space-y-8 text-start">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">

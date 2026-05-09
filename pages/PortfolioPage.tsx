@@ -65,7 +65,7 @@ const PortfolioPage = () => {
                         <Link
                             to={`/portfolio/${project.id}`}
                             key={project.id}
-                            className={`bento-card p-10 group relative overflow-hidden border transition-all hover:-translate-y-2 hover:shadow-2xl ${project.bg} ${project.borderColor}`}
+                            className={`bento-card p-6 md:p-10 group relative overflow-hidden border transition-all hover:-translate-y-2 hover:shadow-2xl ${project.bg} ${project.borderColor}`}
                         >
                             <div className="flex justify-between items-start mb-8">
                                 <div className={`w-8 h-8 md:w-12 md:h-12 rounded-2xl flex items-center justify-center ${project.color} bg-opacity-10`}>

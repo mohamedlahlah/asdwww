@@ -38,7 +38,7 @@ const ProductsPage = () => {
                 </div>
 
                 {/* Main Headline */}
-                <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter leading-[0.9] bg-clip-text text-transparent bg-gradient-to-br from-gray-900 via-gray-600 to-black dark:from-white dark:via-gray-400 dark:to-gray-800 animate-slide-up">
+                <h1 className="text-4xl md:text-6xl lg:text-8xl font-black mb-8 tracking-tighter leading-[0.9] bg-clip-text text-transparent bg-gradient-to-br from-gray-900 via-gray-600 to-black dark:from-white dark:via-gray-400 dark:to-gray-800 animate-slide-up">
                     شيء ضخم <br />
                     <span className="text-gray-900 dark:text-white drop-shadow-xl dark:drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]">يُطبخ في الخفاء.</span>
                 </h1>

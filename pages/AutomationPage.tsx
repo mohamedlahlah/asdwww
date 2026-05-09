@@ -17,7 +17,7 @@ const AutomationPage = () => {
         <main className="pt-16 md:pt-24 pb-20 md:pt-32 md:pb-32 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 {/* Section 1: Problem Awareness */}
-                <div className="mb-48">
+                <div className="mb-20 md:mb-48">
                     <SectionHeader
                         tag="مرآة الفعالية"
                         title="الوقت لا يُهدر في العمل… <span className='text-purple-600'>بل بين الأعمال.</span>"
@@ -46,7 +46,7 @@ const AutomationPage = () => {
                 </div>
 
                 {/* Section 2: Reframing */}
-                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
+                <div className="mb-20 md:mb-48 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="التحول الذهني"
@@ -65,7 +65,7 @@ const AutomationPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="bento-card p-12 bg-indigo-500/5 relative overflow-hidden text-start border-indigo-500/10">
+                    <div className="bento-card p-6 md:p-12 bg-indigo-500/5 relative overflow-hidden text-start border-indigo-500/10">
                         <div className="space-y-6 relative z-10">
                             {[
                                 { q: "يفهم متى يبدأ", a: "Triggers دقيقة" },
@@ -85,7 +85,7 @@ const AutomationPage = () => {
                 </div>
 
                 {/* Section 3: Why n8n? */}
-                <div className="mb-48">
+                <div className="mb-20 md:mb-48">
                     <SectionHeader
                         tag="الأداة المختارة"
                         title="لماذا <span className='text-orange-500'>n8n</span>؟ <span className='text-gray-400'>أتمتة مرنة بلا قيود.</span>"
@@ -100,7 +100,7 @@ const AutomationPage = () => {
                             { t: "منطق شرطي وقرارات", d: "ذكاء اصطناعي وقرارات برمجية داخل المسار الواحد.", i: <Zap className="text-orange-500" /> },
                             { t: "تحكم لا اعتماد", d: "مناسب للشركات التي تريد الاستقلالية والنمو المستدام.", i: <Settings className="text-orange-500" /> }
                         ].map((item, i) => (
-                            <div key={i} className="bento-card p-10 bg-gray-50 dark:bg-[#0c0c0d] border border-black/5 dark:border-white/10 hover:border-orange-500/30 transition-all">
+                            <div key={i} className="bento-card p-6 md:p-10 bg-gray-50 dark:bg-[#0c0c0d] border border-black/5 dark:border-white/10 hover:border-orange-500/30 transition-all">
                                 <div className="mb-6">{item.i}</div>
                                 <h4 className="text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
                                 <p className="text-gray-500 dark:text-gray-400 text-lg font-medium leading-relaxed">{item.d}</p>
@@ -110,7 +110,7 @@ const AutomationPage = () => {
                 </div>
 
                 {/* Section 4: Methodology */}
-                <div className="mb-48 p-12 md:p-24 bento-card relative overflow-hidden bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 text-start">
+                <div className="mb-20 md:mb-48 p-8 md:p-16 lg:p-24 bento-card relative overflow-hidden bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 text-start">
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(168,85,247,0.05)_0%,_transparent_50%)]"></div>
                     <SectionHeader
                         tag="منهجيتنا"
@@ -126,7 +126,7 @@ const AutomationPage = () => {
                             { t: "التنفيذ الرقمي", d: "بناء المسار داخل n8n بـ Trigger ومنطق ونتائج." }
                         ].map((step, i) => (
                             <div key={i} className="p-8 bg-white dark:bg-white/5 rounded-3xl border border-black/5 dark:border-white/5 relative group hover:bg-purple-500/5 transition-colors">
-                                <div className="text-4xl font-black text-purple-500/10 mb-4">{i + 1}.</div>
+                                <div className="text-3xl md:text-4xl font-black text-purple-500/10 mb-4">{i + 1}.</div>
                                 <h5 className="text-base md:text-xl font-black text-gray-900 dark:text-white mb-2">{step.t}</h5>
                                 <p className="text-gray-500 dark:text-gray-400 font-bold text-sm">{step.d}</p>
                             </div>
@@ -135,7 +135,7 @@ const AutomationPage = () => {
                 </div>
 
                 {/* Section 5: Advanced Engineering */}
-                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
+                <div className="mb-20 md:mb-48 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="هندسة Workflows"
@@ -151,7 +151,7 @@ const AutomationPage = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="bento-card p-12 bg-blue-500/5 h-[400px] flex items-center justify-center border-blue-500/10">
+                    <div className="bento-card p-6 md:p-12 bg-blue-500/5 h-[400px] flex items-center justify-center border-blue-500/10">
                         <div className="relative">
                             <Network size={160} className="text-blue-500/20" />
                             <div className="absolute inset-0 flex items-center justify-center">
@@ -162,7 +162,7 @@ const AutomationPage = () => {
                 </div>
 
                 {/* Section 6: Use Cases */}
-                <div className="mb-48">
+                <div className="mb-20 md:mb-48">
                     <SectionHeader
                         tag="حالات استخدام"
                         title="أين تصنع الأتمتة <span className='text-emerald-500'>فرقاً حقيقياً؟</span>"
@@ -254,7 +254,7 @@ const AutomationPage = () => {
                                 )
                             }
                         ].map((item, i) => (
-                            <div key={i} className="bento-card p-10 bg-white dark:bg-[#0a0a0b] border border-black/5 dark:border-white/10 group hover:-translate-y-2 transition-all hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] dark:hover:shadow-none">
+                            <div key={i} className="bento-card p-6 md:p-10 bg-white dark:bg-[#0a0a0b] border border-black/5 dark:border-white/10 group hover:-translate-y-2 transition-all hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] dark:hover:shadow-none">
                                 <div className={`w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform duration-500 ${item.c}`}>
                                     {item.i}
                                 </div>
@@ -266,7 +266,7 @@ const AutomationPage = () => {
                 </div>
 
                 {/* Section 7: Security & Reliability */}
-                <div className="mb-48 p-12 md:p-24 bento-card relative overflow-hidden bg-black text-white border-none">
+                <div className="mb-20 md:mb-48 p-8 md:p-16 lg:p-24 bento-card relative overflow-hidden bg-black text-white border-none">
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_100%,_rgba(37,99,235,0.1)_0%,_transparent_50%)]"></div>
                     <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                         <div className="text-start">
@@ -292,7 +292,7 @@ const AutomationPage = () => {
                 </div>
 
                 {/* Section 8: Integrations */}
-                <div className="mb-48 text-center">
+                <div className="mb-20 md:mb-48 text-center">
                     <SectionHeader
                         tag="التكامل"
                         title="لا نغير أدواتك… <span className='text-purple-500'>نجعلها تعمل معاً.</span>"
@@ -309,7 +309,7 @@ const AutomationPage = () => {
                 </div>
 
                 {/* Section 9: ROI & Measurement */}
-                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
+                <div className="mb-20 md:mb-48 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="القياس والعائد"
@@ -326,13 +326,13 @@ const AutomationPage = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="bento-card p-12 bg-green-500/5 border-green-500/10 flex items-center justify-center">
+                    <div className="bento-card p-6 md:p-12 bg-green-500/5 border-green-500/10 flex items-center justify-center">
                         <TrendingUp size={120} className="text-green-500 opacity-20" />
                     </div>
                 </div>
 
                 {/* Section 10: Proof & Impact */}
-                <div className="mb-48 bento-card p-12 md:p-24 bg-gray-50 dark:bg-[#0c0c0d] border border-black/5 dark:border-white/10">
+                <div className="mb-20 md:mb-48 bento-card p-8 md:p-16 lg:p-24 bg-gray-50 dark:bg-[#0c0c0d] border border-black/5 dark:border-white/10">
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
                         {[
                             { v: "65%", l: "تقليل العمل اليدوي", c: "text-purple-600" },
@@ -349,8 +349,8 @@ const AutomationPage = () => {
                 </div>
 
                 {/* Section 11: Whom is this for? */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-48">
-                    <div className="bento-card p-12 bg-green-500/5 border-green-500/10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-20 md:mb-48">
+                    <div className="bento-card p-6 md:p-12 bg-green-500/5 border-green-500/10">
                         <h4 className="text-lg md:text-2xl font-black text-green-600 mb-8 flex items-center gap-3">
                             <CheckCircle2 /> هذه الخدمة لك إذا:
                         </h4>
@@ -367,7 +367,7 @@ const AutomationPage = () => {
                             ))}
                         </ul>
                     </div>
-                    <div className="bento-card p-12 bg-red-500/5 border-red-500/10 opacity-60">
+                    <div className="bento-card p-6 md:p-12 bg-red-500/5 border-red-500/10 opacity-60">
                         <h4 className="text-lg md:text-2xl font-black text-red-600 mb-8 flex items-center gap-3">
                             <X className="w-6 h-6" /> غير مناسبة إذا كنت:
                         </h4>
@@ -405,7 +405,7 @@ const AutomationPage = () => {
                 />
 
                 {/* Section 12: Call to Action */}
-                <div className="mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-[4rem] p-12 md:p-32">
+                <div className="mt-20 md:mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-[4rem] p-12 md:p-32">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-5xl md:text-7xl font-black text-gray-900 dark:text-white mb-8 tracking-tighter">
                             هل تعمل أنظمتك معك… <br />

@@ -64,7 +64,7 @@ const ServicesLandingPage = () => {
                         <Link
                             key={i}
                             to={service.path}
-                            className="bento-card p-10 group hover:border-blue-500/30 transition-all flex flex-col justify-between min-h-[400px] bg-gray-50 dark:bg-[#151516]"
+                            className="bento-card p-6 md:p-10 group hover:border-blue-500/30 transition-all flex flex-col justify-between min-h-[400px] bg-gray-50 dark:bg-[#151516]"
                         >
                             <div>
                                 <div className="mb-10 p-5 bg-white dark:bg-white/5 w-fit rounded-[2rem] group-hover:scale-110 transition-transform duration-500 shadow-sm dark:shadow-none">
@@ -88,7 +88,7 @@ const ServicesLandingPage = () => {
                 {/* Integration Value Prop */}
                 <div className="bento-card p-12 md:p-20 bg-gray-50 dark:bg-black border border-blue-500/10 dark:border-blue-500/20 text-center relative overflow-hidden group">
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_0%_100%,_rgba(37,99,235,0.05)_0% ,_transparent_50%)]"></div>
-                    <h3 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white mb-10 tracking-tighter relative z-10">هل تحتاج لإستراتيجية مخصصة؟</h3>
+                    <h3 className="text-3xl md:text-3xl md:text-5xl font-black text-gray-900 dark:text-white mb-10 tracking-tighter relative z-10">هل تحتاج لإستراتيجية مخصصة؟</h3>
                     <p className="text-xl text-gray-500 dark:text-gray-400 font-medium max-w-2xl mx-auto mb-12 relative z-10">
                         إذا كنت تبحث عن باقة متكاملة تجمع بين أكثر من خدمة لتحقيق نمو سريع، فنحن هنا لتصميم "خطة الحرب" الخاصة بك.
                     </p>

@@ -99,7 +99,7 @@ const Home = () => {
                             { title: "اعتماد على مزودين منفصلين", desc: "تشتت الجهود بين عدة وكالات بلا رؤية موحّدة." },
                             { title: "النتيجة: هدر للموارد", desc: "ضياع الميزانية، الوقت، والطاقة." }
                         ].map((item, i) => (
-                            <div key={i} className="bento-card p-4 md:p-8 lg:p-10 bg-white dark:bg-[#0f0f10] hover:border-red-500/20 group hover:-translate-y-1 transition-transform">
+                            <div key={i} className="bento-card p-4 md:p-8 lg:p-6 md:p-10 bg-white dark:bg-[#0f0f10] hover:border-red-500/20 group hover:-translate-y-1 transition-transform">
                                 <div className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-red-50 dark:bg-red-500/10 rounded-xl flex items-center justify-center mb-3 md:mb-6 group-hover:scale-110 transition-transform">
                                     <XCircle className="text-red-500 w-5 h-5 md:w-7 md:h-7" />
                                 </div>
@@ -170,7 +170,7 @@ const Home = () => {
                         <span>عقلية الشريك</span>
                     </div>
 
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 md:mb-12 leading-tight">
+                    <h2 className="text-4xl md:text-5xl lg:text-4xl md:text-6xl font-black mb-8 md:mb-12 leading-tight">
                         نحن نعمل كشريك استراتيجي مدمج، <span className="text-blue-500 block md:inline mt-2 md:mt-0">وليس فقط مزود خدمة.</span>
                     </h2>
 
@@ -225,7 +225,7 @@ const Home = () => {
                                 { t: "تكامل بلا حدود", d: "جسور ذكية بين منصاتك المختلفة (CRM, ERP, Ads) لتنهي عزلة البيانات للأبد وتوحد الرؤية.", i: <Layers /> },
                                 { t: "نمو بلا قيود", d: "نظام مرن مصمم ليتوسع معك بسلاسة من أول طلب وحتى الطلب المليون دون الحاجة لإعادة البناء.", i: <BarChart3 /> }
                             ].map((item, i) => (
-                                <div key={i} className="bento-card p-6 md:p-8 lg:p-12 bg-white/50 dark:bg-[#151516]/80 backdrop-blur-xl border border-black/5 dark:border-white/10 hover:border-blue-500/30 hover:scale-[1.02] flex flex-col gap-6 group transition-all duration-500">
+                                <div key={i} className="bento-card p-6 md:p-8 lg:p-6 md:p-12 bg-white/50 dark:bg-[#151516]/80 backdrop-blur-xl border border-black/5 dark:border-white/10 hover:border-blue-500/30 hover:scale-[1.02] flex flex-col gap-6 group transition-all duration-500">
                                     <div className="w-14 h-14 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-white/5 dark:to-white/10 rounded-2xl flex items-center justify-center text-gray-900 dark:text-white group-hover:bg-blue-600 group-hover:text-white transition-colors duration-500 shadow-sm">
                                         {React.cloneElement(item.i as any, { size: 28 })}
                                     </div>
@@ -267,7 +267,7 @@ const Home = () => {
                             { t: "ملكية الجمهور", d: "لا تكن رهينة لمنصات الإعلانات. نساعدك في بناء قنواتك الخاصة (قوائم بريدية، مجتمعات) التي تملكها للأبد ولا يستطيع أحد أخذها منك.", i: <ShieldCheck size={32} />, color: "blue" },
                             { t: "استقرار التنبؤ", d: "وداعاً للتقلبات العنيفة. نصمم آليات عمل وهياكل تسويقية تعطيك رؤية واضحة للمستقبل، لتتخذ قرارات التوسع بقلب مطمئن.", i: <BarChart3 size={32} />, color: "purple" }
                         ].map((item, i) => (
-                            <div key={i} className={`bento-card p-6 md:p-8 lg:p-10 bg-white dark:bg-[#151516] border border-${item.color}-500/10 hover:border-${item.color}-500/30 transition-all duration-500 group relative overflow-hidden`}>
+                            <div key={i} className={`bento-card p-6 md:p-8 lg:p-6 md:p-10 bg-white dark:bg-[#151516] border border-${item.color}-500/10 hover:border-${item.color}-500/30 transition-all duration-500 group relative overflow-hidden`}>
                                 <div className={`absolute top-0 right-0 w-32 h-32 bg-${item.color}-500/5 blur-[60px] -z-10 transition-opacity opacity-50 group-hover:opacity-100`}></div>
                                 <div className={`w-16 h-16 bg-${item.color}-100 dark:bg-${item.color}-500/10 rounded-2xl flex items-center justify-center text-${item.color}-600 dark:text-${item.color}-500 mb-8 group-hover:scale-110 transition-transform duration-500`}>
                                     {item.i}
@@ -291,7 +291,7 @@ const Home = () => {
                             <Globe size={16} />
                             رؤية عربية
                         </div>
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6 md:mb-8 leading-tight">
+                        <h2 className="text-3xl md:text-3xl md:text-4xl lg:text-3xl md:text-5xl font-black text-gray-900 dark:text-white mb-6 md:mb-8 leading-tight">
                             نفهم السوق... <span className="text-blue-500">ونتقن الأدوات.</span>
                         </h2>
                         <ul className="space-y-6 text-xl lg:text-2xl font-medium text-gray-500 dark:text-gray-400">
@@ -310,9 +310,9 @@ const Home = () => {
                     </div>
 
                     {/* Why Digital Merchant */}
-                    <div className="bento-card p-8 md:p-10 lg:p-16 bg-gray-900 text-white relative overflow-hidden">
+                    <div className="bento-card p-8 md:p-10 lg:p-8 md:p-16 bg-gray-900 text-white relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/20 rounded-full blur-[120px]"></div>
-                        <h3 className="text-3xl lg:text-4xl font-black mb-10 relative z-10">لماذا "التاجر الرقمي"؟</h3>
+                        <h3 className="text-3xl lg:text-3xl md:text-4xl font-black mb-10 relative z-10">لماذا "التاجر الرقمي"؟</h3>
                         <ul className="space-y-6 relative z-10">
                             {[
                                 "فريق واحد بدل 5 مزودين",
@@ -427,7 +427,7 @@ const Home = () => {
                                 </div>
 
                                 {/* Card Body */}
-                                <div className="h-full p-6 md:p-8 lg:p-10 pt-16 md:pt-20 rounded-[2.5rem] bg-gray-50/50 dark:bg-[#0c0c0d]/80 border border-black/5 dark:border-white/5 backdrop-blur-xl hover:bg-white dark:hover:bg-[#151516] hover:border-blue-500/20 hover:shadow-2xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col">
+                                <div className="h-full p-6 md:p-8 lg:p-6 md:p-10 pt-16 md:pt-20 rounded-[2.5rem] bg-gray-50/50 dark:bg-[#0c0c0d]/80 border border-black/5 dark:border-white/5 backdrop-blur-xl hover:bg-white dark:hover:bg-[#151516] hover:border-blue-500/20 hover:shadow-2xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col">
                                     <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-6 mt-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                         {item.title}
                                     </h3>
@@ -447,7 +447,7 @@ const Home = () => {
                     <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_0%_100%,_rgba(37,99,235,0.4)_0%,_transparent_50%)]"></div>
 
                     <div className="relative z-10 flex flex-col items-center">
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-10 leading-tight">
+                        <h2 className="text-4xl md:text-5xl lg:text-4xl md:text-6xl font-black mb-10 leading-tight">
                             هل تبحث عن مزوّد خدمات… <span className="text-blue-500">أم فريق كواليس يبني لنجاحك؟</span>
                         </h2>
 

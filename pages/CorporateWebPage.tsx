@@ -25,7 +25,7 @@ const CorporateWebPage = () => {
                     icon={<Building2 className="w-5 h-5 text-blue-600" />}
                 />
 
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-32">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16 md:mb-32">
                     {[
                         { t: "الصورة الذهنية", d: "صورة احترافية تعكس حجم وقوة المؤسسة فعلياً.", i: <Sparkles className="text-blue-500" /> },
                         { t: "بناء الثقة", d: "إزالة الشكوك لدى الشركاء والعملاء المحتملين.", i: <ShieldCheck className="text-blue-500" /> },
@@ -43,7 +43,7 @@ const CorporateWebPage = () => {
                 </div>
 
                 {/* Section 2: Reframing */}
-                <div className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
+                <div className="mb-16 md:mb-32 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="التحول الذهني"
@@ -52,7 +52,7 @@ const CorporateWebPage = () => {
                             icon={<Target className="w-5 h-5 text-indigo-500" />}
                         />
                     </div>
-                    <div className="bento-card p-12 bg-gray-50 dark:bg-[#0c0c0d] relative overflow-hidden text-start">
+                    <div className="bento-card p-6 md:p-12 bg-gray-50 dark:bg-[#0c0c0d] relative overflow-hidden text-start">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 blur-3xl"></div>
                         <div className="space-y-8 relative z-10">
                             <div className="flex items-center gap-6 opacity-40 grayscale">
@@ -69,7 +69,7 @@ const CorporateWebPage = () => {
                 </div>
 
                 {/* Section 3: Strategic Methodology */}
-                <div className="mb-32">
+                <div className="mb-16 md:mb-32">
                     <SectionHeader
                         tag="المنهجية الاستراتيجية"
                         title="بناء يبدأ من الداخل <span className='text-gray-400'>لا من الواجهة.</span>"
@@ -82,7 +82,7 @@ const CorporateWebPage = () => {
                             { t: "تحليل نية الزيارة", d: "هل الزائر هو شريك؟ مستثمر؟ أم عميل يبحث عن خدمة؟" },
                             { t: "هندسة رحلة المستشار", d: "بناء مسارات تفاعلية تقود الزائر نحو قرار التواصل الرسمي." }
                         ].map((item, i) => (
-                            <div key={i} className="bento-card p-10 bg-gray-50 dark:bg-[#0a0a0b] border border-black/5 dark:border-white/10">
+                            <div key={i} className="bento-card p-6 md:p-10 bg-gray-50 dark:bg-[#0a0a0b] border border-black/5 dark:border-white/10">
                                 <div className="text-indigo-500 font-black mb-4">المرحلة ٠{i + 1}</div>
                                 <h4 className="text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
                                 <p className="text-gray-500 dark:text-gray-400 text-lg font-medium leading-relaxed">{item.d}</p>
@@ -92,9 +92,9 @@ const CorporateWebPage = () => {
                 </div>
 
                 {/* Section 4: Corporate Content Architecture */}
-                <div className="mb-32 grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8 items-stretch">
+                <div className="mb-16 md:mb-32 grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8 items-stretch">
                     <div className="lg:col-span-12">
-                        <div className="bento-card p-12 bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 relative overflow-hidden">
+                        <div className="bento-card p-6 md:p-12 bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(37,99,235,0.02)_0%,_transparent_50%)]"></div>
                             <div className="flex flex-col lg:flex-row gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                                 <div className="lg:w-1/2 text-start relative z-10">
@@ -124,7 +124,7 @@ const CorporateWebPage = () => {
                 </div>
 
                 {/* Section 5: UX for Decision Makers */}
-                <div className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
+                <div className="mb-16 md:mb-32 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="تجربة صناع القرار"
@@ -149,14 +149,14 @@ const CorporateWebPage = () => {
                         </div>
                     </div>
                     <div className="relative">
-                        <div className="bento-card p-12 bg-orange-500/5 border-orange-500/10 h-full flex items-center justify-center">
+                        <div className="bento-card p-6 md:p-12 bg-orange-500/5 border-orange-500/10 h-full flex items-center justify-center">
                             <Gauge size={180} className="text-orange-500/20" />
                         </div>
                     </div>
                 </div>
 
                 {/* Section 6: Enterprise-Grade Development (Visual Overhaul) */}
-                <div className="mb-48 relative">
+                <div className="mb-20 md:mb-48 relative">
                     <div className="absolute inset-0 bg-blue-500/5 blur-[120px] pointer-events-none"></div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                         <div className="text-start">
@@ -232,7 +232,7 @@ const CorporateWebPage = () => {
                                     glow: "shadow-[0_0_40px_-10px_rgba(168,85,247,0.3)]"
                                 }
                             ].map((stat, i) => (
-                                <div key={i} className={`bento-card p-10 bg-white/50 dark:bg-[#0c0c0d] border border-black/5 dark:border-white/10 text-center flex flex-col items-center gap-6 group hover:-translate-y-2 transition-all duration-500 ${stat.glow}`}>
+                                <div key={i} className={`bento-card p-6 md:p-10 bg-white/50 dark:bg-[#0c0c0d] border border-black/5 dark:border-white/10 text-center flex flex-col items-center gap-6 group hover:-translate-y-2 transition-all duration-500 ${stat.glow}`}>
                                     <div className="transform group-hover:scale-110 transition-transform duration-500">
                                         {stat.i}
                                     </div>
@@ -247,7 +247,7 @@ const CorporateWebPage = () => {
                 </div>
 
                 {/* Section 7: Corporate SEO Built-in */}
-                <div className="mb-32 text-center relative">
+                <div className="mb-16 md:mb-32 text-center relative">
                     <div className="absolute inset-0 bg-blue-600/5 blur-[150px]"></div>
                     <SectionHeader
                         tag="سيو مؤسسي"
@@ -265,9 +265,9 @@ const CorporateWebPage = () => {
                 </div>
 
                 {/* Section 8: Integration & Automation */}
-                <div className="mb-32 grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8 items-center">
+                <div className="mb-16 md:mb-32 grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8 items-center">
                     <div className="lg:col-span-12">
-                        <div className="bento-card p-12 bg-purple-600/5 text-start border-purple-500/10 flex flex-col lg:flex-row gap-12 items-center">
+                        <div className="bento-card p-6 md:p-12 bg-purple-600/5 text-start border-purple-500/10 flex flex-col lg:flex-row gap-12 items-center">
                             <div className="lg:w-1/2">
                                 <SectionHeader
                                     tag="التكامل الذكي"
@@ -288,7 +288,7 @@ const CorporateWebPage = () => {
                 </div>
 
                 {/* Section 9: Measurement & Continuous Improvement */}
-                <div className="mb-32">
+                <div className="mb-16 md:mb-32">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-start">
                         <div>
                             <SectionHeader
@@ -312,12 +312,12 @@ const CorporateWebPage = () => {
                 </div>
 
                 {/* Section 10: Proof & Impact */}
-                <div className="mb-32 p-12 md:p-24 bento-card bg-black text-white border-none relative overflow-hidden">
+                <div className="mb-16 md:mb-32 p-8 md:p-16 lg:p-24 bento-card bg-black text-white border-none relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(255,255,255,0.05)_0%,_transparent_50%)]"></div>
                     <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-8 md:gap-12 lg:gap-16">
                         <div className="text-start">
                             <div className="text-blue-400 font-black tracking-widest uppercase mb-4 text-sm">الأداء والنتائج</div>
-                            <h4 className="text-4xl md:text-6xl font-black mb-6">نتائج مثبتة <br />مؤسساتياً.</h4>
+                            <h4 className="text-3xl md:text-4xl lg:text-4xl md:text-6xl font-black mb-6">نتائج مثبتة <br />مؤسساتياً.</h4>
                         </div>
                         <div className="grid grid-cols-2 gap-4 md:gap-8 w-full md:w-auto">
                             {[
@@ -327,7 +327,7 @@ const CorporateWebPage = () => {
                                 { l: "تغطية دولية", v: "12+ دولة" }
                             ].map((stat, i) => (
                                 <div key={i} className="text-start">
-                                    <div className="text-4xl md:text-5xl font-black text-white mb-2">{stat.v}</div>
+                                    <div className="text-4xl md:text-3xl md:text-5xl font-black text-white mb-2">{stat.v}</div>
                                     <div className="text-xs text-blue-400 font-bold uppercase tracking-widest">{stat.l}</div>
                                 </div>
                             ))}
@@ -336,8 +336,8 @@ const CorporateWebPage = () => {
                 </div>
 
                 {/* Section 11: Whom is this for? */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-32">
-                    <div className="bento-card p-12 bg-green-500/5 border-green-500/10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-16 md:mb-32">
+                    <div className="bento-card p-6 md:p-12 bg-green-500/5 border-green-500/10">
                         <h4 className="text-lg md:text-2xl font-black text-green-600 mb-8 flex items-center gap-3">
                             <CheckCircle2 /> هذه الخدمة لك إذا:
                         </h4>
@@ -354,7 +354,7 @@ const CorporateWebPage = () => {
                             ))}
                         </ul>
                     </div>
-                    <div className="bento-card p-12 bg-red-500/5 border-red-500/10 opacity-60">
+                    <div className="bento-card p-6 md:p-12 bg-red-500/5 border-red-500/10 opacity-60">
                         <h4 className="text-lg md:text-2xl font-black text-red-600 mb-8 flex items-center gap-3">
                             <X className="w-6 h-6" /> غير مناسبة إذا كنت:
                         </h4>
@@ -389,7 +389,7 @@ const CorporateWebPage = () => {
                 />
 
                 {/* Section 13: Call to Action */}
-                <div className="mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-[4rem] p-12 md:p-32">
+                <div className="mt-20 md:mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-[4rem] p-12 md:p-32">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-5xl md:text-7xl font-black text-gray-900 dark:text-white mb-8 tracking-tighter">
                             هل موقع شركتك <br />

@@ -26,7 +26,7 @@ const DesignPage = () => {
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
 
                 {/* Section 1: Problem Awareness */}
-                <div className="mb-48">
+                <div className="mb-20 md:mb-48">
                     <SectionHeader
                         tag="المشكلة الحقيقية"
                         title="الواجهة الجميلة <span className='text-red-500'>لا تعني تجربة ناجحة.</span>"
@@ -53,7 +53,7 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 2: Reframing */}
-                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
+                <div className="mb-20 md:mb-48 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="التحول الذهني"
@@ -72,7 +72,7 @@ const DesignPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="bento-card p-12 bg-purple-500/5 relative overflow-hidden text-start border-purple-500/10 h-[400px] flex items-center justify-center">
+                    <div className="bento-card p-6 md:p-12 bg-purple-500/5 relative overflow-hidden text-start border-purple-500/10 h-[400px] flex items-center justify-center">
                         <div className="relative z-10 text-center">
                             <Target size={100} className="text-purple-500 mx-auto mb-6 opacity-80" />
                             <p className="text-3xl font-black text-gray-900 dark:text-white">الشكل يتبع <span className="text-purple-500">الوظيفة</span></p>
@@ -82,7 +82,7 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 3: Methodology */}
-                <div className="mb-48">
+                <div className="mb-20 md:mb-48">
                     <SectionHeader
                         tag="منهجيتنا"
                         title="التصميم يبدأ <span className='text-blue-500'>قبل الألوان.</span>"
@@ -97,7 +97,7 @@ const DesignPage = () => {
                             { t: "تصميم User Flow", d: "كل واجهة لها وظيفة ومؤشر نجاح.", i: <GitBranch className="text-blue-500" /> }
                         ].map((item, i) => (
                             <div key={i} className="bento-card p-4 md:p-6 lg:p-8 bg-white dark:bg-[#0a0a0b] border border-black/5 dark:border-white/10 text-start group hover:-translate-y-2 transition-transform duration-500">
-                                <div className="text-6xl font-black text-blue-500/10 mb-4 absolute top-4 left-4">{i + 1}</div>
+                                <div className="text-4xl md:text-6xl font-black text-blue-500/10 mb-4 absolute top-4 left-4">{i + 1}</div>
                                 <div className="mb-6 relative z-10">{item.i}</div>
                                 <h4 className="text-base md:text-xl font-black text-gray-900 dark:text-white mb-2 relative z-10">{item.t}</h4>
                                 <p className="text-gray-500 dark:text-gray-400 font-bold text-sm relative z-10">{item.d}</p>
@@ -107,7 +107,7 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 4: User Research */}
-                <div className="mb-48 grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8 md:gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
+                <div className="mb-20 md:mb-48 grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8 md:gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="lg:col-span-5 relative group overflow-hidden bento-card h-[500px] flex items-center justify-center bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10">
                         <Microscope size={120} className="text-indigo-500 opacity-20 group-hover:scale-110 transition-transform duration-700" />
                         <div className="absolute bottom-10 left-0 right-0 text-center">
@@ -133,7 +133,7 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 5: UX Engineering */}
-                <div className="mb-48">
+                <div className="mb-20 md:mb-48">
                     <SectionHeader
                         tag="هندسة التجربة"
                         title="تقليل الجهد الذهني <span className='text-emerald-500'>هو مفتاح النجاح.</span>"
@@ -146,7 +146,7 @@ const DesignPage = () => {
                             { t: "المخططات الهيكلية (Wireframes)", d: "المخططات الهيكلية الأولية للتركيز على الوظيفة قبل الشكل.", i: <PenTool className="text-emerald-500" /> },
                             { t: "اختبار قابلية الاستخدام", d: "اختبار قابلية الاستخدام لكشف المشاكل مبكراً.", i: <CheckCircle2 className="text-emerald-500" /> }
                         ].map((item, i) => (
-                            <div key={i} className="bento-card p-10 bg-gray-50 dark:bg-[#151516] border-t-4 border-emerald-500 group">
+                            <div key={i} className="bento-card p-6 md:p-10 bg-gray-50 dark:bg-[#151516] border-t-4 border-emerald-500 group">
                                 <div className="mb-6 group-hover:scale-110 transition-transform duration-300">{item.i}</div>
                                 <h4 className="text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
                                 <p className="text-gray-500 dark:text-gray-400 font-bold leading-relaxed">{item.d}</p>
@@ -156,7 +156,7 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 6: UI Design */}
-                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
+                <div className="mb-20 md:mb-48 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start order-2 lg:order-1">
                         <SectionHeader
                             tag="تصميم الواجهة UI"
@@ -189,7 +189,7 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 7: Conversion-Centered Design */}
-                <div className="mb-48 text-center">
+                <div className="mb-20 md:mb-48 text-center">
                     <SectionHeader
                         tag="التصميم للتحويل"
                         title="كل عنصر يجب أن <span className='text-yellow-500'>يبرر وجوده.</span>"
@@ -206,7 +206,7 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 8: Developer Integration */}
-                <div className="mb-48 bento-card p-12 md:p-24 bg-gray-900 text-white border-none relative overflow-hidden text-start">
+                <div className="mb-20 md:mb-48 bento-card p-8 md:p-16 lg:p-24 bg-gray-900 text-white border-none relative overflow-hidden text-start">
                     <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_0%_0%,_rgba(59,130,246,0.2)_0%,_transparent_50%)]"></div>
                     <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12">
                         <div>
@@ -234,7 +234,7 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 9: Measurement */}
-                <div className="mb-48">
+                <div className="mb-20 md:mb-48">
                     <SectionHeader
                         tag="القياس والتحسين"
                         title="التصميم عملية <span className='text-cyan-500'>حية ومستمرة.</span>"
@@ -252,7 +252,7 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 10: Proof & Impact */}
-                <div className="mb-48 bento-card p-12 bg-gray-50 dark:bg-[#0c0c0d] border border-black/5 dark:border-white/10">
+                <div className="mb-20 md:mb-48 bento-card p-6 md:p-12 bg-gray-50 dark:bg-[#0c0c0d] border border-black/5 dark:border-white/10">
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8 text-center divide-y lg:divide-y-0 lg:divide-x lg:divide-x-reverse divide-gray-200 dark:divide-gray-800">
                         {[
                             { v: "2.7x", l: "زيادة معدل التحويل", i: <TrendingUp className="w-8 h-8 text-green-500 mx-auto mb-4" /> },
@@ -263,7 +263,7 @@ const DesignPage = () => {
                         ].map((stat, i) => (
                             <div key={i} className="pt-8 lg:pt-0">
                                 {stat.i}
-                                <div className="text-4xl font-black text-gray-900 dark:text-white mb-2">{stat.v}</div>
+                                <div className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-2">{stat.v}</div>
                                 <div className="text-sm font-bold text-gray-500">{stat.l}</div>
                             </div>
                         ))}
@@ -271,8 +271,8 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 11: Audience */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-48">
-                    <div className="bento-card p-12 bg-green-500/5 border-green-500/10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-20 md:mb-48">
+                    <div className="bento-card p-6 md:p-12 bg-green-500/5 border-green-500/10">
                         <h4 className="text-lg md:text-2xl font-black text-green-600 mb-8 flex items-center gap-3">
                             <CheckCircle2 /> هذه الخدمة لك إذا:
                         </h4>
@@ -290,7 +290,7 @@ const DesignPage = () => {
                             ))}
                         </ul>
                     </div>
-                    <div className="bento-card p-12 bg-red-500/5 border-red-500/10 opacity-70">
+                    <div className="bento-card p-6 md:p-12 bg-red-500/5 border-red-500/10 opacity-70">
                         <h4 className="text-lg md:text-2xl font-black text-red-600 mb-8 flex items-center gap-3">
                             <Ban /> غير مناسبة إذا كنت:
                         </h4>
@@ -310,7 +310,7 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 12: Call to Action */}
-                <div className="mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-[4rem] p-12 md:p-32">
+                <div className="mt-20 md:mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-[4rem] p-12 md:p-32">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-5xl md:text-7xl font-black text-gray-900 dark:text-white mb-8 tracking-tighter">
                             هل واجهتك تحقق أهدافك... <br />

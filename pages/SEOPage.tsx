@@ -26,23 +26,23 @@ const SEOPage = () => {
                     icon={<Search className="w-5 h-5 text-red-500" />}
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-32">
-                    <div className="bento-card p-6 md:p-8 lg:p-12 bg-red-50/30 dark:bg-red-500/5 border-red-100 dark:border-red-500/10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-16 md:mb-32">
+                    <div className="bento-card p-6 md:p-8 lg:p-6 md:p-12 bg-red-50/30 dark:bg-red-500/5 border-red-100 dark:border-red-500/10">
                         <h4 className="text-base md:text-xl lg:text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-6">جوجل اليوم لا يكافئ الكثرة</h4>
                         <p className="text-sm md:text-lg lg:text-xl text-gray-600 dark:text-gray-400 font-medium leading-relaxed">
                             الخوارزميات الحديثة تبحث عن "دقة الفهم" و "نية الباحث" و "تجربة المستخدم الكاملة". نحن ننتقل بك من عقلية حشو الكلمات إلى عقلية الهيمنة على النتائج.
                         </p>
                     </div>
-                    <div className="bento-card p-6 md:p-8 lg:p-12 bg-gray-50 dark:bg-[#151516] flex items-center justify-center">
+                    <div className="bento-card p-6 md:p-8 lg:p-6 md:p-12 bg-gray-50 dark:bg-[#151516] flex items-center justify-center">
                         <div className="text-center">
-                            <div className="text-4xl lg:text-5xl font-black text-red-500 mb-4 tracking-tighter">السيو ≠ مجرد زيارات</div>
+                            <div className="text-3xl md:text-4xl lg:text-3xl md:text-5xl font-black text-red-500 mb-4 tracking-tighter">السيو ≠ مجرد زيارات</div>
                             <div className="text-sm md:text-lg lg:text-xl font-bold text-gray-400 uppercase tracking-widest">السيو = نية تجارية (Commercial Intent)</div>
                         </div>
                     </div>
                 </div>
 
                 {/* Section 2: Methodology (The Mindset Shift) */}
-                <div className="mb-32">
+                <div className="mb-16 md:mb-32">
                     <SectionHeader
                         tag="المنهجية"
                         title="سيو مبني على نية الباحث <span className='text-blue-500'>وليس مجرد كلمات.</span>"
@@ -68,7 +68,7 @@ const SEOPage = () => {
                                 icon: <Layers className="text-blue-500" />
                             }
                         ].map((item, i) => (
-                            <div key={i} className="bento-card p-10 bg-gray-50 dark:bg-[#151516] hover:border-blue-500/30 transition-all group">
+                            <div key={i} className="bento-card p-6 md:p-10 bg-gray-50 dark:bg-[#151516] hover:border-blue-500/30 transition-all group">
                                 <div className="w-8 h-8 md:w-12 md:h-12 bg-white dark:bg-white/5 rounded-2xl flex items-center justify-center mb-3 md:mb-6 shadow-sm group-hover:scale-110 transition-transform">
                                     {React.cloneElement(item.icon as any, { size: 24 })}
                                 </div>
@@ -89,7 +89,7 @@ const SEOPage = () => {
                 </div>
 
                 {/* Section 3: Technical Foundation */}
-                <div className="mb-32">
+                <div className="mb-16 md:mb-32">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                         <div className="lg:col-span-5 flex flex-col justify-center text-start">
                             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-gray-100 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-full text-xs font-black text-gray-400 uppercase tracking-widest mb-8 w-fit">
@@ -122,7 +122,7 @@ const SEOPage = () => {
                 </div>
 
                 {/* Section 4: Domain Authority */}
-                <div className="mb-32 p-12 md:p-24 bento-card relative overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-900 text-white border-none shadow-[0_20px_50px_rgba(37,99,235,0.3)]">
+                <div className="mb-16 md:mb-32 p-8 md:p-16 lg:p-24 bento-card relative overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-900 text-white border-none shadow-[0_20px_50px_rgba(37,99,235,0.3)]">
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(255,255,255,0.15)_0%,_transparent_50%)]"></div>
                     <div className="relative z-10 max-w-5xl">
                         <div className="inline-flex items-center gap-2 px-6 py-2 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full text-xs font-black uppercase tracking-widest mb-12">
@@ -151,7 +151,7 @@ const SEOPage = () => {
                 </div>
 
                 {/* Section 5: The Proof (Numbers) */}
-                <div className="mb-32">
+                <div className="mb-16 md:mb-32">
                     <SectionHeader
                         tag="الدليل بالأرقام"
                         title="نمو عضوي صافي <span className='text-gray-400'>بيانات مقارنة (6 أشهر)</span>"
@@ -160,7 +160,7 @@ const SEOPage = () => {
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 active">
                         {/* Main Stat Card */}
-                        <div className="lg:col-span-8 bento-card p-6 md:p-10 lg:p-16 relative overflow-hidden bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10">
+                        <div className="lg:col-span-8 bento-card p-6 md:p-10 lg:p-8 md:p-16 relative overflow-hidden bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10">
                             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(37,99,235,0.05)_0%,_transparent_50%)]"></div>
                             <div className="flex items-center justify-end gap-4 md:gap-8 mb-16 relative z-10">
                                 <div className="text-start">
@@ -187,17 +187,17 @@ const SEOPage = () => {
 
                         {/* Quick Metrics */}
                         <div className="lg:col-span-4 grid grid-rows-2 gap-4 md:gap-8">
-                            <div className="bento-card p-10 flex flex-col justify-between group bg-gray-50 dark:bg-[#151516]">
+                            <div className="bento-card p-6 md:p-10 flex flex-col justify-between group bg-gray-50 dark:bg-[#151516]">
                                 <Zap size={40} className="text-yellow-500" />
                                 <div className="text-start">
-                                    <div className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-2">0.8 ثانية</div>
+                                    <div className="text-3xl md:text-4xl lg:text-3xl md:text-5xl font-black text-gray-900 dark:text-white mb-2">0.8 ثانية</div>
                                     <p className="text-gray-500 font-black text-xs lg:text-sm uppercase tracking-widest">متوسط سرعة الموقع</p>
                                 </div>
                             </div>
-                            <div className="bento-card p-10 flex flex-col justify-between group bg-gray-50 dark:bg-[#0a0a0b]">
+                            <div className="bento-card p-6 md:p-10 flex flex-col justify-between group bg-gray-50 dark:bg-[#0a0a0b]">
                                 <Globe size={40} className="text-blue-500" />
                                 <div className="text-start">
-                                    <div className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-2">12+ دولة</div>
+                                    <div className="text-3xl md:text-4xl lg:text-3xl md:text-5xl font-black text-gray-900 dark:text-white mb-2">12+ دولة</div>
                                     <p className="text-gray-500 font-black text-xs lg:text-sm uppercase tracking-widest">تغطية سيو عالمية</p>
                                 </div>
                             </div>
@@ -224,7 +224,7 @@ const SEOPage = () => {
                 />
 
                 {/* Section 7: Action / Form */}
-                <div className="mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-[3rem] p-12 md:p-24">
+                <div className="mt-20 md:mt-48 text-center bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-[3rem] p-8 md:p-16 lg:p-24">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="section-title-apple text-gray-900 dark:text-white mb-10 tracking-tighter">
                             هل تريد زوارًا... <br />

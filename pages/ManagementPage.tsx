@@ -30,7 +30,7 @@ const ManagementPage = () => {
                         { t: "استراتيجية النمو", d: "وضع خطط توسعية مبنية على أرقام السوق الحقيقية واقتناص الفرص التجارية الواعدة.", i: <LineChart className="text-blue-500" /> },
                         { t: "إدارة المواهب", d: "توفير الدعم في اختيار وتوجيه الكفاءات اللازمة لنجاح متجرك الرقمي وتوسعه.", i: <Users2 className="text-blue-500" /> }
                     ].map((item, i) => (
-                        <div key={i} className="bento-card p-10 group transition-all duration-500 hover:shadow-[0_40px_80px_rgba(37,99,235,0.05)] bg-gray-50 dark:bg-[#151516]">
+                        <div key={i} className="bento-card p-6 md:p-10 group transition-all duration-500 hover:shadow-[0_40px_80px_rgba(37,99,235,0.05)] bg-gray-50 dark:bg-[#151516]">
                             <div className="mb-6 flex justify-start">{item.i}</div>
                             <h4 className="text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-4 group-hover:text-blue-500 transition-colors uppercase">{item.t}</h4>
                             <p className="text-gray-500 dark:text-gray-400 text-lg font-medium leading-relaxed">{item.d}</p>
@@ -44,7 +44,7 @@ const ManagementPage = () => {
                             <TrendingUp size={18} />
                             <span>عقلية رواد الأعمال</span>
                         </div>
-                        <h2 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white leading-tight tracking-tighter">نحن شركاء <br /><span className="text-blue-600">في النجاح.</span></h2>
+                        <h2 className="text-3xl md:text-4xl lg:text-4xl md:text-6xl font-black text-gray-900 dark:text-white leading-tight tracking-tighter">نحن شركاء <br /><span className="text-blue-600">في النجاح.</span></h2>
                         <p className="text-xl text-gray-500 dark:text-gray-400 font-medium leading-relaxed">لسنا مجرد مستشارين، نحن فريق تنفيذي يعمل معك جنباً إلى جنب لتحقيق أهدافك التجارية الطموحة.</p>
 
                         <div className="space-y-6">
@@ -61,9 +61,9 @@ const ManagementPage = () => {
                         </div>
                     </div>
 
-                    <div className="lg:col-span-7 bento-card p-12 md:p-16 relative overflow-hidden flex flex-col items-center justify-center text-center bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 transition-colors">
+                    <div className="lg:col-span-7 bento-card p-12 md:p-8 md:p-16 relative overflow-hidden flex flex-col items-center justify-center text-center bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 transition-colors">
                         <PieChart size={120} className="text-blue-500 mb-10 opacity-20" />
-                        <div className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white mb-4 tracking-tighter">+120%</div>
+                        <div className="text-3xl md:text-4xl lg:text-4xl md:text-6xl font-black text-gray-900 dark:text-white mb-4 tracking-tighter">+120%</div>
                         <p className="text-gray-500 dark:text-gray-500 font-black text-lg uppercase tracking-widest">زيادة في كفاءة التشغيل الموثقة</p>
                     </div>
                 </div>
