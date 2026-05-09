@@ -29,6 +29,12 @@ const Newsletter = () => {
                     
                     {/* Right Column: Text Content */}
                     <div className="text-start order-1">
+                        {/* Floating Social Proof Chip */}
+                        <div className="inline-flex items-center gap-3 bg-black dark:bg-white text-white dark:text-black px-5 py-2.5 rounded-full text-xs font-black mb-8 shadow-2xl animate-bounce-slow">
+                            <Users size={16} />
+                            <span>انضم للقائمة البريدية للتجار</span>
+                        </div>
+
                         <h2 className="text-3xl md:text-5xl lg:text-6xl font-black mb-6 tracking-tighter leading-[1.2] text-gray-900 dark:text-white transition-all duration-500">
                             لا نرسل إيميلات، <br />
                             <span className="text-blue-600 dark:text-blue-500">نرسل خطط حرب.</span>
@@ -41,12 +47,6 @@ const Newsletter = () => {
 
                     {/* Left Column: Form & Badges */}
                     <div className="flex flex-col items-start lg:items-end w-full order-2">
-                        {/* Floating Social Proof Chip */}
-                        <div className="inline-flex items-center gap-3 bg-black dark:bg-white text-white dark:text-black px-5 py-2.5 rounded-full text-xs font-black mb-8 shadow-2xl animate-bounce-slow">
-                            <Users size={16} />
-                            <span>انضم للقائمة البريدية للتجار</span>
-                        </div>
-
                         {/* Premium Input Group */}
                         <div className="w-full">
                             <form
