@@ -76,13 +76,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
                 {/* Desktop Navigation Links - Centered when scrolled */}
                 <div className="hidden lg:flex items-center gap-2 xl:gap-4 bg-transparent">
-                    <Link
-                        to="/"
-                        className={`px-5 py-2.5 rounded-full text-base font-black transition-all duration-300 flex items-center gap-2
-                        ${pathname === '/' ? 'bg-black/5 dark:bg-white/10 text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5'}`}
-                    >
-                        الرئيسية
-                    </Link>
 
                     {/* Services Dropdown Trigger */}
                     <div className="relative group/nav" ref={servicesRef}>
