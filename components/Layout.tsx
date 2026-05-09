@@ -40,7 +40,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         { name: 'تحسين محركات البحث SEO', path: '/seo', icon: <Search size={18} /> },
         { name: 'إعلانات الأداء الممولة', path: '/ads', icon: <Rocket size={18} /> },
         { name: 'تصميم تجربة المستخدم', path: '/design', icon: <Palette size={18} /> },
-        { name: 'أتمتة العمليات الرقمية', path: '/automation', icon: <Zap size={18} /> },
+        // { name: 'أتمتة العمليات الرقمية', path: '/automation', icon: <Zap size={18} /> },
     ];
 
     const sections = [

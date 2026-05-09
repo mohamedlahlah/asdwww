@@ -41,13 +41,7 @@ const ServicesLandingPage = () => {
             path: "/design",
             color: "purple"
         },
-        {
-            title: "أتمتة العمليات n8n",
-            desc: "ربط تجارتك بأنظمة ذكية تعمل بالنيابة عنك وتوفر آلاف الساعات اليدوية.",
-            icon: <Workflow className="text-purple-500" size={40} />,
-            path: "/automation",
-            color: "purple"
-        }
+        /* { title: "أتمتة العمليات n8n", desc: "...", icon: <Workflow className="text-purple-500" size={40} />, path: "/automation", color: "purple" } */
     ];
 
     return (

@@ -46,7 +46,7 @@ function App() {
           <Route path="/ecommerce" element={<WebDevPage />} />
           <Route path="/corporate-web" element={<CorporateWebPage />} />
           <Route path="/design" element={<DesignPage />} />
-          <Route path="/automation" element={<AutomationPage />} />
+          {/* <Route path="/automation" element={<AutomationPage />} /> */}
           <Route path="/management" element={<ManagementPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
