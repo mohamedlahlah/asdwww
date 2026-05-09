@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import WhatsAppButton from './WhatsAppButton';
-import { Menu, X, Sun, Moon, ArrowUpRight, ChevronLeft, Instagram, Twitter, Linkedin, Github, Sparkles, Send, ChevronDown, Rocket, Search, Globe, Code, Palette, Zap, Briefcase, Info, LayoutGrid, ShoppingBag, LayoutDashboard, Building2, Phone } from 'lucide-react';
+import { Menu, X, Sun, Moon, ArrowUpRight, ChevronLeft, Instagram, Twitter, Linkedin, Github, Sparkles, Send, ChevronDown, Rocket, Search, Globe, Code, Palette, Zap, Briefcase, Info, LayoutGrid, ShoppingBag, LayoutDashboard, Building2, Phone, MessageCircle } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
 import Newsletter from './Newsletter';
@@ -234,10 +234,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                         className="absolute top-0 h-[3px] bg-blue-600 dark:bg-blue-500 rounded-b-full transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] shadow-[0_2px_8px_rgba(37,99,235,0.6)]"
                         style={{
                             width: '32px',
-                            right: pathname === '/' ? 'calc(12.5% - 16px)' : 
-                                   pathname === '/services' ? 'calc(37.5% - 16px)' : 
-                                   pathname === '/portfolio' ? 'calc(62.5% - 16px)' : 
-                                   pathname === '/contact' ? 'calc(87.5% - 16px)' : 'calc(12.5% - 16px)',
+                            right: pathname === '/' ? 'calc(8.33% - 16px)' : 
+                                   pathname === '/services' ? 'calc(25% - 16px)' : 
+                                   pathname === '/portfolio' ? 'calc(41.66% - 16px)' : 
+                                   pathname === '/contact' ? 'calc(58.33% - 16px)' : 'calc(8.33% - 16px)',
                             opacity: ['/', '/services', '/portfolio', '/contact'].includes(pathname) ? 1 : 0
                         }}
                     />
@@ -247,15 +247,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                         { name: 'الخدمات', path: '/services', icon: Briefcase },
                         { name: 'الأعمال', path: '/portfolio', icon: LayoutGrid },
                         { name: 'تواصل', path: '/contact', icon: Phone },
-                    ].map((item) => {
-                        const active = pathname === item.path;
+                        { name: 'واتساب', href: 'https://wa.me/966593224180', icon: MessageCircle },
+                        { name: 'القائمة', action: () => setIsOpen(true), icon: Menu },
+                    ].map((item, idx) => {
+                        const active = item.path ? pathname === item.path : false;
                         const Icon = item.icon;
-                        return (
-                            <Link
-                                key={item.path}
-                                to={item.path}
-                                className={`relative z-10 flex flex-col items-center justify-center w-1/4 h-full gap-1.5 group active:scale-[0.92] transition-all duration-300 ${active ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500'}`}
-                            >
+                        
+                        const innerContent = (
+                            <>
                                 <div className={`relative transition-all duration-300 ease-out ${active ? '-translate-y-1' : 'group-hover:text-gray-600 dark:group-hover:text-gray-300'}`}>
                                     <Icon 
                                         size={active ? 24 : 22} 
@@ -266,8 +265,30 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                                 <span className={`text-[10px] font-black tracking-wide transition-all duration-300 ${active ? 'opacity-100' : 'opacity-80 group-hover:opacity-100'}`}>
                                     {item.name}
                                 </span>
-                            </Link>
+                            </>
                         );
+
+                        const commonClass = `relative z-10 flex flex-col items-center justify-center flex-1 h-full gap-1.5 group active:scale-[0.92] transition-all duration-300 ${active ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500'}`;
+
+                        if (item.action) {
+                            return (
+                                <button key={`action-${idx}`} onClick={item.action} className={commonClass}>
+                                    {innerContent}
+                                </button>
+                            );
+                        } else if (item.href) {
+                            return (
+                                <a key={`href-${idx}`} href={item.href} target="_blank" rel="noopener noreferrer" className={commonClass}>
+                                    {innerContent}
+                                </a>
+                            );
+                        } else {
+                            return (
+                                <Link key={`link-${idx}`} to={item.path!} className={commonClass}>
+                                    {innerContent}
+                                </Link>
+                            );
+                        }
                     })}
                 </div>
             </div>
