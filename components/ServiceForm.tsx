@@ -87,12 +87,12 @@ const ServiceForm: React.FC<ServiceFormProps> = ({ serviceName, questions }) => 
     const canAdvance = !question.required || (answers[question.label] && answers[question.label].trim() !== "");
 
     return (
-        <div className="bento-card p-8 md:p-12 lg:p-16 max-w-4xl mx-auto mt-16 md:mt-24 border-blue-500/20 shadow-2xl relative overflow-hidden bg-white dark:bg-[#0c0c0d]">
+        <div className="bento-card p-6 md:p-12 lg:p-16 max-w-4xl mx-auto mt-16 md:mt-24 border-blue-500/20 shadow-2xl relative overflow-hidden bg-white dark:bg-[#0c0c0d]">
             <div className="absolute top-0 end-0 w-64 h-64 bg-blue-600/10 blur-[100px] pointer-events-none"></div>
 
-            <div className="mb-12 text-center md:text-start reveal">
-                <h3 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-4">ابدأ مشروعك الآن</h3>
-                <p className="text-gray-500 dark:text-gray-400 text-lg md:text-xl font-medium">أجب على الأسئلة التالية لنتمكن من فهم احتياجاتك وتقديم أفضل استراتيجية نمو لك.</p>
+            <div className="mb-8 md:mb-12 text-center md:text-start reveal">
+                <h3 className="text-2xl md:text-4xl font-black text-gray-900 dark:text-white mb-4">ابدأ مشروعك الآن</h3>
+                <p className="text-gray-500 dark:text-gray-400 text-base md:text-xl font-medium">أجب على الأسئلة التالية لنتمكن من فهم احتياجاتك وتقديم أفضل استراتيجية نمو لك.</p>
             </div>
 
             {/* Progress Bar */}
@@ -113,9 +113,9 @@ const ServiceForm: React.FC<ServiceFormProps> = ({ serviceName, questions }) => 
 
             <form onSubmit={handleSubmit} className="flex flex-col min-h-[350px]">
                 <div className={`transition-all duration-300 ease-in-out flex-1 ${isAnimating ? 'opacity-0 translate-x-8' : 'opacity-100 translate-x-0'}`}>
-                    <div className="space-y-8 text-start mb-8">
-                        <label className="text-gray-900 dark:text-white font-black text-2xl md:text-4xl block leading-tight mb-8">
-                            {question.label} {question.required && <span className="text-red-500 text-2xl">*</span>}
+                    <div className="space-y-6 md:space-y-8 text-start mb-8">
+                        <label className="text-gray-900 dark:text-white font-black text-xl md:text-4xl block leading-tight mb-4 md:mb-8">
+                            {question.label} {question.required && <span className="text-red-500 text-xl md:text-2xl">*</span>}
                         </label>
 
                         {question.type === 'text' && (
@@ -126,7 +126,7 @@ const ServiceForm: React.FC<ServiceFormProps> = ({ serviceName, questions }) => 
                                 placeholder={question.placeholder}
                                 value={answers[question.label] || ''}
                                 onChange={(e) => handleInputChange(question.label, e.target.value)}
-                                className="w-full bg-gray-50 dark:bg-black/50 border border-black/10 dark:border-white/10 rounded-2xl px-8 py-6 text-gray-900 dark:text-white text-xl md:text-2xl focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all placeholder-gray-400 dark:placeholder-gray-600 shadow-sm"
+                                className="w-full bg-gray-50 dark:bg-black/50 border border-black/10 dark:border-white/10 rounded-2xl px-6 py-4 md:px-8 md:py-6 text-gray-900 dark:text-white text-lg md:text-2xl focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all placeholder-gray-400 dark:placeholder-gray-600 shadow-sm"
                             />
                         )}
 
@@ -137,7 +137,7 @@ const ServiceForm: React.FC<ServiceFormProps> = ({ serviceName, questions }) => 
                                         type="button"
                                         key={i}
                                         onClick={() => handleInputChange(question.label, opt)}
-                                        className={`w-full text-start p-6 rounded-2xl font-bold text-lg md:text-xl border-2 transition-all flex items-center justify-between group ${
+                                        className={`w-full text-start p-4 md:p-6 rounded-2xl font-bold text-base md:text-xl border-2 transition-all flex items-center justify-between group ${
                                             answers[question.label] === opt 
                                             ? 'border-blue-500 bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300 transform scale-[1.02] shadow-md' 
                                             : 'border-black/5 dark:border-white/5 bg-gray-50 dark:bg-black/50 text-gray-700 dark:text-gray-300 hover:border-blue-500/30'
@@ -160,7 +160,7 @@ const ServiceForm: React.FC<ServiceFormProps> = ({ serviceName, questions }) => 
                                 rows={4}
                                 value={answers[question.label] || ''}
                                 onChange={(e) => handleInputChange(question.label, e.target.value)}
-                                className="w-full bg-gray-50 dark:bg-black/50 border border-black/10 dark:border-white/10 rounded-2xl px-8 py-6 text-gray-900 dark:text-white text-xl md:text-2xl focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all placeholder-gray-400 dark:placeholder-gray-600 shadow-sm resize-none"
+                                className="w-full bg-gray-50 dark:bg-black/50 border border-black/10 dark:border-white/10 rounded-2xl px-6 py-4 md:px-8 md:py-6 text-gray-900 dark:text-white text-lg md:text-2xl focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all placeholder-gray-400 dark:placeholder-gray-600 shadow-sm resize-none"
                             ></textarea>
                         )}
 
@@ -171,7 +171,7 @@ const ServiceForm: React.FC<ServiceFormProps> = ({ serviceName, questions }) => 
                                         type="button"
                                         key={i}
                                         onClick={() => handleInputChange(question.label, opt)}
-                                        className={`w-full text-start p-6 rounded-2xl font-bold text-lg md:text-xl border-2 transition-all flex items-center justify-between group ${
+                                        className={`w-full text-start p-4 md:p-6 rounded-2xl font-bold text-base md:text-xl border-2 transition-all flex items-center justify-between group ${
                                             answers[question.label] === opt 
                                             ? 'border-blue-500 bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300 transform scale-[1.02] shadow-md' 
                                             : 'border-black/5 dark:border-white/5 bg-gray-50 dark:bg-black/50 text-gray-700 dark:text-gray-300 hover:border-blue-500/30'
@@ -194,9 +194,9 @@ const ServiceForm: React.FC<ServiceFormProps> = ({ serviceName, questions }) => 
                         <button
                             type="button"
                             onClick={handlePrev}
-                            className="px-6 md:px-10 py-5 rounded-[1.5rem] font-bold text-lg md:text-xl bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/10 transition-all flex items-center gap-3 hover:-translate-x-1"
+                            className="px-4 md:px-10 py-4 md:py-5 rounded-[1.5rem] font-bold text-base md:text-xl bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/10 transition-all flex items-center gap-2 md:gap-3 hover:-translate-x-1"
                         >
-                            <ArrowRight size={24} /> السابق
+                            <ArrowRight className="w-5 h-5 md:w-6 md:h-6" /> السابق
                         </button>
                     )}
                     
@@ -205,30 +205,30 @@ const ServiceForm: React.FC<ServiceFormProps> = ({ serviceName, questions }) => 
                             type="button"
                             onClick={handleNext}
                             disabled={!canAdvance}
-                            className={`flex-1 py-5 rounded-[1.5rem] font-black text-lg md:text-xl transition-all flex items-center justify-center gap-3 ${
+                            className={`flex-1 py-4 md:py-5 rounded-[1.5rem] font-black text-base md:text-xl transition-all flex items-center justify-center gap-2 md:gap-3 ${
                                 canAdvance 
                                 ? 'bg-blue-600 text-white shadow-[0_0_30px_-5px_rgba(37,99,235,0.4)] hover:shadow-[0_0_40px_-5px_rgba(37,99,235,0.6)] hover:bg-blue-500 hover:translate-x-1' 
                                 : 'bg-gray-100 dark:bg-white/5 text-gray-400 dark:text-gray-600 cursor-not-allowed'
                             }`}
                         >
-                            التالي <ArrowLeft size={24} />
+                            التالي <ArrowLeft className="w-5 h-5 md:w-6 md:h-6" />
                         </button>
                     ) : (
                         <button
                             type="submit"
                             disabled={isSubmitting || !canAdvance}
-                            className={`flex-1 py-5 rounded-[1.5rem] font-black text-lg md:text-xl transition-all flex items-center justify-center gap-3 shadow-xl overflow-hidden relative group ${
+                            className={`flex-1 py-4 md:py-5 rounded-[1.5rem] font-black text-base md:text-xl transition-all flex items-center justify-center gap-2 md:gap-3 shadow-xl overflow-hidden relative group ${
                                 !canAdvance 
                                 ? 'bg-gray-100 dark:bg-white/5 text-gray-400 dark:text-gray-600 cursor-not-allowed'
                                 : isSuccess ? 'bg-green-600 text-white' : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:scale-[1.02] hover:shadow-[0_0_40px_-5px_rgba(147,51,234,0.5)]'
                             }`}
                         >
                             {isSubmitting ? (
-                                <div className="w-8 h-8 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
+                                <div className="w-6 h-6 md:w-8 md:h-8 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
                             ) : isSuccess ? (
-                                <>تم الإرسال بنجاح! <CheckCircle2 size={28} /></>
+                                <>تم بنجاح! <CheckCircle2 className="w-6 h-6 md:w-7 md:h-7" /></>
                             ) : (
-                                <>إرسال الطلب الآن <Send size={28} className="group-hover:-translate-x-2 transition-transform" /></>
+                                <>إرسال الطلب <Send className="w-5 h-5 md:w-7 md:h-7 group-hover:-translate-x-2 transition-transform" /></>
                             )}
                         </button>
                     )}
