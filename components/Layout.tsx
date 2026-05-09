@@ -77,71 +77,77 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 {/* Desktop Navigation Links - Centered when scrolled */}
                 <div className="hidden lg:flex items-center gap-2 xl:gap-4 bg-transparent">
 
-                    {/* Services Dropdown Trigger */}
+                    {/* Mega Menu Trigger */}
                     <div className="relative group/nav" ref={servicesRef}>
                         <button
                             onClick={() => { setServicesOpen(!servicesOpen); setSectionsOpen(false); }}
                             className={`relative px-5 py-2.5 rounded-full text-base font-black transition-all duration-300 flex items-center gap-2
-                            ${isServiceActive || servicesOpen ? 'bg-black/5 dark:bg-white/10 text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5'}`}
+                            ${isServiceActive || isSectionActive || servicesOpen ? 'bg-black/5 dark:bg-white/10 text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5'}`}
                         >
-                            الخدمات
+                            تصفح المنصة
                             <ChevronDown size={14} className={`transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
                         </button>
 
-                        {/* Services Dropdown Menu */}
-                        <div className={`absolute top-full right-0 mt-4 w-[320px] bg-white dark:bg-[#0c0c0d] border border-black/5 dark:border-white/10 rounded-3xl shadow-2xl p-4 grid gap-1 transition-all duration-300 origin-top-right overflow-hidden ${servicesOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-4 pointer-events-none'}`}>
-                            {services.map((s) => (
-                                <Link
-                                    key={s.path}
-                                    to={s.path}
-                                    onClick={() => setServicesOpen(false)}
-                                    className="flex items-center gap-4 p-3 rounded-2xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors group"
-                                >
-                                    <div className="w-10 h-10 rounded-xl bg-gray-50 dark:bg-white/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 text-gray-400 group-hover:text-blue-500">
-                                        {s.icon}
+                        {/* Mega Dropdown Menu */}
+                        <div className={`absolute top-full right-0 mt-4 w-[600px] bg-white dark:bg-[#0c0c0d] border border-black/5 dark:border-white/10 rounded-3xl shadow-2xl p-6 transition-all duration-300 origin-top-right overflow-hidden flex gap-8 ${servicesOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-4 pointer-events-none'}`}>
+                            
+                            {/* Column 1: Services */}
+                            <div className="flex-1">
+                                <h4 className="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4 px-2">الخدمات الرقمية</h4>
+                                <div className="grid gap-1">
+                                    {services.map((s) => (
+                                        <Link
+                                            key={s.path}
+                                            to={s.path}
+                                            onClick={() => setServicesOpen(false)}
+                                            className="flex items-center gap-4 p-3 rounded-2xl hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group"
+                                        >
+                                            <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-white/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 text-blue-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
+                                                {s.icon}
+                                            </div>
+                                            <div className="flex flex-col text-start">
+                                                <span className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-500 transition-colors">{s.name}</span>
+                                            </div>
+                                        </Link>
+                                    ))}
+                                    <div className="pt-2 mt-2 border-t border-gray-100 dark:border-white/5">
+                                        <Link to="/services" onClick={() => setServicesOpen(false)} className="flex items-center justify-center text-xs font-black text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 py-2 uppercase tracking-widest transition-colors">عرض كل الخدمات</Link>
                                     </div>
-                                    <div className="flex flex-col text-start">
-                                        <span className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-blue-500 transition-colors">{s.name}</span>
-                                    </div>
-                                </Link>
-                            ))}
-                            <div className="pt-2 mt-2 border-t border-gray-100 dark:border-white/5">
-                                <Link to="/services" className="flex items-center justify-center text-xs font-black text-gray-400 hover:text-blue-500 py-2 uppercase tracking-widest transition-colors">عرض الكل</Link>
+                                </div>
                             </div>
-                        </div>
-                    </div>
 
-                    {/* Sections Dropdown Trigger */}
-                    <div className="relative group/nav" ref={sectionsRef}>
-                        <button
-                            onClick={() => { setSectionsOpen(!sectionsOpen); setServicesOpen(false); }}
-                            className={`relative px-5 py-2.5 rounded-full text-base font-black transition-all duration-300 flex items-center gap-2
-                            ${isSectionActive || sectionsOpen ? 'bg-black/5 dark:bg-white/10 text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5'}`}
-                        >
-                            الأقسام
-                            <ChevronDown size={14} className={`transition-transform duration-300 ${sectionsOpen ? 'rotate-180' : ''}`} />
-                        </button>
-
-                        {/* Sections Dropdown Menu */}
-                        <div className={`absolute top-full right-0 mt-4 w-[280px] bg-white dark:bg-[#0c0c0d] border border-black/5 dark:border-white/10 rounded-3xl shadow-2xl p-4 grid gap-1 transition-all duration-300 origin-top-right overflow-hidden ${sectionsOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-4 pointer-events-none'}`}>
-                            {sections.map((s) => (
-                                <Link
-                                    key={s.path}
-                                    to={s.path}
-                                    onClick={() => setSectionsOpen(false)}
-                                    className="flex items-center gap-4 p-3 rounded-2xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors group"
-                                >
-                                    <div className="w-10 h-10 rounded-xl bg-gray-50 dark:bg-white/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 text-gray-400 group-hover:text-blue-500">
-                                        {s.icon}
-                                    </div>
-                                    <div className="flex flex-col text-start">
-                                        <div className="flex items-center gap-2">
-                                            <span className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-blue-500 transition-colors">{s.name}</span>
-                                            {(s as any).badge && <span className="text-[10px] bg-blue-500/10 text-blue-500 px-2 py-0.5 rounded-full font-black animate-pulse">{(s as any).badge}</span>}
-                                        </div>
-                                    </div>
-                                </Link>
-                            ))}
+                            {/* Column 2: Sections */}
+                            <div className="flex-1 border-r border-gray-100 dark:border-white/5 pr-8">
+                                <h4 className="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4 px-2">الشركة</h4>
+                                <div className="grid gap-1">
+                                    {sections.map((s) => (
+                                        <Link
+                                            key={s.path}
+                                            to={s.path}
+                                            onClick={() => setServicesOpen(false)}
+                                            className="flex items-center gap-4 p-3 rounded-2xl hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group"
+                                        >
+                                            <div className="w-10 h-10 rounded-xl bg-gray-50 dark:bg-white/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
+                                                {s.icon}
+                                            </div>
+                                            <div className="flex flex-col text-start">
+                                                <div className="flex items-center gap-2">
+                                                    <span className="text-sm font-bold text-gray-900 dark:text-white transition-colors">{s.name}</span>
+                                                    {(s as any).badge && <span className="text-[10px] bg-blue-500/10 text-blue-600 dark:text-blue-400 px-2 py-0.5 rounded-full font-black animate-pulse">{(s as any).badge}</span>}
+                                                </div>
+                                            </div>
+                                        </Link>
+                                    ))}
+                                </div>
+                                
+                                {/* Quick Contact Block inside Mega Menu */}
+                                <div className="mt-6 p-4 rounded-2xl bg-blue-50 dark:bg-blue-500/10 border border-blue-100 dark:border-blue-500/20">
+                                    <p className="text-sm font-bold text-blue-900 dark:text-blue-100 mb-2">تحتاج مساعدة في مشروعك؟</p>
+                                    <Link to="/contact" onClick={() => setServicesOpen(false)} className="text-sm font-black text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
+                                        تواصل مع الخبراء <ArrowUpRight size={14} />
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
