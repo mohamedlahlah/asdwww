@@ -91,7 +91,7 @@ const Home = () => {
                     </div>
 
                     {/* Grid Items (Full Width Again) */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-10">
+                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 lg:gap-10">
                         {[
                             { title: "أدوات لا تعمل معًا", desc: "أنظمة منفصلة تزيد التعقيد بدلاً من حله." },
                             { title: "إعلانات بلا عائد حقيقي", desc: "صرف ميزانيات ضخمة دون نتائج ملموسة." },
@@ -100,12 +100,12 @@ const Home = () => {
                             { title: "اعتماد على مزودين منفصلين", desc: "تشتت الجهود بين عدة وكالات بلا رؤية موحّدة." },
                             { title: "النتيجة: هدر للموارد", desc: "ضياع الميزانية، الوقت، والطاقة." }
                         ].map((item, i) => (
-                            <div key={i} className="bento-card p-6 md:p-8 lg:p-10 bg-white dark:bg-[#0f0f10] hover:border-red-500/20 group hover:-translate-y-1 transition-transform">
-                                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-red-50 dark:bg-red-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                    <XCircle className="text-red-500" size={28} />
+                            <div key={i} className="bento-card p-4 md:p-8 lg:p-10 bg-white dark:bg-[#0f0f10] hover:border-red-500/20 group hover:-translate-y-1 transition-transform">
+                                <div className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-red-50 dark:bg-red-500/10 rounded-xl flex items-center justify-center mb-3 md:mb-6 group-hover:scale-110 transition-transform">
+                                    <XCircle className="text-red-500 w-5 h-5 md:w-7 md:h-7" />
                                 </div>
-                                <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-3">{item.title}</h3>
-                                <p className="text-lg lg:text-xl text-gray-500 dark:text-gray-400 font-medium">{item.desc}</p>
+                                <h3 className="text-base md:text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-1 md:mb-3 leading-tight">{item.title}</h3>
+                                <p className="text-xs md:text-lg lg:text-xl text-gray-500 dark:text-gray-400 font-bold">{item.desc}</p>
                             </div>
                         ))}
                     </div>
