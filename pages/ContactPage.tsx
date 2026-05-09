@@ -21,7 +21,7 @@ const ContactPage = () => {
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 <SectionHeader
                     tag="تواصل معنا"
-                    title="دعنا نبدأ <br/> <span className='text-blue-500'>رحلة النمو اليوم.</span>"
+                    title="دعنا نبدأ <span className='text-blue-500'>رحلة النمو اليوم.</span>"
                     subtitle="سواء كان لديك استفسار بسيط أو مشروع ضخم، نحن هنا للاستماع إليك وتقديم أفضل الحلول الممكنة."
                     icon={<MessageCircle className="w-5 h-5 text-blue-400" />}
                 />
@@ -34,7 +34,7 @@ const ContactPage = () => {
                                 <Sparkles size={18} />
                                 <span>جاهزون للرد دائماً</span>
                             </div>
-                            <h2 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight mb-8 tracking-tighter">معلومات <br /> الاتصال</h2>
+                            <h2 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight mb-8 tracking-tighter">معلومات الاتصال</h2>
                             <p className="text-xl text-gray-500 dark:text-gray-400 font-medium leading-relaxed mb-12">فريقنا متاح لدعمك وتقديم الاستشارات التقنية والتسويقية اللازمة لمتجرك.</p>
                         </div>
 
@@ -51,7 +51,7 @@ const ContactPage = () => {
                                     </div>
                                     <div>
                                         <div className="text-gray-500 dark:text-gray-400 text-sm font-bold mb-1 uppercase tracking-widest">{item.t}</div>
-                                        <div className="text-gray-900 dark:text-white text-xl font-black group-hover:text-blue-500 transition-colors">{item.v}</div>
+                                        <div className="text-gray-900 dark:text-white text-base md:text-xl font-black group-hover:text-blue-500 transition-colors">{item.v}</div>
                                     </div>
                                 </div>
                             ))}
@@ -71,7 +71,7 @@ const ContactPage = () => {
                     <div className="lg:col-span-7 bento-card p-10 md:p-16 relative overflow-hidden bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10 shadow-xl dark:shadow-none transition-colors">
                         <div className="absolute top-0 inset-inline-end-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(37,99,235,0.05)_0%,_transparent_50%)]"></div>
                         <form onSubmit={handleSubmit} className="relative z-10 space-y-8 text-start">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
                                 <div className="space-y-3">
                                     <label className="text-gray-900 dark:text-white font-black text-lg block">الاسم الكريم</label>
                                     <input name="name" required type="text" placeholder="مثلاً: محمد الأحمد" className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl px-6 py-4 text-gray-900 dark:text-white outline-none focus:border-blue-500 transition-colors font-bold shadow-sm dark:shadow-none" />
@@ -85,7 +85,7 @@ const ContactPage = () => {
                                 <label className="text-gray-900 dark:text-white font-black text-lg block">تفاصيل الرسالة</label>
                                 <textarea name="message" required rows={5} placeholder="كيف يمكننا مساعدتك اليوم؟" className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl px-6 py-4 text-gray-900 dark:text-white outline-none focus:border-blue-500 transition-colors font-bold shadow-sm dark:shadow-none resize-none"></textarea>
                             </div>
-                            <button type="submit" className="w-full bg-black dark:bg-white text-white dark:text-black py-6 rounded-3xl text-xl font-black shadow-2xl hover:bg-blue-600 dark:hover:bg-blue-500 hover:text-white dark:hover:text-black transition-all flex items-center justify-center gap-4">
+                            <button type="submit" className="w-full bg-black dark:bg-white text-white dark:text-black py-6 rounded-3xl text-base md:text-xl font-black shadow-2xl hover:bg-blue-600 dark:hover:bg-blue-500 hover:text-white dark:hover:text-black transition-all flex items-center justify-center gap-4">
                                 إرسال عبر واتساب
                                 <Send size={24} />
                             </button>

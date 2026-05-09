@@ -8,13 +8,13 @@ const AboutPage = () => {
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 <SectionHeader
                     tag="عن التاجر الرقمي"
-                    title="أكثر من مجرد وكالة... <br/> <span class='text-blue-500'>نحن المحرك الخفي لنموك.</span>"
+                    title="أكثر من مجرد وكالة... <span class='text-blue-500'>نحن المحرك الخفي لنموك.</span>"
                     subtitle="نشأنا لنعيد تعريف التجارة الرقمية. ندمج بين الإبداع البشري والذكاء التقني لنخلق منظومة نمو لا تتوقف."
                     icon={<Users2 className="w-5 h-5 text-blue-400" />}
                 />
 
                 {/* Values / DNA */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 md:mb-24 text-start">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-16 md:mb-24 text-start">
                     {[
                         { t: "انصهار كامل", d: "لا نعمل لأجلك، بل نعمل معك. نندمج في كيانك التجاري لنصبح الفريق الذي طالما تمنيت وجوده.", i: <Heart className="text-red-500" /> },
                         { t: "هيمنة تقنية", d: "نسخر أحدث ترسانات Apple وأتمتة n8n لنمنحك سبقاً تقنياً يجعلك تسبق المنافسين بسنوات ضوئية.", i: <BrainCircuit className="text-purple-500" /> },
@@ -22,14 +22,14 @@ const AboutPage = () => {
                     ].map((item, i) => (
                         <div key={i} className="bento-card p-10 hover:border-black/10 dark:hover:border-white/20 transition-all bg-gray-50 dark:bg-[#151516]">
                             <div className="mb-6">{item.i}</div>
-                            <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
+                            <h4 className="text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
                             <p className="text-gray-500 dark:text-gray-400 text-lg font-medium leading-relaxed">{item.d}</p>
                         </div>
                     ))}
                 </div>
 
                 {/* Story/Methodology */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center mb-32">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center mb-32">
                     <div className="space-y-8 text-start">
                         <div className="inline-flex items-center gap-3 bg-gray-100 dark:bg-white/5 text-blue-600 dark:text-blue-500 px-6 py-2 rounded-full text-sm font-black mb-4 border border-blue-500/10 dark:border-blue-500/20">
                             <Globe size={18} />
@@ -57,7 +57,7 @@ const AboutPage = () => {
                         <p className="text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed font-medium mb-12">
                             نحن مجموعة من الشغوفين، المطورين، والمتخصصين في التسويق الرقمي، تجمعنا رؤية واحدة: تمكين التاجر العربي من المنافسة عالمياً وبأفضل الأدوات الممكنة.
                         </p>
-                        <div className="flex flex-wrap justify-center gap-8 text-gray-900 dark:text-white font-black text-xl mb-12">
+                        <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-gray-900 dark:text-white font-black text-xl mb-12">
                             <div className="flex items-center gap-2"><div className="w-2 h-2 bg-blue-500 rounded-full"></div> <span>إستراتيجية</span></div>
                             <div className="flex items-center gap-2"><div className="w-2 h-2 bg-purple-500 rounded-full"></div> <span>تكنولوجيا</span></div>
                             <div className="flex items-center gap-2"><div className="w-2 h-2 bg-orange-500 rounded-full"></div> <span>نمو</span></div>
@@ -69,21 +69,21 @@ const AboutPage = () => {
                 <div id="careers" className="scroll-mt-20 md:mt-32">
                     <SectionHeader
                         tag="التوظيف"
-                        title="انضم لنخبة <br/> <span class='text-blue-500'>التاجر الرقمي</span>"
+                        title="انضم لنخبة <span class='text-blue-500'>التاجر الرقمي</span>"
                         subtitle="نبحث دائماً عن مواهب استثنائية تؤمن برؤيتنا وترغب في بناء المستقبل معنا."
                         className="mb-16"
                     />
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 mb-16">
                         {/* Job 1: Full Stack */}
-                        <div className="bento-card p-8 bg-white dark:bg-[#151516] border border-black/5 dark:border-white/10 hover:border-blue-500/30 transition-all group">
+                        <div className="bento-card p-4 md:p-6 lg:p-8 bg-white dark:bg-[#151516] border border-black/5 dark:border-white/10 hover:border-blue-500/30 transition-all group">
                             <div className="flex justify-between items-start mb-6">
                                 <div className="p-3 bg-blue-50 dark:bg-blue-500/10 rounded-xl text-blue-600 dark:text-blue-400">
                                     <Globe size={24} />
                                 </div>
                                 <span className="px-3 py-1 bg-green-100 dark:bg-green-500/10 text-green-600 dark:text-green-400 rounded-full text-xs font-black">متاح للتقديم</span>
                             </div>
-                            <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-2">Full Stack Developer</h3>
+                            <h3 className="text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-2">Full Stack Developer</h3>
                             <p className="text-gray-500 dark:text-gray-400 font-bold mb-6">Laravel (PHP) & React</p>
 
                             <ul className="space-y-3 mb-8 text-gray-600 dark:text-gray-300 font-medium">
@@ -94,14 +94,14 @@ const AboutPage = () => {
                         </div>
 
                         {/* Job 2: Media Buyer */}
-                        <div className="bento-card p-8 bg-white dark:bg-[#151516] border border-black/5 dark:border-white/10 hover:border-purple-500/30 transition-all group">
+                        <div className="bento-card p-4 md:p-6 lg:p-8 bg-white dark:bg-[#151516] border border-black/5 dark:border-white/10 hover:border-purple-500/30 transition-all group">
                             <div className="flex justify-between items-start mb-6">
                                 <div className="p-3 bg-purple-50 dark:bg-purple-500/10 rounded-xl text-purple-600 dark:text-purple-400">
                                     <Target size={24} />
                                 </div>
                                 <span className="px-3 py-1 bg-green-100 dark:bg-green-500/10 text-green-600 dark:text-green-400 rounded-full text-xs font-black">متاح للتقديم</span>
                             </div>
-                            <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-2">Senior Media Buyer</h3>
+                            <h3 className="text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-2">Senior Media Buyer</h3>
                             <p className="text-gray-500 dark:text-gray-400 font-bold mb-6">Performance Marketing</p>
 
                             <ul className="space-y-3 mb-8 text-gray-600 dark:text-gray-300 font-medium">
@@ -114,7 +114,7 @@ const AboutPage = () => {
 
                     {/* Application Form */}
                     <div className="max-w-2xl mx-auto bg-gray-50 dark:bg-[#0c0c0d] p-8 md:p-12 rounded-3xl border border-black/5 dark:border-white/5">
-                        <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-8 text-center">قدّم طلب انضمام</h3>
+                        <h3 className="text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-4 md:mb-8 text-center">قدّم طلب انضمام</h3>
                         <form className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
@@ -171,7 +171,7 @@ const ReliabilityGraphic = () => (
         {/* The Symbol */}
         <div className="relative z-10">
             <div className="relative w-32 h-32 md:w-40 md:h-40 bg-white dark:bg-black rounded-[2rem] shadow-2xl shadow-blue-500/10 flex items-center justify-center transform -rotate-6 group-hover:rotate-0 transition-all duration-500 ease-out border border-black/5 dark:border-white/10">
-                <ShieldCheck strokeWidth={1.5} className="w-16 h-16 md:w-20 md:h-20 text-blue-600 dark:text-blue-500" />
+                <ShieldCheck strokeWidth={1.5} className="w-12 h-12 md:w-16 md:h-16 md:w-20 md:h-20 text-blue-600 dark:text-blue-500" />
 
                 {/* Status Indicator */}
                 <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-4 border-gray-50 dark:border-[#111] shadow-sm"></div>
@@ -183,7 +183,7 @@ const ReliabilityGraphic = () => (
 
         {/* Text */}
         <div className="relative z-10 mt-10 text-center">
-            <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-2 tracking-tight">شريك موثوق</h3>
+            <h3 className="text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-2 tracking-tight">شريك موثوق</h3>
             <p className="text-sm font-bold text-gray-400 uppercase tracking-widest">Reliability Partners</p>
         </div>
     </div>

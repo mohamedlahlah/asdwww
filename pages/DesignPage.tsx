@@ -29,20 +29,20 @@ const DesignPage = () => {
                 <div className="mb-48">
                     <SectionHeader
                         tag="المشكلة الحقيقية"
-                        title="الواجهة الجميلة <br/> <span className='text-red-500'>لا تعني تجربة ناجحة.</span>"
+                        title="الواجهة الجميلة <span className='text-red-500'>لا تعني تجربة ناجحة.</span>"
                         subtitle="UX/UI السيئ لا يُغضب المستخدم… بل يُربكه، والارتباك يعني مغادرة."
                         icon={<X className="w-5 h-5 text-red-500" />}
                     />
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
                         {[
                             { t: "المستخدم لا يفهم", d: "ما المطلوب منه؟ غموض الهدف.", i: <Brain className="text-red-500" /> },
                             { t: "المسار غير واضح", d: "أين يضغط التالي؟ تشتت بصري.", i: <Map className="text-orange-500" /> },
                             { t: "الجهد الذهني مرتفع", d: "تفكير زائد لإنجاز مهمة بسيطة.", i: <Zap className="text-yellow-500" /> },
                             { t: "القرار يتأخر", d: "أو لا يحدث بسبب كثرة الخيارات.", i: <Clock className="text-gray-500" /> }
                         ].map((item, i) => (
-                            <div key={i} className="bento-card p-8 bg-gray-50 dark:bg-[#151516] border border-black/5 dark:border-white/10 group hover:border-red-500/30 transition-all">
-                                <div className="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                            <div key={i} className="bento-card p-4 md:p-6 lg:p-8 bg-gray-50 dark:bg-[#151516] border border-black/5 dark:border-white/10 group hover:border-red-500/30 transition-all">
+                                <div className="w-8 h-8 md:w-12 md:h-12 rounded-2xl bg-white dark:bg-white/5 flex items-center justify-center mb-3 md:mb-6 shadow-sm group-hover:scale-110 transition-transform">
                                     {i === 1 ? <Layout className="text-orange-500" /> : item.i}
                                 </div>
                                 <h4 className="text-lg font-black text-gray-900 dark:text-white mb-2">{item.t}</h4>
@@ -53,11 +53,11 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 2: Reframing */}
-                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="التحول الذهني"
-                            title="UX/UI ليس ذوقًا… <br/> <span className='text-purple-600'>بل علم قرار.</span>"
+                            title="UX/UI ليس ذوقًا… <span className='text-purple-600'>بل علم قرار.</span>"
                             subtitle="نحن لا نصمم شاشات، نحن نُهندس كيف يفكر المستخدم، ماذا يرى أولًا، ومتى يقرر."
                             icon={<Brain className="w-5 h-5 text-purple-600" />}
                         />
@@ -66,7 +66,7 @@ const DesignPage = () => {
                                 <X size={24} />
                                 <span>❌ هل التصميم جميل؟</span>
                             </div>
-                            <div className="flex items-center gap-4 text-2xl font-black text-green-500">
+                            <div className="flex items-center gap-4 text-lg md:text-2xl font-black text-green-500">
                                 <CheckCircle2 size={32} />
                                 <span>✅ هل يقود المستخدم للفعل الصحيح بأقل مجهود؟</span>
                             </div>
@@ -85,21 +85,21 @@ const DesignPage = () => {
                 <div className="mb-48">
                     <SectionHeader
                         tag="منهجيتنا"
-                        title="التصميم يبدأ <br/> <span className='text-blue-500'>قبل الألوان.</span>"
+                        title="التصميم يبدأ <span className='text-blue-500'>قبل الألوان.</span>"
                         subtitle="نبدأ كل مشروع برحلة استكشاف لضمان أن كل بكسل يخدم هدفاً تجارياً حقيقياً."
                         icon={<Lightbulb className="w-5 h-5 text-blue-500" />}
                     />
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
                         {[
                             { t: "فهم الهدف التجاري", d: "تسجيل؟ شراء؟ تواصل؟ استخدام متكرر؟", i: <Target className="text-blue-500" /> },
                             { t: "تحليل المستخدم", d: "من هو؟ ماذا يريد؟ ما الذي يعيقه؟", i: <Users className="text-blue-500" /> },
                             { t: "تحليل نية الاستخدام", d: "استكشاف -> مقارنة -> تنفيذ.", i: <Search className="text-blue-500" /> },
                             { t: "تصميم User Flow", d: "كل واجهة لها وظيفة ومؤشر نجاح.", i: <GitBranch className="text-blue-500" /> }
                         ].map((item, i) => (
-                            <div key={i} className="bento-card p-8 bg-white dark:bg-[#0a0a0b] border border-black/5 dark:border-white/10 text-start group hover:-translate-y-2 transition-transform duration-500">
+                            <div key={i} className="bento-card p-4 md:p-6 lg:p-8 bg-white dark:bg-[#0a0a0b] border border-black/5 dark:border-white/10 text-start group hover:-translate-y-2 transition-transform duration-500">
                                 <div className="text-6xl font-black text-blue-500/10 mb-4 absolute top-4 left-4">{i + 1}</div>
                                 <div className="mb-6 relative z-10">{item.i}</div>
-                                <h4 className="text-xl font-black text-gray-900 dark:text-white mb-2 relative z-10">{item.t}</h4>
+                                <h4 className="text-base md:text-xl font-black text-gray-900 dark:text-white mb-2 relative z-10">{item.t}</h4>
                                 <p className="text-gray-500 dark:text-gray-400 font-bold text-sm relative z-10">{item.d}</p>
                             </div>
                         ))}
@@ -107,7 +107,7 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 4: User Research */}
-                <div className="mb-48 grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-8 md:gap-12 lg:gap-16 items-center">
+                <div className="mb-48 grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8 md:gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="lg:col-span-5 relative group overflow-hidden bento-card h-[500px] flex items-center justify-center bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10">
                         <Microscope size={120} className="text-indigo-500 opacity-20 group-hover:scale-110 transition-transform duration-700" />
                         <div className="absolute bottom-10 left-0 right-0 text-center">
@@ -117,7 +117,7 @@ const DesignPage = () => {
                     <div className="lg:col-span-7 text-start">
                         <SectionHeader
                             tag="أبحاث المستخدم"
-                            title="لا نفترض… <br/> <span className='text-indigo-500'>بل نختبر.</span>"
+                            title="لا نفترض… <span className='text-indigo-500'>بل نختبر.</span>"
                             subtitle="أفضل قرار تصميمي هو الذي تدعمه بيانات استخدام حقيقية."
                             icon={<Microscope className="w-5 h-5 text-indigo-500" />}
                         />
@@ -136,11 +136,11 @@ const DesignPage = () => {
                 <div className="mb-48">
                     <SectionHeader
                         tag="هندسة التجربة"
-                        title="تقليل الجهد الذهني <br/> <span className='text-emerald-500'>هو مفتاح النجاح.</span>"
+                        title="تقليل الجهد الذهني <span className='text-emerald-500'>هو مفتاح النجاح.</span>"
                         subtitle="نُصمم UX وفق مبادئ الوضوح والتدرج المنطقي والاستجابة الفورية."
                         icon={<Layers className="w-5 h-5 text-emerald-500" />}
                     />
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mt-16">
                         {[
                             { t: "هيكلة المعلومات (IA)", d: "تنظيم المحتوى في شجرة منطقية وسهلة الوصول.", i: <Layout className="text-emerald-500" /> },
                             { t: "المخططات الهيكلية (Wireframes)", d: "المخططات الهيكلية الأولية للتركيز على الوظيفة قبل الشكل.", i: <PenTool className="text-emerald-500" /> },
@@ -148,7 +148,7 @@ const DesignPage = () => {
                         ].map((item, i) => (
                             <div key={i} className="bento-card p-10 bg-gray-50 dark:bg-[#151516] border-t-4 border-emerald-500 group">
                                 <div className="mb-6 group-hover:scale-110 transition-transform duration-300">{item.i}</div>
-                                <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
+                                <h4 className="text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
                                 <p className="text-gray-500 dark:text-gray-400 font-bold leading-relaxed">{item.d}</p>
                             </div>
                         ))}
@@ -156,11 +156,11 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 6: UI Design */}
-                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start order-2 lg:order-1">
                         <SectionHeader
                             tag="تصميم الواجهة UI"
-                            title="الجمال <br/> <span className='text-pink-500'>يخدم الوظيفة.</span>"
+                            title="الجمال <span className='text-pink-500'>يخدم الوظيفة.</span>"
                             subtitle="نُحوّل UX إلى واجهة ساحرة، متناسقة بصريًا، وواضحة هرميًا."
                             icon={<Palette className="w-5 h-5 text-pink-500" />}
                         />
@@ -192,7 +192,7 @@ const DesignPage = () => {
                 <div className="mb-48 text-center">
                     <SectionHeader
                         tag="التصميم للتحويل"
-                        title="كل عنصر يجب أن <br/> <span className='text-yellow-500'>يبرر وجوده.</span>"
+                        title="كل عنصر يجب أن <span className='text-yellow-500'>يبرر وجوده.</span>"
                         subtitle="نصمم الواجهات لزيادة التفاعل، الإكمال، والشراء عبر إزالة الاحتكاك ودعم القرار."
                         icon={<MousePointer2 className="w-5 h-5 text-yellow-500" />}
                     />
@@ -212,7 +212,7 @@ const DesignPage = () => {
                         <div>
                             <SectionHeader
                                 tag="التكامل مع التطوير"
-                                title="تصميم يُبنى… <br/> <span className='text-blue-400'>لا يُعاد رسمه.</span>"
+                                title="تصميم يُبنى… <span className='text-blue-400'>لا يُعاد رسمه.</span>"
                                 subtitle="نُسلّم ملفات Figma منظمة، Design Tokens، ومكونات جاهزة لضمان تنفيذ دقيق."
                                 icon={<FileCode className="w-5 h-5 text-blue-400" />}
                             />
@@ -237,7 +237,7 @@ const DesignPage = () => {
                 <div className="mb-48">
                     <SectionHeader
                         tag="القياس والتحسين"
-                        title="التصميم عملية <br/> <span className='text-cyan-500'>حية ومستمرة.</span>"
+                        title="التصميم عملية <span className='text-cyan-500'>حية ومستمرة.</span>"
                         subtitle="نقيس بعد الإطلاق ونُحسّن بناءً على النتائج لا الانطباعات."
                         icon={<Activity className="w-5 h-5 text-cyan-500" />}
                     />
@@ -253,7 +253,7 @@ const DesignPage = () => {
 
                 {/* Section 10: Proof & Impact */}
                 <div className="mb-48 bento-card p-12 bg-gray-50 dark:bg-[#0c0c0d] border border-black/5 dark:border-white/10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 text-center divide-y lg:divide-y-0 lg:divide-x lg:divide-x-reverse divide-gray-200 dark:divide-gray-800">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8 text-center divide-y lg:divide-y-0 lg:divide-x lg:divide-x-reverse divide-gray-200 dark:divide-gray-800">
                         {[
                             { v: "2.7x", l: "زيادة معدل التحويل", i: <TrendingUp className="w-8 h-8 text-green-500 mx-auto mb-4" /> },
                             { v: "40%", l: "تقليل الجهد الذهني", i: <Brain className="w-8 h-8 text-purple-500 mx-auto mb-4" /> },
@@ -271,9 +271,9 @@ const DesignPage = () => {
                 </div>
 
                 {/* Section 11: Audience */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-48">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-48">
                     <div className="bento-card p-12 bg-green-500/5 border-green-500/10">
-                        <h4 className="text-2xl font-black text-green-600 mb-8 flex items-center gap-3">
+                        <h4 className="text-lg md:text-2xl font-black text-green-600 mb-8 flex items-center gap-3">
                             <CheckCircle2 /> هذه الخدمة لك إذا:
                         </h4>
                         <ul className="space-y-6 text-start">
@@ -291,7 +291,7 @@ const DesignPage = () => {
                         </ul>
                     </div>
                     <div className="bento-card p-12 bg-red-500/5 border-red-500/10 opacity-70">
-                        <h4 className="text-2xl font-black text-red-600 mb-8 flex items-center gap-3">
+                        <h4 className="text-lg md:text-2xl font-black text-red-600 mb-8 flex items-center gap-3">
                             <Ban /> غير مناسبة إذا كنت:
                         </h4>
                         <ul className="space-y-6 text-start">

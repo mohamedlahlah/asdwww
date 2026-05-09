@@ -18,13 +18,13 @@ const ManagementPage = () => {
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 <SectionHeader
                     tag="الإدارة والنمو الاستراتيجي"
-                    title="تحويل الفوضى <br/> <span className='text-blue-500'>إلى منظومة نمو آلية.</span>"
+                    title="تحويل الفوضى <span className='text-blue-500'>إلى منظومة نمو آلية.</span>"
                     subtitle="نحن نتحمل عنك عبء الإشراف والتشغيل اليومي، لنحرر وقتك للتركيز على الرؤية الكبيرة وتوسيع نطاق أعمالك."
                     icon={<Briefcase className="w-5 h-5 text-blue-400" />}
                 />
 
                 {/* Management Pillars Bento */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 md:mb-24 text-start">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-16 md:mb-24 text-start">
                     {[
                         { t: "إدارة العمليات (Ops)", d: "هيكلة سير العمل اليومي، تنظيم المهام، وضمان تنفيذها بأعلى جودة وفي الوقت المحدد.", i: <ShieldCheck className="text-blue-500" /> },
                         { t: "استراتيجية النمو", d: "وضع خطط توسعية مبنية على أرقام السوق الحقيقية واقتناص الفرص التجارية الواعدة.", i: <LineChart className="text-blue-500" /> },
@@ -32,7 +32,7 @@ const ManagementPage = () => {
                     ].map((item, i) => (
                         <div key={i} className="bento-card p-10 group transition-all duration-500 hover:shadow-[0_40px_80px_rgba(37,99,235,0.05)] bg-gray-50 dark:bg-[#151516]">
                             <div className="mb-6 flex justify-start">{item.i}</div>
-                            <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4 group-hover:text-blue-500 transition-colors uppercase">{item.t}</h4>
+                            <h4 className="text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-4 group-hover:text-blue-500 transition-colors uppercase">{item.t}</h4>
                             <p className="text-gray-500 dark:text-gray-400 text-lg font-medium leading-relaxed">{item.d}</p>
                         </div>
                     ))}

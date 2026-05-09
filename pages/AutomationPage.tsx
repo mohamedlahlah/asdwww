@@ -20,12 +20,12 @@ const AutomationPage = () => {
                 <div className="mb-48">
                     <SectionHeader
                         tag="مرآة الفعالية"
-                        title="الوقت لا يُهدر في العمل… <br/> <span className='text-purple-600'>بل بين الأعمال.</span>"
+                        title="الوقت لا يُهدر في العمل… <span className='text-purple-600'>بل بين الأعمال.</span>"
                         subtitle="معظم الشركات لا تعاني من نقص أدوات، بل من انقطاع تدفق البيانات وصعوبة العمليات المتكررة."
                         icon={<Clock className="w-5 h-5 text-purple-600" />}
                     />
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mt-12">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-12">
                         {[
                             { t: "إدخال يدوي", d: "تكرار إدخال نفس البيانات في عدة برامج.", i: <Repeat className="text-red-500" /> },
                             { t: "أنظمة صامتة", d: "برامجك لا تتحدث مع بعضها البعض.", i: <Combine className="text-orange-500" /> },
@@ -33,8 +33,8 @@ const AutomationPage = () => {
                             { t: "جزر معزولة", d: "فرق تعمل دون مزامنة فورية للمعلومات.", i: <Users className="text-blue-500" /> },
                             { t: "بيانات متأخرة", d: "قرارات تُبنى على أرقام من الأمس.", i: <Activity className="text-emerald-500" /> }
                         ].map((item, i) => (
-                            <div key={i} className="bento-card p-8 bg-gray-50 dark:bg-[#151516] border border-black/5 dark:border-white/10 group">
-                                <div className="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                            <div key={i} className="bento-card p-4 md:p-6 lg:p-8 bg-gray-50 dark:bg-[#151516] border border-black/5 dark:border-white/10 group">
+                                <div className="w-8 h-8 md:w-12 md:h-12 rounded-2xl bg-white dark:bg-white/5 flex items-center justify-center mb-3 md:mb-6 shadow-sm group-hover:scale-110 transition-transform">
                                     {item.i}
                                 </div>
                                 <h4 className="text-lg font-black text-gray-900 dark:text-white mb-2">{item.t}</h4>
@@ -46,11 +46,11 @@ const AutomationPage = () => {
                 </div>
 
                 {/* Section 2: Reframing */}
-                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="التحول الذهني"
-                            title="الأتمتة ليست اختصار وقت… <br/> <span className='text-indigo-500'>بل إعادة تصميم العمل.</span>"
+                            title="الأتمتة ليست اختصار وقت… <span className='text-indigo-500'>بل إعادة تصميم العمل.</span>"
                             subtitle="نحن لا نستخدم n8n لربط تطبيقين فقط، بل لبناء نظام عمليات ذكي يفهم، يقرر، ويُنتج أثراً."
                             icon={<Sparkles className="w-5 h-5 text-indigo-500" />}
                         />
@@ -59,7 +59,7 @@ const AutomationPage = () => {
                                 <X size={20} />
                                 <span>❌ ما الأداة؟</span>
                             </div>
-                            <div className="flex items-center gap-4 text-2xl font-black text-green-500">
+                            <div className="flex items-center gap-4 text-lg md:text-2xl font-black text-green-500">
                                 <CheckCircle2 size={24} />
                                 <span>✅ لماذا تُنفذ هذه الخطوة أصلًا؟</span>
                             </div>
@@ -88,11 +88,11 @@ const AutomationPage = () => {
                 <div className="mb-48">
                     <SectionHeader
                         tag="الأداة المختارة"
-                        title="لماذا <span className='text-orange-500'>n8n</span>؟ <br/> <span className='text-gray-400'>أتمتة مرنة بلا قيود.</span>"
+                        title="لماذا <span className='text-orange-500'>n8n</span>؟ <span className='text-gray-400'>أتمتة مرنة بلا قيود.</span>"
                         subtitle="نختار n8n لأنه مفتوح المصدر، قابل للاستضافة الذاتية، ويسمح بمنطق شرطي وقرارات متقدمة."
                         icon={<Code2 className="w-5 h-5 text-orange-500" />}
                     />
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-start mt-16">
+                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 text-start mt-16">
                         {[
                             { t: "مفتوح المصدر (Open Source)", d: "تحكم كامل بالكود بلا قيود المنصات المغلقة.", i: <Globe className="text-orange-500" /> },
                             { t: "استضافة ذاتية (Self-hosting)", d: "خصوصية مطلقة لبياناتك بعيداً عن السحابة العامة.", i: <Shield className="text-orange-500" /> },
@@ -102,7 +102,7 @@ const AutomationPage = () => {
                         ].map((item, i) => (
                             <div key={i} className="bento-card p-10 bg-gray-50 dark:bg-[#0c0c0d] border border-black/5 dark:border-white/10 hover:border-orange-500/30 transition-all">
                                 <div className="mb-6">{item.i}</div>
-                                <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
+                                <h4 className="text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
                                 <p className="text-gray-500 dark:text-gray-400 text-lg font-medium leading-relaxed">{item.d}</p>
                             </div>
                         ))}
@@ -114,7 +114,7 @@ const AutomationPage = () => {
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(168,85,247,0.05)_0%,_transparent_50%)]"></div>
                     <SectionHeader
                         tag="منهجيتنا"
-                        title="الأتمتة تبدأ من العملية <br/> <span className='text-purple-500'>لا من الأداة.</span>"
+                        title="الأتمتة تبدأ من العملية <span className='text-purple-500'>لا من الأداة.</span>"
                         subtitle="نبدأ كل مشروع عبر تحليل العمليات الحالية (Process Mapping) لتحديد نقاط الهدر."
                         icon={<Search className="w-5 h-5 text-purple-500" />}
                     />
@@ -127,7 +127,7 @@ const AutomationPage = () => {
                         ].map((step, i) => (
                             <div key={i} className="p-8 bg-white dark:bg-white/5 rounded-3xl border border-black/5 dark:border-white/5 relative group hover:bg-purple-500/5 transition-colors">
                                 <div className="text-4xl font-black text-purple-500/10 mb-4">{i + 1}.</div>
-                                <h5 className="text-xl font-black text-gray-900 dark:text-white mb-2">{step.t}</h5>
+                                <h5 className="text-base md:text-xl font-black text-gray-900 dark:text-white mb-2">{step.t}</h5>
                                 <p className="text-gray-500 dark:text-gray-400 font-bold text-sm">{step.d}</p>
                             </div>
                         ))}
@@ -135,11 +135,11 @@ const AutomationPage = () => {
                 </div>
 
                 {/* Section 5: Advanced Engineering */}
-                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="هندسة Workflows"
-                            title="ما نبنيه ليس سيناريو… <br/> <span className='text-blue-500'>بل نظام مؤسسي مستقر.</span>"
+                            title="ما نبنيه ليس سيناريو… <span className='text-blue-500'>بل نظام مؤسسي مستقر.</span>"
                             subtitle="نُنشئ أنظمة أتمتة تشمل Webhooks، API Integrations، و Error Handling لضمان الاستدامة."
                             icon={<Cpu className="w-5 h-5 text-blue-500" />}
                         />
@@ -155,7 +155,7 @@ const AutomationPage = () => {
                         <div className="relative">
                             <Network size={160} className="text-blue-500/20" />
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="w-16 h-16 bg-blue-500 rounded-full animate-ping opacity-20"></div>
+                                <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-500 rounded-full animate-ping opacity-20"></div>
                             </div>
                         </div>
                     </div>
@@ -165,11 +165,11 @@ const AutomationPage = () => {
                 <div className="mb-48">
                     <SectionHeader
                         tag="حالات استخدام"
-                        title="أين تصنع الأتمتة <br/> <span className='text-emerald-500'>فرقاً حقيقياً؟</span>"
+                        title="أين تصنع الأتمتة <span className='text-emerald-500'>فرقاً حقيقياً؟</span>"
                         subtitle="نُطبق n8n في أعصب مفاصل العمل لرفع الإنتاجية الفورية تحت ضغط العمل."
                         icon={<BarChart3 className="w-5 h-5 text-emerald-500" />}
                     />
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mt-16">
                         {[
                             {
                                 t: "المبيعات",
@@ -255,10 +255,10 @@ const AutomationPage = () => {
                             }
                         ].map((item, i) => (
                             <div key={i} className="bento-card p-10 bg-white dark:bg-[#0a0a0b] border border-black/5 dark:border-white/10 group hover:-translate-y-2 transition-all hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] dark:hover:shadow-none">
-                                <div className={`w-16 h-16 rounded-2xl bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform duration-500 ${item.c}`}>
+                                <div className={`w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform duration-500 ${item.c}`}>
                                     {item.i}
                                 </div>
-                                <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4 group-hover:text-current transition-colors">{item.t}</h4>
+                                <h4 className="text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-4 group-hover:text-current transition-colors">{item.t}</h4>
                                 <p className="text-gray-500 dark:text-gray-400 font-bold leading-relaxed">{item.d}</p>
                             </div>
                         ))}
@@ -268,11 +268,11 @@ const AutomationPage = () => {
                 {/* Section 7: Security & Reliability */}
                 <div className="mb-48 p-12 md:p-24 bento-card relative overflow-hidden bg-black text-white border-none">
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_100%,_rgba(37,99,235,0.1)_0%,_transparent_50%)]"></div>
-                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                         <div className="text-start">
                             <SectionHeader
                                 tag="الأمان والاعتمادية"
-                                title="الأتمتة دون أمان <br/> <span className='text-blue-400'>خطر تشغيلي.</span>"
+                                title="الأتمتة دون أمان <span className='text-blue-400'>خطر تشغيلي.</span>"
                                 subtitle="الأتمتة الجيدة لا تُرى، لكنها يجب أن تكون موثوقة ومحكمة دائماً."
                                 icon={<Shield className="w-5 h-5 text-blue-400" />}
                             />
@@ -295,7 +295,7 @@ const AutomationPage = () => {
                 <div className="mb-48 text-center">
                     <SectionHeader
                         tag="التكامل"
-                        title="لا نغير أدواتك… <br/> <span className='text-purple-500'>نجعلها تعمل معاً.</span>"
+                        title="لا نغير أدواتك… <span className='text-purple-500'>نجعلها تعمل معاً.</span>"
                         subtitle="نربط n8n مع الـ CRM، أنظمة ERP، قواعد البيانات، والذكاء الاصطناعي ليكون لديك مصدر حقيقة موحد."
                         icon={<Combine className="w-5 h-5 text-purple-500" />}
                     />
@@ -309,17 +309,17 @@ const AutomationPage = () => {
                 </div>
 
                 {/* Section 9: ROI & Measurement */}
-                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+                <div className="mb-48 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="القياس والعائد"
-                            title="الأتمتة يجب أن <br/> <span className='text-green-500'>تُبرر نفسها.</span>"
+                            title="الأتمتة يجب أن <span className='text-green-500'>تُبرر نفسها.</span>"
                             subtitle="نحن نقيس أثر الأتمتة على أرقامك الحقيقية لضمان جدوى الاستثمار."
                             icon={<DollarSign className="w-5 h-5 text-green-500" />}
                         />
                         <div className="space-y-6 mt-12">
                             {['الوقت الموفر شهرياً', 'تقليل نسبة الأخطاء', 'سرعة التنفيذ (Cycle Time)', 'التكلفة قبل وبعد'].map((text, i) => (
-                                <div key={i} className="flex items-center gap-4 text-xl font-black text-gray-700 dark:text-gray-300">
+                                <div key={i} className="flex items-center gap-4 text-base md:text-xl font-black text-gray-700 dark:text-gray-300">
                                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                                     <span>{text}</span>
                                 </div>
@@ -333,7 +333,7 @@ const AutomationPage = () => {
 
                 {/* Section 10: Proof & Impact */}
                 <div className="mb-48 bento-card p-12 md:p-24 bg-gray-50 dark:bg-[#0c0c0d] border border-black/5 dark:border-white/10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
                         {[
                             { v: "65%", l: "تقليل العمل اليدوي", c: "text-purple-600" },
                             { v: "80%", l: "خفض الأخطاء التشغيلية", c: "text-blue-600" },
@@ -349,9 +349,9 @@ const AutomationPage = () => {
                 </div>
 
                 {/* Section 11: Whom is this for? */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-48">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-48">
                     <div className="bento-card p-12 bg-green-500/5 border-green-500/10">
-                        <h4 className="text-2xl font-black text-green-600 mb-8 flex items-center gap-3">
+                        <h4 className="text-lg md:text-2xl font-black text-green-600 mb-8 flex items-center gap-3">
                             <CheckCircle2 /> هذه الخدمة لك إذا:
                         </h4>
                         <ul className="space-y-6 text-start">
@@ -368,7 +368,7 @@ const AutomationPage = () => {
                         </ul>
                     </div>
                     <div className="bento-card p-12 bg-red-500/5 border-red-500/10 opacity-60">
-                        <h4 className="text-2xl font-black text-red-600 mb-8 flex items-center gap-3">
+                        <h4 className="text-lg md:text-2xl font-black text-red-600 mb-8 flex items-center gap-3">
                             <X className="w-6 h-6" /> غير مناسبة إذا كنت:
                         </h4>
                         <ul className="space-y-6 text-start">

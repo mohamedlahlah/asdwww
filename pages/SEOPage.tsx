@@ -21,22 +21,22 @@ const SEOPage = () => {
                 {/* Section 1: The Problem (Breaking the Illusion) */}
                 <SectionHeader
                     tag="كسر الوهم"
-                    title="الزيارات وحدها <br/> <span className='text-red-500'>لا تصنع مبيعات.</span>"
+                    title="الزيارات وحدها <span className='text-red-500'>لا تصنع مبيعات.</span>"
                     subtitle="معظم المواقع تخسر المال رغم وجود زيارات، لأن السيو (SEO) التقليدي يجذب 'باحثين عن معلومات' لا 'عملاء بنية شراء'. إن لم يكن موقعك مبنيًا على نية الشراء، فأنت تحسّن شيئًا لا يبيع."
                     icon={<Search className="w-5 h-5 text-red-500" />}
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-32">
-                    <div className="bento-card p-10 lg:p-12 bg-red-50/30 dark:bg-red-500/5 border-red-100 dark:border-red-500/10">
-                        <h4 className="text-xl lg:text-2xl font-black text-gray-900 dark:text-white mb-6">جوجل اليوم لا يكافئ الكثرة</h4>
-                        <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-400 font-medium leading-relaxed">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-32">
+                    <div className="bento-card p-6 md:p-8 lg:p-12 bg-red-50/30 dark:bg-red-500/5 border-red-100 dark:border-red-500/10">
+                        <h4 className="text-base md:text-xl lg:text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-6">جوجل اليوم لا يكافئ الكثرة</h4>
+                        <p className="text-sm md:text-lg lg:text-xl text-gray-600 dark:text-gray-400 font-medium leading-relaxed">
                             الخوارزميات الحديثة تبحث عن "دقة الفهم" و "نية الباحث" و "تجربة المستخدم الكاملة". نحن ننتقل بك من عقلية حشو الكلمات إلى عقلية الهيمنة على النتائج.
                         </p>
                     </div>
-                    <div className="bento-card p-10 lg:p-12 bg-gray-50 dark:bg-[#151516] flex items-center justify-center">
+                    <div className="bento-card p-6 md:p-8 lg:p-12 bg-gray-50 dark:bg-[#151516] flex items-center justify-center">
                         <div className="text-center">
                             <div className="text-4xl lg:text-5xl font-black text-red-500 mb-4 tracking-tighter">السيو ≠ مجرد زيارات</div>
-                            <div className="text-lg lg:text-xl font-bold text-gray-400 uppercase tracking-widest">السيو = نية تجارية (Commercial Intent)</div>
+                            <div className="text-sm md:text-lg lg:text-xl font-bold text-gray-400 uppercase tracking-widest">السيو = نية تجارية (Commercial Intent)</div>
                         </div>
                     </div>
                 </div>
@@ -45,12 +45,12 @@ const SEOPage = () => {
                 <div className="mb-32">
                     <SectionHeader
                         tag="المنهجية"
-                        title="سيو مبني على نية الباحث <br/> <span className='text-blue-500'>وليس مجرد كلمات.</span>"
+                        title="سيو مبني على نية الباحث <span className='text-blue-500'>وليس مجرد كلمات.</span>"
                         subtitle="نحن لا نستهدف كلمات... نحن نعيد هندسة موقعك حول نية البحث التجارية والشرائية (Commercial & Transactional Intent)."
                         icon={<Target className="w-5 h-5 text-blue-500" />}
                     />
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-start">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 text-start">
                         {[
                             {
                                 t: "تحليل مسار البحث الكامل",
@@ -69,11 +69,11 @@ const SEOPage = () => {
                             }
                         ].map((item, i) => (
                             <div key={i} className="bento-card p-10 bg-gray-50 dark:bg-[#151516] hover:border-blue-500/30 transition-all group">
-                                <div className="w-12 h-12 bg-white dark:bg-white/5 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                                <div className="w-8 h-8 md:w-12 md:h-12 bg-white dark:bg-white/5 rounded-2xl flex items-center justify-center mb-3 md:mb-6 shadow-sm group-hover:scale-110 transition-transform">
                                     {React.cloneElement(item.icon as any, { size: 24 })}
                                 </div>
-                                <h4 className="text-xl lg:text-2xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
-                                <p className="text-gray-500 dark:text-gray-400 text-base lg:text-lg font-medium leading-relaxed">{item.d}</p>
+                                <h4 className="text-base md:text-xl lg:text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
+                                <p className="text-gray-500 dark:text-gray-400 text-xs md:text-base lg:text-lg font-medium leading-relaxed">{item.d}</p>
                             </div>
                         ))}
                     </div>
@@ -100,7 +100,7 @@ const SEOPage = () => {
                                 جوجل لا يثق بالمواقع <br />
                                 <span className="text-yellow-500">البطيئة أو المشوشة.</span>
                             </h2>
-                            <p className="text-lg lg:text-xl text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
+                            <p className="text-sm md:text-lg lg:text-xl text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
                                 نفذنا تحسينات تقنية شاملة تجعل موقعك مفهوماً بوضوح لخوارزميات جوجل... وسهلاً للإنسان.
                             </p>
                         </div>
@@ -111,9 +111,9 @@ const SEOPage = () => {
                                 { t: "هيكلة البيانات", d: "استخدام البيانات المنظمة (Schema) لشرح محتوى الموقع لخوارزميات البحث.", v: <Layers size={32} className="text-purple-500" /> },
                                 { t: "سلطة الموضوع", d: "تحسين الربط الداخلي لتعزيز (Topical Authority) واكتساب ثقة جوجل.", v: <Link2 size={32} className="text-indigo-500" /> }
                             ].map((item, i) => (
-                                <div key={i} className="bento-card p-8 bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10">
+                                <div key={i} className="bento-card p-4 md:p-6 lg:p-8 bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10">
                                     <div className="mb-4">{item.v}</div>
-                                    <h5 className="text-xl font-black text-gray-900 dark:text-white mb-2">{item.t}</h5>
+                                    <h5 className="text-base md:text-xl font-black text-gray-900 dark:text-white mb-2">{item.t}</h5>
                                     <p className="text-gray-500 dark:text-gray-400 text-sm lg:text-base font-bold leading-relaxed">{item.d}</p>
                                 </div>
                             ))}
@@ -135,14 +135,14 @@ const SEOPage = () => {
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16 text-start">
                             <div>
-                                <h4 className="text-xl lg:text-2xl font-black mb-6">بناء الثقة (Domain Trust)</h4>
-                                <p className="text-blue-100/80 text-lg lg:text-xl leading-relaxed font-medium">
+                                <h4 className="text-base md:text-xl lg:text-lg md:text-2xl font-black mb-6">بناء الثقة (Domain Trust)</h4>
+                                <p className="text-blue-100/80 text-sm md:text-lg lg:text-xl leading-relaxed font-medium">
                                     نحن لا نبني روابط خلفية (Backlinks) عشوائية، بل نركز على روابط من مواقع ذات صلة حقيقية وحماية موقعك من الروابط السامة.
                                 </p>
                             </div>
                             <div>
-                                <h4 className="text-xl lg:text-2xl font-black mb-6">رفع قيمة النطاق</h4>
-                                <p className="text-blue-100/80 text-lg lg:text-xl leading-relaxed font-medium">
+                                <h4 className="text-base md:text-xl lg:text-lg md:text-2xl font-black mb-6">رفع قيمة النطاق</h4>
+                                <p className="text-blue-100/80 text-sm md:text-lg lg:text-xl leading-relaxed font-medium">
                                     هدفنا هو تحويل موقعك إلى مرجع في مجاله (Topical Authority) ليتصدر تلقائياً دون الحاجة لمحاربة الخوارزميات.
                                 </p>
                             </div>
@@ -154,20 +154,20 @@ const SEOPage = () => {
                 <div className="mb-32">
                     <SectionHeader
                         tag="الدليل بالأرقام"
-                        title="نمو عضوي صافي <br/> <span className='text-gray-400'>بيانات مقارنة (6 أشهر)</span>"
+                        title="نمو عضوي صافي <span className='text-gray-400'>بيانات مقارنة (6 أشهر)</span>"
                         subtitle="السيو الصحيح لا يرفع الترتيب فقط… بل يرفع قيمة كل زيارة إلى أقصى حد."
                     />
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 active">
                         {/* Main Stat Card */}
-                        <div className="lg:col-span-8 bento-card p-12 lg:p-16 relative overflow-hidden bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10">
+                        <div className="lg:col-span-8 bento-card p-6 md:p-10 lg:p-16 relative overflow-hidden bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10">
                             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(37,99,235,0.05)_0%,_transparent_50%)]"></div>
-                            <div className="flex items-center justify-end gap-8 mb-16 relative z-10">
+                            <div className="flex items-center justify-end gap-4 md:gap-8 mb-16 relative z-10">
                                 <div className="text-start">
                                     <div className="font-black text-2xl lg:text-3xl text-gray-900 dark:text-white">تحليل العائد الاستثماري</div>
-                                    <p className="text-blue-600 dark:text-blue-400 text-lg lg:text-xl font-black">مؤشرات التحويل والعائد (ROI & Conversion)</p>
+                                    <p className="text-blue-600 dark:text-blue-400 text-lg lg:text-base md:text-xl font-black">مؤشرات التحويل والعائد (ROI & Conversion)</p>
                                 </div>
-                                <div className="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center shrink-0"><TrendingUp size={32} className="text-blue-600 dark:text-blue-400" /></div>
+                                <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center shrink-0"><TrendingUp size={32} className="text-blue-600 dark:text-blue-400" /></div>
                             </div>
                             <div className="space-y-12 relative z-10">
                                 {[
@@ -176,7 +176,7 @@ const SEOPage = () => {
                                     { label: 'القيمة التجارية للزيارات', value: '+120 ألف دولار', color: 'from-purple-600 to-pink-600', w: '85%' }
                                 ].map((item, i) => (
                                     <div key={i} className="space-y-4 text-start">
-                                        <div className="flex justify-between text-xl font-black text-gray-900 dark:text-white"><span>{item.label}</span><span className="text-left" style={{ direction: 'ltr' }}>{item.value}</span></div>
+                                        <div className="flex justify-between text-base md:text-xl font-black text-gray-900 dark:text-white"><span>{item.label}</span><span className="text-left" style={{ direction: 'ltr' }}>{item.value}</span></div>
                                         <div className="h-4 w-full bg-gray-200 dark:bg-white/5 rounded-full overflow-hidden border border-black/5 dark:border-white/5">
                                             <div className={`h-full bg-gradient-to-r ${item.color} transition-all duration-[2s]`} style={{ width: item.w }}></div>
                                         </div>
@@ -186,7 +186,7 @@ const SEOPage = () => {
                         </div>
 
                         {/* Quick Metrics */}
-                        <div className="lg:col-span-4 grid grid-rows-2 gap-8">
+                        <div className="lg:col-span-4 grid grid-rows-2 gap-4 md:gap-8">
                             <div className="bento-card p-10 flex flex-col justify-between group bg-gray-50 dark:bg-[#151516]">
                                 <Zap size={40} className="text-yellow-500" />
                                 <div className="text-start">

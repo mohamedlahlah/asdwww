@@ -38,7 +38,7 @@ const PortfolioPage = () => {
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 <SectionHeader
                     tag="سجل نجاحنا"
-                    title="قصص نمو <br/> <span className='text-emerald-500'>تتكلم لغة الأرقام.</span>"
+                    title="قصص نمو <span className='text-emerald-500'>تتكلم لغة الأرقام.</span>"
                     subtitle="استكشف كيف ساعدنا الشركات على تحقيق قفزات نوعية في الأداء والعائد."
                     icon={<BarChart3 className="w-5 h-5 text-emerald-400" />}
                 />
@@ -60,7 +60,7 @@ const PortfolioPage = () => {
                 </div>
 
                 {/* Projects Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in-up">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 animate-fade-in-up">
                     {filteredProjects.map((project) => (
                         <Link
                             to={`/portfolio/${project.id}`}
@@ -68,7 +68,7 @@ const PortfolioPage = () => {
                             className={`bento-card p-10 group relative overflow-hidden border transition-all hover:-translate-y-2 hover:shadow-2xl ${project.bg} ${project.borderColor}`}
                         >
                             <div className="flex justify-between items-start mb-8">
-                                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center ${project.color} bg-opacity-10`}>
+                                <div className={`w-8 h-8 md:w-12 md:h-12 rounded-2xl flex items-center justify-center ${project.color} bg-opacity-10`}>
                                     <ArrowUpRight className={`${project.textColor} transform scale-x-[-1]`} />
                                 </div>
                                 <span className={`text-sm font-black uppercase tracking-wider px-3 py-1 rounded-full bg-white dark:bg-black/20 ${project.textColor}`}>

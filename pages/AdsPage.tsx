@@ -21,12 +21,12 @@ const AdsPage = () => {
                 {/* Section 1: Problem awareness (Breaking the False Idea) */}
                 <SectionHeader
                     tag="كسر الوهم الإعلاني"
-                    title="المشكلة ليست في الإعلانات... <br/> <span className='text-orange-500'>بل في ما قبلها.</span>"
+                    title="المشكلة ليست في الإعلانات... <span className='text-orange-500'>بل في ما قبلها.</span>"
                     subtitle="معظم الحملات تفشل ليس لأن المنصة سيئة، بل لأن الإعلان يُطلق دون فهم نية العميل، ودون بنية تحويل صحيحة. الإعلان لا يصنع الطلب، بل يلتقطه."
                     icon={<ShieldAlert className="w-5 h-5 text-orange-500" />}
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-32">
                     {[
                         { t: "نقرات بلا مبيعات", d: "زيارات كثيرة تنتهي بمعدل ارتداد عالي لأن الرسالة لا تطابق النية.", icon: <MousePointer2 className="text-orange-500" /> },
                         { t: "ميزانية تُحرق بلا أثر", d: "التنافس على كلمات عامة بدلاً من استهداف لحظات القرار الحاسمة.", icon: <Zap className="text-orange-500" /> },
@@ -34,23 +34,23 @@ const AdsPage = () => {
                     ].map((item, i) => (
                         <div key={i} className="bento-card p-10 bg-orange-50/30 dark:bg-orange-500/5 border-orange-100 dark:border-orange-500/10">
                             <div className="mb-6">{item.icon}</div>
-                            <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
+                            <h4 className="text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-4">{item.t}</h4>
                             <p className="text-lg text-gray-600 dark:text-gray-400 font-medium leading-relaxed">{item.d}</p>
                         </div>
                     ))}
                 </div>
 
                 {/* Section 2: Reframing */}
-                <div className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+                <div className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center">
                     <div className="text-start">
                         <SectionHeader
                             tag="التحول الذهني"
-                            title="نحن لا نشتري نقرات... <br/> <span className='text-blue-500'>بل قرارات شراء.</span>"
+                            title="نحن لا نشتري نقرات... <span className='text-blue-500'>بل قرارات شراء.</span>"
                             subtitle="الإعلانات المدفوعة الناجحة اليوم تُبنى على مطابقة الرسالة مع المرحلة النفسية للعميل. نحن لا نسأل كم عدد الزيارات، بل من المستعد للدفع الآن؟"
                             icon={<Brain className="w-5 h-5 text-blue-500" />}
                         />
                     </div>
-                    <div className="bento-card p-12 bg-gray-50 dark:bg-[#0c0c0d] flex flex-col gap-8">
+                    <div className="bento-card p-12 bg-gray-50 dark:bg-[#0c0c0d] flex flex-col gap-4 md:gap-8">
                         <div className="flex items-center gap-6 p-6 bg-red-500/5 rounded-2xl border border-red-500/10">
                             <X className="text-red-500" size={32} />
                             <div>
@@ -73,7 +73,7 @@ const AdsPage = () => {
                 <div className="mb-32 relative">
                     <SectionHeader
                         tag="المنهجية الجوهرية"
-                        title="نظام إعلاني مبني <br/> <span className='text-indigo-500'>على هرم نية المستخدم.</span>"
+                        title="نظام إعلاني مبني <span className='text-indigo-500'>على هرم نية المستخدم.</span>"
                         subtitle="نحن نوزع الميزانية بذكاء عبر ثلاث مستويات تضمن لك الربح العاجل والنمو الآجل."
                         icon={<Layers className="w-5 h-5 text-indigo-500" />}
                     />
@@ -112,7 +112,7 @@ const AdsPage = () => {
                                 <div className="relative z-10 flex flex-col h-full justify-between">
                                     <div>
                                         <div className="flex justify-between items-start mb-6">
-                                            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center border border-white/10">
+                                            <div className="w-8 h-8 md:w-12 md:h-12 bg-white/10 rounded-xl flex items-center justify-center border border-white/10">
                                                 {React.cloneElement(item.icon, { size: 24 })}
                                             </div>
                                             <div className="text-end">
@@ -121,7 +121,7 @@ const AdsPage = () => {
                                             </div>
                                         </div>
 
-                                        <h3 className="text-2xl font-black mb-1">{item.t}</h3>
+                                        <h3 className="text-lg md:text-2xl font-black mb-1">{item.t}</h3>
                                         <div className="text-indigo-200 text-sm font-bold uppercase tracking-wider mb-4">{item.sub}</div>
                                         <p className="text-indigo-100 font-medium leading-relaxed">{item.d}</p>
                                     </div>
@@ -139,7 +139,7 @@ const AdsPage = () => {
                         <div className="lg:col-span-5 text-start order-1 md:order-1">
                             <SectionHeader
                                 tag="المنصات والشركاء"
-                                title="أينما يتواجد عملاؤك... <br/> <span className='text-blue-500'>سنصل إليهم.</span>"
+                                title="أينما يتواجد عملاؤك... <span className='text-blue-500'>سنصل إليهم.</span>"
                                 subtitle="ندير حملاتك عبر أقوى المنصات العالمية لضمان الوصول لأعلى نية شرائية وبأقل تكلفة استحواذ."
                                 icon={<Globe className="w-5 h-5 text-blue-500" />}
                             />
@@ -191,12 +191,12 @@ const AdsPage = () => {
                 <div className="mb-48 relative">
                     <SectionHeader
                         tag="استراتيجية التوسع"
-                        title="خارطة طريق <br/> <span className='text-blue-500'>التوسع الهائل.</span>"
+                        title="خارطة طريق <span className='text-blue-500'>التوسع الهائل.</span>"
                         subtitle="النمو الحقيقي ليس وليد الصدفة، بل هو نتيجة تطبيق استراتيجيات توسع مدروسة تحافظ على استقرار الأرباح."
                         icon={<TrendingUp className="w-5 h-5 text-blue-500" />}
                     />
 
-                    <div className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="mt-16 md:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
                         {[
                             {
                                 number: "01",
@@ -260,12 +260,12 @@ const AdsPage = () => {
                                 {step.isCTA && <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 blur-[60px]"></div>}
                                 <div className="text-start relative z-10">
                                     <div className="flex justify-between items-start mb-8">
-                                        <div className={`w-14 h-14 rounded-2xl ${step.isCTA ? 'bg-white/10' : 'bg-gray-100 dark:bg-white/5'} flex items-center justify-center`}>
+                                        <div className={`w-10 h-10 md:w-14 md:h-14 rounded-2xl ${step.isCTA ? 'bg-white/10' : 'bg-gray-100 dark:bg-white/5'} flex items-center justify-center`}>
                                             {step.icon}
                                         </div>
                                         <span className={`text-4xl font-black tracking-tighter ${step.isCTA ? 'text-white/20' : 'text-gray-900/10 dark:text-white/10'}`}>{step.number}</span>
                                     </div>
-                                    <h5 className={`text-xl font-black mb-4 leading-tight ${step.isCTA ? 'text-white' : 'text-gray-900 dark:text-white group-hover:text-blue-500 transition-colors'}`}>{step.t}</h5>
+                                    <h5 className={`text-base md:text-xl font-black mb-4 leading-tight ${step.isCTA ? 'text-white' : 'text-gray-900 dark:text-white group-hover:text-blue-500 transition-colors'}`}>{step.t}</h5>
                                     <p className={`font-bold text-sm leading-relaxed ${step.isCTA ? 'text-blue-50' : 'text-gray-500 dark:text-gray-400'}`}>{step.d}</p>
                                 </div>
                             </div>
@@ -277,7 +277,7 @@ const AdsPage = () => {
                 <div className="mb-48 relative">
                     <SectionHeader
                         tag="تحليل السلوك"
-                        title="تتبّع أداء الإعلانات <br/> <span className='text-rose-500'>عبر الخرائط الحرارية.</span>"
+                        title="تتبّع أداء الإعلانات <span className='text-rose-500'>عبر الخرائط الحرارية.</span>"
                         subtitle="لأن النقر لا يعني دائمًا اهتمامًا… والسلوك لا يكذب. نحن نحول صفحات الهبوط من 'افتراضات تسويقية' إلى مساحات اختبار سلوكي حقيقي، لنكشف لك ما يفعله الزائر فعلياً."
                         icon={<MousePointer2 className="w-5 h-5 text-rose-500" />}
                     />
@@ -379,12 +379,12 @@ const AdsPage = () => {
                         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full mix-blend-multiply dark:mix-blend-screen animate-pulse"></div>
                         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-red-500/10 blur-[120px] rounded-full mix-blend-multiply dark:mix-blend-screen opacity-50"></div>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 lg:gap-24 items-center relative z-10">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 lg:gap-24 items-center relative z-10">
                             {/* Text Visuals */}
                             <div className="text-start space-y-12">
                                 <SectionHeader
                                     tag="منظومة جوجل"
-                                    title="سيطرة ممتدة عبر <br/> <span className='text-transparent bg-clip-text bg-gradient-to-l from-blue-600 to-red-500'>كامل منظومة Google.</span>"
+                                    title="سيطرة ممتدة عبر <span className='text-transparent bg-clip-text bg-gradient-to-l from-blue-600 to-red-500'>كامل منظومة Google.</span>"
                                     subtitle="لا نكتفي بالبحث فقط؛ نصل لعميلك في لحظة الإلهام على YouTube، ولحظة التصفح في Gmail، ولحظة البحث عن الموقع في Maps."
                                     icon={<Globe className="w-5 h-5 text-blue-600" />}
                                     className="mb-0"
@@ -394,11 +394,11 @@ const AdsPage = () => {
                                     {/* Feature 1: PMax */}
                                     <div className="group bg-white dark:bg-white/5 p-6 md:p-8 rounded-3xl border border-black/5 dark:border-white/5 hover:border-blue-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-blue-500/5">
                                         <div className="flex gap-6 items-start">
-                                            <div className="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-blue-500/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-500">
+                                            <div className="w-10 h-10 md:w-14 md:h-14 rounded-2xl bg-blue-50 dark:bg-blue-500/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-500">
                                                 <Brain size={28} className="text-blue-600 dark:text-blue-400" />
                                             </div>
                                             <div>
-                                                <h5 className="text-2xl font-black text-gray-900 dark:text-white mb-3">حملات PMax الذكية</h5>
+                                                <h5 className="text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-3">حملات PMax الذكية</h5>
                                                 <p className="text-gray-500 dark:text-gray-400 font-bold leading-relaxed text-lg">
                                                     استخدام الذكاء الاصطناعي لتوزيع الإعلانات آلياً عبر أفضل القنوات أداءً.
                                                 </p>
@@ -409,11 +409,11 @@ const AdsPage = () => {
                                     {/* Feature 2: Multi-Angle */}
                                     <div className="group bg-white dark:bg-white/5 p-6 md:p-8 rounded-3xl border border-black/5 dark:border-white/5 hover:border-red-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-red-500/5">
                                         <div className="flex gap-6 items-start">
-                                            <div className="w-14 h-14 rounded-2xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-500">
+                                            <div className="w-10 h-10 md:w-14 md:h-14 rounded-2xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-500">
                                                 <Layers size={28} className="text-red-600 dark:text-red-400" />
                                             </div>
                                             <div>
-                                                <h5 className="text-2xl font-black text-gray-900 dark:text-white mb-3">ظهور متعدد الزوايا</h5>
+                                                <h5 className="text-lg md:text-2xl font-black text-gray-900 dark:text-white mb-3">ظهور متعدد الزوايا</h5>
                                                 <p className="text-gray-500 dark:text-gray-400 font-bold leading-relaxed text-lg">
                                                     عميلك يراك في كل مكان، مما يعزز الثقة ويسرع قرار الشراء.
                                                 </p>
@@ -436,7 +436,7 @@ const AdsPage = () => {
                                 {/* Floating Badge */}
                                 <div className="absolute -bottom-8 -left-8 bg-white dark:bg-[#1a1a1a] p-6 rounded-2xl shadow-xl border border-black/5 dark:border-white/10 hidden md:block animate-bounce-slow">
                                     <div className="flex items-center gap-4">
-                                        <img src="/assets/platforms/google-ads.png" alt="Google Partner" className="w-12 h-12 object-contain" />
+                                        <img src="/assets/platforms/google-ads.png" alt="Google Partner" className="w-8 h-8 md:w-12 md:h-12 object-contain" />
                                         <div>
                                             <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">شريك معتمد</div>
                                             <div className="text-lg font-black text-gray-900 dark:text-white">Google Partner</div>
@@ -452,7 +452,7 @@ const AdsPage = () => {
                 <div className="mb-48 relative px-6 max-w-5xl mx-auto">
                     <SectionHeader
                         tag="محركات الفعالية"
-                        title="لماذا تهم <br/> <span className='text-emerald-500'>فعالية الإعلانات؟</span>"
+                        title="لماذا تهم <span className='text-emerald-500'>فعالية الإعلانات؟</span>"
                         subtitle="الحملة الإعلانية ليست مجرد إنفاق، بل هي استثمار استراتيجي يهدف لتحويل كل ريال إلى أصل تجاري متنامي."
                         icon={<TargetIcon className="w-5 h-5 text-emerald-500" />}
                         titleClassName="text-4xl md:text-5xl lg:text-5xl"
@@ -503,7 +503,7 @@ const AdsPage = () => {
 
                                     {/* Content Card */}
                                     <div className={`w-full md:w-[45%] ml-12 md:ml-0 bento-card p-10 md:p-14 relative overflow-hidden transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 ${point.glow}`}>
-                                        <div className="mb-8 w-16 h-16 rounded-2xl bg-white dark:bg-white/5 flex items-center justify-center shadow-sm">
+                                        <div className="mb-8 w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-white dark:bg-white/5 flex items-center justify-center shadow-sm">
                                             {React.cloneElement(point.i as React.ReactElement, { size: 32 })}
                                         </div>
                                         <h4 className="text-2xl md:text-3xl font-black text-gray-900 dark:text-white mb-6 group-hover:text-emerald-500 transition-colors uppercase tracking-tight leading-tight">{point.t}</h4>
@@ -524,7 +524,7 @@ const AdsPage = () => {
                     <div className="lg:col-span-5 text-start order-1 lg:order-1">
                         <SectionHeader
                             tag="هندسة الحساب"
-                            title="المنصات لا تكافئ <br/> <span className='text-blue-500'>العشوائية.</span>"
+                            title="المنصات لا تكافئ <span className='text-blue-500'>العشوائية.</span>"
                             subtitle="نحن نعيد بناء الحساب الإعلاني ليفهم نشاطك، ويُحسن الأداء بدلاً من استنزاف الميزانية."
                             icon={<Cpu className="w-5 h-5 text-blue-500" />}
                         />
@@ -538,7 +538,7 @@ const AdsPage = () => {
                             { t: "Machine Learning", d: "تغذية الخوارزمية بالبيانات الصحيحة للتعلم.", i: <Cpu className="text-purple-500" /> },
                             { t: "استهداف جماهيري", d: "بناء جماهير مشابهة (Lookalike) ذات جودة عالية.", i: <Users2 className="text-green-500" /> }
                         ].map((item, i) => (
-                            <div key={i} className="bento-card p-8 bg-gray-50 dark:bg-[#0c0c0d] border border-black/5 dark:border-white/10">
+                            <div key={i} className="bento-card p-4 md:p-6 lg:p-8 bg-gray-50 dark:bg-[#0c0c0d] border border-black/5 dark:border-white/10">
                                 <div className="mb-4">{item.i}</div>
                                 <h5 className="font-black text-gray-900 dark:text-white text-xl mb-2">{item.t}</h5>
                                 <p className="text-gray-500 dark:text-gray-400 font-bold text-sm">{item.d}</p>
@@ -555,7 +555,7 @@ const AdsPage = () => {
                     <div className="relative z-10 max-w-4xl mx-auto text-center md:text-start">
                         <SectionHeader
                             tag="الإبداع الإعلاني"
-                            title="الإعلان ليس تصميماً... <br/> <span className='text-blue-500'>بل رسالة في توقيت حاسم.</span>"
+                            title="الإعلان ليس تصميماً... <span className='text-blue-500'>بل رسالة في توقيت حاسم.</span>"
                             subtitle="نطوّر الإعلانات بناءً على نقاط الألم (Pain Points) واعتراضات الشراء ومحفزات القرار."
                             icon={<Sparkles className="w-5 h-5 text-blue-500" />}
                         />
@@ -565,7 +565,7 @@ const AdsPage = () => {
                                 { t: "اختبار الزوايا النفسية", d: "اختبار مستمر (A/B Testing) للعناوين، العروض، وأزرار الإجراء (CTA)." }
                             ].map((item, i) => (
                                 <div key={i} className="border-r-2 border-blue-500/30 pr-8">
-                                    <h4 className="text-2xl font-black mb-4 font-sans">{item.t}</h4>
+                                    <h4 className="text-lg md:text-2xl font-black mb-4 font-sans">{item.t}</h4>
                                     <p className="text-gray-400 text-lg font-medium leading-relaxed font-sans">{item.d}</p>
                                 </div>
                             ))}
@@ -574,25 +574,25 @@ const AdsPage = () => {
                 </div>
 
                 {/* Section 6: Conversion Engineering */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-center mb-32">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8 md:gap-12 lg:gap-16 items-center mb-32">
                     <div className="lg:col-span-5 text-start">
                         <SectionHeader
                             tag="هندسة التحويل"
-                            title="الإعلان القوي يفشل <br/> <span className='text-red-500'>بدون صفحة بيع صحيحة.</span>"
+                            title="الإعلان القوي يفشل <span className='text-red-500'>بدون صفحة بيع صحيحة.</span>"
                             subtitle="نربط كل إعلان بصفحة هبوط مبنية على سرعة عالية، رسالة واحدة واضحة، وإزالة كاملة لأي احتكاك يمنع العميل من الشراء."
                             icon={<Layout className="w-5 h-5 text-red-500" />}
                         />
                     </div>
-                    <div className="lg:col-span-7 inline-grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="lg:col-span-7 inline-grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
                         {[
                             { t: "سرعة تحميل < 1s", i: <Zap className="text-yellow-500" /> },
                             { t: "إزالة الاحتكاك (Friction)", i: <ShieldAlert className="text-red-500" /> },
                             { t: "تسلسل إقناعي مدروس", i: <Layers className="text-blue-500" /> },
                             { t: "رسالة واحدة واضحة", i: <TargetIcon className="text-green-500" /> }
                         ].map((item, i) => (
-                            <div key={i} className="bento-card p-8 bg-gray-50 dark:bg-[#151516] flex items-center gap-6 group hover:scale-105 transition-transform">
-                                <div className="w-12 h-12 bg-white dark:bg-white/5 rounded-xl flex items-center justify-center shadow-sm">{item.i}</div>
-                                <span className="text-xl font-black text-gray-900 dark:text-white">{item.t}</span>
+                            <div key={i} className="bento-card p-4 md:p-6 lg:p-8 bg-gray-50 dark:bg-[#151516] flex items-center gap-6 group hover:scale-105 transition-transform">
+                                <div className="w-8 h-8 md:w-12 md:h-12 bg-white dark:bg-white/5 rounded-xl flex items-center justify-center shadow-sm">{item.i}</div>
+                                <span className="text-base md:text-xl font-black text-gray-900 dark:text-white">{item.t}</span>
                             </div>
                         ))}
                     </div>
@@ -605,7 +605,7 @@ const AdsPage = () => {
                     <div className="absolute inset-0 bg-blue-600/5 blur-[120px]"></div>
                     <SectionHeader
                         tag="التحسين المستمر"
-                        title="الإعلانات علم... <br/> <span className='text-gray-400'>ليست مجرد حملة مؤقتة.</span>"
+                        title="الإعلانات علم... <span className='text-gray-400'>ليست مجرد حملة مؤقتة.</span>"
                         subtitle="ندير الإعلانات كنظام حي يتنفس؛ تحليل يومي للأداء، قرارات مبنية على بيانات لا مشاعر، وتحسين مستمر للميزانية حسب الربحية."
                         icon={<TrendingUp className="w-5 h-5 text-blue-500" />}
                     />
@@ -613,7 +613,7 @@ const AdsPage = () => {
 
                 {/* Section 8: Proof & Metrics */}
                 <div className="mb-32">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8">
                         <div className="lg:col-span-8 bento-card p-12 md:p-16 relative overflow-hidden bg-gray-50 dark:bg-black border border-black/5 dark:border-white/10">
                             <div className="absolute top-0 start-0 w-full h-full bg-[radial-gradient(circle_at_0%_0%,_rgba(249,115,22,0.05)_0%,_transparent_50%)]"></div>
                             <div className="flex items-center justify-end gap-6 mb-16 relative z-10">
@@ -621,7 +621,7 @@ const AdsPage = () => {
                                     <div className="font-bold text-2xl md:text-3xl text-gray-900 dark:text-white uppercase tracking-tighter">نتائج الأداء الحقيقة</div>
                                     <p className="text-orange-600 dark:text-orange-400 font-bold">مؤشرات الأداء والعائد (ROAS)</p>
                                 </div>
-                                <div className="w-14 h-14 bg-orange-500/10 rounded-2xl flex items-center justify-center shrink-0"><LineChart size={32} className="text-orange-600 dark:text-orange-400" /></div>
+                                <div className="w-10 h-10 md:w-14 md:h-14 bg-orange-500/10 rounded-2xl flex items-center justify-center shrink-0"><LineChart size={32} className="text-orange-600 dark:text-orange-400" /></div>
                             </div>
                             <div className="space-y-12 relative z-10">
                                 {[
@@ -638,7 +638,7 @@ const AdsPage = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="lg:col-span-4 grid gap-8">
+                        <div className="lg:col-span-4 grid gap-4 md:gap-8">
                             <div className="bento-card p-10 bg-gray-50 dark:bg-[#151516] flex flex-col justify-between">
                                 <Globe size={40} className="text-blue-500" />
                                 <div className="text-start">
@@ -658,9 +658,9 @@ const AdsPage = () => {
                 </div>
 
                 {/* Section 9: Qualification (Ideal Client) */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-32">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-32">
                     <div className="bento-card p-12 bg-green-500/5 border-green-500/20">
-                        <h4 className="text-2xl font-black text-green-600 mb-8 flex items-center gap-3">
+                        <h4 className="text-lg md:text-2xl font-black text-green-600 mb-8 flex items-center gap-3">
                             <CheckCircle2 /> هذه الخدمة لك إذا:
                         </h4>
                         <ul className="space-y-4 text-start">
@@ -677,7 +677,7 @@ const AdsPage = () => {
                         </ul>
                     </div>
                     <div className="bento-card p-12 bg-red-500/5 border-red-500/20 grayscale hover:grayscale-0 transition-all opacity-60">
-                        <h4 className="text-2xl font-black text-red-600 mb-8 flex items-center gap-3">
+                        <h4 className="text-lg md:text-2xl font-black text-red-600 mb-8 flex items-center gap-3">
                             <BadgeAlert /> غير مناسبة إذا كنت:
                         </h4>
                         <ul className="space-y-4 text-start">
@@ -739,7 +739,7 @@ const AdsPage = () => {
                                     { t: "خارطة طريق للعائد", d: "خطة واضحة لرفع ROAS خلال 90 يوم.", i: <TrendingUp className="text-green-500" /> }
                                 ].map((item, i) => (
                                     <div key={i} className="flex flex-col items-center gap-4 bg-white dark:bg-white/5 p-6 rounded-3xl border border-black/5 dark:border-white/5 shadow-sm hover:scale-105 transition-transform">
-                                        <div className="w-16 h-16 rounded-2xl bg-gray-50 dark:bg-white/5 flex items-center justify-center shrink-0">
+                                        <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-gray-50 dark:bg-white/5 flex items-center justify-center shrink-0">
                                             {React.cloneElement(item.i as React.ReactElement, { size: 32 })}
                                         </div>
                                         <div>

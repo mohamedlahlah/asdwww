@@ -97,7 +97,7 @@ const CaseStudyPage = () => {
 
             {/* Challenge & Solution */}
             <section className="px-6 md:px-12 max-w-[1200px] mx-auto mb-32">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 md:gap-24 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 md:gap-12 lg:gap-16 md:gap-24 items-start">
                     <div>
                         <SectionHeader
                             tag="التحدي"
@@ -128,9 +128,9 @@ const CaseStudyPage = () => {
                     className="mb-16"
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                     {/* Frontend */}
-                    <div className="bento-card p-8 bg-blue-50 dark:bg-blue-900/5 border-blue-100 dark:border-blue-500/10">
+                    <div className="bento-card p-4 md:p-6 lg:p-8 bg-blue-50 dark:bg-blue-900/5 border-blue-100 dark:border-blue-500/10">
                         <div className="flex items-center gap-3 mb-6">
                             <div className="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center">
                                 <Globe className="text-blue-500" size={20} />
@@ -148,7 +148,7 @@ const CaseStudyPage = () => {
                     </div>
 
                     {/* Backend */}
-                    <div className="bento-card p-8 bg-purple-50 dark:bg-purple-900/5 border-purple-100 dark:border-purple-500/10">
+                    <div className="bento-card p-4 md:p-6 lg:p-8 bg-purple-50 dark:bg-purple-900/5 border-purple-100 dark:border-purple-500/10">
                         <div className="flex items-center gap-3 mb-6">
                             <div className="w-10 h-10 bg-purple-500/10 rounded-xl flex items-center justify-center">
                                 <Layers className="text-purple-500" size={20} />
@@ -166,7 +166,7 @@ const CaseStudyPage = () => {
                     </div>
 
                     {/* Infrastructure */}
-                    <div className="bento-card p-8 bg-green-50 dark:bg-green-900/5 border-green-100 dark:border-green-500/10">
+                    <div className="bento-card p-4 md:p-6 lg:p-8 bg-green-50 dark:bg-green-900/5 border-green-100 dark:border-green-500/10">
                         <div className="flex items-center gap-3 mb-6">
                             <div className="w-10 h-10 bg-green-500/10 rounded-xl flex items-center justify-center">
                                 <Zap className="text-green-500" size={20} />
@@ -184,7 +184,7 @@ const CaseStudyPage = () => {
                     </div>
 
                     {/* APIs */}
-                    <div className="bento-card p-8 bg-orange-50 dark:bg-orange-900/5 border-orange-100 dark:border-orange-500/10">
+                    <div className="bento-card p-4 md:p-6 lg:p-8 bg-orange-50 dark:bg-orange-900/5 border-orange-100 dark:border-orange-500/10">
                         <div className="flex items-center gap-3 mb-6">
                             <div className="w-10 h-10 bg-orange-500/10 rounded-xl flex items-center justify-center">
                                 <BarChart3 className="text-orange-500" size={20} />
@@ -209,7 +209,7 @@ const CaseStudyPage = () => {
                         <div className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">صفحة</div>
                     </div>
                     <div className="bento-card p-6 text-center bg-gray-50 dark:bg-[#111]">
-                        <div className="text-2xl font-black text-blue-600 dark:text-blue-400 mb-2">{project.projectDetails.duration}</div>
+                        <div className="text-lg md:text-2xl font-black text-blue-600 dark:text-blue-400 mb-2">{project.projectDetails.duration}</div>
                         <div className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">المدة</div>
                     </div>
                     <div className="bento-card p-6 text-center bg-gray-50 dark:bg-[#111]">
@@ -246,12 +246,12 @@ const CaseStudyPage = () => {
 
             {/* Visual Proof (Mockup Placeholders) */}
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto mb-32">
-                <div className="bento-card p-8 md:p-12 bg-gray-100 dark:bg-[#151516] border-none mb-8">
+                <div className="bento-card p-4 md:p-6 lg:p-8 md:p-12 bg-gray-100 dark:bg-[#151516] border-none mb-8">
                     <div className="aspect-video bg-gray-200 dark:bg-black/50 rounded-2xl flex items-center justify-center">
                         <span className="text-gray-400 font-black text-2xl">[ تصور الفائدة / لقطة شاشة ]</span>
                     </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
                     <div className="aspect-square bg-gray-100 dark:bg-[#151516] rounded-3xl flex items-center justify-center">
                         <span className="text-gray-400 font-black">[ عرض الجوال ]</span>
                     </div>
