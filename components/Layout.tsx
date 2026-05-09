@@ -349,11 +349,25 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
                     <div className="lg:col-span-3 text-start">
                         <h4 className="font-black text-gray-900/40 dark:text-white/30 mb-8 text-sm tracking-widest uppercase">تواصل معنا</h4>
-                        <p className="text-gray-400 dark:text-gray-500 text-lg font-medium mb-8 leading-relaxed">فريقنا متاح دائماً للرد على استفساراتك ومناقشة مشروعك القادم.</p>
-                        <Link to="/contact" className="inline-flex items-center gap-3 text-gray-900 dark:text-white font-black hover:text-blue-500 transition-all group">
-                            <span className="text-xl">ابدأ محادثة الآن</span>
-                            <ChevronLeft size={24} className="group-hover:-translate-x-2 transition-transform" />
-                        </Link>
+                        <div className="space-y-6">
+                            <p className="text-gray-400 dark:text-gray-500 text-lg font-medium leading-relaxed">فريقنا متاح دائماً للرد على استفساراتك ومناقشة مشروعك القادم.</p>
+                            
+                            <div className="text-gray-500 dark:text-gray-400 font-medium space-y-2">
+                                <p className="flex flex-col gap-1">
+                                    <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">الدعم الفني</span>
+                                    <a href="mailto:support@dtajer.com" className="hover:text-blue-500 transition-colors text-lg" dir="ltr">support@dtajer.com</a>
+                                </p>
+                                <p className="flex flex-col gap-1">
+                                    <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">العنوان</span>
+                                    <span className="text-lg">الرياض، المملكة العربية السعودية</span>
+                                </p>
+                            </div>
+
+                            <Link to="/contact" className="inline-flex items-center gap-3 text-gray-900 dark:text-white font-black hover:text-blue-500 transition-all group pt-2">
+                                <span className="text-xl">ابدأ محادثة الآن</span>
+                                <ChevronLeft size={24} className="group-hover:-translate-x-2 transition-transform" />
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
@@ -362,6 +376,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     <div className="flex gap-8">
                         <Link to="/privacy-policy" className="hover:text-gray-900 dark:hover:text-white cursor-pointer transition-colors">سياسة الخصوصية</Link>
                         <Link to="/terms" className="hover:text-gray-900 dark:hover:text-white cursor-pointer transition-colors">شروط الخدمة</Link>
+                        <Link to="/refund-policy" className="hover:text-gray-900 dark:hover:text-white cursor-pointer transition-colors">سياسة الاسترجاع</Link>
                         <Link to="/cookies" className="hover:text-gray-900 dark:hover:text-white cursor-pointer transition-colors">ملفات الارتباط</Link>
                     </div>
                 </div>

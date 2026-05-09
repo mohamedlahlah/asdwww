@@ -17,6 +17,7 @@ import ServicesLandingPage from './pages/ServicesLandingPage';
 import ContactPage from './pages/ContactPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import RefundPolicy from './pages/RefundPolicy';
 import Cookies from './pages/Cookies';
 
 const ScrollToTop = () => {
@@ -49,6 +50,7 @@ function App() {
           <Route path="/management" element={<ManagementPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/cookies" element={<Cookies />} />
         </Routes>
       </Layout>
