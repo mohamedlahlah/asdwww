@@ -42,8 +42,7 @@ const Home = () => {
                     </div>
 
                     <h1 className="hero-title-apple mb-12 md:mb-16 reveal active">
-                        لسنا مجرد وكالة... <br />
-                        <span className="text-gray-400 dark:text-gray-600">نحن شريكك في كواليس النمو.</span>
+                        لسنا مجرد وكالة... <span className="text-gray-400 dark:text-gray-600">نحن شريكك في كواليس النمو.</span>
                     </h1>
 
                     <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed font-medium mb-16 reveal active">
@@ -77,7 +76,7 @@ const Home = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-end mb-16 md:mb-16 md:mb-24">
                         <SectionHeader
                             tag="المشكلة التي نحلّها"
-                            title="لماذا يفشل النمو <br/> <span class='text-red-500'>رغم كثرة الأدوات؟</span>"
+                            title="لماذا يفشل النمو <span class='text-red-500'>رغم كثرة الأدوات؟</span>"
                             subtitle="الكثير من التجار والشركات يعانون من أدوات لا تعمل معًا، وإعلانات بلا عائد حقيقي."
                             className="mb-0 text-start"
                         />
@@ -119,7 +118,7 @@ const Home = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-end mb-16 md:mb-16 md:mb-24">
                         <SectionHeader
                             tag="الحل: فريق نمو مدمج"
-                            title="منظومة واحدة <br/> <span class='text-blue-500'>بدل حلول متفرقة.</span>"
+                            title="منظومة واحدة <span class='text-blue-500'>بدل حلول متفرقة.</span>"
                             subtitle="نحن لا نبيع خدمات منفصلة، بل نوفر فريق نمو مدمج يتولى عنك الجوانب التقنية والتسويقية."
                             className="mb-0 text-start"
                         />
@@ -171,9 +170,8 @@ const Home = () => {
                         <span>عقلية الشريك</span>
                     </div>
 
-                    <h2 className="section-title-apple text-white mb-8 tracking-tighter leading-tight">
-                        نحن نعمل كشريك استراتيجي مدمج، <br />
-                        <span className="text-blue-500">لا كمزوّد خدمة خارجي.</span>
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 md:mb-12 leading-tight">
+                        نحن نعمل كشريك استراتيجي مدمج، <span className="text-blue-500 block md:inline mt-2 md:mt-0">وليس فقط مزود خدمة.</span>
                     </h2>
 
                     <p className="text-lg md:text-xl text-gray-300 font-medium leading-relaxed max-w-4xl mx-auto mb-16">
@@ -193,7 +191,7 @@ const Home = () => {
                         <div className="lg:col-span-5 text-start">
                             <SectionHeader
                                 tag="التميز الهندسي"
-                                title="بنية رقمية صلبة.<br/> <span class='text-blue-500'> أتمتة ذكية تفهمك.</span>"
+                                title="بنية رقمية صلبة. <span class='text-blue-500'>أتمتة ذكية تفهمك.</span>"
                                 subtitle="لا نكتفي ببناء المواقع؛ نخلق أنظمة حية تتنفس البيانات، تتحدث مع عملائك، وتنجز المهام الروتينية بدقة جراحية بينما تتفرغ أنت للنمو."
                             />
                             <div className="mt-8 flex flex-col gap-6">
@@ -249,7 +247,7 @@ const Home = () => {
                         <div className="text-start order-1">
                             <SectionHeader
                                 tag="المنظور الاستراتيجي"
-                                title="لا نبحث عن ضجة مؤقتة...<br/> <span class='text-green-600'>نبني أصولاً تدوم.</span>"
+                                title="لا نبحث عن ضجة مؤقتة... <span class='text-green-600'>نبني أصولاً تدوم.</span>"
                                 subtitle="القفزات السريعة تغري الهواة، لكن النمو المركب هو لعبة المحترفين. نحول عملك من صفقات عشوائية إلى ماكينة تدفق نقدي مستدام."
                                 className="items-start text-start"
                             />
@@ -293,9 +291,8 @@ const Home = () => {
                             <Globe size={16} />
                             رؤية عربية
                         </div>
-                        <h2 className="section-title-apple text-gray-900 dark:text-white mb-8 leading-tight">
-                            نفهم السوق... <br />
-                            <span className="text-blue-500">ونتقن الأدوات.</span>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6 md:mb-8 leading-tight">
+                            نفهم السوق... <span className="text-blue-500">ونتقن الأدوات.</span>
                         </h2>
                         <ul className="space-y-6 text-xl lg:text-2xl font-medium text-gray-500 dark:text-gray-400">
                             {[
@@ -450,9 +447,8 @@ const Home = () => {
                     <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_0%_100%,_rgba(37,99,235,0.4)_0%,_transparent_50%)]"></div>
 
                     <div className="relative z-10 flex flex-col items-center">
-                        <h2 className="section-title-apple text-white mb-10 tracking-tighter leading-tight">
-                            هل تبحث عن مزوّد خدمات… <br className="hidden lg:block" />
-                            <span className="text-blue-500">أم عن شريك يقود معك النمو؟</span>
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-10 leading-tight">
+                            هل تبحث عن مزوّد خدمات… <span className="text-blue-500">أم فريق كواليس يبني لنجاحك؟</span>
                         </h2>
 
                         <p className="text-lg md:text-xl text-gray-300 font-medium mb-16 max-w-4xl mx-auto leading-relaxed">
