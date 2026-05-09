@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import { Zap, Bot, Database, MessageSquare, Workflow, Settings, CheckCircle2, Cpu, Sparkles, LineChart, Clock, AlertTriangle, Network, Combine, Shield, Activity, FileText, BarChart, Code2, Repeat, Globe, DollarSign, UserCheck, UserPlus, Search, TrendingUp, Target, BarChart3, Users, X } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
@@ -15,6 +16,8 @@ const AutomationPage = () => {
 
     return (
         <main className="pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
+            <SEO title="أتمتة العمليات الرقمية" description="وفر وقتك وجهدك عبر أتمتة مهام متجرك الإلكتروني." canonicalUrl="/automation" />
+
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 {/* Section 1: Problem Awareness */}
                 <div className="mb-20 md:mb-48">

@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React, { useEffect } from 'react';
 import { ArrowLeft, ShieldCheck, Clock, FileWarning, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -10,6 +11,8 @@ const RefundPolicy = () => {
 
     return (
         <main className="pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black transition-colors duration-500 font-sans">
+            <SEO title="سياسة الاسترجاع" description="سياسة الاسترجاع الخاصة بالخدمات الرقمية لمنصة التاجر الرقمي." canonicalUrl="/refundpolicy" />
+
             <div className="max-w-4xl mx-auto px-6 md:px-12">
                 
                 <Link to="/" className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-500 font-bold hover:gap-3 transition-all mb-12">

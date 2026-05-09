@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import SectionHeader from '../components/SectionHeader';
 import { Cookie } from 'lucide-react';
@@ -5,6 +6,8 @@ import { Cookie } from 'lucide-react';
 const Cookies = () => {
     return (
         <main className="pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black transition-colors duration-500">
+            <SEO title="ملفات الارتباط" description="سياسة ملفات الارتباط (الكوكيز) لمنصة التاجر الرقمي." canonicalUrl="/cookies" />
+
             <section className="px-6 md:px-12 max-w-[1000px] mx-auto text-start">
                 <SectionHeader
                     tag="ملفات تعريف الارتباط"

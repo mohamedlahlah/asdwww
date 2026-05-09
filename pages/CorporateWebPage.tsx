@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import { Building2, ShieldCheck, Target, Users, BarChart3, Rocket, Sparkles, Zap, Search, Share2, Workflow, Cpu, Globe, CheckCircle2, X, MousePointer2, Briefcase, Info, MessageSquare, LineChart, Layers, Gauge } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
@@ -16,6 +17,8 @@ const CorporateWebPage = () => {
 
     return (
         <main className="pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
+            <SEO title="مواقع الشركات (B2B)" description="تصميم مواقع شركات احترافية تعكس هوية علامتك التجارية وتجذب العملاء." canonicalUrl="/corporateweb" />
+
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 {/* Section 1: Problem Awareness */}
                 <SectionHeader

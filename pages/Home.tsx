@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import {
     Search,
@@ -33,6 +34,8 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <main className="flex-grow overflow-hidden">
+            <SEO title="الرئيسية" description="التاجر الرقمي - منصة رائدة لتمكين التجار العرب عبر توفير خدمات رقمية، تصميم متاجر، وتسويق." canonicalUrl="/" />
+
             {/* HERO SECTION */}
             <section className="relative pt-28 md:pt-40 lg:pt-56 pb-16 md:pb-28 lg:pb-36 px-4 md:px-8 lg:px-16 bg-white dark:bg-black overflow-hidden flex flex-col items-center min-h-screen transition-colors duration-500">
                 <div className="max-w-[1400px] mx-auto relative z-10 w-full text-center">

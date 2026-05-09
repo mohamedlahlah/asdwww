@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React, { useState } from 'react';
 import { ArrowUpRight, BarChart3, Code2, Globe, Layout, Palette, ScanFace, Smartphone, Sparkles, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -35,6 +36,8 @@ const PortfolioPage = () => {
 
     return (
         <main className="pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black transition-colors duration-500 min-h-screen">
+            <SEO title="معرض الأعمال" description="اطلع على سوابق أعمالنا والمتاجر التي قمنا بتصميمها وتسويقها." canonicalUrl="/portfolio" />
+
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 <SectionHeader
                     tag="سجل نجاحنا"

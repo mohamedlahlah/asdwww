@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import SectionHeader from '../components/SectionHeader';
 import { ShieldCheck } from 'lucide-react';
@@ -5,6 +6,8 @@ import { ShieldCheck } from 'lucide-react';
 const PrivacyPolicy = () => {
     return (
         <main className="pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black transition-colors duration-500">
+            <SEO title="سياسة الخصوصية" description="تعرف على كيفية حماية بياناتك وخصوصيتك في التاجر الرقمي." canonicalUrl="/privacypolicy" />
+
             <section className="px-6 md:px-12 max-w-[1000px] mx-auto text-start">
                 <SectionHeader
                     tag="سياسة الخصوصية"

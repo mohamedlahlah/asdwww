@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import { Search, TrendingUp, Monitor, Palette, Workflow, Briefcase, Sparkles, ArrowRight, ShoppingBag, Building2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -51,6 +52,8 @@ const ServicesLandingPage = () => {
 
     return (
         <main className="pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black transition-colors duration-500">
+            <SEO title="الخدمات الرقمية" description="تصفح باقة الخدمات الرقمية المتكاملة التي يقدمها التاجر الرقمي لنمو أعمالك." canonicalUrl="/serviceslanding" />
+
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 <SectionHeader
                     tag="منظومة الخدمات 360"

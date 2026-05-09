@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React, { useState } from 'react';
 import { Lock, Sparkles, Send, Box, ChevronRight, Fingerprint, ScanEye, Code2 } from 'lucide-react';
 
@@ -16,6 +17,8 @@ const ProductsPage = () => {
 
     return (
         <main className="min-h-screen pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black text-gray-900 dark:text-white relative overflow-hidden flex flex-col items-center justify-center transition-colors duration-500">
+            <SEO title="منتجات التاجر" description="منتجات وأدوات رقمية حصرية مصممة لتسريع نمو تجارتك." canonicalUrl="/products" />
+
 
             {/* Ambient Background */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">

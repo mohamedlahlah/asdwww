@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import { Briefcase, Users2, BarChart3, LineChart, ShieldCheck, PieChart, CheckCircle2, TrendingUp } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
@@ -15,6 +16,8 @@ const ManagementPage = () => {
 
     return (
         <main className="pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black transition-colors duration-500">
+            <SEO title="إدارة المتاجر الإلكترونية" description="خدمة إدارة المتاجر الشاملة من التاجر الرقمي، تفرغ لنمو تجارتك ونحن نديرها لك." canonicalUrl="/management" />
+
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 <SectionHeader
                     tag="الإدارة والنمو الاستراتيجي"

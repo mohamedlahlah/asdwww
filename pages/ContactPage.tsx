@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import { Mail, Phone, MapPin, Send, MessageCircle, Sparkles, Globe, Clock, ArrowRight } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
@@ -18,6 +19,8 @@ const ContactPage = () => {
 
     return (
         <main className="pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black transition-colors duration-500">
+            <SEO title="تواصل معنا" description="تواصل مع فريق التاجر الرقمي لمناقشة مشروعك والحصول على استشارة مجانية." canonicalUrl="/contact" />
+
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 <SectionHeader
                     tag="تواصل معنا"

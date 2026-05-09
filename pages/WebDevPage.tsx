@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import { ShoppingBag, ShoppingCart, Rocket, BarChart3, Layers, Zap, MousePointer2, Gauge, Search, Share2, Cpu, Globe, CheckCircle2, X, MessageSquare, TrendingUp, ShieldCheck, CreditCard, RefreshCw, LineChart, Workflow } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
@@ -16,6 +17,8 @@ const WebDevPage = () => {
 
     return (
         <main className="pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
+            <SEO title="تصميم وبرمجة المتاجر" description="صمم متجرك الإلكتروني الاحترافي لزيادة المبيعات والتحويلات مع التاجر الرقمي." canonicalUrl="/webdev" />
+
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 {/* Section 1: Problem Awareness */}
                 <SectionHeader

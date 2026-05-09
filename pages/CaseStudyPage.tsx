@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, BarChart3, Globe, Layers, Smartphone, Sparkles, Target, Zap } from 'lucide-react';
@@ -67,6 +68,8 @@ const CaseStudyPage = () => {
 
     return (
         <main className="pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black transition-colors duration-500">
+            <SEO title="دراسة حالة" description="اكتشف كيف ساعدنا الشركات على تحقيق نمو استثنائي من خلال دراسات الحالة." canonicalUrl="/casestudy" />
+
             {/* Header / Hero */}
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto mb-12 md:mb-20 text-start">
                 <Link to="/portfolio" className="inline-flex items-center gap-2 text-gray-400 hover:text-black dark:hover:text-white transition-colors mb-8 font-bold" dir="rtl">

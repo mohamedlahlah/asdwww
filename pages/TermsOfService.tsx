@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import SectionHeader from '../components/SectionHeader';
 import { FileText } from 'lucide-react';
@@ -5,6 +6,8 @@ import { FileText } from 'lucide-react';
 const TermsOfService = () => {
     return (
         <main className="pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black transition-colors duration-500">
+            <SEO title="شروط الخدمة" description="شروط وأحكام استخدام خدمات منصة التاجر الرقمي." canonicalUrl="/termsofservice" />
+
             <section className="px-6 md:px-12 max-w-[1000px] mx-auto text-start">
                 <SectionHeader
                     tag="شروط الخدمة"

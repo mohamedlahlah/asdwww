@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import { Target, Users2, ShieldCheck, Sparkles, Zap, BrainCircuit, Globe, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SectionHeader from '../components/SectionHeader';
@@ -5,6 +6,8 @@ import SectionHeader from '../components/SectionHeader';
 const AboutPage = () => {
     return (
         <main className="pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black transition-colors duration-500">
+            <SEO title="عن التاجر الرقمي" description="تعرف على قصة التاجر الرقمي ورؤيتنا في تمكين رواد الأعمال العرب رقمياً." canonicalUrl="/about" />
+
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 <SectionHeader
                     tag="عن التاجر الرقمي"

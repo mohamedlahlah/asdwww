@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import { TrendingUp, CheckCircle2, Target, BarChart3, Rocket, Users2, Sparkles, MessageSquare, Zap, Target as TargetIcon, Search, ShieldAlert, BadgeAlert, Brain, Layers, Cpu, MousePointer2, Layout, LineChart, Check, X, LayoutGrid, Globe } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
@@ -17,6 +18,8 @@ const AdsPage = () => {
 
     return (
         <main className="pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
+            <SEO title="إعلانات الأداء الممولة" description="حملات إعلانية مدفوعة وممولة على سناب شات، جوجل، تيك توك وميتا لتحقيق أعلى عائد." canonicalUrl="/ads" />
+
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 {/* Section 1: Problem awareness (Breaking the False Idea) */}
                 <SectionHeader

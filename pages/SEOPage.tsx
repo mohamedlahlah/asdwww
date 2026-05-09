@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import { Search, TrendingUp, Zap, Globe, ShieldCheck, Target, MousePointer2, BarChart3, Layers, LayoutPanelLeft, Compass, Info, Link2 } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
@@ -17,6 +18,8 @@ const SEOPage = () => {
 
     return (
         <main className="pt-32 md:pt-48 pb-20 md:pb-32 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
+            <SEO title="تحسين محركات البحث (SEO)" description="تصدر نتائج بحث جوجل مع خدمات تحسين محركات البحث من التاجر الرقمي." canonicalUrl="/seo" />
+
             <section className="px-6 md:px-12 max-w-[1400px] mx-auto">
                 {/* Section 1: The Problem (Breaking the Illusion) */}
                 <SectionHeader
