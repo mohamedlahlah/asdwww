@@ -226,8 +226,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             {children}
 
             {/* NATIVE-LIKE MOBILE BOTTOM NAVBAR */}
-            <div className="lg:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[94%] max-w-[420px] h-[72px] z-[100] transition-all duration-500">
-                <div className="relative w-full h-full bg-white/80 dark:bg-[#121213]/85 backdrop-blur-2xl border border-black/5 dark:border-white/10 rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.5)] flex items-center justify-between px-2 overflow-hidden">
+            <div className="lg:hidden fixed bottom-0 left-0 w-full z-[100] transition-all duration-500">
+                <div className="relative w-full h-[72px] bg-white/90 dark:bg-[#121213]/90 backdrop-blur-2xl border-t border-black/5 dark:border-white/10 shadow-[0_-8px_32px_rgba(0,0,0,0.05)] dark:shadow-[0_-12px_40px_rgba(0,0,0,0.3)] flex items-center justify-between px-2 md:px-6 overflow-hidden pb-[env(safe-area-inset-bottom)]">
                     
                     {/* Dynamic Top Indicator for Active Tab (RTL Optimized) */}
                     <div 
