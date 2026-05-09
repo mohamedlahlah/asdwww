@@ -61,7 +61,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <nav
                 className={`fixed z-[100] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex items-center justify-between
                 ${scrolled
-                        ? 'top-4 md:top-6 left-1/2 -translate-x-1/2 w-[90%] md:w-[70%] max-w-5xl rounded-full bg-white/70 dark:bg-[#151516]/70 backdrop-blur-xl border border-black/5 dark:border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] py-2 px-2 md:px-3'
+                        ? 'top-4 md:top-6 left-1/2 -translate-x-1/2 w-[95%] lg:w-[85%] max-w-6xl rounded-full bg-white/80 dark:bg-[#151516]/80 backdrop-blur-2xl border border-black/10 dark:border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] py-2.5 px-3 md:px-4'
                         : 'top-0 w-full bg-transparent border-transparent py-8 px-6 md:px-12'}`}
             >
                 {/* Logo Section */}
@@ -75,10 +75,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 </Link>
 
                 {/* Desktop Navigation Links - Centered when scrolled */}
-                <div className="hidden lg:flex items-center gap-2 bg-transparent">
+                <div className="hidden lg:flex items-center gap-2 xl:gap-4 bg-transparent">
                     <Link
                         to="/"
-                        className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 flex items-center gap-2
+                        className={`px-5 py-2.5 rounded-full text-base font-black transition-all duration-300 flex items-center gap-2
                         ${pathname === '/' ? 'bg-black/5 dark:bg-white/10 text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5'}`}
                     >
                         الرئيسية
@@ -88,7 +88,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     <div className="relative group/nav" ref={servicesRef}>
                         <button
                             onClick={() => { setServicesOpen(!servicesOpen); setSectionsOpen(false); }}
-                            className={`relative px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 flex items-center gap-2
+                            className={`relative px-5 py-2.5 rounded-full text-base font-black transition-all duration-300 flex items-center gap-2
                             ${isServiceActive || servicesOpen ? 'bg-black/5 dark:bg-white/10 text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5'}`}
                         >
                             الخدمات
@@ -122,7 +122,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     <div className="relative group/nav" ref={sectionsRef}>
                         <button
                             onClick={() => { setSectionsOpen(!sectionsOpen); setServicesOpen(false); }}
-                            className={`relative px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 flex items-center gap-2
+                            className={`relative px-5 py-2.5 rounded-full text-base font-black transition-all duration-300 flex items-center gap-2
                             ${isSectionActive || sectionsOpen ? 'bg-black/5 dark:bg-white/10 text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5'}`}
                         >
                             الأقسام
@@ -159,7 +159,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
                     <Link
                         to="/contact"
-                        className={`hidden lg:flex items-center gap-2 bg-black dark:bg-white text-white dark:text-black px-6 py-2.5 rounded-full text-sm font-black hover:scale-105 active:scale-95 transition-all shadow-lg hover:shadow-xl
+                        className={`hidden lg:flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-full text-base font-black hover:bg-blue-700 hover:scale-105 active:scale-95 transition-all shadow-lg hover:shadow-blue-500/25
                         ${scrolled ? '' : ''}`}
                     >
                         <span>تواصل معنا</span>
